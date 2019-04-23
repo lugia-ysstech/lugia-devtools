@@ -1,0 +1,83 @@
+{
+  "name": "@lugia/devtools-conversion",
+  "version": "1.0.0",
+  "dependencies": {
+    "@lugia/lugiax-core": "^1.0.5",
+    "connected-react-router": "^4.4.1",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1"
+  },
+  "peerDependencies": {
+    "react": ">16.0.0",
+    "react-dom": ">16.0.0"
+  },
+  "author": "ysstech",
+  "scripts": {
+    "build": "lugia-complie build",
+    "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
+    "dev": "./tasks/dev.sh",
+    "test": "./tasks/test.sh",
+    "cov": "lugia-complie cov",
+    "start": "node scripts/start.js",
+    "flow": "flow"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": []
+  },
+  "files": [
+    "target",
+    "package.json"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "testMatch": [
+      "<rootDir>/target/test/**/*.{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "main": "target/lib",
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.2.0"
+  },
+  "devDependencies": {
+    "@lugia/lugiax": "^1.0.6",
+    "@lugia/react-test-utils": "^1.0.0",
+    "babel-jest": "^23.4.0",
+    "babel-preset-react-app": "^3.1.2",
+    "enzyme": "3.2.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "flow-bin": "^0.77.0",
+    "history": "^4.7.2",
+    "ramda": "0.22.0",
+    "react": "^16.7.0",
+    "react-dev-utils": "4.2.1",
+    "react-test-renderer": "16.4.1",
+    "styled-components": "^3.4.5"
+  }
+}

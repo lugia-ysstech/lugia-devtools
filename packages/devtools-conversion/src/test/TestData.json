@@ -1,0 +1,141 @@
+{
+  "type": "PolarBear",
+  "areaId2ChildPadIndexString": {},
+  "widgetId2ChildPad": {},
+  "forkDependencies": [],
+  "mainDependencies": [
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Button" },
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Input" },
+    { "version": "1.0.0", "module": "@lugia/lugia-web-html", "widgetName": "label" },
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Pagination" },
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Slider" }
+  ],
+  "forkPad": {
+    "point": [-1540, -1926],
+    "width": 5000,
+    "index": 0,
+    "height": 5000,
+    "zIndex": 4000,
+    "type": "ForkPad",
+    "layers": [],
+    "idSeq": 67,
+    "id2WidgetInfo": {},
+    "id": "forkPad",
+    "lastIndex": 41,
+    "group": false
+  },
+  "mainPad": {
+    "point": [0, 34],
+    "width": 1920,
+    "index": 0,
+    "height": 1080,
+    "zIndex": 4000,
+    "type": "MainPad",
+    "layers": [
+      { "i": "wb*IXm81", "z": 0, "w": 160, "h": 32, "p": [405, 296] },
+      { "i": "wbg][H82", "z": 1, "w": 369, "h": 32, "p": [671, 296] },
+      { "i": "wb4SCs83", "z": 2, "w": 25, "h": 13, "p": [624, 304] },
+      { "i": "wb7#ES41", "z": 3, "w": 311, "h": 32, "p": [389, 395] },
+      { "i": "wb*JBA42", "z": 4, "w": 91, "h": 32, "p": [878, 390] },
+      { "i": "wbQ9X&84", "z": 5, "w": 100, "h": 28, "p": [453, 525] },
+      { "i": "wb@C^d85", "z": 6, "w": 546, "h": 41, "p": [693, 530] }
+    ],
+    "idSeq": 91291,
+    "id2WidgetInfo": {
+      "wb*IXm81": {
+        "w": "Button",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello26", "children": "hello27" },
+        "i": "wb*IXm81"
+      },
+      "wbg][H82": {
+        "w": "Input",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello76", "children": "hello77" },
+        "i": "wbg][H82"
+      },
+      "wb4SCs83": {
+        "w": "label",
+        "m": "@lugia/lugia-web-html",
+        "v": "1.0.0",
+        "p": { "children": "label" },
+        "i": "wb4SCs83"
+      },
+      "wb7#ES41": {
+        "w": "Input",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello172", "children": "hello173" },
+        "i": "wb7#ES41"
+      },
+      "wb*JBA42": {
+        "w": "Button",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello266", "children": "hello267" },
+        "i": "wb*JBA42"
+      },
+      "wbQ9X&84": {
+        "w": "Pagination",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello376", "children": "hello377" },
+        "i": "wbQ9X&84"
+      },
+      "wb@C^d85": {
+        "w": "Slider",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": { "defaultValue": "hello420", "children": "hello421" },
+        "i": "wb@C^d85"
+      }
+    },
+    "id": "mainPad",
+    "lastIndex": 81,
+    "group": false,
+    "backgroudColor": "#f8f8f8"
+  },
+  "themes": {
+    "widgetId2ThemeInfo": {
+      "wbg][H82": { "width": 368.75, "height": 32 },
+      "wb*IXm81": { "width": 160.25, "height": 32 },
+      "wb4SCs83": { "width": 33.75, "height": 13 },
+      "wb7#ES41": { "width": 311.25, "height": 32 },
+      "wbQ9X&84": { "width": 100, "height": 53 },
+      "wb@C^d85": { "width": 562, "height": 41 }
+    }
+  },
+  "lugiax": { "widgetId2PropsName2BindInfo": {}, "widgetId2EventName2MutationInfo": {} },
+  "widgetId2Locked": {},
+  "layoutInfos": {
+    "mode2Config": {
+      "1920x1080": {
+        "mainPadSize": { "width": 1920, "height": 1080 },
+        "widthRange": [0, 50000],
+        "scale": 0.8,
+        "forkPadPoint": [-1540, -1926]
+      },
+      "1000x1000": {
+        "mainPadSize": { "width": 1000, "height": 1000 },
+        "widthRange": [1000, 1000],
+        "scale": 0.9,
+        "forkPadPoint": [-1540, -2015]
+      }
+    },
+    "mode2LayoutData": {
+      "1920x1080": {
+        "wb*IXm81": { "a": "mainPad", "w": 160, "h": 32, "p": [405, 296], "wi": "wb*IXm81" },
+        "wbg][H82": { "a": "mainPad", "w": 369, "h": 32, "p": [671, 296], "wi": "wbg][H82" },
+        "wb4SCs83": { "a": "mainPad", "w": 25, "h": 13, "p": [624, 304], "wi": "wb4SCs83" },
+        "wb7#ES41": { "a": "mainPad", "w": 311, "h": 32, "p": [389, 395], "wi": "wb7#ES41" },
+        "wb*JBA42": { "a": "mainPad", "w": 91, "h": 32, "p": [878, 390], "wi": "wb*JBA42" },
+        "wbQ9X&84": { "a": "mainPad", "w": 100, "h": 28, "p": [453, 525], "wi": "wbQ9X&84" },
+        "wb@C^d85": { "a": "mainPad", "w": 546, "h": 41, "p": [693, 530], "wi": "wb@C^d85" }
+      },
+      "1000x1000": {}
+    }
+  },
+  "zip": true
+}
