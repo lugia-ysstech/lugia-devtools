@@ -12,7 +12,10 @@ import {
   createTargetContainer,
   handlePropsType,
   createComponent,
-} from '../createClass';
+} from '../lib/createClass';
+import chai from 'chai';
+
+const { expect } = chai;
 
 const data = [
   {
@@ -20,11 +23,11 @@ const data = [
     children: [
       {
         id: 11,
-        children: [{ id: 111, }, { id: 112, },],
+        children: [{ id: 111 }, { id: 112 }],
       },
       {
         id: 12,
-        children: [{ id: 121, }, { id: 122, },],
+        children: [{ id: 121 }, { id: 122 }],
       },
     ],
   },
@@ -33,21 +36,12 @@ const data = [
     children: [
       {
         id: 21,
-        children: [{ id: 211, },],
+        children: [{ id: 211 }],
       },
     ],
   },
 ];
 describe('conversion createClass ->', () => {
-  const space = '';
-  const defaultLayerCode = `${space}<div style={{position: 'absolute',width: '72px',height: '21px',zIndex: '4000', left: '92px', top: '67px'}}><Theme config={{'aaa' :{  width: 100, height: 100, }}}><ConnectLabel10  viewClass="aaa" children={'高级表单'} value={'高级表单'} fontSize={ 18 } color={'#50575d'} /></Theme></div>`;
-  const defaultBindCode = `const ConnectLabel10 = connect(
-    [user],
-    state=>{ return {
-      ... getData(state, 'data', 'user', 'data'),
-    }},
-    mutations => { return {}}
-  )(Label);`;
   const lugiax = {
     widgetId2PropsName2BindInfo: {
       aaa: {
@@ -73,7 +67,7 @@ describe('conversion createClass ->', () => {
       zIndex: 4000,
       width: 72,
       height: 21,
-      point: [92, 67,],
+      point: [ 92, 67 ],
       id: 'aaa',
     },
   ];
@@ -104,7 +98,7 @@ describe('conversion createClass ->', () => {
     expect(errRes).toEqual([]);
 
     const res = createExpantWidgetid(data);
-    expect(res).toEqual([211, 21, 2, 122, 121, 12, 112, 111, 11, 1,]);
+    expect(res).toEqual([ 211, 21, 2, 122, 121, 12, 112, 111, 11, 1 ]);
   });
 
   it('createClassCode', () => {
@@ -128,8 +122,8 @@ describe('conversion createClass ->', () => {
     };
 
     const index = 1;
-    const widgetId2Component = { label: 'Label', };
-    const { layerCode, layerBindCode, } = createLayerComponent(
+    const widgetId2Component = { label: 'Label' };
+    const { layerCode, layerBindCode } = createLayerComponent(
       layers,
       id2WidgetInfo,
       lugiax,
@@ -157,7 +151,7 @@ describe('conversion createClass ->', () => {
   });
 
   it('getComponentProps', () => {
-    const props = { data: {}, type: 'a', };
+    const props = { data: {}, type: 'a' };
     const errRes = getComponentProps();
     expect(errRes).toBe('');
 
@@ -169,7 +163,7 @@ describe('conversion createClass ->', () => {
   });
 
   it('createTargetContainer', () => {
-    const TargetContainer = { widgetName: 'Card', };
+    const TargetContainer = { widgetName: 'Card' };
     const {
       containerStart: errContainerStart,
       containerEnd: errContainerEnd,
@@ -177,7 +171,7 @@ describe('conversion createClass ->', () => {
     expect(errContainerStart).toBe('');
     expect(errContainerEnd).toBe('');
 
-    const { containerStart, containerEnd, } = createTargetContainer(
+    const { containerStart, containerEnd } = createTargetContainer(
       TargetContainer
     );
     expect(containerStart).toBe('<Card ');
@@ -185,7 +179,7 @@ describe('conversion createClass ->', () => {
   });
 
   it('handlePropsType', () => {
-    const objRes = handlePropsType({ a: 1, });
+    const objRes = handlePropsType({ a: 1 });
     expect(objRes).toBe('{ {"a":1} }');
 
     const numberRes = handlePropsType(2);

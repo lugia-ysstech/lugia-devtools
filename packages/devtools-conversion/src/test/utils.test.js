@@ -4,7 +4,10 @@
  *
  * @flow
  */
-import { camelNamed, recursiveChildren, } from '../utils';
+import { camelNamed, recursiveChildren } from '../lib/utils';
+import chai from 'chai';
+
+const { expect } = chai;
 
 const data = [
   {
@@ -12,11 +15,11 @@ const data = [
     children: [
       {
         id: 11,
-        children: [{ id: 111, }, { id: 112, },],
+        children: [{ id: 111 }, { id: 112 }],
       },
       {
         id: 12,
-        children: [{ id: 121, }, { id: 122, },],
+        children: [{ id: 121 }, { id: 122 }],
       },
     ],
   },
@@ -25,7 +28,7 @@ const data = [
     children: [
       {
         id: 21,
-        children: [{ id: 211, },],
+        children: [{ id: 211 }],
       },
     ],
   },
@@ -46,7 +49,7 @@ describe('conversion utils ->', () => {
   it('recursiveChildren', () => {
     const res = [];
     recursiveChildren(data, res);
-    expect(res).toEqual([211, 21, 2, 122, 121, 12, 112, 111, 11, 1,]);
+    expect(res).toEqual([ 211, 21, 2, 122, 121, 12, 112, 111, 11, 1 ]);
 
     const errRes = recursiveChildren(undefined, res);
     expect(errRes).toBeUndefined();

@@ -4,12 +4,15 @@
  *
  * @flow
  */
-import { widgetIdInLugiax, } from '../widgetIdInLugiax';
+import { widgetIdInLugiax } from '../lib/widgetIdInLugiax';
+import chai from 'chai';
+
+const { expect } = chai;
 
 describe('conversion widgetIdInLugiax ->', () => {
   const target = {
     a: {
-      data: { modelName: 'user', fieldName: 'data', propsName: 'data', },
+      data: { modelName: 'user', fieldName: 'data', propsName: 'data' },
       user: {
         modelName: 'user',
         bindType: 'bind',
@@ -18,7 +21,7 @@ describe('conversion widgetIdInLugiax ->', () => {
       },
     },
     b: {
-      data: { modelName: 'login', },
+      data: { modelName: 'login' },
     },
   };
   const lugiax = {
@@ -56,7 +59,7 @@ describe('conversion widgetIdInLugiax ->', () => {
     }},
     mutations => { return {}}
   )(User1);`;
-    const { inLugiax, lugiaxCode, componentName: newComponentName, } =
+    const { inLugiax, lugiaxCode, componentName: newComponentName } =
       widgetIdInLugiax(widgetId, lugiax, componentName, index) || {};
     expect(inLugiax).toBeTruthy();
     expect(lugiaxCode).toBe(defaultCode);

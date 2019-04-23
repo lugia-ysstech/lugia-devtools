@@ -5,20 +5,23 @@
  * @flow
  */
 
-import { getTargetModal, getModelCode, createHeader, } from '../header';
+import { getTargetModal, getModelCode, createHeader } from '../lib/header';
+import chai from 'chai';
+
+const { expect } = chai;
 
 describe('conversion header ->', () => {
   const target = {
     a: {
-      data: { modelName: 'user', },
+      data: { modelName: 'user' },
     },
     b: {
-      data: { modelName: 'login', },
+      data: { modelName: 'login' },
     },
   };
   it('getTargetModal', () => {
     const result = getTargetModal(target);
-    expect(result).toEqual(['user', 'login',]);
+    expect(result).toEqual([ 'user', 'login' ]);
 
     const errResult = getTargetModal();
     expect(errResult).toEqual([]);
@@ -52,8 +55,8 @@ describe('conversion header ->', () => {
 
   it('createHeader', () => {
     const mainDependencies = [
-      { module: '@lugia/lugia-web', widgetName: 'Table', },
-      { module: '@lugia/lugia-web-html', widgetName: 'label', },
+      { module: '@lugia/lugia-web', widgetName: 'Table' },
+      { module: '@lugia/lugia-web-html', widgetName: 'label' },
     ];
     const widgetId2Component = {};
     const {
@@ -64,7 +67,7 @@ describe('conversion header ->', () => {
     expect(spacePakage).toMatchSnapshot();
     expect(widgetId2Component).toEqual({});
 
-    const { packages, styledComponentCode, } = createHeader(
+    const { packages, styledComponentCode } = createHeader(
       mainDependencies,
       widgetId2Component
     );
@@ -72,15 +75,11 @@ describe('conversion header ->', () => {
     expect(styledComponentCode).toBe(
       'const Label = styled.div`font-size: 12px;`;'
     );
-    expect(widgetId2Component).toEqual({ label: 'Label', });
+    expect(widgetId2Component).toEqual({ label: 'Label' });
   });
 
   it('createHeader toMatchSnapshot', () => {
     const widgetId2Component = {};
-    const {
-      packages: spacePakage,
-      styledComponentCode: spaceStyled,
-    } = createHeader([], widgetId2Component);
     expect(createHeader([], widgetId2Component)).toMatchSnapshot();
   });
 });

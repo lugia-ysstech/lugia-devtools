@@ -4,11 +4,14 @@
  *
  * @flow
  */
-import { createThemeCode, getThemeConfig, } from '../theme';
+import { createThemeCode, getThemeConfig } from '../lib/theme';
+import chai from 'chai';
+
+const { expect } = chai;
 
 describe('conversion createClass ->', () => {
   it('createThemeCode', () => {
-    const widgetId2ThemeInfo = { a: { width: 100, height: 100, }, };
+    const widgetId2ThemeInfo = { a: { width: 100, height: 100 } };
     const widgetId = 'a';
 
     const {
@@ -20,7 +23,7 @@ describe('conversion createClass ->', () => {
     expect(errLabelEnd).toBe('');
     expect(errViewClass).toBe('');
 
-    const { labelStart, labelEnd, viewClass, } = createThemeCode(
+    const { labelStart, labelEnd, viewClass } = createThemeCode(
       widgetId2ThemeInfo,
       widgetId
     );
@@ -32,11 +35,11 @@ describe('conversion createClass ->', () => {
   });
 
   it('getThemeConfig', () => {
-    const theme = { width: 100, height: 100, };
+    const theme = { width: 100, height: 100 };
     const widgetId = 'a';
 
     const errRes = getThemeConfig({}, widgetId);
-    expect(errRes).toEqual({ config: '', configStr: '', });
+    expect(errRes).toEqual({ config: '', configStr: '' });
 
     const res = getThemeConfig(theme, widgetId);
     expect(res).toEqual({

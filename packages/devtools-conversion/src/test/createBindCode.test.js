@@ -4,16 +4,19 @@
  *
  * @flow
  */
-import { createBindCode, createConnectCode, } from '../createBindCode';
+import { createBindCode, createConnectCode } from '../lib/createBindCode';
+import chai from 'chai';
+
+const { expect } = chai;
 
 describe('conversion createBindCode ->', () => {
   it('createBindCode', () => {
     const bindItem = [
-      { modelName: 'user', fieldName: 'data', propsName: 'data', },
+      { modelName: 'user', fieldName: 'data', propsName: 'data' },
     ];
     const componentName = 'Component';
     const mutationInfo = [
-      { eventName: 'onChange', modelName: 'user', mutationName: 'changeName', },
+      { eventName: 'onChange', modelName: 'user', mutationName: 'changeName' },
     ];
     const index = 1;
     const {
@@ -32,7 +35,7 @@ describe('conversion createBindCode ->', () => {
         onChange: { ['data'](e){ return bindHandleEvent(e); } }
       }
     )(Component);`;
-    const { bindCode, componentName: bindComponentName, } = createBindCode(
+    const { bindCode, componentName: bindComponentName } = createBindCode(
       bindItem,
       componentName,
       [],
@@ -60,11 +63,11 @@ describe('conversion createBindCode ->', () => {
 
   it('createConnectCode', () => {
     const connectItem = [
-      { modelName: 'user', fieldName: 'data', propsName: 'data', },
+      { modelName: 'user', fieldName: 'data', propsName: 'data' },
     ];
     const componentName = 'Component';
     const mutationInfo = [
-      { eventName: 'onChange', modelName: 'user', mutationName: 'changeName', },
+      { eventName: 'onChange', modelName: 'user', mutationName: 'changeName' },
     ];
     const index = 1;
     const defaultConnectCode = `const ConnectComponent1 = connect(

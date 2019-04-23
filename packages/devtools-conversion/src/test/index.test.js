@@ -4,7 +4,11 @@
  *
  * @flow
  */
-import conversion from '../index';
+import conversion from '../lib/index';
+import chai from 'chai';
+
+const { expect } = chai;
+
 describe('conversion index ->', () => {
   it('Card Container', () => {
     expect(conversion(require('./TestData.json'))).toMatchSnapshot();
