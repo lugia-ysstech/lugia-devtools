@@ -1,2 +1,3 @@
-packages/lugiax-core/flow-typed
-packages/lugiax-router/flow-typed
+packages/devtools-core/flow-typed
+packages/devtools-conversion/flow-typed
+packages/devtools-material/flow-typed

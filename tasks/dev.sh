@@ -3,11 +3,11 @@ echo "$root_path"
 
 lugiacomplie="$root_path/node_modules/.bin/lugia-complie"
 
-cd "$root_path"/packages/lugiax-core
+cd "$root_path"/packages/devtools-core
 $lugiacomplie dev --ig &
 
-cd "$root_path"/packages/lugiax-router
+cd "$root_path"/packages/devtools-material
 $lugiacomplie dev --ig &
 
-cd "$root_path"/packages/lugiax
+cd "$root_path"/packages/devtools-conversion
 $lugiacomplie dev --ig &
