@@ -1,0 +1,160 @@
+{
+  "type": "CopyData",
+  "copyData": [
+    {
+      "areaId": "",
+      "areaType": "MainPad",
+      "info": {
+        "widgetName": "Button",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello530",
+          "children": "hello531"
+        },
+        "id": "wbcgApv3"
+      },
+      "layer": {
+        "id": "layer91293",
+        "zIndex": 0,
+        "width": 60,
+        "height": 32,
+        "point": [
+          1147,
+          667
+        ],
+        "widgetId": "wbcgApv3"
+      },
+      "bindInfo": {
+        "value": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "value"
+        },
+        "data": {
+          "modelName": "user",
+          "fieldName": "pageData",
+          "propsName": "data"
+        },
+        "children": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "children"
+        },
+        "pageSize": {
+          "modelName": "user",
+          "fieldName": "pageInfo.pageSize",
+          "propsName": "pageSize"
+        },
+        "page": {
+          "modelName": "user",
+          "fieldName": "pageInfo.page",
+          "propsName": "page"
+        },
+        "total": {
+          "modelName": "user",
+          "fieldName": "pageInfo.total",
+          "propsName": "total"
+        },
+        "disabled": {
+          "modelName": "user",
+          "fieldName": "disabled",
+          "propsName": "disabled"
+        }
+      },
+      "mutationInfo": {
+        "onChange": {
+          "eventName": "onChange",
+          "modelName": "user",
+          "mutationName": "changeName"
+        }
+      }
+    },
+    {
+      "areaId": "",
+      "areaType": "MainPad",
+      "info": {
+        "widgetName": "Button",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello530",
+          "children": "hello531"
+        },
+        "id": "wbcH]$12"
+      },
+      "layer": {
+        "id": "layer91300",
+        "zIndex": 0,
+        "width": 91,
+        "height": 32,
+        "point": [
+          955,
+          603
+        ],
+        "widgetId": "wbcH]$12"
+      }
+    },
+    {
+      "areaId": "",
+      "areaType": "MainPad",
+      "info": {
+        "widgetName": "Button",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello530",
+          "children": "hello531"
+        },
+        "id": "wbc^6&G3"
+      },
+      "layer": {
+        "id": "layer91306",
+        "zIndex": 0,
+        "width": 91,
+        "height": 32,
+        "point": [
+          914,
+          762
+        ],
+        "widgetId": "wbc^6&G3"
+      },
+      "mutationInfo": {
+        "onChange": {
+          "eventName": "onChange",
+          "modelName": "user",
+          "mutationName": "changeName"
+        }
+      }
+    },
+    {
+      "areaId": "",
+      "areaType": "MainPad",
+      "info": {
+        "widgetName": "Button",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello530",
+          "children": "hello531"
+        },
+        "id": "wbcQAQ03"
+      },
+      "layer": {
+        "id": "layer91314",
+        "zIndex": 0,
+        "width": 169,
+        "height": 32,
+        "point": [
+          1209,
+          792
+        ],
+        "widgetId": "wbcQAQ03"
+      },
+      "themeInfo": {
+        "width": 168.52808988764045,
+        "height": 32
+      }
+    }
+  ]
+}

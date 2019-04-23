@@ -1,0 +1,2220 @@
+{
+  "type": "PolarBear",
+  "areaId2ChildPadIndexString": {
+    "polarbear68408d30-17d3-11e9-bb21-754a2cde60632": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631.wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+    "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631.wb8d669780-17d3-11e9-bb21-754a2cde60631",
+    "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631.wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+    "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+    "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+    "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+    "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+    "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+    "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+    "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635.wb_copy80586910-5b80-11e9-8060-cb9154c8d1740"
+  },
+  "widgetId2ChildPad": {
+    "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+      "point": [
+        90.96428571428578,
+        395.02777777777794
+      ],
+      "width": 1201,
+      "index": 1,
+      "height": 656,
+      "zIndex": 4010,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer54",
+          "zIndex": 4010,
+          "width": 64,
+          "height": 18,
+          "point": [
+            33.988095238095696,
+            24.623015873015902
+          ],
+          "widgetId": "wbe4eb74a0-17e0-11e9-8805-81783b379d674"
+        },
+        {
+          "id": "layer155",
+          "zIndex": 0,
+          "width": 1176,
+          "height": 103,
+          "point": [
+            8,
+            69
+          ],
+          "widgetId": "wbd79bb5d0-17e0-11e9-8805-81783b379d6710"
+        },
+        {
+          "id": "layer307",
+          "zIndex": 0,
+          "width": 316,
+          "height": 28,
+          "point": [
+            34,
+            617
+          ],
+          "widgetId": "wb528f23e0-17db-11e9-951e-c92465ba60ea4"
+        }
+      ],
+      "idSeq": 308,
+      "widgetId2RangeId": {
+        "wbe4eb74a0-17e0-11e9-8805-81783b379d674": "layer54",
+        "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": "layer155",
+        "wb528f23e0-17db-11e9-951e-c92465ba60ea4": "layer307"
+      },
+      "id2WidgetInfo": {
+        "wbe4eb74a0-17e0-11e9-8805-81783b379d674": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "查询结果",
+            "value": "查询结果",
+            "fontSize": 16,
+            "color": "#50575d"
+          },
+          "id": "wbe4eb74a0-17e0-11e9-8805-81783b379d674"
+        },
+        "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
+          "widgetName": "Table",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello220150",
+            "children": "hello220151",
+            "width": 800,
+            "columns": [
+              {
+                "title": "Name",
+                "dataIndex": "name",
+                "key": "name",
+                "width": 100
+              },
+              {
+                "title": "Age",
+                "dataIndex": "age",
+                "key": "age",
+                "width": 100
+              },
+              {
+                "title": "Address",
+                "dataIndex": "address",
+                "key": "address",
+                "width": 200
+              },
+              {
+                "title": "Operations",
+                "dataIndex": "",
+                "key": "operations"
+              }
+            ]
+          },
+          "id": "wbd79bb5d0-17e0-11e9-8805-81783b379d6710"
+        },
+        "wb528f23e0-17db-11e9-951e-c92465ba60ea4": {
+          "widgetName": "Pagination",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello608",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb528f23e0-17db-11e9-951e-c92465ba60ea4"
+        }
+      },
+      "id": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+      "lastIndex": 5,
+      "fatherId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+      "widgetId": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+      "group": false
+    },
+    "wb8d669780-17d3-11e9-bb21-754a2cde60631": {
+      "point": [
+        89,
+        128
+      ],
+      "width": 1200,
+      "index": 2,
+      "height": 240,
+      "zIndex": 4010,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer112",
+          "zIndex": 4010,
+          "width": 0,
+          "height": 0,
+          "point": [
+            42.83730158730225,
+            14.96031746031747
+          ],
+          "widgetId": "wb5cb72390-17e0-11e9-8805-81783b379d678"
+        },
+        {
+          "id": "layer164",
+          "zIndex": 4010,
+          "width": 48,
+          "height": 18,
+          "point": [
+            26.315744573420034,
+            18.031475468975827
+          ],
+          "widgetId": "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5"
+        },
+        {
+          "id": "layer658",
+          "zIndex": 0,
+          "width": 189,
+          "height": 32,
+          "point": [
+            991,
+            195
+          ],
+          "widgetId": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740"
+        },
+        {
+          "id": "layer942",
+          "zIndex": 0,
+          "width": 340,
+          "height": 32,
+          "point": [
+            433,
+            64
+          ],
+          "widgetId": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740"
+        },
+        {
+          "id": "layer943",
+          "zIndex": 0,
+          "width": 340,
+          "height": 32,
+          "point": [
+            833,
+            65
+          ],
+          "widgetId": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5"
+        },
+        {
+          "id": "layer946",
+          "zIndex": 0,
+          "width": 340,
+          "height": 32,
+          "point": [
+            834,
+            129
+          ],
+          "widgetId": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740"
+        },
+        {
+          "id": "layer947",
+          "zIndex": 0,
+          "width": 337,
+          "height": 32,
+          "point": [
+            36,
+            65
+          ],
+          "widgetId": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1"
+        },
+        {
+          "id": "layer948",
+          "zIndex": 0,
+          "width": 337,
+          "height": 32,
+          "point": [
+            36,
+            129
+          ],
+          "widgetId": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6"
+        },
+        {
+          "id": "layer949",
+          "zIndex": 0,
+          "width": 337,
+          "height": 32,
+          "point": [
+            435,
+            129
+          ],
+          "widgetId": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740"
+        }
+      ],
+      "idSeq": 950,
+      "widgetId2RangeId": {
+        "wb5cb72390-17e0-11e9-8805-81783b379d678": "layer112",
+        "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5": "layer164",
+        "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740": "layer658",
+        "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740": "layer942",
+        "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5": "layer943",
+        "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740": "layer946",
+        "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1": "layer947",
+        "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6": "layer948",
+        "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740": "layer949"
+      },
+      "id2WidgetInfo": {
+        "wb5cb72390-17e0-11e9-8805-81783b379d678": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "",
+            "value": "",
+            "title": "24",
+            "fontSize": 16
+          },
+          "id": "wb5cb72390-17e0-11e9-8805-81783b379d678"
+        },
+        "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "搜索栏",
+            "value": "搜索栏",
+            "fontSize": 16,
+            "color": "#50575d"
+          },
+          "id": "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5"
+        },
+        "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740": {
+          "isGroup": true,
+          "id": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 189.04045190852446,
+            "height": 32.07557720057764,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 189.04045190852446,
+                "height": 32.07557720057764
+              }
+            }
+          },
+          "childAreaId": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154"
+        },
+        "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740": {
+          "isGroup": true,
+          "id": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 340.2348935786438,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 340.2348935786438,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740"
+        },
+        "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5": {
+          "isGroup": true,
+          "id": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 340.2348935786438,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 340.2348935786438,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247"
+        },
+        "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740": {
+          "isGroup": true,
+          "id": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 340.2348935786438,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 340.2348935786438,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740"
+        },
+        "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1": {
+          "isGroup": true,
+          "id": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 337.22691197691233,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 337.22691197691233,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243"
+        },
+        "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6": {
+          "isGroup": true,
+          "id": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 336.85890151515173,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 336.85890151515173,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248"
+        },
+        "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740": {
+          "isGroup": true,
+          "id": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+          "widgetName": "MonkeyKing",
+          "module": "@lugia/lugia-design",
+          "version": "1.0.0",
+          "props": {
+            "width": 336.85890151515173,
+            "height": 32,
+            "TargetContainer": {
+              "widgetName": "box",
+              "module": "@lugia/lugia-web-html",
+              "version": "1.0.0",
+              "props": {
+                "width": 336.85890151515173,
+                "height": 32
+              }
+            }
+          },
+          "childAreaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740"
+        }
+      },
+      "id": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "lastIndex": 12,
+      "fatherId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+      "widgetId": "wb8d669780-17d3-11e9-bb21-754a2cde60631",
+      "group": false
+    },
+    "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740": {
+      "point": [
+        991,
+        195
+      ],
+      "width": 189,
+      "index": 3,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer0",
+          "zIndex": 0,
+          "width": 106,
+          "height": 32,
+          "point": [
+            0,
+            0
+          ],
+          "widgetId": "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863"
+        },
+        {
+          "id": "layer1",
+          "zIndex": 0,
+          "width": 66,
+          "height": 32,
+          "point": [
+            123,
+            0
+          ],
+          "widgetId": "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": "layer0",
+        "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": "layer1"
+      },
+      "id2WidgetInfo": {
+        "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": {
+          "widgetName": "Button",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello9284",
+            "children": "搜索选择项",
+            "value": "搜索选择项",
+            "type": "primary"
+          },
+          "id": "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863"
+        },
+        "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": {
+          "widgetName": "Button",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello109076",
+            "children": "取消",
+            "value": "取消"
+          },
+          "id": "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6"
+        }
+      },
+      "id": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+      "group": true
+    },
+    "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1": {
+      "point": [
+        36,
+        65
+      ],
+      "width": 337,
+      "index": 4,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer0",
+          "zIndex": 0,
+          "width": 300,
+          "height": 32,
+          "point": [
+            37,
+            0
+          ],
+          "widgetId": "wbc2e09890-17d6-11e9-b988-bb6d65be56e63"
+        },
+        {
+          "id": "layer1",
+          "zIndex": 0,
+          "width": 24,
+          "height": 14,
+          "point": [
+            0,
+            6
+          ],
+          "widgetId": "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": "layer0",
+        "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": "layer1"
+      },
+      "id2WidgetInfo": {
+        "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello2",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wbc2e09890-17d6-11e9-b988-bb6d65be56e63"
+        },
+        "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello0",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62"
+        }
+      },
+      "id": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+      "group": true
+    },
+    "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6": {
+      "point": [
+        36,
+        129
+      ],
+      "width": 337,
+      "index": 5,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer0",
+          "zIndex": 0,
+          "width": 300,
+          "height": 32,
+          "point": [
+            37,
+            0
+          ],
+          "widgetId": "wbdd092260-17df-11e9-8805-81783b379d675"
+        },
+        {
+          "id": "layer1",
+          "zIndex": 0,
+          "width": 24,
+          "height": 14,
+          "point": [
+            0,
+            9
+          ],
+          "widgetId": "wb828873f0-17de-11e9-bdb2-a94cb2be29860"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wbdd092260-17df-11e9-8805-81783b379d675": "layer0",
+        "wb828873f0-17de-11e9-bdb2-a94cb2be29860": "layer1"
+      },
+      "id2WidgetInfo": {
+        "wbdd092260-17df-11e9-8805-81783b379d675": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello42792",
+            "children": "hello42793"
+          },
+          "id": "wbdd092260-17df-11e9-8805-81783b379d675"
+        },
+        "wb828873f0-17de-11e9-bdb2-a94cb2be29860": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb828873f0-17de-11e9-bdb2-a94cb2be29860"
+        }
+      },
+      "id": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+      "group": true
+    },
+    "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5": {
+      "point": [
+        833,
+        65
+      ],
+      "width": 340,
+      "index": 6,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer0",
+          "zIndex": 0,
+          "width": 300,
+          "height": 32,
+          "point": [
+            40,
+            0
+          ],
+          "widgetId": "wb8fea8240-17de-11e9-bdb2-a94cb2be29865"
+        },
+        {
+          "id": "layer1",
+          "zIndex": 0,
+          "width": 25,
+          "height": 14,
+          "point": [
+            0,
+            10
+          ],
+          "widgetId": "wb14e9f1a0-17e0-11e9-8805-81783b379d6710"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": "layer0",
+        "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": "layer1"
+      },
+      "id2WidgetInfo": {
+        "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello22728",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb8fea8240-17de-11e9-bdb2-a94cb2be29865"
+        },
+        "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "label"
+          },
+          "id": "wb14e9f1a0-17e0-11e9-8805-81783b379d6710"
+        }
+      },
+      "id": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+      "group": true
+    },
+    "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740": {
+      "point": [
+        435,
+        129
+      ],
+      "width": 337,
+      "index": 7,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "rb_copy778d9621-5b80-11e9-8060-cb9154c8d1741",
+          "zIndex": 2,
+          "width": 300,
+          "height": 32,
+          "point": [
+            37,
+            0
+          ],
+          "widgetId": "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741"
+        },
+        {
+          "id": "rb_copy778d9623-5b80-11e9-8060-cb9154c8d1742",
+          "zIndex": 3,
+          "width": 24,
+          "height": 14,
+          "point": [
+            0,
+            9
+          ],
+          "widgetId": "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": "rb_copy778d9621-5b80-11e9-8060-cb9154c8d1741",
+        "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": "rb_copy778d9623-5b80-11e9-8060-cb9154c8d1742"
+      },
+      "id2WidgetInfo": {
+        "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello42792",
+            "children": "hello42793"
+          },
+          "id": "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741",
+          "childAreaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740"
+        },
+        "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742",
+          "childAreaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740"
+        }
+      },
+      "id": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+      "group": true
+    },
+    "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740": {
+      "point": [
+        433,
+        64
+      ],
+      "width": 340,
+      "index": 8,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "rb_copy7d812d34-5b80-11e9-8060-cb9154c8d1741",
+          "zIndex": 2,
+          "width": 300,
+          "height": 32,
+          "point": [
+            40,
+            0
+          ],
+          "widgetId": "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741"
+        },
+        {
+          "id": "rb_copy7d812d36-5b80-11e9-8060-cb9154c8d1742",
+          "zIndex": 3,
+          "width": 25,
+          "height": 14,
+          "point": [
+            0,
+            10
+          ],
+          "widgetId": "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": "rb_copy7d812d34-5b80-11e9-8060-cb9154c8d1741",
+        "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": "rb_copy7d812d36-5b80-11e9-8060-cb9154c8d1742"
+      },
+      "id2WidgetInfo": {
+        "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello22728",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741",
+          "childAreaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740"
+        },
+        "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "label"
+          },
+          "id": "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742",
+          "childAreaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740"
+        }
+      },
+      "id": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+      "group": true
+    },
+    "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740": {
+      "point": [
+        834,
+        129
+      ],
+      "width": 340,
+      "index": 9,
+      "height": 32,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "rb_copy80586914-5b80-11e9-8060-cb9154c8d1741",
+          "zIndex": 2,
+          "width": 300,
+          "height": 32,
+          "point": [
+            40,
+            0
+          ],
+          "widgetId": "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741"
+        },
+        {
+          "id": "rb_copy80586916-5b80-11e9-8060-cb9154c8d1742",
+          "zIndex": 3,
+          "width": 25,
+          "height": 14,
+          "point": [
+            0,
+            10
+          ],
+          "widgetId": "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": "rb_copy80586914-5b80-11e9-8060-cb9154c8d1741",
+        "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": "rb_copy80586916-5b80-11e9-8060-cb9154c8d1742"
+      },
+      "id2WidgetInfo": {
+        "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": {
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
+            "defaultValue": "hello22728",
+            "children": "姓名",
+            "value": "姓名"
+          },
+          "id": "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741",
+          "childAreaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740"
+        },
+        "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "label"
+          },
+          "id": "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742",
+          "childAreaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740"
+        }
+      },
+      "id": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740",
+      "lastIndex": 0,
+      "fatherId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+      "widgetId": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740",
+      "group": true
+    },
+    "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0": {
+      "point": [
+        91,
+        35
+      ],
+      "width": 504,
+      "index": 10,
+      "height": 47,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "id": "layer0",
+          "zIndex": 0,
+          "width": 72,
+          "height": 21,
+          "point": [
+            1,
+            0
+          ],
+          "widgetId": "wb30f04110-1876-11e9-b171-9bbb680aa2ed4"
+        },
+        {
+          "id": "layer1",
+          "zIndex": 0,
+          "width": 504,
+          "height": 16,
+          "point": [
+            0,
+            31
+          ],
+          "widgetId": "wb52280f50-1878-11e9-b171-9bbb680aa2ed12"
+        }
+      ],
+      "idSeq": 2,
+      "widgetId2RangeId": {
+        "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": "layer0",
+        "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": "layer1"
+      },
+      "id2WidgetInfo": {
+        "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "高级表单",
+            "value": "高级表单",
+            "fontSize": 18,
+            "color": "#50575d"
+          },
+          "id": "wb30f04110-1876-11e9-b171-9bbb680aa2ed4"
+        },
+        "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": {
+          "widgetName": "label",
+          "module": "@lugia/lugia-web-html",
+          "version": "1.0.0",
+          "props": {
+            "children": "高级表单作为一个页面展示多个查询表单内容，常用于一次可以检索多个查询项。",
+            "value": "高级表单作为一个页面展示多个查询表单内容，常用于一次可以检索多个查询项。",
+            "fontSize": 14,
+            "color": "#a6aab2"
+          },
+          "id": "wb52280f50-1878-11e9-b171-9bbb680aa2ed12"
+        }
+      },
+      "id": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242",
+      "lastIndex": 0,
+      "fatherId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+      "widgetId": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+      "group": true
+    }
+  },
+  "forkDependencies": [],
+  "mainDependencies": [
+    {
+      "module": "@lugia/lugia-web",
+      "widgetName": "Card",
+      "version": "1.0.0"
+    },
+    {
+      "widgetName": "box",
+      "module": "@lugia/lugia-web-html",
+      "version": "1.0.0",
+      "props": {
+        "width": 504,
+        "height": 47
+      }
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web-html",
+      "widgetName": "label"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Table"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Pagination"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Button"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Input"
+    }
+  ],
+  "forkPad": {
+    "point": [
+      -1660,
+      -2031
+    ],
+    "width": 5000,
+    "index": 0,
+    "height": 5000,
+    "zIndex": 4000,
+    "type": "ForkPad",
+    "layers": [],
+    "idSeq": 33,
+    "widgetId2RangeId": {},
+    "id2WidgetInfo": {},
+    "id": "polarbear66488dc0-17d3-11e9-bb21-754a2cde60630",
+    "lastIndex": 13,
+    "group": false
+  },
+  "mainPad": {
+    "point": [
+      157,
+      -71
+    ],
+    "width": 1366,
+    "index": 0,
+    "height": 1080,
+    "zIndex": 4000,
+    "type": "MainPad",
+    "layers": [
+      {
+        "id": "layer434",
+        "zIndex": 0,
+        "width": 1201,
+        "height": 656,
+        "point": [
+          90.96428571428578,
+          395.02777777777794
+        ],
+        "widgetId": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630"
+      },
+      {
+        "id": "layer477",
+        "zIndex": 0,
+        "width": 1200,
+        "height": 240,
+        "point": [
+          89,
+          128
+        ],
+        "widgetId": "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+      },
+      {
+        "id": "layer545",
+        "zIndex": 0,
+        "width": 504,
+        "height": 47,
+        "point": [
+          91,
+          35
+        ],
+        "widgetId": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0"
+      }
+    ],
+    "idSeq": 551,
+    "widgetId2RangeId": {
+      "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": "layer434",
+      "wb8d669780-17d3-11e9-bb21-754a2cde60631": "layer477",
+      "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0": "layer545"
+    },
+    "id2WidgetInfo": {
+      "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+        "widgetName": "MonkeyKing",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello0",
+          "children": "12",
+          "width": 400,
+          "height": 400,
+          "TargetContainer": {
+            "module": "@lugia/lugia-web",
+            "widgetName": "Card",
+            "version": "1.0.0"
+          },
+          "title": "",
+          "value": "12"
+        },
+        "id": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+        "childAreaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632"
+      },
+      "wb8d669780-17d3-11e9-bb21-754a2cde60631": {
+        "widgetName": "MonkeyKing",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
+          "defaultValue": "hello2",
+          "children": "",
+          "width": 400,
+          "height": 400,
+          "TargetContainer": {
+            "module": "@lugia/lugia-web",
+            "widgetName": "Card",
+            "version": "1.0.0"
+          },
+          "value": "",
+          "title": ""
+        },
+        "id": "wb8d669780-17d3-11e9-bb21-754a2cde60631",
+        "childAreaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635"
+      },
+      "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0": {
+        "isGroup": true,
+        "id": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+        "widgetName": "MonkeyKing",
+        "module": "@lugia/lugia-design",
+        "version": "1.0.0",
+        "props": {
+          "width": 504,
+          "height": 47,
+          "TargetContainer": {
+            "widgetName": "box",
+            "module": "@lugia/lugia-web-html",
+            "version": "1.0.0",
+            "props": {
+              "width": 504,
+              "height": 47
+            }
+          }
+        },
+        "childAreaId": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242"
+      }
+    },
+    "id": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+    "lastIndex": 14,
+    "group": false,
+    "children": [
+      {
+        "widgetId": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+        "path": [
+          "@root"
+        ]
+      },
+      {
+        "widgetId": "wb8d669780-17d3-11e9-bb21-754a2cde60631",
+        "path": [
+          "@root"
+        ],
+        "children": [
+          {
+            "widgetId": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          },
+          {
+            "widgetId": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740",
+            "path": [
+              "@root",
+              "wb8d669780-17d3-11e9-bb21-754a2cde60631"
+            ]
+          }
+        ]
+      },
+      {
+        "widgetId": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+        "path": [
+          "@root"
+        ]
+      }
+    ],
+    "backgroudColor": "#f5f5f9"
+  },
+  "themes": {
+    "widgetId2ThemeInfo": {
+      "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+        "width": 1201,
+        "height": 656
+      },
+      "wb8d669780-17d3-11e9-bb21-754a2cde60631": {
+        "width": 1200,
+        "height": 240
+      },
+      "wb97208560-17d3-11e9-bb21-754a2cde60630": {
+        "width": 1100,
+        "height": 780
+      },
+      "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": {
+        "width": 300,
+        "height": 32
+      },
+      "wb5d087f40-17dd-11e9-a9b6-31087639c9171": {
+        "width": 300
+      },
+      "wbdd092260-17df-11e9-8805-81783b379d675": {
+        "width": 300,
+        "height": 32
+      },
+      "wb89a5e500-17de-11e9-bdb2-a94cb2be29864": {
+        "width": 300,
+        "height": 32
+      },
+      "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": {
+        "width": 300,
+        "height": 32
+      },
+      "wb2f848d40-17e0-11e9-8805-81783b379d670": {
+        "width": 300,
+        "height": 32
+      },
+      "wb41896fb0-17e0-11e9-8805-81783b379d671": {
+        "width": 300,
+        "height": 32
+      },
+      "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
+        "width": 1176,
+        "height": 103
+      },
+      "wbe4eb74a0-17e0-11e9-8805-81783b379d674": {
+        "width": 64,
+        "height": 18
+      },
+      "wb528f23e0-17db-11e9-951e-c92465ba60ea4": {
+        "width": 316,
+        "height": 28
+      },
+      "wb5cb72390-17e0-11e9-8805-81783b379d678": {
+        "width": 0,
+        "height": 0
+      },
+      "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5": {
+        "width": 48,
+        "height": 18
+      },
+      "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": {
+        "width": 106,
+        "height": 32
+      },
+      "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": {
+        "width": 66,
+        "height": 32
+      },
+      "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": {
+        "width": 24,
+        "height": 14
+      },
+      "wbf1e20c60-17df-11e9-8805-81783b379d679": {
+        "width": 25,
+        "height": 14
+      },
+      "wb2db2da80-17e0-11e9-8805-81783b379d676": {
+        "width": 25,
+        "height": 14
+      },
+      "wb3f1cb570-17e0-11e9-8805-81783b379d677": {
+        "width": 25,
+        "height": 14
+      },
+      "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": {
+        "width": 25,
+        "height": 14
+      },
+      "wb828873f0-17de-11e9-bdb2-a94cb2be29860": {
+        "width": 24,
+        "height": 14
+      },
+      "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": {
+        "width": 72,
+        "height": 21
+      },
+      "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": {
+        "width": 504,
+        "height": 16
+      },
+      "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": {
+        "width": 300,
+        "height": 32
+      },
+      "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": {
+        "width": 24,
+        "height": 14
+      },
+      "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": {
+        "width": 300,
+        "height": 32
+      },
+      "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": {
+        "width": 25,
+        "height": 14
+      },
+      "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": {
+        "width": 300,
+        "height": 32
+      },
+      "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": {
+        "width": 25,
+        "height": 14
+      },
+      "wb_group_cef46810-59d9-11e9-a891-a7a3e38db44b3": {
+        "width": 342.6590909090909,
+        "height": 32
+      },
+      "wb_group_cc12f300-59d9-11e9-a891-a7a3e38db44b2": {
+        "width": 341.4921085858589,
+        "height": 32
+      },
+      "wb_group_d03d14b0-59d9-11e9-a891-a7a3e38db44b4": {
+        "width": 339.10714285714323,
+        "height": 32
+      }
+    }
+  },
+  "lugiax": {
+    "widgetId2PropsName2BindInfo": {
+      "wb97208560-17d3-11e9-bb21-754a2cde60630": {
+        "value": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "value"
+        },
+        "data": {
+          "modelName": "user",
+          "fieldName": "data",
+          "propsName": "data"
+        },
+        "children": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "children"
+        },
+        "disabled": {
+          "modelName": "user",
+          "fieldName": "disabled",
+          "propsName": "disabled"
+        }
+      },
+      "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+        "value": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "value"
+        },
+        "data": {
+          "modelName": "user",
+          "fieldName": "data",
+          "propsName": "data"
+        },
+        "children": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "children"
+        },
+        "pageSize": {
+          "modelName": "user",
+          "fieldName": "pageInfo.pageSize",
+          "propsName": "pageSize"
+        },
+        "page": {
+          "modelName": "user",
+          "fieldName": "pageInfo.page",
+          "propsName": "page"
+        },
+        "total": {
+          "modelName": "user",
+          "fieldName": "pageInfo.total",
+          "propsName": "total"
+        },
+        "disabled": {
+          "modelName": "user",
+          "fieldName": "disabled",
+          "propsName": "disabled"
+        }
+      },
+      "wb528f23e0-17db-11e9-951e-c92465ba60ea4": {
+        "value": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "value"
+        },
+        "data": {
+          "modelName": "user",
+          "fieldName": "data",
+          "propsName": "data"
+        },
+        "children": {
+          "modelName": "user",
+          "fieldName": "name",
+          "propsName": "children"
+        },
+        "pageSize": {
+          "modelName": "user",
+          "fieldName": "pageInfo.pageSize",
+          "propsName": "pageSize"
+        },
+        "page": {
+          "modelName": "user",
+          "fieldName": "pageInfo.page",
+          "propsName": "page"
+        },
+        "total": {
+          "modelName": "user",
+          "fieldName": "pageInfo.total",
+          "propsName": "total"
+        },
+        "disabled": {
+          "modelName": "user",
+          "fieldName": "disabled",
+          "propsName": "disabled"
+        }
+      }
+    },
+    "widgetId2EventName2MutationInfo": {
+      "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+        "onClick": {
+          "modelName": "user",
+          "eventName": "onClick",
+          "mutationName": "login"
+        }
+      }
+    }
+  },
+  "widgetId2Locked": {
+    "w1": {
+      "type": "Normal"
+    },
+    "w2": {
+      "type": "Normal"
+    },
+    "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": {
+      "type": "Deep"
+    },
+    "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": {
+      "type": "Deep"
+    },
+    "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": {
+      "type": "Deep"
+    },
+    "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": {
+      "type": "Deep"
+    },
+    "wb89a5e500-17de-11e9-bdb2-a94cb2be29864": {
+      "type": "Deep"
+    },
+    "wbf1e20c60-17df-11e9-8805-81783b379d679": {
+      "type": "Deep"
+    },
+    "wb2f848d40-17e0-11e9-8805-81783b379d670": {
+      "type": "Deep"
+    },
+    "wb2db2da80-17e0-11e9-8805-81783b379d676": {
+      "type": "Deep"
+    },
+    "wb41896fb0-17e0-11e9-8805-81783b379d671": {
+      "type": "Deep"
+    },
+    "wb3f1cb570-17e0-11e9-8805-81783b379d677": {
+      "type": "Deep"
+    },
+    "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": {
+      "type": "Deep"
+    },
+    "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": {
+      "type": "Deep"
+    },
+    "wbdd092260-17df-11e9-8805-81783b379d675": {
+      "type": "Deep"
+    },
+    "wb828873f0-17de-11e9-bdb2-a94cb2be29860": {
+      "type": "Deep"
+    },
+    "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": {
+      "type": "Deep"
+    },
+    "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": {
+      "type": "Deep"
+    },
+    "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": {
+      "type": "Deep"
+    },
+    "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": {
+      "type": "Deep"
+    },
+    "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": {
+      "type": "Deep"
+    },
+    "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": {
+      "type": "Deep"
+    },
+    "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": {
+      "type": "Deep"
+    },
+    "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": {
+      "type": "Deep"
+    }
+  },
+  "layoutInfos": {
+    "mode2Config": {
+      "1366x1080": {
+        "mainPadSize": {
+          "width": 1366,
+          "height": 1080
+        },
+        "widthRange": [
+          0,
+          50000
+        ],
+        "scale": 0.86,
+        "forkPadPoint": [
+          -1660,
+          -2031
+        ]
+      },
+      "1024x768": {
+        "mainPadSize": {
+          "width": 1024,
+          "height": 768
+        },
+        "widthRange": [
+          0,
+          50000
+        ],
+        "scale": 1.22,
+        "forkPadPoint": [
+          -1660,
+          -2031
+        ]
+      }
+    },
+    "mode2LayoutData": {
+      "1366x1080": {
+        "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+          "height": 656,
+          "width": 1201,
+          "point": [
+            90.96428571428578,
+            395.02777777777794
+          ]
+        },
+        "wb8d669780-17d3-11e9-bb21-754a2cde60631": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb8d669780-17d3-11e9-bb21-754a2cde60631",
+          "height": 240,
+          "width": 1200,
+          "point": [
+            89,
+            128
+          ]
+        },
+        "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+          "height": 47,
+          "width": 504,
+          "point": [
+            91,
+            35
+          ]
+        },
+        "wbe4eb74a0-17e0-11e9-8805-81783b379d674": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wbe4eb74a0-17e0-11e9-8805-81783b379d674",
+          "height": 18,
+          "width": 64,
+          "point": [
+            33.988095238095696,
+            24.623015873015902
+          ]
+        },
+        "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wbd79bb5d0-17e0-11e9-8805-81783b379d6710",
+          "height": 103,
+          "width": 1176,
+          "point": [
+            8,
+            69
+          ]
+        },
+        "wb528f23e0-17db-11e9-951e-c92465ba60ea4": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wb528f23e0-17db-11e9-951e-c92465ba60ea4",
+          "height": 28,
+          "width": 316,
+          "point": [
+            34,
+            617
+          ]
+        },
+        "wb5cb72390-17e0-11e9-8805-81783b379d678": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb5cb72390-17e0-11e9-8805-81783b379d678",
+          "height": 0,
+          "width": 0,
+          "point": [
+            42.83730158730225,
+            14.96031746031747
+          ]
+        },
+        "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5",
+          "height": 18,
+          "width": 48,
+          "point": [
+            26.315744573420034,
+            18.031475468975827
+          ]
+        },
+        "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 189,
+          "point": [
+            991,
+            195
+          ]
+        },
+        "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 340,
+          "point": [
+            433,
+            64
+          ]
+        },
+        "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+          "height": 32,
+          "width": 340,
+          "point": [
+            833,
+            65
+          ]
+        },
+        "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 340,
+          "point": [
+            834,
+            129
+          ]
+        },
+        "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+          "height": 32,
+          "width": 337,
+          "point": [
+            36,
+            65
+          ]
+        },
+        "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+          "height": 32,
+          "width": 337,
+          "point": [
+            36,
+            129
+          ]
+        },
+        "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 337,
+          "point": [
+            435,
+            129
+          ]
+        },
+        "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": {
+          "areaId": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154",
+          "widgetId": "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863",
+          "height": 32,
+          "width": 106,
+          "point": [
+            0,
+            0
+          ]
+        },
+        "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": {
+          "areaId": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154",
+          "widgetId": "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6",
+          "height": 32,
+          "width": 66,
+          "point": [
+            123,
+            0
+          ]
+        },
+        "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": {
+          "areaId": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243",
+          "widgetId": "wbc2e09890-17d6-11e9-b988-bb6d65be56e63",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": {
+          "areaId": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243",
+          "widgetId": "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            6
+          ]
+        },
+        "wbdd092260-17df-11e9-8805-81783b379d675": {
+          "areaId": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248",
+          "widgetId": "wbdd092260-17df-11e9-8805-81783b379d675",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wb828873f0-17de-11e9-bdb2-a94cb2be29860": {
+          "areaId": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248",
+          "widgetId": "wb828873f0-17de-11e9-bdb2-a94cb2be29860",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            9
+          ]
+        },
+        "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": {
+          "areaId": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247",
+          "widgetId": "wb8fea8240-17de-11e9-bdb2-a94cb2be29865",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": {
+          "areaId": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247",
+          "widgetId": "wb14e9f1a0-17e0-11e9-8805-81783b379d6710",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            9
+          ]
+        },
+        "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": {
+          "areaId": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242",
+          "widgetId": "wb30f04110-1876-11e9-b171-9bbb680aa2ed4",
+          "height": 21,
+          "width": 72,
+          "point": [
+            1,
+            0
+          ]
+        },
+        "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": {
+          "areaId": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242",
+          "widgetId": "wb52280f50-1878-11e9-b171-9bbb680aa2ed12",
+          "height": 16,
+          "width": 504,
+          "point": [
+            0,
+            31
+          ]
+        }
+      },
+      "1024x768": {
+        "wb67fbbc00-17d3-11e9-bb21-754a2cde60630": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb67fbbc00-17d3-11e9-bb21-754a2cde60630",
+          "height": 363,
+          "width": 908,
+          "point": [
+            59,
+            387
+          ]
+        },
+        "wb8d669780-17d3-11e9-bb21-754a2cde60631": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb8d669780-17d3-11e9-bb21-754a2cde60631",
+          "height": 240,
+          "width": 908,
+          "point": [
+            58,
+            124
+          ]
+        },
+        "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0": {
+          "areaId": "polarbear66488dc1-17d3-11e9-bb21-754a2cde60631",
+          "widgetId": "wb_group_c7d4d420-59d9-11e9-a891-a7a3e38db44b0",
+          "height": 47,
+          "width": 504,
+          "point": [
+            59,
+            25
+          ]
+        },
+        "wbe4eb74a0-17e0-11e9-8805-81783b379d674": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wbe4eb74a0-17e0-11e9-8805-81783b379d674",
+          "height": 18,
+          "width": 64,
+          "point": [
+            33.988095238095696,
+            24.623015873015902
+          ]
+        },
+        "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wbd79bb5d0-17e0-11e9-8805-81783b379d6710",
+          "height": 103,
+          "width": 884,
+          "point": [
+            13,
+            55
+          ]
+        },
+        "wb528f23e0-17db-11e9-951e-c92465ba60ea4": {
+          "areaId": "polarbear68408d30-17d3-11e9-bb21-754a2cde60632",
+          "widgetId": "wb528f23e0-17db-11e9-951e-c92465ba60ea4",
+          "height": 28,
+          "width": 316,
+          "point": [
+            294,
+            308
+          ]
+        },
+        "wb5cb72390-17e0-11e9-8805-81783b379d678": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb5cb72390-17e0-11e9-8805-81783b379d678",
+          "height": 0,
+          "width": 0,
+          "point": [
+            42.83730158730225,
+            14.96031746031747
+          ]
+        },
+        "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb6e1b9620-1876-11e9-b171-9bbb680aa2ed5",
+          "height": 18,
+          "width": 48,
+          "point": [
+            26.315744573420034,
+            18.031475468975827
+          ]
+        },
+        "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_1a775340-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 189,
+          "point": [
+            701,
+            196
+          ]
+        },
+        "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy7d812d30-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 340,
+          "point": [
+            519,
+            93
+          ]
+        },
+        "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_d1728770-59d9-11e9-a891-a7a3e38db44b5",
+          "height": 32,
+          "width": 340,
+          "point": [
+            519,
+            49
+          ]
+        },
+        "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy80586910-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 340,
+          "point": [
+            519,
+            136
+          ]
+        },
+        "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_caf2dd00-59d9-11e9-a891-a7a3e38db44b1",
+          "height": 32,
+          "width": 337,
+          "point": [
+            32,
+            49
+          ]
+        },
+        "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_group_d2dfd310-59d9-11e9-a891-a7a3e38db44b6",
+          "height": 32,
+          "width": 337,
+          "point": [
+            32,
+            95
+          ]
+        },
+        "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740": {
+          "areaId": "polarbear8da8f7b0-17d3-11e9-bb21-754a2cde60635",
+          "widgetId": "wb_copy778d6f10-5b80-11e9-8060-cb9154c8d1740",
+          "height": 32,
+          "width": 337,
+          "point": [
+            32,
+            141
+          ]
+        },
+        "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863": {
+          "areaId": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154",
+          "widgetId": "wb8708cbf0-17de-11e9-bdb2-a94cb2be29863",
+          "height": 32,
+          "width": 98,
+          "point": [
+            0,
+            0
+          ]
+        },
+        "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6": {
+          "areaId": "polarbear1a829de0-5b80-11e9-8060-cb9154c8d174154",
+          "widgetId": "wbb0e22910-1876-11e9-b171-9bbb680aa2ed6",
+          "height": 32,
+          "width": 66,
+          "point": [
+            123,
+            0
+          ]
+        },
+        "wbc2e09890-17d6-11e9-b988-bb6d65be56e63": {
+          "areaId": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243",
+          "widgetId": "wbc2e09890-17d6-11e9-b988-bb6d65be56e63",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62": {
+          "areaId": "polarbearcafa7e20-59d9-11e9-a891-a7a3e38db44b243",
+          "widgetId": "wbbbe862c0-17d6-11e9-b988-bb6d65be56e62",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            6
+          ]
+        },
+        "wbdd092260-17df-11e9-8805-81783b379d675": {
+          "areaId": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248",
+          "widgetId": "wbdd092260-17df-11e9-8805-81783b379d675",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wb828873f0-17de-11e9-bdb2-a94cb2be29860": {
+          "areaId": "polarbeard2e81070-59d9-11e9-a891-a7a3e38db44b248",
+          "widgetId": "wb828873f0-17de-11e9-bdb2-a94cb2be29860",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            9
+          ]
+        },
+        "wb8fea8240-17de-11e9-bdb2-a94cb2be29865": {
+          "areaId": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247",
+          "widgetId": "wb8fea8240-17de-11e9-bdb2-a94cb2be29865",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb14e9f1a0-17e0-11e9-8805-81783b379d6710": {
+          "areaId": "polarbeard17b3a00-59d9-11e9-a891-a7a3e38db44b247",
+          "widgetId": "wb14e9f1a0-17e0-11e9-8805-81783b379d6710",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy778d9620-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            37,
+            0
+          ]
+        },
+        "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy778d6f12-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy778d9622-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 24,
+          "point": [
+            0,
+            9
+          ]
+        },
+        "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy7d812d33-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy7d812d32-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy7d812d35-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741": {
+          "areaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy80586913-5b80-11e9-8060-cb9154c8d1741",
+          "height": 32,
+          "width": 300,
+          "point": [
+            40,
+            0
+          ]
+        },
+        "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742": {
+          "areaId": "polar_copy80586912-5b80-11e9-8060-cb9154c8d1740",
+          "widgetId": "wb_copy80586915-5b80-11e9-8060-cb9154c8d1742",
+          "height": 14,
+          "width": 25,
+          "point": [
+            0,
+            10
+          ]
+        },
+        "wb30f04110-1876-11e9-b171-9bbb680aa2ed4": {
+          "areaId": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242",
+          "widgetId": "wb30f04110-1876-11e9-b171-9bbb680aa2ed4",
+          "height": 21,
+          "width": 72,
+          "point": [
+            1,
+            0
+          ]
+        },
+        "wb52280f50-1878-11e9-b171-9bbb680aa2ed12": {
+          "areaId": "polarbearc7d52240-59d9-11e9-a891-a7a3e38db44b242",
+          "widgetId": "wb52280f50-1878-11e9-b171-9bbb680aa2ed12",
+          "height": 16,
+          "width": 504,
+          "point": [
+            0,
+            31
+          ]
+        }
+      }
+    }
+  }
+}
