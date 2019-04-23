@@ -1,0 +1,26 @@
+{
+  "lerna": "2.11.0",
+  "changelog": {
+    "repo": "lugia/@lugia/devtools-conversion",
+    "labels": {
+      "new feature": ":rocket: New Feature",
+      "breaking change": ":boom: Breaking Change",
+      "bug": ":bug: Bug Fix",
+      "enhancement": ":nail_care: Enhancement",
+      "documentation": ":memo: Documentation"
+    },
+    "cacheDir": ".changelog"
+  },
+  "commands": {
+    "publish": {
+      "access": "target",
+      "ignore": [
+        "lugiax-example*"
+      ]
+    }
+  },
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent"
+}
