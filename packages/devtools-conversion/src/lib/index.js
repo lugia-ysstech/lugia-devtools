@@ -4,9 +4,9 @@
  *
  * @flow
  */
-import { createHeader, getModelCode, } from './header';
-import { createComponent, createLayerComponent, } from './createClass';
-import { unZip, } from '../design/file/zip';
+import { createHeader, getModelCode } from './header';
+import { createComponent, createLayerComponent } from './createClass';
+import { unZip } from '../design/file/zip';
 
 const stateHeader = `const getData = (state, propsName, modelName, fieldName)=>{
     const model = state[ modelName ];
@@ -61,19 +61,19 @@ export default function conversion(page: Object): string {
     return exportCode;
   }
   const widgetId2Component = {};
-  const { zip, } = page;
+  const { zip } = page;
   if (zip) {
     page = unZip(JSON.stringify(page));
   }
-  const { mainDependencies = [], layoutInfos = {}, } = page;
-  const { mode2Config, mode2LayoutData, } = layoutInfos;
-  const isResponsive = Object.keys(mode2Config || {}).length > 0;
-  const { packages, styledComponentCode, } = createHeader(
+  const { mainDependencies = [], layoutInfos = {} } = page;
+  const { mode2Config, mode2LayoutData } = layoutInfos;
+  const isResponsive = Object.keys(mode2Config || {}).length > 1;
+  const { packages, styledComponentCode } = createHeader(
     mainDependencies,
     widgetId2Component
   );
-  const { mainPad, widgetId2ChildPad, lugiax = {}, themes = {}, } = page;
-  const { children, layers, id2WidgetInfo, width, zIndex, } = mainPad;
+  const { mainPad, widgetId2ChildPad, lugiax = {}, themes = {} } = page;
+  const { children, layers, id2WidgetInfo, width, zIndex } = mainPad;
   const modelCode = getModelCode(lugiax);
   const classCode = createComponent(
     children,
@@ -82,7 +82,7 @@ export default function conversion(page: Object): string {
     themes,
     widgetId2Component
   );
-  const { layerCode, layerBindCode, } = createLayerComponent(
+  const { layerCode, layerBindCode } = createLayerComponent(
     layers,
     id2WidgetInfo,
     lugiax,
