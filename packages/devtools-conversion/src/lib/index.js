@@ -6,7 +6,7 @@
  */
 import { createHeader, getModelCode } from './header';
 import { createComponent, createLayerComponent } from './createClass';
-import { unZip } from '../design/file/zip';
+import { unZip } from '../../../devtools-core/src/lib';
 
 const stateHeader = `const getData = (state, propsName, modelName, fieldName)=>{
     const model = state[ modelName ];
