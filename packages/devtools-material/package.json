@@ -3,7 +3,8 @@
   "version": "1.0.6",
   "dependencies": {
     "@lugia/lugiax-core": "^1.0.5",
-    "immutable": "^3.8.2"
+    "immutable": "^3.8.2",
+    "yargs": "^13.2.2"
   },
   "peerDependencies": {
     "react": ">16.0.0",
@@ -19,8 +20,12 @@
     "start": "node scripts/start.js",
     "flow": "flow"
   },
+  "bin": {
+    "lugia-create-info": "./bin/create.js"
+  },
   "files": [
     "target",
+    "bin",
     "package.json"
   ],
   "babel": {

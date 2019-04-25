@@ -28,14 +28,14 @@ const path = require('path');
 //   'design-responsive',
 // ];
 const fileRelativePath = '../src/widgets';
-createDesignInfo();
+// createDesignInfo();
 
-// function getPath(folderName: string) {
-//   return path.join(__dirname, folderName);
-// }
+function getPath(url: string, folderName: string): string {
+  return path.join(url, folderName);
+}
 function getTargetPath(targetPath: string): string {
   const url = targetPath || fileRelativePath;
-  return path.join(__dirname, url);
+  return path.join(url);
 }
 async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
   return fs
@@ -110,21 +110,18 @@ export async function createDesignInfo(
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
 
-    return (
-      getComponent(widgetNames, folderNames, outExtend) +
-      'export default { ' +
-      designInfo +
-      ' };'
-    );
-    // try {
-    //   const designData =
-    //     getComponent(widgetNames, folderNames, outExtend) + 'export default { ' + designInfo + ' };';
-    //   const designPath = getPath('../src/widgets/designInfo.js');
-    //   await fs.writeFileSync(designPath, designData);
-    // } catch (err) {
-    //   console.log('写入文件 designInfo 失败  X');
-    //   return;
-    // }
+    try {
+      const designData =
+        getComponent(widgetNames, folderNames, outExtend) +
+        'export default { ' +
+        designInfo +
+        ' };';
+      const designPath = getPath(targetPath, 'designInfo.js');
+      await fs.writeFileSync(designPath, designData);
+    } catch (err) {
+      console.log('写入文件 designInfo 失败  X');
+      return;
+    }
   } catch (e) {
     console.log('%s 异常  X', e);
   }

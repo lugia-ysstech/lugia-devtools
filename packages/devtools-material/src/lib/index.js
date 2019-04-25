@@ -5,4 +5,4 @@
  * @flow
  */
 import { createDesignInfo } from './create';
-export default createDesignInfo;
+export { createDesignInfo };
