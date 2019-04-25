@@ -5,9 +5,6 @@
  * @flow
  */
 import { widgetIdInLugiax } from '../lib/widgetIdInLugiax';
-import chai from 'chai';
-
-const { expect } = chai;
 
 describe('conversion widgetIdInLugiax ->', () => {
   const target = {

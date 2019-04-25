@@ -1,4 +1,4 @@
-/**
+/*
  *
  * create by guorg
  *
@@ -13,12 +13,12 @@ export function createThemeCode(
   let viewClass = '';
   let configString = '';
   if (!widgetId2ThemeInfo) {
-    return { labelStart, labelEnd, viewClass, };
+    return { labelStart, labelEnd, viewClass };
   }
   if (widgetId2ThemeInfo && id) {
     const theme = widgetId2ThemeInfo[id];
     if (theme) {
-      const { config, configStr, } = getThemeConfig(theme, id);
+      const { config, configStr } = getThemeConfig(theme, id);
       labelStart = `<Theme config={{${config}}}>`;
       configString = configStr;
       labelEnd = '</Theme>';
@@ -26,7 +26,7 @@ export function createThemeCode(
     }
   }
 
-  return { labelStart, labelEnd, viewClass, configString, };
+  return { labelStart, labelEnd, viewClass, configString };
 }
 
 export function getThemeConfig(theme: Object, id: string): string {
@@ -34,10 +34,12 @@ export function getThemeConfig(theme: Object, id: string): string {
   let config = '';
   let configStr = '';
   if (themes && themes.length > 0) {
-    themes.forEach(item => {
-      configStr = `${configStr} ${item}: ${theme[item]},`;
-    });
+    themes.forEach(
+      (item: Object): Object => {
+        configStr = `${configStr} ${item}: ${theme[item]},`;
+      }
+    );
     config = `'${id}' :{ ${configStr} }`;
   }
-  return { config, configStr, };
+  return { config, configStr };
 }

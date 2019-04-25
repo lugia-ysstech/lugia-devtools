@@ -4,13 +4,15 @@
  *
  * @flow
  */
-import { createBindCode, createConnectCode, } from './createBindCode';
+import { createBindCode, createConnectCode } from './createBindCode';
 
 type LugiaxType = {
   inLugiax: boolean,
   lugiaxCode: string,
   componentName: ?string
 };
+
+type LugiaxCodeType = { code: string, componentName: string };
 
 export function widgetIdInLugiax(
   id: ?string,
@@ -44,7 +46,7 @@ export function widgetIdInLugiax(
     index
   );
   if (bindInfoCode) {
-    const { code, componentName, } = bindInfoCode;
+    const { code, componentName } = bindInfoCode;
     lastComponentName = componentName;
     lugiaxCode.push(code);
   }
@@ -56,7 +58,7 @@ export function widgetIdInLugiax(
     index
   );
   if (connectInfoCode) {
-    const { code, componentName, } = connectInfoCode;
+    const { code, componentName } = connectInfoCode;
     lugiaxCode.push(code);
     lastComponentName = componentName;
   }
@@ -67,23 +69,29 @@ export function widgetIdInLugiax(
   };
 }
 
-type LugiaxCode = { code: string, componentName: string };
+const filterBy = (info: Object[], type: string): Object[] =>
+  info.filter(
+    (item: Object): boolean => {
+      const { bindType = 'connect' } = item;
+      return bindType === type;
+    }
+  );
 
 function getBindInfoCode(
   info: Object[],
   cmpName: string,
   mutationItem: Object[],
   index: number | string
-): ?LugiaxCode {
+): ?LugiaxCodeType {
   const bindItem = filterBy(info, 'bind');
   if (bindItem && bindItem.length > 0) {
-    const { bindCode, componentName, } = createBindCode(
+    const { bindCode, componentName } = createBindCode(
       bindItem,
       cmpName,
       mutationItem,
       index
     );
-    return { code: bindCode, componentName, };
+    return { code: bindCode, componentName };
   }
   return null;
 }
@@ -93,22 +101,16 @@ function getConnectInfoCode(
   cmpName: string,
   mutationItem: Object,
   index: number | string
-): ?LugiaxCode {
+): ?LugiaxCodeType {
   const connectItem = filterBy(info, 'connect');
   if ((connectItem && connectItem.length > 0) || mutationItem.length > 0) {
-    const { connectCode, componentName, } = createConnectCode(
+    const { connectCode, componentName } = createConnectCode(
       connectItem,
       cmpName,
       mutationItem,
       index
     );
-    return { code: connectCode, componentName, };
+    return { code: connectCode, componentName };
   }
   return null;
 }
-
-const filterBy = (info: Object[], type: string) =>
-  info.filter(item => {
-    const { bindType = 'connect', } = item;
-    return bindType === type;
-  });

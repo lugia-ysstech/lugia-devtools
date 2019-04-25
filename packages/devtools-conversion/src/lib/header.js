@@ -4,8 +4,8 @@
  *
  * @flow
  */
-import { camelNamed, } from './utils';
-import type { HeaderType, } from '@lugia/devtools-conversion';
+import { camelNamed } from './utils';
+import type { HeaderType } from '@lugia/devtools-conversion';
 
 export function createHeader(
   mainDependencies: ?(Object[]),
@@ -20,10 +20,10 @@ export function createHeader(
   let styledComponentCode = '';
 
   if (!mainDependencies || mainDependencies.length < 1) {
-    return { packages, styledComponentCode, };
+    return { packages, styledComponentCode };
   }
-  mainDependencies.forEach(item => {
-    const { widgetName, module, } = item;
+  mainDependencies.forEach((item: Object) => {
+    const { widgetName, module } = item;
     const componentName = camelNamed(widgetName);
     if (module === '@lugia/lugia-web-html') {
       styledComponentCode =
@@ -47,7 +47,7 @@ export function createHeader(
     }
   });
 
-  return { packages, styledComponentCode, };
+  return { packages, styledComponentCode };
 }
 export function getModelCode(lugiax: ?Object): string {
   let code = '';
@@ -62,10 +62,10 @@ export function getModelCode(lugiax: ?Object): string {
 
   const propsModel = getTargetModal(widgetId2PropsName2BindInfo);
   const eventModal = getTargetModal(widgetId2EventName2MutationInfo);
-  modelName = [...propsModel, ...eventModal,];
+  modelName = [ ...propsModel, ...eventModal ];
   if (modelName.length > 0) {
-    modelName = [...new Set(modelName),];
-    modelName.forEach(model => {
+    modelName = [ ...new Set(modelName) ];
+    modelName.forEach((model: string) => {
       code = code + `import ${model} from '../models/${model}';`;
     });
   }
@@ -80,10 +80,10 @@ export function getTargetModal(target: ?Object): any[] {
   if (!targetKeys || targetKeys.length < 1) {
     return keys;
   }
-  targetKeys.forEach(targetItem => {
+  targetKeys.forEach((targetItem: string) => {
     const targetValue = target && target[targetItem];
     const value = Object.values(targetValue);
-    value.forEach(item => {
+    value.forEach((item: Object) => {
       item && item.modelName && keys.push(item.modelName);
     });
   });

@@ -5,9 +5,6 @@
  * @flow
  */
 import { createThemeCode, getThemeConfig } from '../lib/theme';
-import chai from 'chai';
-
-const { expect } = chai;
 
 describe('conversion createClass ->', () => {
   it('createThemeCode', () => {

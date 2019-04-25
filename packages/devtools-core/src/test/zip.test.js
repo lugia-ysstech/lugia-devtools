@@ -4,14 +4,12 @@
  *
  * @flow
  */
-import chai from 'chai';
+
 import { unZip, unZipCopyData, zip, zipCopyData } from '../lib';
 import LayoutFile from './LayoutFile';
 import LayoutFileZip from './LayoutFileZip';
 import CopyDataZip from './copydata_zip';
 import CopyData from './copydata';
-
-const { expect } = chai;
 
 describe('zip.test', () => {
   it('zip', () => {

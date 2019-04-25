@@ -5,9 +5,6 @@
  * @flow
  */
 import { camelNamed, recursiveChildren } from '../lib/utils';
-import chai from 'chai';
-
-const { expect } = chai;
 
 const data = [
   {

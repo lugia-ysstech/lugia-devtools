@@ -6,9 +6,6 @@
  */
 
 import { getTargetModal, getModelCode, createHeader } from '../lib/header';
-import chai from 'chai';
-
-const { expect } = chai;
 
 describe('conversion header ->', () => {
   const target = {

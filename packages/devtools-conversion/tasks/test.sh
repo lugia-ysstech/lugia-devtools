@@ -5,5 +5,5 @@ echo "$root_path"
 
 lugiac="$root_path/node_modules/.bin/lugia-complie"
 
-cd "$root_path"/packages/lugiax-router
+cd "$root_path"/packages/devtools-conversion
 $lugiac test --watchAll

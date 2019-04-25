@@ -4,21 +4,21 @@
  *
  * @flow
  */
-import { camelNamed, } from './utils';
+import { camelNamed } from './utils';
 
 export function createBindCode(
   bindItem: ?(Object[]),
   componentName: string,
   mutationInfo: Object[],
   index: number | string
-) {
+): Object {
   let bindCode = '';
   let bindCmpName = componentName;
   if (!bindItem || bindItem.length < 1) {
-    return { bindCode, componentName: bindCmpName, };
+    return { bindCode, componentName: bindCmpName };
   }
-  bindItem.forEach(item => {
-    const { modelName, fieldName, propsName, } = item;
+  bindItem.forEach((item: Object) => {
+    const { modelName, fieldName, propsName } = item;
     const BindName = camelNamed(modelName) + fieldName.replace(/./g, '');
     const eventCode = `onChange: { ['${fieldName}'](e){ return bindHandleEvent(e); } }`;
     const theBindName = BindName + index;
@@ -36,7 +36,7 @@ export function createBindCode(
     )(${componentName});`;
   });
 
-  return { bindCode, componentName: bindCmpName, };
+  return { bindCode, componentName: bindCmpName };
 }
 
 export function createConnectCode(
@@ -44,23 +44,23 @@ export function createConnectCode(
   componentName: string,
   mutationInfo: Object[],
   index: number | string
-) {
+): Object {
   let connectCode = '';
   let connectComName = componentName;
   if (
     (!connectItem || connectItem.length < 1) &&
     (!mutationInfo || mutationInfo.length < 1)
   ) {
-    return { connectCode, componentName: connectComName, };
+    return { connectCode, componentName: connectComName };
   }
 
-  const stateCodes = ['state=>{ return {',];
+  const stateCodes = [ 'state=>{ return {' ];
   let mutationsCodes = 'mutations => { return {';
   connectComName = camelNamed(`connect${componentName}${index}`);
   let theModelName = [];
   if (connectItem && connectItem.length > 0) {
-    connectItem.forEach(bindItem => {
-      const { modelName, fieldName, propsName, } = bindItem;
+    connectItem.forEach((bindItem: Object) => {
+      const { modelName, fieldName, propsName } = bindItem;
       theModelName.push(modelName);
       stateCodes.push(`
       ... getData(state, '${propsName}', '${modelName}', '${fieldName}'),
@@ -69,8 +69,8 @@ export function createConnectCode(
   }
   stateCodes.push('}},');
   if (mutationInfo && mutationInfo.length > 0) {
-    mutationInfo.forEach(item => {
-      const { eventName, modelName, mutationName, } = item;
+    mutationInfo.forEach((item: Object) => {
+      const { eventName, modelName, mutationName } = item;
       theModelName.push(modelName);
       mutationsCodes =
         mutationsCodes +
@@ -78,12 +78,12 @@ export function createConnectCode(
     });
   }
   mutationsCodes = mutationsCodes + '}}';
-  theModelName = [...new Set(theModelName),];
+  theModelName = [ ...new Set(theModelName) ];
   connectCode = `const ${connectComName} = connect(
     [${theModelName.join('')}],
     ${stateCodes.join('')}
     ${mutationsCodes}
   )(${componentName});`;
 
-  return { connectCode, componentName: connectComName, };
+  return { connectCode, componentName: connectComName };
 }

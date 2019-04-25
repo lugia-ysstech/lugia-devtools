@@ -2,6 +2,9 @@
   "extends": [
     "eslint-config-egg"
   ],
+  "env": {
+    "jest": true
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"

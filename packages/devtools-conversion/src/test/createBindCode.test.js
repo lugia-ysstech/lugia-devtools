@@ -5,9 +5,6 @@
  * @flow
  */
 import { createBindCode, createConnectCode } from '../lib/createBindCode';
-import chai from 'chai';
-
-const { expect } = chai;
 
 describe('conversion createBindCode ->', () => {
   it('createBindCode', () => {

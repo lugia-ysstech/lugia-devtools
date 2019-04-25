@@ -30,7 +30,7 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "target/**/*.{js,jsx,mjs}"
     ],
     "testMatch": [
       "<rootDir>/target/test/**/*.{js,jsx,mjs}"

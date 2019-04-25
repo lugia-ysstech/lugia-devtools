@@ -13,9 +13,6 @@ import {
   handlePropsType,
   createComponent,
 } from '../lib/createClass';
-import chai from 'chai';
-
-const { expect } = chai;
 
 const data = [
   {
