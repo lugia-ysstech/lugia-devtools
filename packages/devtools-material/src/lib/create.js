@@ -45,8 +45,8 @@ async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
         Invalid.indexOf(folderName) === -1 && folderName.indexOf('.') === -1
     );
 }
-function loadMeta(folderName: string): Object {
-  return require(`${fileRelativePath}/${folderName}/lugia.${folderName}.zh-CN.json`);
+function loadMeta(path: string, folderName: string, metaName: string): Object {
+  return require(`${path}/${folderName}/lugia.${metaName}.zh-CN.json`);
 }
 async function getDemoFolderNames(allPathFile: string[]): string[] {
   const res = [];
@@ -62,11 +62,14 @@ async function getDemoFolderNames(allPathFile: string[]): string[] {
   }
   return res;
 }
-async function getFolderName2Meta(folderNames: string[]): Object {
+async function getFolderName2Meta(
+  targetPath: string,
+  folderNames: string[]
+): Object {
   const metas = {};
   folderNames.forEach((folderName: string, pos: number) => {
     try {
-      metas[folderName] = loadMeta(folderName);
+      metas[folderName] = loadMeta(targetPath, folderName, folderName);
     } catch (error) {
       console.log('(%d) %s 读取元信息失败  X', pos, folderName);
       return;
@@ -85,7 +88,7 @@ export async function createDesignInfo(
   try {
     const allPathFile = await getFolderNames(targetPath, Invalid || []);
     const folderNames = await getDemoFolderNames(allPathFile);
-    const folderName2Meta = await getFolderName2Meta(folderNames);
+    const folderName2Meta = await getFolderName2Meta(targetPath, folderNames);
     console.log('共获取组件[%d]个', allPathFile.length);
     folderNames.forEach((folderName: string) => {
       const meta = folderName2Meta[folderName];
@@ -96,7 +99,12 @@ export async function createDesignInfo(
       const childrenMeta =
         folderName === 'table'
           ? ''
-          : joinChildrenwidgetName(widgetName, folderName, childrenWidget);
+          : joinChildrenWidgetName(
+            widgetName,
+            folderName,
+            childrenWidget,
+            targetPath
+          );
       widgetNames.push(widgetName);
       const commonStr =
         widgetName +
@@ -127,15 +135,17 @@ export async function createDesignInfo(
   }
 }
 
-function joinChildrenwidgetName(
+function joinChildrenWidgetName(
   targetWidgetName: string,
   folderName: string,
-  childrenWidget: string[]
+  childrenWidget: string[],
+  targetPath: string
 ): string {
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
     childrenWidget.forEach((item: string) => {
-      const childrenMeta = require(`${fileRelativePath}/${folderName}/lugia.${item}.zh-CN.json`);
+      // const childrenMeta = require(`${fileRelativePath}/${folderName}/lugia.${item}.zh-CN.json`);
+      const childrenMeta = loadMeta(targetPath, folderName, item);
       const { widgetName, componentName } = childrenMeta;
       // targetWidgetNames.push(widgetName);
       const childrenNeedExport = childrenMeta.needExport;
