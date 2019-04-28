@@ -48,11 +48,14 @@ async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
 function loadMeta(path: string, folderName: string, metaName: string): Object {
   return require(`${path}/${folderName}/lugia.${metaName}.zh-CN.json`);
 }
-async function getDemoFolderNames(allPathFile: string[]): string[] {
+async function getDemoFolderNames(
+  allPathFile: string[],
+  targetPath: string
+): string[] {
   const res = [];
   for (let index = 0; index < allPathFile.length; index++) {
     const folderName = allPathFile[index];
-    const stats = await fs.statSync(getTargetPath());
+    const stats = await fs.statSync(getTargetPath(targetPath));
     const pos = index + 1;
     if (stats.isDirectory()) {
       res.push(folderName);
@@ -87,7 +90,7 @@ export async function createDesignInfo(
   let designInfo = '';
   try {
     const allPathFile = await getFolderNames(targetPath, Invalid || []);
-    const folderNames = await getDemoFolderNames(allPathFile);
+    const folderNames = await getDemoFolderNames(allPathFile, targetPath);
     const folderName2Meta = await getFolderName2Meta(targetPath, folderNames);
     console.log('共获取组件[%d]个', allPathFile.length);
     folderNames.forEach((folderName: string) => {
