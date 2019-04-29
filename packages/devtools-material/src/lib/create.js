@@ -178,7 +178,7 @@ function getComponent(
 ): string {
   if (widgetNames && widgetNames.length > 0) {
     const importInfo = [];
-    const extend = outExtend ? outExtend : '';
+    const extend = outExtend ? `${outExtend}/` : '';
     widgetNames.forEach((item: string, index: number) => {
       importInfo.push(
         `import ${item} from './${extend}${folderNames[index]}';`
