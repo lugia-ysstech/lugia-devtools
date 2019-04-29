@@ -6,7 +6,7 @@
  */
 import { createHeader, getModelCode } from './header';
 import { createComponent, createLayerComponent } from './createClass';
-import { unZip } from '../../../devtools-core/src/lib';
+import { unZip } from '@lugia/devtools-core';
 
 const stateHeader = `const getData = (state, propsName, modelName, fieldName)=>{
     const model = state[ modelName ];
