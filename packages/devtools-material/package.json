@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "dependencies": {
     "@lugia/lugiax-core": "^1.0.0",
+    "babel-runtime": "^6.26.0",
     "immutable": "^3.8.2",
     "yargs": "^13.2.2"
   },
@@ -11,6 +12,9 @@
     "react-dom": ">16.0.0"
   },
   "author": "ysstech",
+  "bin": {
+    "lugia-create": "./bin/create.js"
+  },
   "scripts": {
     "build": "lugia-complie lint && lugia-complie build",
     "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
@@ -19,9 +23,6 @@
     "cov": "lugia-complie cov",
     "start": "node scripts/start.js",
     "flow": "flow"
-  },
-  "bin": {
-    "lugia-create-info": "./bin/create.js"
   },
   "files": [
     "target",
