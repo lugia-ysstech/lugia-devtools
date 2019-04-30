@@ -109,14 +109,7 @@ export async function createDesignInfo(
             targetPath
           );
       widgetNames.push(widgetName);
-      const commonStr =
-        widgetName +
-        ':' +
-        '{ meta: ' +
-        JSON.stringify(meta) +
-        ', target: ' +
-        widgetName +
-        '},';
+      const commonStr = createMeta(widgetName, meta, widgetName);
       designInfo =
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
@@ -147,26 +140,18 @@ function joinChildrenWidgetName(
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
     childrenWidget.forEach((item: string) => {
-      // const childrenMeta = require(`${fileRelativePath}/${folderName}/lugia.${item}.zh-CN.json`);
       const childrenMeta = loadMeta(targetPath, folderName, item);
       const { widgetName, componentName } = childrenMeta;
-      // targetWidgetNames.push(widgetName);
       const childrenNeedExport = childrenMeta.needExport;
       if (childrenNeedExport) {
         commonStr =
           commonStr +
-          widgetName +
-          ':' +
-          '{ meta: ' +
-          JSON.stringify(childrenMeta) +
-          ', target: ' +
-          targetWidgetName +
-          '.' +
-          componentName +
-          '},';
+          createMeta(
+            widgetName,
+            childrenMeta,
+            `${targetWidgetName}.${componentName}`
+          );
       }
-
-      // targetObject = targetObject ? targetObject + commonStr : commonStr;
     });
   }
   return commonStr;
@@ -188,4 +173,16 @@ function getComponent(
     return importInfo.join('');
   }
   return '';
+}
+
+function createMeta(
+  widgetName: string,
+  meta: Object,
+  targetName: string
+): string {
+  const str = `${widgetName}: {meta: ${JSON.stringify(
+    meta
+  )},target: ${targetName}`;
+
+  return str;
 }
