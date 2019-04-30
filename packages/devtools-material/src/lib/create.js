@@ -7,28 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// const Invalid = [
-//   'align',
-//   'code-box',
-//   'check-button',
-//   'common',
-//   'consts',
-//   'css',
-//   'inputtag',
-//   'page-loading',
-//   'screen-shot',
-//   'scroller',
-//   'theme',
-//   'theme-provider',
-//   'trigger',
-//   'utils',
-//   'empty',
-//   'message',
-//   'notification',
-//   'design-responsive',
-// ];
 const fileRelativePath = '../src/widgets';
-// createDesignInfo();
 
 function getPath(url: string, folderName: string): string {
   return path.join(url, folderName);
@@ -169,7 +148,7 @@ function getComponent(
         `import ${item} from './${extend}${folderNames[index]}';`
       );
     });
-    // const importInfo = `import {${component}} from './${folderNames[index]}';`;
+
     return importInfo.join('');
   }
   return '';
