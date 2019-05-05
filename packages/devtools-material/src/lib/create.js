@@ -78,6 +78,7 @@ export async function createDesignInfo(
         return;
       }
       const { childrenWidget, widgetName } = meta;
+      const extendComponent = createExtendComponent(meta);
       const childrenMeta =
         folderName === 'table'
           ? ''
@@ -88,7 +89,8 @@ export async function createDesignInfo(
             targetPath
           );
       widgetNames.push(widgetName);
-      const commonStr = createMeta(widgetName, meta, widgetName);
+      const commonStr =
+        createMeta(widgetName, meta, widgetName) + extendComponent;
       designInfo =
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
@@ -161,7 +163,45 @@ function createMeta(
 ): string {
   const str = `${widgetName}: {meta: ${JSON.stringify(
     meta
-  )},target: ${targetName}`;
+  )},target: ${targetName}},`;
 
   return str;
+}
+
+function replaceMeta(props: Object, outMeta: Object): Object {
+  const propsKeys = Object.keys(props);
+  if (propsKeys.length > 0) {
+    propsKeys.forEach((item: string) => {
+      outMeta.props[item].defaultValue = props[item];
+    });
+  }
+
+  return outMeta;
+}
+
+function createExtendComponent(meta: Object): string {
+  const { designInfo } = meta;
+  if (!designInfo) {
+    return '';
+  }
+  const componentName = Object.keys(designInfo);
+  if (componentName.length > 0) {
+    let extendMetaInfo = '';
+    const extendMeta = createExtendMeta(meta);
+    const { widgetName } = extendMeta;
+    componentName.forEach((item: string) => {
+      const extendProps = extendMeta.designInfo[item].props;
+      const replacedMeta = replaceMeta(extendProps, extendMeta);
+      extendMetaInfo += createMeta(item, replacedMeta, widgetName);
+    });
+
+    return extendMetaInfo;
+  }
+  return '';
+}
+
+function createExtendMeta(meta: Object): Object {
+  const extendMeta = JSON.parse(JSON.stringify(meta));
+
+  return extendMeta;
 }
