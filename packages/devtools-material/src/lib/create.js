@@ -8,6 +8,8 @@ const fs = require('fs');
 const path = require('path');
 
 const fileRelativePath = '../src/widgets';
+const defaultImgPath = './default.png';
+const defaultBase64 = getBase64(path.join(__dirname, defaultImgPath));
 
 function getPath(url: string, folderName: string): string {
   return path.join(url, folderName);
@@ -63,7 +65,8 @@ async function getFolderName2Meta(
 export async function createDesignInfo(
   targetPath: string,
   outExtend: string,
-  Invalid: string[]
+  Invalid: string[],
+  max: number = 10240
 ): string {
   const widgetNames = [];
   let designInfo = '';
@@ -78,7 +81,14 @@ export async function createDesignInfo(
         return;
       }
       const { childrenWidget, widgetName } = meta;
-      const extendComponent = createExtendComponent(meta);
+      const imgBase64 =
+        getImgBase64(targetPath, folderName, folderName, max) || defaultBase64;
+      const extendComponent = createExtendComponent(
+        meta,
+        targetPath,
+        folderName,
+        max
+      );
       const childrenMeta =
         folderName === 'table'
           ? ''
@@ -86,11 +96,12 @@ export async function createDesignInfo(
             widgetName,
             folderName,
             childrenWidget,
-            targetPath
+            targetPath,
+            max
           );
       widgetNames.push(widgetName);
       const commonStr =
-        createMeta(widgetName, meta, widgetName) + extendComponent;
+        createMeta(widgetName, meta, widgetName, imgBase64) + extendComponent;
       designInfo =
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
@@ -116,7 +127,8 @@ function joinChildrenWidgetName(
   targetWidgetName: string,
   folderName: string,
   childrenWidget: string[],
-  targetPath: string
+  targetPath: string,
+  max: number
 ): string {
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
@@ -125,12 +137,15 @@ function joinChildrenWidgetName(
       const { widgetName, componentName } = childrenMeta;
       const childrenNeedExport = childrenMeta.needExport;
       if (childrenNeedExport) {
+        const childrenImgBase64 =
+          getImgBase64(targetPath, folderName, item, max) || defaultBase64;
         commonStr =
           commonStr +
           createMeta(
             widgetName,
             childrenMeta,
-            `${targetWidgetName}.${componentName}`
+            `${targetWidgetName}.${componentName}`,
+            childrenImgBase64
           );
       }
     });
@@ -157,11 +172,12 @@ function getComponent(
 function createMeta(
   widgetName: string,
   meta: Object,
-  targetName: string
+  targetName: string,
+  imgBase64: string
 ): string {
   const str = `${widgetName}: {meta: ${JSON.stringify(
     meta
-  )},target: ${targetName}},`;
+  )},target: ${targetName},screenshot: '${imgBase64}'},`;
 
   return str;
 }
@@ -177,7 +193,12 @@ function replaceMeta(props: Object, outMeta: Object): Object {
   return outMeta;
 }
 
-function createExtendComponent(meta: Object): string {
+function createExtendComponent(
+  meta: Object,
+  targetPath: string,
+  folderName: string,
+  max: number
+): string {
   const { designInfo } = meta;
   if (!designInfo) {
     return '';
@@ -190,7 +211,14 @@ function createExtendComponent(meta: Object): string {
     componentName.forEach((item: string) => {
       const extendProps = extendMeta.designInfo[item].props;
       const replacedMeta = replaceMeta(extendProps, extendMeta);
-      extendMetaInfo += createMeta(item, replacedMeta, widgetName);
+      const extendImgBase64 =
+        getImgBase64(targetPath, folderName, item, max) || defaultBase64;
+      extendMetaInfo += createMeta(
+        item,
+        replacedMeta,
+        widgetName,
+        extendImgBase64
+      );
     });
 
     return extendMetaInfo;
@@ -202,4 +230,36 @@ function createExtendMeta(meta: Object): Object {
   const extendMeta = JSON.parse(JSON.stringify(meta));
 
   return extendMeta;
+}
+
+function getImgBase64(
+  targetPath: string,
+  folderName: string,
+  imgName: string,
+  max: number
+): string {
+  const filePath = path.join(targetPath, `${folderName}/${imgName}.png`);
+  let base64 = '';
+  try {
+    const stats = fs.statSync(filePath);
+    if (stats) {
+      const { size } = stats;
+      if (size > max) {
+        throw new Error('图片过大！');
+      }
+      base64 = getBase64(filePath);
+    }
+  } catch (e) {
+    return '';
+  }
+
+  return base64;
+}
+
+function getBase64(filePath: string): string {
+  let data = fs.readFileSync(filePath);
+  data = Buffer.from(data).toString('base64');
+  data = 'data:image/png;base64,' + data;
+
+  return data;
 }

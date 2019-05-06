@@ -14,5 +14,6 @@ if (params[0] === '-V' || params[0] === '--version') {
 const targetPath = process.cwd();
 const filterParam = yargs.array('filter').argv.filter || [];
 const outExtend = yargs.string('outExtend').argv.outExtend || '';
+const limit = yargs.number('limit').argv.limit || 10240;
 
-createDesignInfo(targetPath, outExtend, filterParam);
+createDesignInfo(targetPath, outExtend, filterParam, limit);
