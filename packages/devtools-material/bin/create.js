@@ -15,5 +15,6 @@ const targetPath = process.cwd();
 const filterParam = yargs.array('filter').argv.filter || [];
 const outExtend = yargs.string('outExtend').argv.outExtend || '';
 const limit = yargs.number('limit').argv.limit || 10240;
+const extend = { outExtend, limit };
 
-createDesignInfo(targetPath, outExtend, filterParam, limit);
+createDesignInfo(targetPath, filterParam, extend);

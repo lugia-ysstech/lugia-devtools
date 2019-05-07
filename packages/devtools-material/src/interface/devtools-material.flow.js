@@ -4,4 +4,9 @@
  */
 declare module '@lugia/devtools-material' {
   declare type PathType = string;
+  declare type ExtendParam = {
+    outExtend: string,
+    max: number,
+    outFile: string
+  };
 }
