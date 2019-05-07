@@ -43,7 +43,8 @@ export function createClassCode(
   lugiax: Object,
   themes: Object,
   index: number | string,
-  widgetId2Component: Object
+  widgetId2Component: Object,
+  isResponsive: boolean
 ): string {
   let classCode = '';
   const padInfo = childPadInfo[id];
@@ -55,7 +56,8 @@ export function createClassCode(
       lugiax,
       themes,
       index,
-      widgetId2Component
+      widgetId2Component,
+      isResponsive
     );
     classCode = `${layerBindCode} class ChildPadComponent${index} extends React.Component {
       render(){
@@ -76,7 +78,8 @@ export function createLayerComponent(
   lugiax: Object,
   themes: Object,
   index: number | string,
-  widgetId2Component: Object
+  widgetId2Component: Object,
+  isResponsive: boolean
 ): Object {
   let layerCode = '',
     layerBindCode = '';
@@ -128,22 +131,24 @@ export function createLayerComponent(
       ? containerStartLabel + viewClassCode + '>'
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
+    const commonStr = `context.getLayout("${layerId}").`;
+    const styleWidth = isResponsive ? `${commonStr}width` : width;
+    const styleHeight = isResponsive ? `${commonStr}height` : height;
+    const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
+    const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    const theContext = isResponsive ? 'context' : 'undefined';
     layerCode =
       layerCode +
-      `<div style={{position: 'absolute',width: context ? context.getLayout("${layerId}").width + "px" || '${width}px' : '${width}px',
-        height: context ? context.getLayout("${layerId}").height + "px" || '${height}px' : '${height}px',zIndex: '${zIndex}', 
-        left:context ? context.getLayout("${layerId}").point[0] + "px" || '${
-  point[0]
-}px' : '${point[0]}px', 
-        top: context ? context.getLayout("${layerId}").point[1] + "px" || '${
-  point[1]
-}px' : '${point[1]}px'}}
-        ><Theme config={{'${layerId}':{${configString}...themeHandle('${layerId}',context)}}}>${containerThemeCode}<${
+      `<div style={{position: 'absolute',width: '${styleWidth}px',
+        height: '${styleHeight}px', zIndex: '${zIndex}', 
+        left: '${styleLeft}px', 
+        top: '${styleRight}px' }}
+        ><Theme config={{'${layerId}':{${configString}...themeHandle('${layerId}',${theContext})}}}>${containerThemeCode}<${
   widgetId2Component[layerId]
 } ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
-  if (layerCode) {
+  if (layerCode && isResponsive) {
     layerCode = `<ResponsiveContext.Consumer>{
                     context => {
                         return <React.Fragment>${layerCode}</React.Fragment>
@@ -208,7 +213,8 @@ export function createComponent(
   widgetId2ChildPadInfo: Object,
   lugiax: Object,
   themes: Object,
-  widgetId2Component: Object
+  widgetId2Component: Object,
+  isResponsive: boolean
 ): string {
   let classCode = '';
   if (!childrenPad || childrenPad.length < 1) {
@@ -230,7 +236,8 @@ export function createComponent(
           lugiax,
           themes,
           index,
-          widgetId2Component
+          widgetId2Component,
+          isResponsive
         ) +
         bindCode;
     }
