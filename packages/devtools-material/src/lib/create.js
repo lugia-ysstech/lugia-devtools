@@ -66,7 +66,8 @@ export async function createDesignInfo(
   targetPath: string,
   outExtend: string,
   Invalid: string[],
-  max: number = 10240
+  max: number = 10240,
+  outFile: string
 ): string {
   const widgetNames = [];
   let designInfo = '';
@@ -106,12 +107,17 @@ export async function createDesignInfo(
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
 
+    const designData =
+      getComponent(widgetNames, folderNames, outExtend) +
+      'export default { ' +
+      designInfo +
+      ' };';
+
+    if (outFile === 'string') {
+      return designData;
+    }
+
     try {
-      const designData =
-        getComponent(widgetNames, folderNames, outExtend) +
-        'export default { ' +
-        designInfo +
-        ' };';
       const designPath = getPath(targetPath, 'designInfo.js');
       await fs.writeFileSync(designPath, designData);
     } catch (err) {
