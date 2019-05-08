@@ -126,7 +126,8 @@ describe('conversion createClass ->', () => {
       lugiax,
       themes,
       index,
-      widgetId2Component
+      widgetId2Component,
+      false
     );
 
     expect(layerCode).toMatchSnapshot();
@@ -141,7 +142,8 @@ describe('conversion createClass ->', () => {
       spaceLugiax,
       themes,
       index,
-      widgetId2Component
+      widgetId2Component,
+      false
     );
     expect(newLayerCode).toMatchSnapshot();
     expect(spaceLayerBindCode).toMatchSnapshot();

@@ -80,7 +80,8 @@ export default function conversion(page: Object): string {
     widgetId2ChildPad,
     lugiax,
     themes,
-    widgetId2Component
+    widgetId2Component,
+    isResponsive
   );
   const { layerCode, layerBindCode } = createLayerComponent(
     layers,
@@ -88,7 +89,8 @@ export default function conversion(page: Object): string {
     lugiax,
     themes,
     'MainPad',
-    widgetId2Component
+    widgetId2Component,
+    isResponsive
   );
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);

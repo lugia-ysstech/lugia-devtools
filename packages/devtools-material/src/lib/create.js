@@ -4,6 +4,7 @@
  *
  * @flow
  */
+import type { ExtendParam } from '@lugia/devtools-material';
 const fs = require('fs');
 const path = require('path');
 
@@ -64,10 +65,10 @@ async function getFolderName2Meta(
 
 export async function createDesignInfo(
   targetPath: string,
-  outExtend: string,
   Invalid: string[],
-  max: number = 10240
+  opt: ExtendParam
 ): string {
+  const { outExtend, limit = 10240, outFile } = opt;
   const widgetNames = [];
   let designInfo = '';
   try {
@@ -82,12 +83,13 @@ export async function createDesignInfo(
       }
       const { childrenWidget, widgetName } = meta;
       const imgBase64 =
-        getImgBase64(targetPath, folderName, folderName, max) || defaultBase64;
+        getImgBase64(targetPath, folderName, folderName, limit) ||
+        defaultBase64;
       const extendComponent = createExtendComponent(
         meta,
         targetPath,
         folderName,
-        max
+        limit
       );
       const childrenMeta =
         folderName === 'table'
@@ -97,7 +99,7 @@ export async function createDesignInfo(
             folderName,
             childrenWidget,
             targetPath,
-            max
+            limit
           );
       widgetNames.push(widgetName);
       const commonStr =
@@ -106,12 +108,17 @@ export async function createDesignInfo(
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
 
+    const designData =
+      getComponent(widgetNames, folderNames, outExtend) +
+      'export default { ' +
+      designInfo +
+      ' };';
+
+    if (outFile === 'string') {
+      return designData;
+    }
+
     try {
-      const designData =
-        getComponent(widgetNames, folderNames, outExtend) +
-        'export default { ' +
-        designInfo +
-        ' };';
       const designPath = getPath(targetPath, 'designInfo.js');
       await fs.writeFileSync(designPath, designData);
     } catch (err) {
@@ -128,7 +135,7 @@ function joinChildrenWidgetName(
   folderName: string,
   childrenWidget: string[],
   targetPath: string,
-  max: number
+  limit: number
 ): string {
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
@@ -138,7 +145,7 @@ function joinChildrenWidgetName(
       const childrenNeedExport = childrenMeta.needExport;
       if (childrenNeedExport) {
         const childrenImgBase64 =
-          getImgBase64(targetPath, folderName, item, max) || defaultBase64;
+          getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
         commonStr =
           commonStr +
           createMeta(
@@ -197,7 +204,7 @@ function createExtendComponent(
   meta: Object,
   targetPath: string,
   folderName: string,
-  max: number
+  limit: number
 ): string {
   const { designInfo } = meta;
   if (!designInfo) {
@@ -212,7 +219,7 @@ function createExtendComponent(
       const extendProps = extendMeta.designInfo[item].props;
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
-        getImgBase64(targetPath, folderName, item, max) || defaultBase64;
+        getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
       extendMetaInfo += createMeta(
         item,
         replacedMeta,
@@ -236,7 +243,7 @@ function getImgBase64(
   targetPath: string,
   folderName: string,
   imgName: string,
-  max: number
+  limit: number
 ): string {
   const filePath = path.join(targetPath, `${folderName}/${imgName}.png`);
   let base64 = '';
@@ -244,12 +251,15 @@ function getImgBase64(
     const stats = fs.statSync(filePath);
     if (stats) {
       const { size } = stats;
-      if (size > max) {
-        throw new Error('图片过大！');
+      if (size > limit) {
+        throw 'over-limit';
       }
       base64 = getBase64(filePath);
     }
   } catch (e) {
+    if (e === 'over-limit') {
+      throw new Error(`${imgName}.png 图片过大！`);
+    }
     return '';
   }
 
