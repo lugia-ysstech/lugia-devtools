@@ -66,7 +66,7 @@ async function getFolderName2Meta(
 export async function createDesignInfo(
   targetPath: string,
   Invalid: string[],
-  opt: ExtendParam
+  opt: ExtendParam = {}
 ): string {
   const { outExtend, limit = 10240, outFile } = opt;
   const widgetNames = [];
