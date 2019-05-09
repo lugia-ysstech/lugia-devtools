@@ -7,10 +7,10 @@ export function camelNamed(_str: any): string {
   return 'Label';
 }
 export function recursiveChildren(target: ?(Object[]), outResult: string[]) {
-  if (target && target.length > 0) {
+  if (!target || target.length < 0) {
     return;
   }
-  target.forEach((item: string) => {
+  target.forEach((item: Object) => {
     const { children, widgetId } = item;
     outResult.unshift(widgetId);
     children && recursiveChildren(children, outResult);
