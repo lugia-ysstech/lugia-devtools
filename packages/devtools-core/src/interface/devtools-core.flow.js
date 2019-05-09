@@ -7,6 +7,8 @@ declare module '@lugia/devtools-core' {
   declare type ZipData = {
     zip(outLugiadFile: LugiaDFile): Object,
     unZip(fileJSON: string): Object,
+    unZipObject(fileJSON: string): Object,
+    zipObject(fileJSON: string): Object,
     unZipCopyData(outCopyData: Object): Object,
     zipCopyData(outCopyData: Object): Object
   };
