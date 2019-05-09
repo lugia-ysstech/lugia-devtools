@@ -223,23 +223,24 @@ export function createComponent(
   const padWidgetIds = createExpantWidgetid(childrenPad);
   padWidgetIds.forEach((id: string, index: number) => {
     const componentName = `ChildPadComponent${index}`;
+    classCode =
+      classCode +
+      createClassCode(
+        id,
+        widgetId2ChildPadInfo,
+        lugiax,
+        themes,
+        index,
+        widgetId2Component,
+        isResponsive
+      );
+    widgetId2Component[id] = componentName;
     const lugiaxInfo = widgetIdInLugiax(id, lugiax, componentName, index);
     if (lugiaxInfo) {
       const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
       widgetId2Component[id] = inLugiax ? bindName : componentName;
       const bindCode = inLugiax ? lugiaxCode : '';
-      classCode =
-        classCode +
-        createClassCode(
-          id,
-          widgetId2ChildPadInfo,
-          lugiax,
-          themes,
-          index,
-          widgetId2Component,
-          isResponsive
-        ) +
-        bindCode;
+      classCode = classCode + bindCode;
     }
   });
 
