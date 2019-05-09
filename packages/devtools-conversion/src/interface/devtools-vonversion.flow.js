@@ -7,4 +7,10 @@ declare module '@lugia/devtools-conversion' {
     packages: string,
     styledComponentCode: string
   };
+
+  declare type ConversionType = {
+    conversion(page: Object): string
+  };
+
+  declare module.exports: ConversionType;
 }
