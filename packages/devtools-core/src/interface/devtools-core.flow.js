@@ -4,5 +4,10 @@
  */
 
 declare module '@lugia/devtools-core' {
-  declare type ZipData = Object;
+  declare type ZipData = {
+    unZipCopyData(outCopyData: Object): Object,
+    zipCopyData(outCopyData: Object): Object
+  };
+
+  declare module.exports: ZipData;
 }
