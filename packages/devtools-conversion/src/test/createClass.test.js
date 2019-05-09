@@ -16,24 +16,24 @@ import {
 
 const data = [
   {
-    Widgetid: 1,
+    widgetId: 1,
     children: [
       {
-        Widgetid: 11,
-        children: [{ Widgetid: 111 }, { Widgetid: 112 }],
+        widgetId: 11,
+        children: [{ widgetId: 111 }, { widgetId: 112 }],
       },
       {
-        Widgetid: 12,
-        children: [{ Widgetid: 121 }, { Widgetid: 122 }],
+        widgetId: 12,
+        children: [{ widgetId: 121 }, { widgetId: 122 }],
       },
     ],
   },
   {
-    Widgetid: 2,
+    widgetId: 2,
     children: [
       {
-        Widgetid: 21,
-        children: [{ Widgetid: 211 }],
+        widgetId: 21,
+        children: [{ widgetId: 211 }],
       },
     ],
   },
