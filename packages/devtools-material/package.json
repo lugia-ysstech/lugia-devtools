@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-material",
-  "version": "1.0.5-y.0",
+  "version": "1.0.5-y.1",
   "dependencies": {
     "@lugia/lugiax-core": "^1.0.0",
     "babel-runtime": "^6.26.0",
