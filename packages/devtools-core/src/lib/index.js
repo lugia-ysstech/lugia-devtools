@@ -4,7 +4,7 @@
  *
  * @flow
  */
-import type { Layer, LugiaDFile, PolarBearFile } from '@lugiax/design';
+import type { Layer, LugiaDFile, PolarBearFile } from '@lugia/devtools-core';
 
 const layerZip = {
   areaId: 'a',
