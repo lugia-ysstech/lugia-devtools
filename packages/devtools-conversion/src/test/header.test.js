@@ -75,6 +75,28 @@ describe('conversion header ->', () => {
     expect(widgetId2Component).toEqual({ label: 'Label' });
   });
 
+  it('createHeader childrenComponent', () => {
+    const mainDependencies = [
+      { module: '@lugia/lugia-web', widgetName: 'Table' },
+      { module: '@lugia/lugia-web', widgetName: 'Checkbox' },
+      { module: '@lugia/lugia-web', widgetName: 'Checkbox' },
+      { module: '@lugia/lugia-web', widgetName: 'Checkbox.Group' },
+      { module: '@lugia/lugia-web', widgetName: 'Checkbox.Button' },
+      { module: '@lugia/lugia-web', widgetName: 'Table' },
+      { module: '@lugia/lugia-web-html', widgetName: 'label' },
+    ];
+    const widgetId2Component = {};
+    const { packages, styledComponentCode } = createHeader(
+      mainDependencies,
+      widgetId2Component
+    );
+    expect(packages).toMatchSnapshot();
+    expect(styledComponentCode).toBe(
+      'const Label = styled.div`font-size: 12px;`;'
+    );
+    expect(widgetId2Component).toEqual({ label: 'Label' });
+  });
+
   it('createHeader toMatchSnapshot', () => {
     const widgetId2Component = {};
     expect(createHeader([], widgetId2Component)).toMatchSnapshot();
