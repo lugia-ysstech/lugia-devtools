@@ -85,12 +85,7 @@ export async function createDesignInfo(
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
-      const extendComponent = createExtendComponent(
-        meta,
-        targetPath,
-        folderName,
-        limit
-      );
+      const childrenWidgetName = [];
       const childrenMeta =
         folderName === 'table'
           ? ''
@@ -99,20 +94,29 @@ export async function createDesignInfo(
             folderName,
             childrenWidget,
             targetPath,
-            limit
+            limit,
+            childrenWidgetName
           );
       widgetNames.push(widgetName);
+      const copyMeta = createExtendMeta(meta);
+      copyMeta.childrenWidget = childrenWidgetName;
+      const extendComponent = createExtendComponent(
+        copyMeta,
+        targetPath,
+        folderName,
+        limit
+      );
       const commonStr =
-        createMeta(widgetName, meta, widgetName, imgBase64) + extendComponent;
+        createMeta(copyMeta, widgetName, imgBase64) + extendComponent;
       designInfo =
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
 
     const designData =
       getComponent(widgetNames, folderNames, outExtend) +
-      'export default { ' +
+      'export default [ ' +
       designInfo +
-      ' };';
+      ' ];';
 
     if (outFile === 'string') {
       return designData;
@@ -135,25 +139,24 @@ function joinChildrenWidgetName(
   folderName: string,
   childrenWidget: string[],
   targetPath: string,
-  limit: number
+  limit: number,
+  outChildrenWidgetName: string[]
 ): string {
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
     childrenWidget.forEach((item: string) => {
       const childrenMeta = loadMeta(targetPath, folderName, item);
-      const { widgetName, componentName } = childrenMeta;
+      const { widgetName } = childrenMeta;
       const childrenNeedExport = childrenMeta.needExport;
       if (childrenNeedExport) {
         const childrenImgBase64 =
           getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
+        outChildrenWidgetName.push(widgetName);
+        const copyChildrenMeta = createExtendMeta(childrenMeta);
+        copyChildrenMeta.parentWidget = targetWidgetName;
         commonStr =
           commonStr +
-          createMeta(
-            widgetName,
-            childrenMeta,
-            `${targetWidgetName}.${componentName}`,
-            childrenImgBase64
-          );
+          createMeta(copyChildrenMeta, widgetName, childrenImgBase64);
       }
     });
   }
@@ -177,12 +180,11 @@ function getComponent(
 }
 
 function createMeta(
-  widgetName: string,
   meta: Object,
   targetName: string,
   imgBase64: string
 ): string {
-  const str = `${widgetName}: {meta: ${JSON.stringify(
+  const str = `{meta: ${JSON.stringify(
     meta
   )},target: ${targetName},screenshot: '${imgBase64}'},`;
 
@@ -220,12 +222,7 @@ function createExtendComponent(
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
-      extendMetaInfo += createMeta(
-        item,
-        replacedMeta,
-        widgetName,
-        extendImgBase64
-      );
+      extendMetaInfo += createMeta(replacedMeta, widgetName, extendImgBase64);
     });
 
     return extendMetaInfo;
