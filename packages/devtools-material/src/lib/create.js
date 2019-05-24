@@ -151,12 +151,14 @@ function joinChildrenWidgetName(
       if (childrenNeedExport) {
         const childrenImgBase64 =
           getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
-        outChildrenWidgetName.push(widgetName);
+        const childrenWidgetName = `${targetWidgetName}.${widgetName}`;
+        outChildrenWidgetName.push(childrenWidgetName);
         const copyChildrenMeta = createExtendMeta(childrenMeta);
         copyChildrenMeta.parentWidget = targetWidgetName;
+        copyChildrenMeta.widgetName = childrenWidgetName;
         commonStr =
           commonStr +
-          createMeta(copyChildrenMeta, widgetName, childrenImgBase64);
+          createMeta(copyChildrenMeta, childrenWidgetName, childrenImgBase64);
       }
     });
   }
