@@ -18,6 +18,7 @@ export function createHeader(
     'import { Theme, DesignResponsive } from "@lugia/lugia-web";' +
     'import { ResponsiveContext } from "@lugia/lugia-web/dist/design-responsive/component";';
   let styledComponentCode = '';
+  const moudleMap = {};
 
   if (!mainDependencies || mainDependencies.length < 1) {
     return { packages, styledComponentCode };
@@ -35,15 +36,11 @@ export function createHeader(
         '`;';
       widgetId2Component[widgetName] = componentName;
     } else {
-      packages =
-        packages +
-        'import { ' +
-        widgetName +
-        ' } from ' +
-        '"' +
-        module +
-        '"' +
-        ';';
+      const components = widgetName.split('.');
+      if (!moudleMap[components[0]]) {
+        packages += `import { ${components[0]} } from '${module}';`;
+      }
+      moudleMap[components[0]] = true;
     }
   });
 
