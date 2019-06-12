@@ -220,7 +220,10 @@ function createExtendComponent(
     const extendMeta = createExtendMeta(meta);
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
-      const extendProps = extendMeta.designInfo[item].props;
+      const designInfoElement = extendMeta.designInfo[item];
+      const extendProps = designInfoElement.props;
+      extendMeta.title = designInfoElement.title;
+      extendMeta.desc = designInfoElement.desc;
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
