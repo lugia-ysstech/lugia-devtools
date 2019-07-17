@@ -224,6 +224,7 @@ function createExtendComponent(
       const extendProps = designInfoElement.props;
       extendMeta.title = designInfoElement.title;
       extendMeta.desc = designInfoElement.desc;
+      extendMeta.aliasName = designInfoElement.designInfo[item];
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
