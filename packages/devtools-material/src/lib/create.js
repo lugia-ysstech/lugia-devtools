@@ -197,7 +197,7 @@ function createMeta(
 
 function replaceMeta(props: Object, outMeta: Object): Object {
   if (!outMeta.props) {
-    console.warn('主配置中缺少props属性');
+    console.warn(`error: ${outMeta.aliasName}-主配置中缺少props属性`);
     outMeta.props = {};
   }
   if (props) {
@@ -206,14 +206,16 @@ function replaceMeta(props: Object, outMeta: Object): Object {
       propsKeys.forEach((item: string) => {
         let outProps = outMeta.props[item];
         if (!outProps) {
-          console.warn(`主配置中缺少props.${item} 属性`);
+          console.warn(
+            `error: ${outMeta.aliasName}-主配置中缺少props.${item} 属性`
+          );
           outProps = outMeta.props[item] = {};
         }
         outProps.defaultValue = props[item];
       });
     }
   } else {
-    console.error('props不能为空!');
+    console.error(`error: ${outMeta.aliasName} props不能为空!`);
   }
   return outMeta;
 }
