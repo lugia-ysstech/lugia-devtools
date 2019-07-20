@@ -82,6 +82,7 @@ export async function createDesignInfo(
         return;
       }
       const { childrenWidget, widgetName } = meta;
+      console.log(`处理组件: ${widgetName}`);
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
@@ -195,6 +196,10 @@ function createMeta(
 }
 
 function replaceMeta(props: Object, outMeta: Object): Object {
+  if (!outMeta.props) {
+    console.warn('主配置中缺少props属性');
+    outMeta.props = {};
+  }
   if (props) {
     const propsKeys = Object.keys(props);
     if (propsKeys.length > 0) {
