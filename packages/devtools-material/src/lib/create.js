@@ -98,6 +98,7 @@ export async function createDesignInfo(
             childrenWidgetName
           );
       widgetNames.push(widgetName);
+
       const copyMeta = createExtendMeta(meta);
       copyMeta.childrenWidget = childrenWidgetName;
       const extendComponent = createExtendComponent(
@@ -224,7 +225,7 @@ function createExtendComponent(
       const extendProps = designInfoElement.props;
       extendMeta.title = designInfoElement.title;
       extendMeta.desc = designInfoElement.desc;
-      extendMeta.aliasName = designInfoElement.designInfo[item];
+      extendMeta.aliasName = designInfoElement[item];
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
