@@ -204,10 +204,10 @@ function replaceMeta(props: Object, outMeta: Object): Object {
     const propsKeys = Object.keys(props);
     if (propsKeys.length > 0) {
       propsKeys.forEach((item: string) => {
-        const outProps = outMeta.props[item];
+        let outProps = outMeta.props[item];
         if (!outProps) {
           console.warn(`主配置中缺少props.${item} 属性`);
-          outMeta.props = {};
+          outProps = outMeta.props[item] = {};
         }
         outProps.defaultValue = props[item];
       });
