@@ -195,13 +195,16 @@ function createMeta(
 }
 
 function replaceMeta(props: Object, outMeta: Object): Object {
-  const propsKeys = Object.keys(props);
-  if (propsKeys.length > 0) {
-    propsKeys.forEach((item: string) => {
-      outMeta.props[item].defaultValue = props[item];
-    });
+  if (props) {
+    const propsKeys = Object.keys(props);
+    if (propsKeys.length > 0) {
+      propsKeys.forEach((item: string) => {
+        outMeta.props[item].defaultValue = props[item];
+      });
+    }
+  } else {
+    console.error('props不能为空!');
   }
-
   return outMeta;
 }
 
@@ -225,7 +228,7 @@ function createExtendComponent(
       const extendProps = designInfoElement.props;
       extendMeta.title = designInfoElement.title;
       extendMeta.desc = designInfoElement.desc;
-      extendMeta.aliasName = designInfoElement[item];
+      extendMeta.aliasName = item;
       const replacedMeta = replaceMeta(extendProps, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
