@@ -255,7 +255,7 @@ function getComponent(
     const extend = outExtend ? `${outExtend}/` : './';
     widgetNames.forEach((item: string) => {
       importInfo.push(
-        `import ${item} from '${extend}${widgetName2FolderName[widgetNames]}';`
+        `import ${item} from '${extend}${widgetName2FolderName[item]}';`
       );
     });
 
