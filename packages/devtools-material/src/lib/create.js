@@ -241,11 +241,18 @@ function createExtendComponent(
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
       const designInfoElement = extendMeta.designInfo[item];
-      const extendProps = designInfoElement.props;
-      extendMeta.title = designInfoElement.title;
-      extendMeta.desc = designInfoElement.desc;
+      const { theme, title, desc, props } = designInfoElement;
+      extendMeta.title = title;
+      extendMeta.desc = desc;
+      console.log(
+        `处理组件: ${widgetName}[${item}] ${
+          theme ? '' : '** theme不能为空 **'
+        } ${desc ? '' : '** desc 不能为空 **'}  ${
+          title ? '' : '** title 不能为空 **'
+        }  ${props ? '' : '** props 不能为空 **'} `
+      );
       extendMeta.aliasName = item;
-      const replacedMeta = replaceMeta(extendProps, extendMeta);
+      const replacedMeta = replaceMeta(props, extendMeta);
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
       extendMetaInfo += createMeta(replacedMeta, widgetName, extendImgBase64);
