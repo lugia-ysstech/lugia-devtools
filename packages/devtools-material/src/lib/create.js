@@ -8,6 +8,7 @@ import type { ExtendParam } from '@lugia/devtools-material';
 const fs = require('fs');
 const path = require('path');
 let errors = [];
+let total = 0;
 const fileRelativePath = '../src/widgets';
 const defaultImgPath = './default.png';
 const defaultBase64 = getBase64(path.join(__dirname, defaultImgPath));
@@ -71,12 +72,13 @@ const checkInfo = function(
   theme: Object,
   desc: string,
   title: string,
-  widgetName: string
+  widgetName: string,
+  item: string = ''
 ) {
   const themeIsRight = theme && Object.keys(theme).length > 0;
   const descIsRigth = !!desc;
   const titleIsRight = !!title;
-  const msg = `处理组件: ${widgetName} ${
+  const msg = `处理组件: ${widgetName}[${item}] ${
     themeIsRight ? '' : '** theme不能为空 **'
   } ${descIsRigth ? '' : '** desc 不能为空 **'}  ${
     titleIsRight ? '' : '** title 不能为空 **'
@@ -93,6 +95,7 @@ export async function createDesignInfo(
   opt: ExtendParam = {}
 ): string {
   errors = [];
+  total = 0;
   const { outExtend, limit = 10240, outFile } = opt;
   const widgetNames = [];
   let designInfo = '';
@@ -106,6 +109,7 @@ export async function createDesignInfo(
       if (!meta) {
         return;
       }
+      total += 1;
       const { childrenWidget, widgetName, theme, title, desc } = meta;
       checkInfo(theme, desc, title, widgetName);
       const imgBase64 =
@@ -127,14 +131,14 @@ export async function createDesignInfo(
 
       const copyMeta = createExtendMeta(meta);
       copyMeta.childrenWidget = childrenWidgetName;
+      const owner = createMeta(copyMeta, widgetName, imgBase64);
       const extendComponent = createExtendComponent(
         copyMeta,
         targetPath,
         folderName,
         limit
       );
-      const commonStr =
-        createMeta(copyMeta, widgetName, imgBase64) + extendComponent;
+      const commonStr = owner + extendComponent;
       designInfo =
         (designInfo ? designInfo + commonStr : commonStr) + childrenMeta;
     });
@@ -162,6 +166,7 @@ export async function createDesignInfo(
     console.log(msg);
     errors.push(msg);
   } finally {
+    console.log(`总数: ${total} 错误: ${errors.length}`);
     console.log('--------------> error');
     errors.forEach((err: string) => {
       console.error(err);
@@ -277,11 +282,12 @@ function createExtendComponent(
     const extendMeta = createExtendMeta(meta);
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
+      total += 1;
       const designInfoElement = designInfo[item];
       const { theme, title, desc, props } = designInfoElement;
       extendMeta.title = title;
       extendMeta.desc = desc;
-      checkInfo(theme, desc, title, widgetName);
+      checkInfo(theme, desc, title, widgetName, item);
       extendMeta.aliasName = item;
       const replacedMeta = replaceMeta(props, extendMeta);
       replacedMeta.theme = theme;
@@ -297,7 +303,6 @@ function createExtendComponent(
 
 function createExtendMeta(meta: Object): Object {
   const extendMeta = JSON.parse(JSON.stringify(meta));
-
   return extendMeta;
 }
 
