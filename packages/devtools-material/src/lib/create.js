@@ -117,6 +117,7 @@ export async function createDesignInfo(
     const folderNames = await getDemoFolderNames(allPathFile, targetPath);
     const folderName2Meta = await getFolderName2Meta(targetPath, folderNames);
     console.log('共获取组件[%d]个', allPathFile.length);
+    const widgetName2FolderName = {};
     folderNames.forEach((folderName: string) => {
       const meta = folderName2Meta[folderName];
       if (!meta) {
@@ -125,6 +126,7 @@ export async function createDesignInfo(
       total += 1;
       const { childrenWidget, widgetName, theme, title, desc } = meta;
       checkInfo(theme, desc, title, widgetName);
+      widgetName2FolderName[widgetName] = folderName;
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
@@ -158,7 +160,7 @@ export async function createDesignInfo(
     });
 
     const designData =
-      getComponent(widgetNames, folderNames, outExtend) +
+      getComponent(widgetNames, widgetName2FolderName, outExtend) +
       'export default [ ' +
       designInfo +
       ' ];';
@@ -245,14 +247,16 @@ function joinChildrenWidgetName(
 }
 function getComponent(
   widgetNames: string[],
-  folderNames: string[],
+  widgetName2FolderName: Object,
   outExtend: string
 ): string {
   if (widgetNames && widgetNames.length > 0) {
     const importInfo = [];
     const extend = outExtend ? `${outExtend}/` : './';
-    widgetNames.forEach((item: string, index: number) => {
-      importInfo.push(`import ${item} from '${extend}${folderNames[index]}';`);
+    widgetNames.forEach((item: string) => {
+      importInfo.push(
+        `import ${item} from '${extend}${widgetName2FolderName[widgetNames]}';`
+      );
     });
 
     return importInfo.join('');
