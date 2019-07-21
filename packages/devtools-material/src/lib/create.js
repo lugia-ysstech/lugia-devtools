@@ -238,9 +238,10 @@ function createExtendComponent(
   if (componentName.length > 0) {
     let extendMetaInfo = '';
     const extendMeta = createExtendMeta(meta);
+    delete extendMeta.designInfo;
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
-      const designInfoElement = extendMeta.designInfo[item];
+      const designInfoElement = designInfo[item];
       const { theme, title, desc, props } = designInfoElement;
       extendMeta.title = title;
       extendMeta.desc = desc;
@@ -253,6 +254,7 @@ function createExtendComponent(
       );
       extendMeta.aliasName = item;
       const replacedMeta = replaceMeta(props, extendMeta);
+      replacedMeta.theme = theme;
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
       extendMetaInfo += createMeta(replacedMeta, widgetName, extendImgBase64);
