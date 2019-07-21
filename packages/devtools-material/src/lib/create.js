@@ -81,8 +81,8 @@ export async function createDesignInfo(
       if (!meta) {
         return;
       }
-      const { childrenWidget, widgetName } = meta;
-      console.log(`处理组件: ${widgetName}`);
+      const { childrenWidget, widgetName, theme } = meta;
+      console.log(`处理组件: ${widgetName} theme: ${!!theme}`);
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
