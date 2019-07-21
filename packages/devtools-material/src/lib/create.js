@@ -234,11 +234,11 @@ function createExtendComponent(
   if (!designInfo) {
     return '';
   }
+  delete meta.designInfo;
   const componentName = Object.keys(designInfo);
   if (componentName.length > 0) {
     let extendMetaInfo = '';
     const extendMeta = createExtendMeta(meta);
-    delete extendMeta.designInfo;
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
       const designInfoElement = designInfo[item];
