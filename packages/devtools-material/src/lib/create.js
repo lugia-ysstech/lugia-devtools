@@ -73,7 +73,7 @@ const checkInfo = function(
   title: string,
   widgetName: string
 ) {
-  const themeIsRight = theme && Object.keys(theme) === 0;
+  const themeIsRight = theme && Object.keys(theme).length > 0;
   const descIsRigth = !!desc;
   const titleIsRight = !!title;
   const msg = `处理组件: ${widgetName} ${
