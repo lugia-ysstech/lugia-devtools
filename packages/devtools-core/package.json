@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "chai": "^4.1.2",
     "immutable": "^3.8.2",
