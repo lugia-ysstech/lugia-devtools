@@ -9,10 +9,21 @@ const fs = require('fs');
 const path = require('path');
 let errors = [];
 let total = 0;
+let childWidgetTotal = 0;
+let designInfoTotal = 0;
 const fileRelativePath = '../src/widgets';
 const defaultImgPath = './default.png';
 const defaultBase64 = getBase64(path.join(__dirname, defaultImgPath));
 
+const checkImage = function(
+  extendImgBase64: string,
+  widgetName: string,
+  item: string = ''
+) {
+  if (extendImgBase64 === defaultBase64) {
+    errors.push(`${widgetName}[${item}] 缺少图片`);
+  }
+};
 function getPath(url: string, folderName: string): string {
   return path.join(url, folderName);
 }
@@ -96,6 +107,8 @@ export async function createDesignInfo(
 ): string {
   errors = [];
   total = 0;
+  designInfoTotal = 0;
+  childWidgetTotal = 0;
   const { outExtend, limit = 10240, outFile } = opt;
   const widgetNames = [];
   let designInfo = '';
@@ -115,6 +128,7 @@ export async function createDesignInfo(
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
+      checkImage(imgBase64, widgetName);
       const childrenWidgetName = [];
       const childrenMeta =
         folderName === 'table'
@@ -166,7 +180,13 @@ export async function createDesignInfo(
     console.log(msg);
     errors.push(msg);
   } finally {
-    console.log(`总数: ${total} 错误: ${errors.length}`);
+    console.log(
+      `总数: ${total} 普通组件:${total -
+        designInfoTotal -
+        childWidgetTotal} designInfo组件：${designInfoTotal} 子组件: ${childWidgetTotal} 错误: ${
+        errors.length
+      }`
+    );
     console.log('--------------> error');
     errors.forEach((err: string, index: number) => {
       console.error(`${index}: ${err}`);
@@ -186,20 +206,38 @@ function joinChildrenWidgetName(
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
     childrenWidget.forEach((item: string) => {
-      const childrenMeta = loadMeta(targetPath, folderName, item);
+      total++;
+      childWidgetTotal++;
+      let childrenMeta;
+      try {
+        childrenMeta = loadMeta(targetPath, folderName, item);
+      } catch (error) {
+        error.push(
+          `** ${folderName}--${targetWidgetName}-${item} 子组件加载错误**`
+        );
+        return;
+      }
       const { widgetName } = childrenMeta;
-      const childrenNeedExport = childrenMeta.needExport;
-      if (childrenNeedExport) {
-        const childrenImgBase64 =
-          getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
-        const childrenWidgetName = `${targetWidgetName}.${widgetName}`;
-        outChildrenWidgetName.push(childrenWidgetName);
-        const copyChildrenMeta = createExtendMeta(childrenMeta);
-        copyChildrenMeta.parentWidget = targetWidgetName;
-        copyChildrenMeta.widgetName = childrenWidgetName;
-        commonStr =
-          commonStr +
-          createMeta(copyChildrenMeta, childrenWidgetName, childrenImgBase64);
+
+      try {
+        const childrenNeedExport = childrenMeta.needExport;
+        if (childrenNeedExport) {
+          const childrenImgBase64 =
+            getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
+          checkImage(childrenImgBase64, widgetName);
+          const childrenWidgetName = `${targetWidgetName}.${widgetName}`;
+          outChildrenWidgetName.push(childrenWidgetName);
+          const copyChildrenMeta = createExtendMeta(childrenMeta);
+          copyChildrenMeta.parentWidget = targetWidgetName;
+          copyChildrenMeta.widgetName = childrenWidgetName;
+          commonStr =
+            commonStr +
+            createMeta(copyChildrenMeta, childrenWidgetName, childrenImgBase64);
+        }
+      } catch (error) {
+        error.push(
+          `** ${folderName}--${targetWidgetName}-${item}子组件${widgetName}获取元信息错误 **`
+        );
       }
     });
   }
@@ -283,6 +321,7 @@ function createExtendComponent(
     const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
       total += 1;
+      designInfoTotal += 1;
       const designInfoElement = designInfo[item];
       const { theme, title, desc, props } = designInfoElement;
       extendMeta.title = title;
@@ -293,6 +332,7 @@ function createExtendComponent(
       replacedMeta.theme = theme;
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
+      checkImage(extendImgBase64, widgetName, item);
       extendMetaInfo += createMeta(replacedMeta, widgetName, extendImgBase64);
     });
 
