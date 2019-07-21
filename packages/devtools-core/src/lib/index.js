@@ -27,6 +27,7 @@ const layerUnZip = {
 };
 const widgetInfoZip = {
   widgetName: 'w',
+  aliasName: 'a',
   module: 'm',
   version: 'v',
   props: 'p',
@@ -35,6 +36,7 @@ const widgetInfoZip = {
 
 const widgetInfoUnZip = {
   w: 'widgetName',
+  a: 'aliasName',
   m: 'module',
   v: 'version',
   p: 'props',

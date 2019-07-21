@@ -79,6 +79,7 @@
         },
         "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
           "widgetName": "Table",
+          "aliasName": "Table",
           "module": "@lugia/lugia-web",
           "version": "1.0.0",
           "props": {

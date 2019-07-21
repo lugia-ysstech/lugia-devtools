@@ -79,6 +79,7 @@
         },
         "wbd79bb5d0-17e0-11e9-8805-81783b379d6710": {
           "w": "Table",
+          "a": "Table",
           "m": "@lugia/lugia-web",
           "v": "1.0.0",
           "p": {
