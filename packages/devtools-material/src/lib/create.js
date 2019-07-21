@@ -247,7 +247,7 @@ function createExtendComponent(
       extendMeta.desc = desc;
       console.log(
         `处理组件: ${widgetName}[${item}] ${
-          theme ? '' : '** theme不能为空 **'
+          theme && Object.keys(theme).length > 0 ? '' : '** theme不能为空 **'
         } ${desc ? '' : '** desc 不能为空 **'}  ${
           title ? '' : '** title 不能为空 **'
         }  ${props ? '' : '** props 不能为空 **'} `
