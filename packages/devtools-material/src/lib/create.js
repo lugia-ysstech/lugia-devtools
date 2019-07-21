@@ -83,9 +83,9 @@ export async function createDesignInfo(
       }
       const { childrenWidget, widgetName, theme, title, desc } = meta;
       console.log(
-        `处理组件: ${widgetName} ${
-          theme ? '' : 'theme不能为空'
-        } desc: [${desc}] title: [${title}]`
+        `处理组件: ${widgetName} ${theme ? '' : '** theme不能为空 **'} ${
+          desc ? '' : '** desc 不能为空 **'
+        }  ${title ? '' : '** title 不能为空 **'} `
       );
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
