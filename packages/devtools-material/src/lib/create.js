@@ -7,7 +7,7 @@
 import type { ExtendParam } from '@lugia/devtools-material';
 const fs = require('fs');
 const path = require('path');
-
+let errors = [];
 const fileRelativePath = '../src/widgets';
 const defaultImgPath = './default.png';
 const defaultBase64 = getBase64(path.join(__dirname, defaultImgPath));
@@ -42,7 +42,9 @@ async function getDemoFolderNames(
     if (stats.isDirectory()) {
       res.push(folderName);
     } else {
-      console.log('(%d) %s 目录错误  X', pos, folderName);
+      const msg = `** (第${pos}个) ${folderName} 目录错误  **`;
+      console.log(msg, pos, folderName);
+      errors.push(msg);
     }
   }
   return res;
@@ -56,18 +58,41 @@ async function getFolderName2Meta(
     try {
       metas[folderName] = loadMeta(targetPath, folderName, folderName);
     } catch (error) {
-      console.log('(%d) %s 读取元信息失败  X', pos, folderName);
+      const msg = `** (第${pos}个) ${folderName} 读取元信息失败 **`;
+      console.log(msg, pos, folderName);
+      errors.push(msg);
       return;
     }
   });
   return metas;
 }
 
+const checkInfo = function(
+  theme: Object,
+  desc: string,
+  title: string,
+  widgetName: string
+) {
+  const themeIsRight = theme && Object.keys(theme) === 0;
+  const descIsRigth = !!desc;
+  const titleIsRight = !!title;
+  const msg = `处理组件: ${widgetName} ${
+    themeIsRight ? '' : '** theme不能为空 **'
+  } ${descIsRigth ? '' : '** desc 不能为空 **'}  ${
+    titleIsRight ? '' : '** title 不能为空 **'
+  } `;
+  console.log(msg);
+  if (!themeIsRight || !descIsRigth || !titleIsRight) {
+    errors.push(msg);
+  }
+};
+
 export async function createDesignInfo(
   targetPath: string,
   Invalid: string[],
   opt: ExtendParam = {}
 ): string {
+  errors = [];
   const { outExtend, limit = 10240, outFile } = opt;
   const widgetNames = [];
   let designInfo = '';
@@ -82,11 +107,7 @@ export async function createDesignInfo(
         return;
       }
       const { childrenWidget, widgetName, theme, title, desc } = meta;
-      console.log(
-        `处理组件: ${widgetName} ${theme ? '' : '** theme不能为空 **'} ${
-          desc ? '' : '** desc 不能为空 **'
-        }  ${title ? '' : '** title 不能为空 **'} `
-      );
+      checkInfo(theme, desc, title, widgetName);
       const imgBase64 =
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
@@ -132,11 +153,18 @@ export async function createDesignInfo(
       const designPath = getPath(targetPath, 'designInfo.js');
       await fs.writeFileSync(designPath, designData);
     } catch (err) {
-      console.log('写入文件 designInfo 失败  X');
-      return;
+      const msg = '** 写入文件 designInfo 失败  **';
+      console.log(msg);
+      errors.push(msg);
     }
   } catch (e) {
-    console.log('%s 异常  X', e);
+    const msg = `** ${e} 异常  X`;
+    console.log(msg);
+    errors.push(msg);
+  } finally {
+    errors.forEach((err: string) => {
+      console.error(err);
+    });
   }
 }
 
@@ -201,7 +229,9 @@ function createMeta(
 
 function replaceMeta(props: Object, outMeta: Object): Object {
   if (!outMeta.props) {
-    console.warn(`error: ${outMeta.aliasName}-主配置中缺少props属性`);
+    const msg = `error: ${outMeta.aliasName}-主配置中缺少props属性`;
+    console.warn(msg);
+    errors.push(msg);
     outMeta.props = {};
   }
   if (props) {
@@ -210,16 +240,20 @@ function replaceMeta(props: Object, outMeta: Object): Object {
       propsKeys.forEach((item: string) => {
         let outProps = outMeta.props[item];
         if (!outProps) {
-          console.warn(
-            `error: ${outMeta.aliasName}-主配置中缺少props.${item} 属性`
-          );
+          const msg = `error: ${
+            outMeta.aliasName
+          }-主配置中缺少props.${item} 属性`;
+          console.warn(msg);
+          errors.push(msg);
           outProps = outMeta.props[item] = {};
         }
         outProps.defaultValue = props[item];
       });
     }
   } else {
-    console.error(`error: ${outMeta.aliasName} props不能为空!`);
+    const msg = `error: ${outMeta.aliasName} props不能为空!`;
+    console.error(msg);
+    errors.push(msg);
   }
   return outMeta;
 }
@@ -245,13 +279,7 @@ function createExtendComponent(
       const { theme, title, desc, props } = designInfoElement;
       extendMeta.title = title;
       extendMeta.desc = desc;
-      console.log(
-        `处理组件: ${widgetName}[${item}] ${
-          theme && Object.keys(theme).length > 0 ? '' : '** theme不能为空 **'
-        } ${desc ? '' : '** desc 不能为空 **'}  ${
-          title ? '' : '** title 不能为空 **'
-        }  ${props ? '' : '** props 不能为空 **'} `
-      );
+      checkInfo(theme, desc, title, widgetName);
       extendMeta.aliasName = item;
       const replacedMeta = replaceMeta(props, extendMeta);
       replacedMeta.theme = theme;
