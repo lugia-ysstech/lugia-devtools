@@ -162,9 +162,11 @@ export async function createDesignInfo(
     console.log(msg);
     errors.push(msg);
   } finally {
+    console.log('--------------> error');
     errors.forEach((err: string) => {
       console.error(err);
     });
+    console.log('--------------> end');
   }
 }
 
