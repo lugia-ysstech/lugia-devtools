@@ -168,8 +168,8 @@ export async function createDesignInfo(
   } finally {
     console.log(`总数: ${total} 错误: ${errors.length}`);
     console.log('--------------> error');
-    errors.forEach((err: string) => {
-      console.error(err);
+    errors.forEach((err: string, index: number) => {
+      console.error(`${index}: ${err}`);
     });
     console.log('--------------> end');
   }
