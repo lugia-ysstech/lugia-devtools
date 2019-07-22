@@ -4,7 +4,7 @@ module.exports = {
     '!src/**/demo*.js',
     '!src/*.js',
   ],
-  testMatch: [ '<rootDir>/packages/**/?(*.)(spec|test).js?(x)' ],
+  testMatch: [ '<rootDir>/packages/**/*.(spec|test).js?(x)' ],
   testEnvironment: 'node',
   testURL: 'http://localhost',
   transform: {
