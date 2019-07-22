@@ -5,7 +5,7 @@
 [include]
 [libs]
 flow-typed/
-./src/interface/
+./interface/
 ./node_modules/@lugia/lugiax-core/target/interface
 [options]
 esproposal.class_static_fields=enable

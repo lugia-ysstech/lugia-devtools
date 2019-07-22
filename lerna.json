@@ -17,6 +17,11 @@
       "ignore": [
         "devtools-example*"
       ]
+    },
+    "build": {
+      "ignore": [
+        "devtools-example"
+      ]
     }
   },
   "packages": [

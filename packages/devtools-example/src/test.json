@@ -1,0 +1,245 @@
+{
+  "type": "PolarBear",
+  "designPoint": [-1316, -1759],
+  "scale": 2.43,
+  "areaId2ChildPadIndexString": {},
+  "widgetId2ChildPad": {},
+  "forkDependencies": [],
+  "mainDependencies": [
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Button" }
+  ],
+  "forkPad": {
+    "point": [-1316, -1759],
+    "width": 5000,
+    "index": 0,
+    "height": 5000,
+    "zIndex": 4000,
+    "type": "ForkPad",
+    "layers": [],
+    "idSeq": 67,
+    "id2WidgetInfo": {},
+    "id": "forkPad",
+    "lastIndex": 41,
+    "group": false
+  },
+  "mainPad": {
+    "point": [224, 201],
+    "width": 1920,
+    "index": 0,
+    "height": 1080,
+    "zIndex": 4000,
+    "type": "MainPad",
+    "layers": [
+      {
+        "rulerIndex": 5,
+        "i": "wb4^vE72",
+        "z": 0,
+        "w": 104,
+        "h": 32,
+        "p": [811, 431]
+      }
+    ],
+    "idSeq": 91291,
+    "id2WidgetInfo": {
+      "wb4^vE72": {
+        "w": "Button",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": {
+          "block": false,
+          "disabled": true,
+          "shape": "default",
+          "size": "default",
+          "type": "default",
+          "text": "234214321"
+        },
+        "i": "wb4^vE72"
+      }
+    },
+    "id": "mainPad",
+    "lastIndex": 71,
+    "group": false,
+    "backgroudColor": "#f8f8f8"
+  },
+  "themes": {
+    "widgetId2ThemeInfo": {
+      "wb4^vE72": {
+        "Container": {
+          "current": {
+            "background": { "color": "#ab2d2d" },
+            "border": {
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 }
+            },
+            "cursor": "not-allowed",
+            "borderRadius": {
+              "topLeft": 16,
+              "topRight": 16,
+              "bottomLeft": 16,
+              "bottomRight": 16
+            },
+            "height": 32,
+            "padding": { "top": 0, "right": 18, "bottom": 0, "left": 18 }
+          },
+          "normal": {
+            "border": {
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 }
+            },
+            "background": { "color": "#ab2d2d" },
+            "borderRadius": {
+              "topLeft": 21,
+              "topRight": 21,
+              "bottomLeft": 21,
+              "bottomRight": 21
+            },
+            "height": 32,
+            "padding": { "top": 0, "right": 18, "bottom": 0, "left": 18 },
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "family": "",
+              "size": ""
+            },
+            "color": ""
+          },
+          "hover": {
+            "border": {
+              "left": { "color": "#8090ff", "style": "solid", "width": 1 },
+              "top": { "color": "#8090ff", "style": "solid", "width": 1 },
+              "right": { "color": "#8090ff", "style": "solid", "width": 1 },
+              "bottom": { "color": "#8090ff", "style": "solid", "width": 1 }
+            },
+            "background": { "color": "rgba(77,99,255,0.05)" }
+          },
+          "active": {
+            "border": {
+              "left": { "color": "#3e4fcc", "style": "solid", "width": 1 },
+              "top": { "color": "#3e4fcc", "style": "solid", "width": 1 },
+              "right": { "color": "#3e4fcc", "style": "solid", "width": 1 },
+              "bottom": { "color": "#3e4fcc", "style": "solid", "width": 1 }
+            },
+            "background": { "color": "rgba(77,99,255,0.05)" }
+          },
+          "disabled": {
+            "background": { "color": "#ab2d2d" },
+            "border": {
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 }
+            },
+            "cursor": "not-allowed",
+            "borderRadius": {
+              "topLeft": 16,
+              "topRight": 16,
+              "bottomLeft": 16,
+              "bottomRight": 16
+            }
+          }
+        },
+        "ButtonText": {
+          "current": { "color": "#cccccc", "font": { "size": 14 } },
+          "normal": {
+            "color": "#666666",
+            "font": { "size": 14 },
+            "borderRadius": {
+              "topLeft": 0,
+              "topRight": 0,
+              "bottomLeft": 0,
+              "bottomRight": 0
+            },
+            "background": { "color": "#ab2d2d" },
+            "border": {
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 }
+            }
+          },
+          "hover": { "color": "#8090ff" },
+          "active": { "color": "#3e4fcc" },
+          "disabled": {
+            "color": "#cccccc",
+            "borderRadius": {
+              "topLeft": 0,
+              "topRight": 0,
+              "bottomLeft": 0,
+              "bottomRight": 0
+            },
+            "background": { "color": "#ab2d2d" },
+            "border": {
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 }
+            },
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "family": "",
+              "size": ""
+            }
+          }
+        },
+        "X": 846,
+        "Y": 428,
+        "ButtonIcon": {
+          "normal": {
+            "borderRadius": {
+              "topLeft": 0,
+              "topRight": 0,
+              "bottomLeft": 0,
+              "bottomRight": 0
+            },
+            "background": { "color": "#ab2d2d" },
+            "border": {
+              "top": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "right": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "bottom": { "color": "#4c2828", "style": "solid", "width": 1 },
+              "left": { "color": "#4c2828", "style": "solid", "width": 1 }
+            },
+            "font": {
+              "style": "normal",
+              "weight": "normal",
+              "family": "",
+              "size": ""
+            },
+            "color": ""
+          }
+        }
+      }
+    }
+  },
+  "lugiax": {
+    "widgetId2PropsName2BindInfo": {},
+    "widgetId2EventName2MutationInfo": {}
+  },
+  "widgetId2Locked": {},
+  "layoutInfos": {
+    "mode2Config": {
+      "1920x1080": {
+        "forkPadPoint": [-1316, -1759],
+        "mainPadSize": { "height": 1080, "width": 1920 },
+        "scale": 2.43,
+        "widthRange": [0, 50000]
+      }
+    },
+    "mode2LayoutData": {
+      "1920x1080": {
+        "wb4^vE72": {
+          "a": "mainPad",
+          "w": 104,
+          "h": 32,
+          "p": [811, 431],
+          "wi": "wb4^vE72"
+        }
+      }
+    }
+  },
+  "zip": true
+}

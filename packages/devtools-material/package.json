@@ -24,8 +24,8 @@
     "flow": "flow"
   },
   "files": [
-    "target",
-    "bin",
+    "lib",
+    "interface",
     "package.json"
   ],
   "babel": {
@@ -62,7 +62,7 @@
       "mjs"
     ]
   },
-  "main": "target/lib/index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.2.0"

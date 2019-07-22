@@ -2,8 +2,7 @@
   "name": "@lugia/devtools-conversion",
   "version": "1.0.4",
   "dependencies": {
-    "@lugia/devtools-core": "^1.0.3",
-    "chai": "^4.1.2"
+    "@lugia/devtools-core": "^1.0.3"
   },
   "peerDependencies": {
     "react": ">16.0.0",
@@ -26,7 +25,8 @@
     "plugins": []
   },
   "files": [
-    "target",
+    "lib",
+    "interface",
     "package.json"
   ],
   "jest": {
@@ -57,7 +57,7 @@
       "mjs"
     ]
   },
-  "main": "target/lib",
+  "main": "/lib/index.js",
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.2.0"
