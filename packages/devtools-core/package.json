@@ -4,21 +4,12 @@
   "dependencies": {
     "chai": "^4.1.2",
     "immutable": "^3.8.2",
-    "jest": "23.4.2",
-    "jest-cli": "23.4.2",
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0",
     "redux-saga": "^0.16.0"
   },
   "author": "ysstech-yjy",
   "scripts": {
-    "build": "lugia-complie lint && lugia-complie build",
-    "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
-    "test": "./tasks/test.sh",
-    "dev": "./tasks/dev.sh",
-    "cov": "lugia-complie cov",
-    "start": "node scripts/start.js",
-    "flow": "flow"
   },
   "devDependencies": {
     "@lugia/jverify": "1.0.1",
@@ -37,34 +28,6 @@
     "interface",
     "package.json"
   ],
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "testMatch": [
-      "<rootDir>/target/test/**/*.{js,jsx,mjs}"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
-  },
   "main": "lib/index.js",
   "engines": {
     "node": ">=8.0.0",

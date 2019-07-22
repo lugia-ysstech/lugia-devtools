@@ -1,31 +1,20 @@
 {
-  "lerna": "2.11.0",
   "changelog": {
-    "repo": "lugia/@lugia/devtools-conversion",
     "labels": {
-      "new feature": ":rocket: New Feature",
-      "breaking change": ":boom: Breaking Change",
-      "bug": ":bug: Bug Fix",
-      "enhancement": ":nail_care: Enhancement",
-      "documentation": ":memo: Documentation"
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix"
     },
+    "repo": "lugia/scaffoldings",
     "cacheDir": ".changelog"
   },
-  "commands": {
+  "command": {
     "publish": {
-      "access": "target",
-      "ignore": [
-        "devtools-example*"
-      ]
-    },
-    "build": {
-      "ignore": [
-        "devtools-example"
+      "ignoreChanges": [
+        "lugia-theme-example*"
       ]
     }
   },
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
   "version": "independent"
 }
