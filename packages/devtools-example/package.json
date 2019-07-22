@@ -1,6 +1,6 @@
 {
-  "name": "@lugia/libs-example",
-  "version": "1.0.71",
+  "name": "@lugia/devtools-example",
+  "version": "1.0.0",
   "dependencies": {
     "@lugia/devtools-conversion": "^1.0.4",
     "@lugia/lugia-web": "^1.1.0-25",
