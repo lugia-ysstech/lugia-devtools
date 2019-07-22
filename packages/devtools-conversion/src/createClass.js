@@ -143,7 +143,7 @@ export function createLayerComponent(
         height: '${styleHeight}px', zIndex: '${zIndex}', 
         left: '${styleLeft}px', 
         top: '${styleRight}px' }}
-        ><Theme config={{'${layerId}':{${configString}...themeHandle('${layerId}',${theContext})}}}>${containerThemeCode}<${
+        ><Theme config={{'${layerId}':${configString},...themeHandle('${layerId}',${theContext})}}>${containerThemeCode}<${
   widgetId2Component[layerId]
 } ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
