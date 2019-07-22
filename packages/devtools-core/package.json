@@ -9,8 +9,7 @@
     "redux-saga": "^0.16.0"
   },
   "author": "ysstech-yjy",
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "@lugia/jverify": "1.0.1",
     "@lugia/react-test-utils": "^1.0.0",
