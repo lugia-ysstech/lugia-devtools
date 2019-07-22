@@ -43,10 +43,10 @@ const themeHandle = `
     if(context){
       const {width, height} = context.getLayout(id);
       if(width){
-        config.width = width;
+        config.Container.normal.width = width;
       }
       if(height){
-        config.height = height;
+        config.Container.normal.height = height;
       }
       return config;
     }

@@ -137,15 +137,14 @@ export function createLayerComponent(
     const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
     const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
     const theContext = isResponsive ? 'context' : 'undefined';
+    const themeStr = configString ? `${configString},` : '{}';
     layerCode =
       layerCode +
       `<div style={{position: 'absolute',width: '${styleWidth}px',
         height: '${styleHeight}px', zIndex: '${zIndex}', 
         left: '${styleLeft}px', 
         top: '${styleRight}px' }}
-        ><Theme config={{'${layerId}':${configString},...themeHandle('${layerId}',${theContext})}}>${containerThemeCode}<${
-  widgetId2Component[layerId]
-} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
+        ><Theme config={{'${layerId}':{...${themeStr}}, ...themeHandle('${layerId}',${theContext})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
   if (layerCode && isResponsive) {
