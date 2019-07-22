@@ -4,7 +4,7 @@
   "dependencies": {
     "@lugia/devtools-conversion": "^1.0.4",
     "@lugia/lugia-web": "^1.1.0-25",
-    "@lugia/lugiax": "^1.1.0-25",
+    "@lugia/lugiax": "^1.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

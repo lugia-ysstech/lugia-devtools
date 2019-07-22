@@ -65,8 +65,6 @@
   "devDependencies": {
     "@lugia/lugiax": "^1.0.6",
     "@lugia/react-test-utils": "^1.0.0",
-    "babel-jest": "^23.4.0",
-    "babel-preset-react-app": "^3.1.2",
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.1",
     "flow-bin": "^0.77.0",
