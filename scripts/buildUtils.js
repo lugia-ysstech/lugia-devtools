@@ -113,6 +113,10 @@ function buildPkg(pkg, minify = false) {
 
   vfs
     .src([
+      `./${packagesDirName}/${pkg}/src/**/*.png`,
+    ])
+    .pipe(vfs.dest(join('./', packagesDirName, pkg, './lib'))); vfs
+    .src([
       `./${packagesDirName}/${pkg}/src/**/*.js`,
       `!./${packagesDirName}/${pkg}/src/**/fixtures/**/*.js`,
       `!./${packagesDirName}/${pkg}/src/**/*.test.js`,
