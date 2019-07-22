@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-material",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "immutable": "^3.8.2",
@@ -14,8 +14,7 @@
   "bin": {
     "lugia-create": "./bin/create.js"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "files": [
     "lib",
     "interface",

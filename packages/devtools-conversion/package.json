@@ -1,16 +1,15 @@
 {
   "name": "@lugia/devtools-conversion",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependencies": {
-    "@lugia/devtools-core": "^1.0.3"
+    "@lugia/devtools-core": "^1.0.4"
   },
   "peerDependencies": {
     "react": ">16.0.0",
     "react-dom": ">16.0.0"
   },
   "author": "ysstech",
-  "scripts": {
-  },
+  "scripts": {},
   "babel": {
     "presets": [
       "react-app"
