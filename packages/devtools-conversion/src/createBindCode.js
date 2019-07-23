@@ -21,7 +21,10 @@ export function createBindCode(
     const { modelName, fieldName, propsName } = item;
     const BindName = camelNamed(modelName) + fieldName.replace(/./g, '');
     const eventCode = `onChange: { ['${fieldName}'](e){ return bindHandleEvent(e); } }`;
-    const theBindName = BindName + index;
+    let theBindName = BindName + index;
+    if (theBindName.indexOf('.') > -1) {
+      theBindName = theBindName.split('.').join('');
+    }
     bindCmpName = theBindName;
     bindCode =
       bindCode +
@@ -57,6 +60,9 @@ export function createConnectCode(
   const stateCodes = [ 'state=>{ return {' ];
   let mutationsCodes = 'mutations => { return {';
   connectComName = camelNamed(`connect${componentName}${index}`);
+  if (connectComName.indexOf('.') > -1) {
+    connectComName = connectComName.split('.').join('');
+  }
   let theModelName = [];
   if (connectItem && connectItem.length > 0) {
     connectItem.forEach((bindItem: Object) => {
