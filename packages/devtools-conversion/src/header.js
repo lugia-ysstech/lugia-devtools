@@ -15,13 +15,19 @@ export function createHeader(
     'import React from "react";' +
     'import styled from "styled-components";' +
     'import lugiax, { bindTo, connect, bind } from "@lugia/lugiax";' +
-    'import { Theme, DesignResponsive } from "@lugia/lugia-web";' +
-    'import { ResponsiveContext } from "@lugia/lugia-web/dist/design-responsive/component";';
+    'import  { deepMerge } from "@lugia/object-utils";' +
+    'import { Theme, DesignResponsive } from "@lugia/lugia-web";';
   let styledComponentCode = '';
   const moudleMap = {};
 
+  function append(): string {
+    return (
+      packages + 'const ResponsiveContext = DesignResponsive.ResponsiveContext;'
+    );
+  }
   if (!mainDependencies || mainDependencies.length < 1) {
-    return { packages, styledComponentCode };
+    append();
+    return { packages: append(), styledComponentCode };
   }
   mainDependencies.forEach((item: Object) => {
     const { widgetName, module } = item;
@@ -43,8 +49,7 @@ export function createHeader(
       moudleMap[components[0]] = true;
     }
   });
-
-  return { packages, styledComponentCode };
+  return { packages: append(), styledComponentCode };
 }
 export function getModelCode(lugiax: ?Object): string {
   let code = '';

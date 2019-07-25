@@ -13,7 +13,16 @@ const path = require('path');
 export default {
   disableCSSModules: true,
   disableDll: true,
-  browserslist: ['>0.2%', 'not dead', 'not ie <= 11', 'not op_mini all'],
+  extraBabelPlugins: [
+    [
+      'import',
+      {
+        libraryName: '@lugia/lugia-web',
+        libraryDirectory: 'dist',
+      },
+    ],
+  ],
+  browserslist: [ '>0.2%', 'not dead', 'not ie <= 11', 'not op_mini all' ],
   alias: {
     react: path.join(__dirname, '/node_modules/react'),
   },

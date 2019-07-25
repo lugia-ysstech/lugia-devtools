@@ -38,21 +38,12 @@ const bindHandle = `
       }
   `;
 const themeHandle = `
-  function themeHandle(id,context){
-    const config = {};
-    if(context){
-      const {width, height} = context.getLayout(id);
-      if(width){
-        config.Container.normal.width = width;
-      }
-      if(height){
-        config.Container.normal.height = height;
-      }
-      return config;
-    }
-    
-    return config;
+function themeHandle(id, context, dTh) {
+  if (context) {
+    return context.getLayout(id).theme || {};
   }
+  return dTh || {};
+}
 `;
 
 export default function conversion(page: Object): string {

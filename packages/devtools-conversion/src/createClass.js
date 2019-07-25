@@ -144,7 +144,7 @@ export function createLayerComponent(
         height: '${styleHeight}px', zIndex: '${zIndex}', 
         left: '${styleLeft}px', 
         top: '${styleRight}px' }}
-        ><Theme config={{'${layerId}':{...${themeStr}}, ...themeHandle('${layerId}',${theContext})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
+        ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
   if (layerCode && isResponsive) {
