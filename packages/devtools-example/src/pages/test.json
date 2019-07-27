@@ -1,0 +1,99 @@
+{
+  "type": "PolarBear",
+  "designPoint": [-24040, -24654],
+  "scale": 0.8,
+  "areaId2ChildPadIndexString": {},
+  "widgetId2ChildPad": {},
+  "forkDependencies": [],
+  "mainDependencies": [
+    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Button" }
+  ],
+  "forkPad": {
+    "point": [-24040, -24654],
+    "width": 50000,
+    "index": 0,
+    "height": 50000,
+    "zIndex": 4000,
+    "type": "ForkPad",
+    "layers": [],
+    "idSeq": 67,
+    "id2WidgetInfo": {},
+    "id": "forkPad",
+    "lastIndex": 41,
+    "group": false
+  },
+  "mainPad": {
+    "point": [0, -194],
+    "width": 1920,
+    "index": 0,
+    "height": 1080,
+    "zIndex": 4000,
+    "type": "MainPad",
+    "layers": [
+      {
+        "rulerIndex": 5,
+        "i": "wbZbwA72",
+        "z": 0,
+        "w": 38,
+        "h": 35,
+        "p": [603, 448]
+      }
+    ],
+    "idSeq": 91291,
+    "id2WidgetInfo": {
+      "wbZbwA72": {
+        "w": "Button",
+        "a": "Hee",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": {},
+        "i": "wbZbwA72"
+      }
+    },
+    "id": "mainPad",
+    "lastIndex": 71,
+    "group": false,
+    "backgroudColor": "black"
+  },
+  "themes": {
+    "widgetId2ThemeInfo": {
+      "wbZbwA72": {
+        "Container": { "normal": { "background": { "color": "yellow" } } }
+      }
+    }
+  },
+  "lugiax": {
+    "page2mutation": {
+      "componentDidMount": { "modelName": "hello", "mutationName": "load" },
+      "componentWillUnmount": { "modelName": "hello", "mutationName": "load" }
+    },
+    "widgetId2PropsName2BindInfo": {},
+    "widgetId2EventName2MutationInfo": {}
+  },
+  "widgetId2Locked": {},
+  "layoutInfos": {
+    "mode2Config": {
+      "1920x1080": {
+        "mainPadSize": { "width": 1920, "height": 1080 },
+        "widthRange": [0, 50000],
+        "scale": 0.8,
+        "forkPadPoint": [-24040, -24654]
+      }
+    },
+    "mode2LayoutData": {
+      "1920x1080": {
+        "wbZbwA72": {
+          "theme": {
+            "Container": { "normal": { "background": { "color": "yellow" } } }
+          },
+          "a": "mainPad",
+          "w": 38,
+          "h": 35,
+          "p": [603, 448],
+          "wi": "wbZbwA72"
+        }
+      }
+    }
+  },
+  "zip": true
+}

@@ -56,15 +56,23 @@ export function getModelCode(lugiax: ?Object): string {
   if (!lugiax) {
     return code;
   }
-  let modelName = [];
   const {
     widgetId2PropsName2BindInfo = {},
     widgetId2EventName2MutationInfo = {},
+    page2mutation = {},
   } = lugiax;
 
   const propsModel = getTargetModal(widgetId2PropsName2BindInfo);
   const eventModal = getTargetModal(widgetId2EventName2MutationInfo);
-  modelName = [ ...propsModel, ...eventModal ];
+  const pageModal = [];
+  const pageMutationsKey = Object.keys(page2mutation);
+  for (let i = 0; i < pageMutationsKey.length; i++) {
+    const { modelName } = page2mutation[pageMutationsKey[i]];
+    if (modelName) {
+      pageModal.push(modelName);
+    }
+  }
+  let modelName = [ ...propsModel, ...eventModal, ...pageModal ];
   if (modelName.length > 0) {
     modelName = [ ...new Set(modelName) ];
     modelName.forEach((model: string) => {

@@ -46,6 +46,24 @@ function themeHandle(id, context, dTh) {
 }
 `;
 
+function getPageMutation(pageMutation: Object): string {
+  if (!pageMutation) {
+    return '';
+  }
+  const eventNames = Object.keys(pageMutation).filter(
+    (name: string): boolean =>
+      name === 'componentDidMount' || name === 'componentWillUnmount'
+  );
+  const res = [];
+  eventNames.forEach((name: string) => {
+    const { modelName, mutationName } = pageMutation[name];
+    res.push(`${name}(){
+          ${modelName}.mutations.${mutationName}({eventName: '${name}'});
+      }`);
+  });
+  return res.join('');
+}
+
 export default function conversion(page: Object): string {
   let exportCode = '';
   if (!page) {
@@ -64,6 +82,7 @@ export default function conversion(page: Object): string {
     widgetId2Component
   );
   const { mainPad, widgetId2ChildPad, lugiax = {}, themes = {} } = page;
+
   const { children, layers, id2WidgetInfo, width, zIndex } = mainPad;
   const modelCode = getModelCode(lugiax);
   const classCode = createComponent(
@@ -83,6 +102,7 @@ export default function conversion(page: Object): string {
     widgetId2Component,
     isResponsive
   );
+
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
   const nomalCode = `<div style={{width: '${width}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
@@ -95,6 +115,7 @@ export default function conversion(page: Object): string {
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
   exportCode = `${packages} ${modelCode} ${stateHeader} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  ${getPageMutation(lugiax.page2mutation)}
       render(){
         return (
             ${Code}
