@@ -9,12 +9,11 @@ import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
 
 const stateHeader = `const getData = (state, propsName, modelName, fieldName)=>{
-    const model = state[ modelName ];
-    if (!model) {
+    if (!modelName) {
       return {};
     }
     const paths = fieldName.split('.');
-    const data = model.getIn(paths);
+    const data = modelName.getState().getIn(paths);
     return { [propsName] : typeof data !== 'object' ? data : data ? data.toJS  ? data.toJS() : data:null }
   };`;
 const bindHandle = `

@@ -80,7 +80,7 @@ export function createConnectCode(
       theModelName.push(modelName);
       mutationsCodes =
         mutationsCodes +
-        `${eventName}: (event) => mutations.${modelName}.${mutationName}({eventArgs: {...event}}),`;
+        `${eventName}: (event) => ${modelName}.mutations.${mutationName}({eventArgs: {...event}}),`;
     });
   }
   mutationsCodes = mutationsCodes + '}}';
