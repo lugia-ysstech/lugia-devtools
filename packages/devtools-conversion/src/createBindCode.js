@@ -69,7 +69,7 @@ export function createConnectCode(
       const { modelName, fieldName, propsName } = bindItem;
       theModelName.push(modelName);
       stateCodes.push(`
-      ... getData(state, '${propsName}', '${modelName}', '${fieldName}'),
+      ... getData(state, '${propsName}', ${modelName}, '${fieldName}'),
     `);
     });
   }
