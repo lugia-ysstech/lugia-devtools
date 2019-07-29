@@ -69,7 +69,7 @@ export function createConnectCode(
       const { modelName, fieldName, propsName } = bindItem;
       theModelName.push(modelName);
       stateCodes.push(`
-      ... getData(state, '${propsName}', '${modelName}', '${fieldName}'),
+      ... getData(state, '${propsName}', ${modelName}, '${fieldName}'),
     `);
     });
   }
@@ -80,7 +80,7 @@ export function createConnectCode(
       theModelName.push(modelName);
       mutationsCodes =
         mutationsCodes +
-        `${eventName}: (event) => mutations.${modelName}.${mutationName}({eventArgs: {...event}}),`;
+        `${eventName}: (event) => ${modelName}.mutations.${mutationName}({eventArgs: {...event}}),`;
     });
   }
   mutationsCodes = mutationsCodes + '}}';
