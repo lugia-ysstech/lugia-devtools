@@ -140,10 +140,10 @@ export function createLayerComponent(
     const themeStr = configString ? `${configString},` : '{}';
     layerCode =
       layerCode +
-      `<div style={{position: 'absolute',width: '${styleWidth}px',
-        height: '${styleHeight}px', zIndex: '${zIndex}', 
-        left: '${styleLeft}px', 
-        top: '${styleRight}px' }}
+      `<div style={{position: 'absolute',width: ${styleWidth} + 'px',
+        height: ${styleHeight} + 'px', zIndex: '${zIndex}', 
+        left: ${styleLeft} + 'px', 
+        top: ${styleRight} + 'px' }}
         ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
