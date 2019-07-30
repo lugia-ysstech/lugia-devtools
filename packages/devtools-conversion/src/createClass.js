@@ -204,6 +204,9 @@ export function handlePropsType(propsItem?: any): string {
   if (type === 'number') {
     return `{ ${propsItem} }`;
   }
+  if (type === 'string') {
+    return `{  \`${propsItem}\` }`;
+  }
   return `{'${propsItem}'}`;
 }
 
