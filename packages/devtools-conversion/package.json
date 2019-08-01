@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-conversion",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "dependencies": {
     "@lugia/devtools-core": "^1.0.4"
   },
