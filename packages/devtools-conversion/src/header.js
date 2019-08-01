@@ -20,14 +20,8 @@ export function createHeader(
   let styledComponentCode = '';
   const moudleMap = {};
 
-  function append(): string {
-    return (
-      packages + 'const ResponsiveContext = DesignResponsive.ResponsiveContext;'
-    );
-  }
   if (!mainDependencies || mainDependencies.length < 1) {
-    append();
-    return { packages: append(), styledComponentCode };
+    return { packages, styledComponentCode };
   }
   mainDependencies.forEach((item: Object) => {
     const { widgetName, module } = item;
@@ -49,7 +43,7 @@ export function createHeader(
       moudleMap[components[0]] = true;
     }
   });
-  return { packages: append(), styledComponentCode };
+  return { packages, styledComponentCode };
 }
 export function getModelCode(lugiax: ?Object): string {
   let code = '';

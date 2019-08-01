@@ -82,8 +82,10 @@ export default function conversion(page: Object): string {
   );
   const { mainPad, widgetId2ChildPad, lugiax = {}, themes = {} } = page;
 
-  const { children, layers, id2WidgetInfo, width, zIndex } = mainPad;
+  const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);
+  const responsiveCode =
+    'const ResponsiveContext = DesignResponsive.ResponsiveContext;';
   const classCode = createComponent(
     children,
     widgetId2ChildPad,
@@ -104,7 +106,7 @@ export default function conversion(page: Object): string {
 
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
-  const nomalCode = `<div style={{width: '${width}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
+  const nomalCode = `<div style={{width: '${width}px',height: '${height}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
                     context => {
@@ -113,7 +115,7 @@ export default function conversion(page: Object): string {
                 }</ResponsiveContext.Consumer>        
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
-  exportCode = `${packages} ${modelCode} ${stateHeader} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  exportCode = `${packages} ${modelCode} ${stateHeader} ${responsiveCode} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
   ${getPageMutation(lugiax.page2mutation)}
       render(){
         return (
