@@ -40,7 +40,7 @@ async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
     );
 }
 function loadMeta(path: string, folderName: string, metaName: string): Object {
-  const file = fs.readdirSync(
+  const file = fs.readFileSync(
     `${path}/${folderName}/lugia.${metaName}.zh-CN.json`
   );
   return JSON.parse(file);
