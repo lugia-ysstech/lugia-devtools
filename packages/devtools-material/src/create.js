@@ -40,7 +40,10 @@ async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
     );
 }
 function loadMeta(path: string, folderName: string, metaName: string): Object {
-  return require(`${path}/${folderName}/lugia.${metaName}.zh-CN.json`);
+  const file = fs.readdirSync(
+    `${path}/${folderName}/lugia.${metaName}.zh-CN.json`
+  );
+  return JSON.parse(file);
 }
 async function getDemoFolderNames(
   allPathFile: string[],
@@ -289,9 +292,7 @@ function replaceMeta(props: Object, outMeta: Object): Object {
       propsKeys.forEach((item: string) => {
         let outProps = outMeta.props[item];
         if (!outProps) {
-          const msg = `error: ${
-            outMeta.aliasName
-          }-主配置中缺少props.${item} 属性`;
+          const msg = `error: ${outMeta.aliasName}-主配置中缺少props.${item} 属性`;
           console.warn(msg);
           errors.push(msg);
           outProps = outMeta.props[item] = {};
