@@ -158,7 +158,7 @@ describe('conversion createClass ->', () => {
     expect(spaceRes).toBe('');
 
     const res = getComponentProps(props);
-    expect(res).toBe("data={ {} } type={'a'}");
+    expect(res).toBe('data={ {} } type={  `a` }');
   });
 
   it('createTargetContainer', () => {
@@ -185,7 +185,7 @@ describe('conversion createClass ->', () => {
     expect(numberRes).toBe('{ 2 }');
 
     const res = handlePropsType('aaa');
-    expect(res).toBe("{'aaa'}");
+    expect(res).toBe('{  `aaa` }');
   });
 
   it('createComponent', () => {

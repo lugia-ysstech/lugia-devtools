@@ -25,7 +25,7 @@ describe('conversion createClass ->', () => {
       widgetId
     );
     expect(labelStart).toBe(
-      "<Theme config={{'a' :{  width: 100, height: 100, }}}>"
+      "<Theme config={{'a' :{\"width\":100,\"height\":100},}}>"
     );
     expect(labelEnd).toBe('</Theme>');
     expect(viewClass).toBe('a');
@@ -40,8 +40,8 @@ describe('conversion createClass ->', () => {
 
     const res = getThemeConfig(theme, widgetId);
     expect(res).toEqual({
-      config: "'a' :{  width: 100, height: 100, }",
-      configStr: ' width: 100, height: 100,',
+      config: "'a' :{\"width\":100,\"height\":100},",
+      configStr: '{"width":100,"height":100}',
     });
   });
 });
