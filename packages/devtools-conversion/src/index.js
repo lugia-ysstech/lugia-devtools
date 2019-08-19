@@ -5,6 +5,7 @@
  * @flow
  */
 import { createHeader, getModelCode } from './header';
+import { createImageImport } from './img';
 import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
 
@@ -69,6 +70,7 @@ export default function conversion(page: Object, options: Object): string {
     return exportCode;
   }
   const widgetId2Component = {};
+  const images = [];
   const { zip } = page;
   if (zip) {
     page = unZip(JSON.stringify(page));
@@ -100,7 +102,7 @@ export default function conversion(page: Object, options: Object): string {
     themes,
     widgetId2Component,
     isResponsive,
-    { resourcesHead, widgetIdHasAssetPropsName }
+    { resourcesHead, widgetIdHasAssetPropsName, images }
   );
   const { layerCode, layerBindCode } = createLayerComponent(
     layers,
@@ -110,9 +112,10 @@ export default function conversion(page: Object, options: Object): string {
     'MainPad',
     widgetId2Component,
     isResponsive,
-    { resourcesHead, widgetIdHasAssetPropsName }
+    { resourcesHead, widgetIdHasAssetPropsName, images }
   );
-
+  let imageCode = createImageImport(images);
+  imageCode = imageCode ? imageCode + ';' : '';
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
   const nomalCode = `<div style={{width: '${width}px',height: '${height}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
@@ -124,7 +127,7 @@ export default function conversion(page: Object, options: Object): string {
                 }</ResponsiveContext.Consumer>        
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
-  exportCode = `${packages} ${modelCode} ${stateHeader} ${responsiveCode} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  exportCode = `${packages} ${imageCode} ${modelCode} ${stateHeader} ${responsiveCode} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
   ${getPageMutation(lugiax.page2mutation)}
       render(){
         return (

@@ -1,21 +1,19 @@
 {
   "type": "PolarBear",
-  "designPoint": [-1696, -1982],
-  "scale": 0.79,
+  "designPoint": [-1660, -1940],
+  "scale": 0.6,
   "areaId2ChildPadIndexString": {},
   "widgetId2ChildPad": {},
   "forkDependencies": [],
   "mainDependencies": [
-    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Alert" },
     {
       "version": "1.0.0",
       "module": "@lugia/lugia-web",
-      "widgetName": "Button"
-    },
-    { "version": "1.0.0", "module": "@lugia/lugia-web", "widgetName": "Avatar" }
+      "widgetName": "Avatar"
+    }
   ],
   "forkPad": {
-    "point": [-1696, -1982],
+    "point": [-1660, -1940],
     "width": 5000,
     "index": 0,
     "height": 5000,
@@ -29,8 +27,8 @@
     "group": false
   },
   "mainPad": {
-    "point": [204, -22],
-    "width": 1200,
+    "point": [-120, 20],
+    "width": 1920,
     "index": 0,
     "height": 1080,
     "zIndex": 4000,
@@ -38,90 +36,29 @@
     "layers": [
       {
         "rulerIndex": 5,
-        "i": "wbm@my71",
+        "i": "wb(Aqu71",
         "z": 0,
-        "w": 80,
-        "h": 38,
-        "p": [277, 238]
-      },
-      {
-        "rulerIndex": 5,
-        "i": "wb0(E%72",
-        "z": 0,
-        "w": 104,
-        "h": 32,
-        "p": [414, 256]
-      },
-      {
-        "rulerIndex": 5,
-        "i": "wbGw7)71",
-        "z": 0,
-        "w": 32,
-        "h": 32,
-        "p": [235, 348]
-      },
-      {
-        "rulerIndex": 5,
-        "i": "wbWc^G41",
-        "z": 0,
-        "w": 32,
-        "h": 32,
-        "p": [486, 139]
+        "w": 640,
+        "h": 427,
+        "p": [533, 436]
       }
     ],
     "idSeq": 91291,
     "id2WidgetInfo": {
-      "wb0(E%72": {
-        "w": "Button",
-        "a": "IconButton",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
-          "block": false,
-          "disabled": false,
-          "icon": "lugia-icon-logo_lugia",
-          "plain": true,
-          "shape": "default",
-          "size": "default",
-          "text": "Button",
-          "type": "primary"
-        },
-        "i": "wb0(E%72"
-      },
-      "wbm@my71": {
-        "w": "Alert",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": { "closable": false, "showIcon": false, "type": 0 },
-        "i": "wbm@my71"
-      },
-      "wbGw7)71": {
+      "wb(Aqu71": {
         "w": "Avatar",
         "a": "AvatarSrc",
         "m": "@lugia/lugia-web",
         "v": "1.0.0",
         "p": {
-          "size": "default",
-          "name": "Lugia",
           "icon": "lugia-icon-financial_user",
-          "src": "",
-          "shape": "circle"
-        },
-        "i": "wbGw7)71"
-      },
-      "wbWc^G41": {
-        "w": "Avatar",
-        "a": "AvatarSrc",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
-          "size": "default",
           "name": "Lugia",
-          "icon": "lugia-icon-financial_user",
-          "src": "",
-          "shape": "circle"
+          "shape": "circle",
+          "size": "default",
+          "src": "9f2f070828381f30cfb1ff8e74179c0c6e06f00c.jpeg",
+          "type": "img"
         },
-        "i": "wbWc^G41"
+        "i": "wb(Aqu71"
       }
     },
     "id": "mainPad",
@@ -129,84 +66,44 @@
     "group": false,
     "backgroudColor": "#f8f8f8"
   },
-  "themes": { "widgetId2ThemeInfo": {} },
+  "themes": {
+    "widgetId2ThemeInfo": {}
+  },
   "lugiax": {
     "page2mutation": {},
     "widgetId2PropsName2BindInfo": {},
     "widgetId2EventName2MutationInfo": {}
   },
+  "assets": {
+    "widgetIdHasAssetPropsName": {
+      "wb(Aqu71": {
+        "src": true
+      }
+    },
+    "widgetIdHasAssetThemeName": {}
+  },
   "widgetId2Locked": {},
   "layoutInfos": {
     "mode2Config": {
-      "1200x1080": {
-        "mainPadSize": { "width": 1200, "height": 1080 },
-        "widthRange": [751, 50000],
-        "scale": 0.79
-      },
-      "750x1334": {
-        "mainPadSize": { "width": 750, "height": 1334 },
-        "widthRange": [0, 750]
+      "1920x1080": {
+        "forkPadPoint": [-1660, -1940],
+        "mainPadSize": {
+          "height": 1080,
+          "width": 1920
+        },
+        "scale": 0.6,
+        "widthRange": [0, 50000]
       }
     },
     "mode2LayoutData": {
-      "1200x1080": {
-        "wbm@my71": {
+      "1920x1080": {
+        "wb(Aqu71": {
           "theme": {},
           "a": "mainPad",
-          "w": 80,
-          "h": 38,
-          "p": [277, 238],
-          "wi": "wbm@my71"
-        },
-        "wb0(E%72": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 104,
-          "h": 32,
-          "p": [414, 256],
-          "wi": "wb0(E%72"
-        },
-        "wbGw7)71": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 32,
-          "h": 32,
-          "p": [235, 348],
-          "wi": "wbGw7)71"
-        },
-        "wbWc^G41": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 32,
-          "h": 32,
-          "p": [486, 139],
-          "wi": "wbWc^G41"
-        }
-      },
-      "750x1334": {
-        "wbm@my71": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 80,
-          "h": 38,
-          "p": [277, 238],
-          "wi": "wbm@my71"
-        },
-        "wb0(E%72": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 104,
-          "h": 32,
-          "p": [414, 256],
-          "wi": "wb0(E%72"
-        },
-        "wbGw7)71": {
-          "theme": {},
-          "a": "mainPad",
-          "w": 32,
-          "h": 32,
-          "p": [235, 348],
-          "wi": "wbGw7)71"
+          "w": 640,
+          "h": 427,
+          "p": [533, 436],
+          "wi": "wb(Aqu71"
         }
       }
     }
