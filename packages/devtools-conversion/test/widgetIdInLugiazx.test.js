@@ -52,7 +52,7 @@ describe('conversion widgetIdInLugiax ->', () => {
     )(Component);const ConnectUser11 = connect(
     [user],
     state=>{ return {
-      ... getData(state, 'data', 'user', 'data'),
+      ... getData(state, 'data', user, 'data'),
     }},
     mutations => { return {}}
   )(User1);`;

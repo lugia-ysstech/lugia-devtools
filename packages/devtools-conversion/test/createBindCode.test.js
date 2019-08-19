@@ -70,7 +70,7 @@ describe('conversion createBindCode ->', () => {
     const defaultConnectCode = `const ConnectComponent1 = connect(
     [user],
     state=>{ return {}},
-    mutations => { return {onChange: (event) => mutations.user.changeName({eventArgs: {...event}}),}}
+    mutations => { return {onChange: (event) => user.mutations.changeName({eventArgs: {...event}}),}}
   )(Component);`;
     const {
       connectCode: errConnectCode,
@@ -82,9 +82,9 @@ describe('conversion createBindCode ->', () => {
     const defaultCode = `const ConnectComponent1 = connect(
     [user],
     state=>{ return {
-      ... getData(state, 'data', 'user', 'data'),
+      ... getData(state, 'data', user, 'data'),
     }},
-    mutations => { return {onChange: (event) => mutations.user.changeName({eventArgs: {...event}}),}}
+    mutations => { return {onChange: (event) => user.mutations.changeName({eventArgs: {...event}}),}}
   )(Component);`;
     const {
       connectCode,
