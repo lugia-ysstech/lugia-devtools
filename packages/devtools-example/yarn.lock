@@ -1126,13 +1126,6 @@
     "@lugia/devtools-core" "^1.0.3"
     chai "^4.1.2"
 
-"@lugia/devtools-conversion@^1.0.8":
-  version "1.0.8"
-  resolved "http://192.168.102.79:5001/@lugia/devtools-conversion/download/@lugia/devtools-conversion-1.0.8.tgz#36c67f55883f33660ae40803b918444d7d2f67bb"
-  integrity sha1-NsZ/VYg/M2YK5AgDuRhETX0vZ7s=
-  dependencies:
-    "@lugia/devtools-core" "^1.0.4"
-
 "@lugia/devtools-core@^1.0.3":
   version "1.0.3"
   resolved "http://192.168.102.79:5001/@lugia/devtools-core/download/@lugia/devtools-core-1.0.3.tgz#6202d0a51eed339c1229d319037f17b96c69afe2"
@@ -1142,17 +1135,6 @@
     immutable "^3.8.2"
     jest "23.4.2"
     jest-cli "23.4.2"
-    redux "^4.0.0"
-    redux-immutable "^4.0.0"
-    redux-saga "^0.16.0"
-
-"@lugia/devtools-core@^1.0.4":
-  version "1.0.4"
-  resolved "http://192.168.102.79:5001/@lugia/devtools-core/download/@lugia/devtools-core-1.0.4.tgz#0889542a3ec1f0900e2a6997a097839b4ca18ef8"
-  integrity sha1-CIlUKj7B8JAOKmmXoJeDm0yhjvg=
-  dependencies:
-    chai "^4.1.2"
-    immutable "^3.8.2"
     redux "^4.0.0"
     redux-immutable "^4.0.0"
     redux-saga "^0.16.0"
