@@ -44,7 +44,8 @@ export function createClassCode(
   themes: Object,
   index: number | string,
   widgetId2Component: Object,
-  isResponsive: boolean
+  isResponsive: boolean,
+  options: Object
 ): string {
   let classCode = '';
   const padInfo = childPadInfo[id];
@@ -57,7 +58,8 @@ export function createClassCode(
       themes,
       index,
       widgetId2Component,
-      isResponsive
+      isResponsive,
+      options
     );
     classCode = `${layerBindCode} class ChildPadComponent${index} extends React.Component {
       render(){
@@ -79,8 +81,10 @@ export function createLayerComponent(
   themes: Object,
   index: number | string,
   widgetId2Component: Object,
-  isResponsive: boolean
+  isResponsive: boolean,
+  options: Object
 ): Object {
+  const { widgetIdHasAssetPropsName = {}, resourcesHead = '' } = options || {};
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
@@ -110,13 +114,15 @@ export function createLayerComponent(
       }
     }
     const hasContainer = 'TargetContainer' in props;
+    const assetProps = widgetIdHasAssetPropsName[layerId];
     const { containerStart, containerEnd } = createTargetContainer(
       props.TargetContainer,
-      props
+      props,
+      { assetProps, resourcesHead }
     );
     const containerStartLabel = hasContainer ? containerStart : '';
     const containerEndLabel = hasContainer ? containerEnd : '';
-    const propsConfig = getComponentProps(props);
+    const propsConfig = getComponentProps(props, { assetProps, resourcesHead });
 
     const layerThemeInfo =
       themes && themes.widgetId2ThemeInfo && themes.widgetId2ThemeInfo[layerId];
@@ -158,17 +164,22 @@ export function createLayerComponent(
   return { layerCode, layerBindCode };
 }
 
-export function getComponentProps(props: ?Object): string {
+export function getComponentProps(props: ?Object, opt: ?Object): string {
   if (!props) {
     return '';
   }
   const comProps = [];
-
+  const { assetProps = {}, resourcesHead = '' } = opt || {};
   const propsKey = Object.keys(props);
   if (propsKey && propsKey.length > 0) {
     propsKey.forEach((item: string) => {
       if (item !== 'TargetContainer') {
-        const propsItem = props && props[item];
+        let propsItem = props && props[item];
+        const assetPropItem = assetProps[item];
+        if (assetPropItem && typeof propsItem === 'string') {
+          const url = `${resourcesHead}${propsItem}`;
+          propsItem = url;
+        }
         comProps.push(`${item}=${handlePropsType(propsItem)}`);
       }
     });
@@ -178,7 +189,8 @@ export function getComponentProps(props: ?Object): string {
 }
 export function createTargetContainer(
   TargetContainer: ?Object,
-  props: Object
+  props: Object,
+  opt: Object
 ): Object {
   let labelStart = '',
     labelEnd = '';
@@ -186,7 +198,7 @@ export function createTargetContainer(
     return { containerStart: labelStart, containerEnd: labelEnd };
   }
   const { widgetName } = TargetContainer;
-  const propsCode = getComponentProps(props);
+  const propsCode = getComponentProps(props, opt);
   labelStart = `<${widgetName} ${propsCode}`;
   labelEnd = `</${widgetName}>`;
 
@@ -216,7 +228,8 @@ export function createComponent(
   lugiax: Object,
   themes: Object,
   widgetId2Component: Object,
-  isResponsive: boolean
+  isResponsive: boolean,
+  options: Object
 ): string {
   let classCode = '';
   if (!childrenPad || childrenPad.length < 1) {
@@ -234,7 +247,8 @@ export function createComponent(
         themes,
         index,
         widgetId2Component,
-        isResponsive
+        isResponsive,
+        options
       );
     widgetId2Component[id] = componentName;
     const lugiaxInfo = widgetIdInLugiax(id, lugiax, componentName, index);
