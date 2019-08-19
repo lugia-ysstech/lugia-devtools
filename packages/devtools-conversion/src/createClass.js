@@ -84,7 +84,7 @@ export function createLayerComponent(
   isResponsive: boolean,
   options: Object
 ): Object {
-  const { widgetIdHasAssetPropsName = {}, resourcesHead = '' } = options || {};
+  const { widgetIdHasAssetPropsName = {}, resourcesHead = '', images = [] } = options || {};
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
@@ -118,11 +118,11 @@ export function createLayerComponent(
     const { containerStart, containerEnd } = createTargetContainer(
       props.TargetContainer,
       props,
-      { assetProps, resourcesHead }
+      { assetProps, resourcesHead, images }
     );
     const containerStartLabel = hasContainer ? containerStart : '';
     const containerEndLabel = hasContainer ? containerEnd : '';
-    const propsConfig = getComponentProps(props, { assetProps, resourcesHead });
+    const propsConfig = getComponentProps(props, { assetProps, resourcesHead, images });
 
     const layerThemeInfo =
       themes && themes.widgetId2ThemeInfo && themes.widgetId2ThemeInfo[layerId];
@@ -169,18 +169,25 @@ export function getComponentProps(props: ?Object, opt: ?Object): string {
     return '';
   }
   const comProps = [];
-  const { assetProps = {}, resourcesHead = '' } = opt || {};
+  const { assetProps = {}, resourcesHead = '', images = [] } = opt || {};
   const propsKey = Object.keys(props);
   if (propsKey && propsKey.length > 0) {
     propsKey.forEach((item: string) => {
       if (item !== 'TargetContainer') {
-        let propsItem = props && props[item];
+        const propsItem = props && props[item];
         const assetPropItem = assetProps[item];
         if (assetPropItem && typeof propsItem === 'string') {
           const url = `${resourcesHead}${propsItem}`;
-          propsItem = url;
+          const propsValue = `image${images.length}`;
+          images.push({
+            name: propsValue,
+            value: url,
+          });
+          comProps.push(`${item}={ ${propsValue} }`);
+        } else {
+          comProps.push(`${item}=${handlePropsType(propsItem)}`);
         }
-        comProps.push(`${item}=${handlePropsType(propsItem)}`);
+
       }
     });
   }
