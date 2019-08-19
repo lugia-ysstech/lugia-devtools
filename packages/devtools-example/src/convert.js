@@ -9,4 +9,4 @@ const Test = require('./a.json');
 const fs = require('fs');
 
 console.info(Convert);
-fs.writeFileSync('./Page.js', Convert(Test));
+fs.writeFileSync('./Page.js', Convert(Test, { resourcesHead: 'http:/' }));
