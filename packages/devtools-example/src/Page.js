@@ -4,6 +4,7 @@ import lugiax, { bindTo, connect, bind } from "@lugia/lugiax";
 import { deepMerge } from "@lugia/object-utils";
 import { Theme, DesignResponsive } from "@lugia/lugia-web";
 import { Avatar } from "@lugia/lugia-web";
+import image0 from "http:/9f2f070828381f30cfb1ff8e74179c0c6e06f00c.jpeg";
 const getData = (state, propsName, modelName, fieldName) => {
   if (!modelName) {
     return {};
@@ -75,7 +76,7 @@ export default class Page extends React.Component {
               name={`Lugia`}
               shape={`circle`}
               size={`default`}
-              src={`http:/9f2f070828381f30cfb1ff8e74179c0c6e06f00c.jpeg`}
+              src={image0}
               type={`img`}
             />
           </Theme>
