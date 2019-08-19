@@ -63,7 +63,7 @@ function getPageMutation(pageMutation: Object): string {
   return res.join('');
 }
 
-export default function conversion(page: Object): string {
+export default function conversion(page: Object, options: Object): string {
   let exportCode = '';
   if (!page) {
     return exportCode;
@@ -73,6 +73,7 @@ export default function conversion(page: Object): string {
   if (zip) {
     page = unZip(JSON.stringify(page));
   }
+  const { resourcesHead = '' } = options || {};
   const { mainDependencies = [], layoutInfos = {} } = page;
   const { mode2Config, mode2LayoutData } = layoutInfos;
   const isResponsive = Object.keys(mode2Config || {}).length > 1;
@@ -80,8 +81,14 @@ export default function conversion(page: Object): string {
     mainDependencies,
     widgetId2Component
   );
-  const { mainPad, widgetId2ChildPad, lugiax = {}, themes = {} } = page;
-
+  const {
+    mainPad,
+    widgetId2ChildPad,
+    lugiax = {},
+    themes = {},
+    assets = {},
+  } = page;
+  const { widgetIdHasAssetPropsName = {} } = assets;
   const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);
   const responsiveCode =
@@ -92,7 +99,8 @@ export default function conversion(page: Object): string {
     lugiax,
     themes,
     widgetId2Component,
-    isResponsive
+    isResponsive,
+    { resourcesHead, widgetIdHasAssetPropsName }
   );
   const { layerCode, layerBindCode } = createLayerComponent(
     layers,
@@ -101,7 +109,8 @@ export default function conversion(page: Object): string {
     themes,
     'MainPad',
     widgetId2Component,
-    isResponsive
+    isResponsive,
+    { resourcesHead, widgetIdHasAssetPropsName }
   );
 
   const mode2ConfigData = JSON.stringify(mode2Config);
