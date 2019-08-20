@@ -10,6 +10,12 @@
   },
   "author": "ysstech-yjy",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lugia-ysstech/lugia-devtools"
+  },
+  "homepage": "http://lugia.tech",
+  "license": "Apache License 2.0",
   "devDependencies": {
     "@lugia/jverify": "1.0.1",
     "@lugia/react-test-utils": "^1.0.0",

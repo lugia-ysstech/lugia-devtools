@@ -31,6 +31,12 @@
     "node": ">=8.0.0",
     "npm": ">=5.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lugia-ysstech/lugia-devtools"
+  },
+  "homepage": "http://lugia.tech",
+  "license": "Apache License 2.0",
   "devDependencies": {
     "babel-jest": "^23.4.0",
     "babel-preset-react-app": "^3.1.2",
