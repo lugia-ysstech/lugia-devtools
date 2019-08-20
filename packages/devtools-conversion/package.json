@@ -1,15 +1,15 @@
 {
   "name": "@lugia/devtools-conversion",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "dependencies": {
-    "@lugia/devtools-core": "^1.0.4"
+    "@lugia/devtools-core": "^1.0.5"
   },
   "peerDependencies": {
     "react": ">16.0.0",
     "react-dom": ">16.0.0"
   },
   "repository": {
-    "type" : "git",
+    "type": "git",
     "url": "https://github.com/lugia-ysstech/lugia-devtools"
   },
   "homepage": "http://lugia.tech",
