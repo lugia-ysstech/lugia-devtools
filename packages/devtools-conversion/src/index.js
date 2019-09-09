@@ -4,7 +4,7 @@
  *
  * @flow
  */
-import { createHeader, getModelCode, getLugiaDCoreCode, getResponsiveCode } from './header';
+import { createHeader, getModelCode, getLugiadCoreCode, getResponsiveCode } from './header';
 import { createImageImport } from './img';
 import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
@@ -53,7 +53,7 @@ export default function conversion(page: Object, options: Object): string {
     themes = {},
     assets = {},
   } = page;
-  const lugiadCoreCode = getLugiaDCoreCode(lugiax);
+  const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax);
   const { widgetIdHasAssetPropsName = {} } = assets;
   const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);
@@ -90,7 +90,7 @@ export default function conversion(page: Object, options: Object): string {
                 }</ResponsiveContext.Consumer>        
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
-  exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
   ${getPageMutation(lugiax.page2mutation)}
       render(){
         return (
