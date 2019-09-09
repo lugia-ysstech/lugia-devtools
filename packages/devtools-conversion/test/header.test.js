@@ -5,7 +5,15 @@
  * @flow
  */
 
-import { getTargetModal, getModelCode, createHeader } from '../src/header';
+import {
+  getTargetModal,
+  getModelCode,
+  createHeader,
+  getLugiaDCoreCode,
+  createLugiaDCoreCode,
+  hasResponsive,
+  getResponsiveCode,
+} from '../src/header';
 
 describe('conversion header ->', () => {
   const target = {
@@ -100,5 +108,72 @@ describe('conversion header ->', () => {
   it('createHeader toMatchSnapshot', () => {
     const widgetId2Component = {};
     expect(createHeader([], widgetId2Component)).toMatchSnapshot();
+  });
+
+  it('createLugiaDCoreCode toMatchSnapshot', () => {
+    const packageNames = [ 'ThemeHandle', 'bindHandleEvent' ];
+    expect(createLugiaDCoreCode(packageNames)).toMatchSnapshot();
+  });
+
+  it('hasResponsive toMatchSnapshot', () => {
+    const spaceLayoutInfos = {
+      mode2Config: {},
+      mode2LayoutData: {},
+    };
+    const layoutInfos = {
+      mode2Config: {
+        '1920x1080': {},
+        '1080x960': {},
+      },
+      mode2LayoutData: {
+        '1920x1080': {},
+        '1080x960': {},
+      },
+    };
+    expect(hasResponsive(spaceLayoutInfos)).toBe(false);
+    expect(hasResponsive(layoutInfos)).toBe(true);
+  });
+
+  it('getResponsiveCode toMatchSnapshot', () => {
+    const spaceLayoutInfos = {
+      mode2Config: {},
+      mode2LayoutData: {},
+    };
+    const layoutInfos = {
+      mode2Config: {
+        '1920x1080': {},
+        '1080x960': {},
+      },
+      mode2LayoutData: {
+        '1920x1080': {},
+        '1080x960': {},
+      },
+    };
+    expect(getResponsiveCode(spaceLayoutInfos)).toMatchSnapshot();
+    expect(getResponsiveCode(layoutInfos)).toMatchSnapshot();
+  });
+
+  it('getLugiaDCoreCode toMatchSnapshot', () => {
+    const spaceLugiax = {
+      widgetId2PropsName2BindInfo: {},
+      widgetId2EventName2MutationInfo: {},
+    };
+    const lugiaxBind = {
+      widgetId2PropsName2BindInfo: {
+        onChange: {},
+      },
+      widgetId2EventName2MutationInfo: {},
+    };
+    const lugiaxMutationKeys = {
+      widgetId2PropsName2BindInfo: {},
+      widgetId2EventName2MutationInfo: {
+        hello: {
+          propsName: 'value',
+        },
+      },
+    };
+    expect(getLugiaDCoreCode(spaceLugiax)).toMatchSnapshot();
+    expect(getLugiaDCoreCode(lugiaxBind)).toMatchSnapshot();
+    expect(getLugiaDCoreCode(lugiaxMutationKeys)).toMatchSnapshot();
   });
 });
