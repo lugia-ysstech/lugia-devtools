@@ -4,47 +4,10 @@
  *
  * @flow
  */
-import { createHeader, getModelCode } from './header';
+import { createHeader, getModelCode, getLugiaDCoreCode, getResponsiveCode } from './header';
 import { createImageImport } from './img';
 import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
-
-const stateHeader = `const getData = (state, propsName, modelName, fieldName)=>{
-    if (!modelName) {
-      return {};
-    }
-    const paths = fieldName.split('.');
-    const data = modelName.getState().getIn(paths);
-    return { [propsName] : typeof data !== 'object' ? data : data ? data.toJS  ? data.toJS() : data:null }
-  };`;
-const bindHandle = `
-     function bindHandleEvent(e) {
-
-        if(!e){
-          return;
-        }
-
-        if(e.newValue || e.newValue === 0){
-          return e.newValue;
-        }
-
-        if(e.value || e.value === 0){
-          return e.value;
-        }
-        
-        if(e.target && (e.target.value || e.target.value === 0)){
-          return e.target.value;
-        }
-      }
-  `;
-const themeHandle = `
-function themeHandle(id, context, dTh) {
-  if (context) {
-    return context.getLayout(id).theme || {};
-  }
-  return dTh || {};
-}
-`;
 
 function getPageMutation(pageMutation: Object): string {
   if (!pageMutation) {
@@ -90,11 +53,11 @@ export default function conversion(page: Object, options: Object): string {
     themes = {},
     assets = {},
   } = page;
+  const lugiadCoreCode = getLugiaDCoreCode(lugiax);
   const { widgetIdHasAssetPropsName = {} } = assets;
   const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);
-  const responsiveCode =
-    'const ResponsiveContext = DesignResponsive.ResponsiveContext;';
+  const { rspPackagesCode, rspDeconstructionCode: responsiveCode } = getResponsiveCode(layoutInfos);
   const classCode = createComponent(
     children,
     widgetId2ChildPad,
@@ -127,7 +90,7 @@ export default function conversion(page: Object, options: Object): string {
                 }</ResponsiveContext.Consumer>        
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
-  exportCode = `${packages} ${imageCode} ${modelCode} ${stateHeader} ${responsiveCode} ${bindHandle} ${themeHandle} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
   ${getPageMutation(lugiax.page2mutation)}
       render(){
         return (

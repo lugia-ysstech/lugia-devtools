@@ -14,9 +14,7 @@ export function createHeader(
   let packages =
     'import React from "react";' +
     'import styled from "styled-components";' +
-    'import lugiax, { bindTo, connect, bind } from "@lugia/lugiax";' +
-    'import  { deepMerge } from "@lugia/object-utils";' +
-    'import { Theme, DesignResponsive } from "@lugia/lugia-web";';
+    'import { Theme } from "@lugia/lugia-web";';
   let styledComponentCode = '';
   const moudleMap = {};
 
@@ -92,4 +90,60 @@ export function getTargetModal(target: ?Object): any[] {
     });
   });
   return keys;
+}
+
+export function getLugiaDCoreCode(
+  lugiax: Object
+): string[] {
+  if (!lugiax) {
+    return '';
+  }
+  const functionNames = [ 'themeHandle' ];
+  let lugiaxCode = '';
+  const { widgetId2PropsName2BindInfo = {}, widgetId2EventName2MutationInfo = {} } = lugiax || {};
+  const bindKeys = Object.keys(widgetId2PropsName2BindInfo);
+  const mutationKeys = Object.keys(widgetId2EventName2MutationInfo);
+  if (bindKeys.length || mutationKeys.length) {
+    functionNames.push('bindHandleEvent');
+    functionNames.push('getData');
+    lugiaxCode = 'import lugiax, { bindTo, connect, bind } from \'@lugia/lugiax\';';
+  }
+
+  return lugiaxCode + createLugiaDCoreCode(functionNames);
+}
+
+export function createLugiaDCoreCode(names: string[]): string {
+  if (!names || !names.length) {
+    return '';
+  }
+
+  const functionNames = names.join(',');
+  return `import {${functionNames}} from '@lugia/lugia-web/dist/common/lugiadCore';`;
+}
+
+export function hasResponsive(layoutInfos: Object): boolean {
+  const { mode2Config = {}, mode2LayoutData = {} } = layoutInfos || {};
+  const themeaMainPadKeys = Object.keys(mode2Config);
+  const themeComponentKeys = Object.keys(mode2LayoutData);
+  return themeaMainPadKeys.length > 1 || themeComponentKeys.length > 1;
+}
+
+export function getResponsiveCode(layoutInfos: Object): Object {
+  let rspPackagesCode = '',
+    rspDeconstructionCode = '';
+  if (!layoutInfos) {
+    return {
+      rspPackagesCode,
+      rspDeconstructionCode,
+    };
+  }
+  if (hasResponsive(layoutInfos)) {
+    rspPackagesCode = 'import { DesignResponsive } from \'@lugia/lugia-web\';';
+    rspDeconstructionCode = 'const ResponsiveContext = DesignResponsive.ResponsiveContext;';
+  }
+
+  return {
+    rspPackagesCode,
+    rspDeconstructionCode,
+  };
 }
