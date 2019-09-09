@@ -9,8 +9,8 @@ import {
   getTargetModal,
   getModelCode,
   createHeader,
-  getLugiaDCoreCode,
-  createLugiaDCoreCode,
+  getLugiadCoreCode,
+  createLugiadCoreCode,
   hasResponsive,
   getResponsiveCode,
 } from '../src/header';
@@ -110,9 +110,9 @@ describe('conversion header ->', () => {
     expect(createHeader([], widgetId2Component)).toMatchSnapshot();
   });
 
-  it('createLugiaDCoreCode toMatchSnapshot', () => {
+  it('createLugiadCoreCode toMatchSnapshot', () => {
     const packageNames = [ 'ThemeHandle', 'bindHandleEvent' ];
-    expect(createLugiaDCoreCode(packageNames)).toMatchSnapshot();
+    expect(createLugiadCoreCode(packageNames)).toMatchSnapshot();
   });
 
   it('hasResponsive toMatchSnapshot', () => {
@@ -153,7 +153,7 @@ describe('conversion header ->', () => {
     expect(getResponsiveCode(layoutInfos)).toMatchSnapshot();
   });
 
-  it('getLugiaDCoreCode toMatchSnapshot', () => {
+  it('getLugiadCoreCode toMatchSnapshot', () => {
     const spaceLugiax = {
       widgetId2PropsName2BindInfo: {},
       widgetId2EventName2MutationInfo: {},
@@ -172,8 +172,8 @@ describe('conversion header ->', () => {
         },
       },
     };
-    expect(getLugiaDCoreCode(spaceLugiax)).toMatchSnapshot();
-    expect(getLugiaDCoreCode(lugiaxBind)).toMatchSnapshot();
-    expect(getLugiaDCoreCode(lugiaxMutationKeys)).toMatchSnapshot();
+    expect(getLugiadCoreCode(spaceLugiax)).toMatchSnapshot();
+    expect(getLugiadCoreCode(lugiaxBind)).toMatchSnapshot();
+    expect(getLugiadCoreCode(lugiaxMutationKeys)).toMatchSnapshot();
   });
 });
