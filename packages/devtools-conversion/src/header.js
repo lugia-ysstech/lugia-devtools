@@ -92,7 +92,7 @@ export function getTargetModal(target: ?Object): any[] {
   return keys;
 }
 
-export function getLugiaDCoreCode(
+export function getLugiadCoreCode(
   lugiax: Object
 ): string[] {
   if (!lugiax) {
@@ -108,17 +108,22 @@ export function getLugiaDCoreCode(
     functionNames.push('getData');
     lugiaxCode = 'import lugiax, { bindTo, connect, bind } from \'@lugia/lugiax\';';
   }
-
-  return lugiaxCode + createLugiaDCoreCode(functionNames);
+  const { packageCode, functionsCode } = createLugiadCoreCode(functionNames);
+  return { lugiadCoreCode: lugiaxCode + packageCode, lugiadFuncCode: functionsCode };
 }
 
-export function createLugiaDCoreCode(names: string[]): string {
+export function createLugiadCoreCode(names: string[]): string {
   if (!names || !names.length) {
     return '';
   }
-
+  const packageCode = 'import { LugiadCore } from \'@lugia/lugia-web\';';
   const functionNames = names.join(',');
-  return `import {${functionNames}} from '@lugia/lugia-web/dist/common/lugiadCore';`;
+  const functionsCode = `const {${functionNames}} = LugiadCore;`;
+
+  return {
+    packageCode,
+    functionsCode,
+  };
 }
 
 export function hasResponsive(layoutInfos: Object): boolean {
