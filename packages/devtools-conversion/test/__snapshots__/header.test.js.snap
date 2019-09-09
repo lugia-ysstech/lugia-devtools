@@ -1,14 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`conversion header -> createHeader 1`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import lugiax, { bindTo, connect, bind } from \\"@lugia/lugiax\\";import  { deepMerge } from \\"@lugia/object-utils\\";import { Theme, DesignResponsive } from \\"@lugia/lugia-web\\";"`;
+exports[`conversion header -> createHeader 1`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";"`;
 
-exports[`conversion header -> createHeader 2`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import lugiax, { bindTo, connect, bind } from \\"@lugia/lugiax\\";import  { deepMerge } from \\"@lugia/object-utils\\";import { Theme, DesignResponsive } from \\"@lugia/lugia-web\\";import { Table } from '@lugia/lugia-web';"`;
+exports[`conversion header -> createHeader 2`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";import { Table } from '@lugia/lugia-web';"`;
 
-exports[`conversion header -> createHeader childrenComponent 1`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import lugiax, { bindTo, connect, bind } from \\"@lugia/lugiax\\";import  { deepMerge } from \\"@lugia/object-utils\\";import { Theme, DesignResponsive } from \\"@lugia/lugia-web\\";import { Table } from '@lugia/lugia-web';import { Checkbox } from '@lugia/lugia-web';"`;
+exports[`conversion header -> createHeader childrenComponent 1`] = `"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";import { Table } from '@lugia/lugia-web';import { Checkbox } from '@lugia/lugia-web';"`;
 
 exports[`conversion header -> createHeader toMatchSnapshot 1`] = `
 Object {
-  "packages": "import React from \\"react\\";import styled from \\"styled-components\\";import lugiax, { bindTo, connect, bind } from \\"@lugia/lugiax\\";import  { deepMerge } from \\"@lugia/object-utils\\";import { Theme, DesignResponsive } from \\"@lugia/lugia-web\\";",
+  "packages": "import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";",
   "styledComponentCode": "",
+}
+`;
+
+exports[`conversion header -> createLugiaDCoreCode toMatchSnapshot 1`] = `"import {ThemeHandle,bindHandleEvent} from '@lugia/lugia-web/dist/common/lugiadCore';"`;
+
+exports[`conversion header -> getLugiaDCoreCode toMatchSnapshot 1`] = `"import {themeHandle} from '@lugia/lugia-web/dist/common/lugiadCore';"`;
+
+exports[`conversion header -> getLugiaDCoreCode toMatchSnapshot 2`] = `"import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import {themeHandle,bindHandleEvent,getData} from '@lugia/lugia-web/dist/common/lugiadCore';"`;
+
+exports[`conversion header -> getLugiaDCoreCode toMatchSnapshot 3`] = `"import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import {themeHandle,bindHandleEvent,getData} from '@lugia/lugia-web/dist/common/lugiadCore';"`;
+
+exports[`conversion header -> getResponsiveCode toMatchSnapshot 1`] = `
+Object {
+  "rspDeconstructionCode": "",
+  "rspPackagesCode": "",
+}
+`;
+
+exports[`conversion header -> getResponsiveCode toMatchSnapshot 2`] = `
+Object {
+  "rspDeconstructionCode": "const ResponsiveContext = DesignResponsive.ResponsiveContext;",
+  "rspPackagesCode": "import { DesignResponsive } from '@lugia/lugia-web';",
 }
 `;
