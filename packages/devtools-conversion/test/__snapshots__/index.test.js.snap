@@ -35,7 +35,7 @@ exports[`conversion index -> Card Container 1`] = `
         height: 102 + 'px', zIndex: '0', 
         left: 42 + 'px', 
         top: 71 + 'px' }}
-        ><Theme config={{'wbPrZp41':themeHandle('wbPrZp41',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":102,\\"width\\":821}}},)}}><ConnectTable10  viewClass=\\"wbPrZp41\\" indentSize={ 15 } rowKey={  \`key\` } showHeader={'true'} /></Theme></div><div style={{position: 'absolute',width: 136 + 'px',
+        ><Theme config={{'wbPrZp41':themeHandle('wbPrZp41',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":102,\\"width\\":821}}},)}}><ConnectTable10  viewClass=\\"wbPrZp41\\" indentSize={ 15 } rowKey={  \`key\` } showHeader={ true } /></Theme></div><div style={{position: 'absolute',width: 136 + 'px',
         height: 28 + 'px', zIndex: '0', 
         left: 42 + 'px', 
         top: 430 + 'px' }}
