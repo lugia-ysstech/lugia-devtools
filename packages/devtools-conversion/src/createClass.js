@@ -220,6 +220,9 @@ export function handlePropsType(propsItem?: any): string {
   if (type === 'object') {
     return `{ ${JSON.stringify(propsItem)} }`;
   }
+  if (type === 'boolean') {
+    return `{ ${propsItem} }`;
+  }
   if (type === 'number') {
     return `{ ${propsItem} }`;
   }
