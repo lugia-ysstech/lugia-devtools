@@ -10,6 +10,8 @@ import LayoutFile from './LayoutFile';
 import LayoutFileZip from './LayoutFileZip';
 import CopyDataZip from './copydata_zip';
 import CopyData from './copydata';
+import LugiaDFile from './lugiaDFile';
+import LugiaDFileZip from './lugiaDFileZip';
 
 describe('zip.test', () => {
   it('zip', () => {
@@ -18,6 +20,12 @@ describe('zip.test', () => {
     const zipJSONString = JSON.stringify(zip(file));
     expect(zipJSONString).toEqual(JSON.stringify(LayoutFileZip));
     expect(unZip(zipJSONString)).toEqual({ ...orginal, zip: true });
+  });
+
+  it('zip lugiaDFile', () => {
+    const meta = JSON.parse(JSON.stringify(LugiaDFile));
+    expect(JSON.stringify(LugiaDFileZip)).toEqual(JSON.stringify(zip(LugiaDFile)));
+    expect(unZip(JSON.stringify(JSON.parse(JSON.stringify(LugiaDFileZip))))).toEqual(meta);
   });
 
   function deepClone(target: Object): Object {
