@@ -120,7 +120,7 @@ export function createLugiadCoreCode(names: string[]): string {
   if (!names || !names.length) {
     return '';
   }
-  const packageCode = 'import { LugiadCore } from \'@lugia/lugia-web\';';
+  const packageCode = 'import LugiadCore from \'@lugia/lugiad-core\';';
   const functionNames = names.join(',');
   const functionsCode = `const {${functionNames}} = LugiadCore;`;
 

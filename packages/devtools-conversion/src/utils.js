@@ -16,27 +16,3 @@ export function recursiveChildren(target: ?(Object[]), outResult: string[]) {
     children && recursiveChildren(children, outResult);
   });
 }
-
-type PointType = "leftTop" | "leftBottom" | "rightTop" | "rightBottom";
-type Point = [number, number];
-
-export const pointType2GetCSS: {
-  [key: PointType]: (point: Point) => Object
-} = {
-  leftTop: (point: Point) => {
-    const [x, y] = point;
-    return { left: `${x}%`, top: `${y}%`, right: "", bottom: "" };
-  },
-  leftBottom: (point: Point) => {
-    const [x, y] = point;
-    return { left: `${x}%`, bottom: `${y}%`, right: "", top: "" };
-  },
-  rightTop: (point: Point) => {
-    const [x, y] = point;
-    return { right: `${x}%`, top: `${y}%`, left: "", bottom: "" };
-  },
-  rightBottom: (point: Point) => {
-    const [x, y] = point;
-    return { right: `${x}%`, bottom: `${y}%`, left: "", top: "" };
-  }
-};
