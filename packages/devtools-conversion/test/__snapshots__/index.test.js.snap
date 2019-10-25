@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`conversion index -> Card Container 1`] = `
-"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";import { Card } from '@lugia/lugia-web';import { Breadcrumb } from '@lugia/lugia-web';import { Input } from '@lugia/lugia-web';import { Button } from '@lugia/lugia-web';import { DatePicker } from '@lugia/lugia-web';import { Select } from '@lugia/lugia-web';import { Steps } from '@lugia/lugia-web';import { Avatar } from '@lugia/lugia-web';import { Table } from '@lugia/lugia-web';import { Pagination } from '@lugia/lugia-web'; import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import { LugiadCore } from '@lugia/lugia-web';  import page2 from '../models/page2';   const {themeHandle,bindHandleEvent,getData} = LugiadCore; const Label = styled.div\`font-size: 12px;\`;  class ChildPadComponent0 extends React.Component {
+"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";import { Card } from '@lugia/lugia-web';import { Breadcrumb } from '@lugia/lugia-web';import { Input } from '@lugia/lugia-web';import { Button } from '@lugia/lugia-web';import { DatePicker } from '@lugia/lugia-web';import { Select } from '@lugia/lugia-web';import { Steps } from '@lugia/lugia-web';import { Avatar } from '@lugia/lugia-web';import { Table } from '@lugia/lugia-web';import { Pagination } from '@lugia/lugia-web'; import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';  import page2 from '../models/page2';   const {themeHandle,bindHandleEvent,getData} = LugiadCore; const Label = styled.div\`font-size: 12px;\`;  class ChildPadComponent0 extends React.Component {
       render(){
         return (
           <React.Fragment>
@@ -31,15 +31,13 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 1001 + 'px',
-        height: 102 + 'px', zIndex: '0', 
-        left: 42 + 'px', 
-        top: 71 + 'px' }}
-        ><Theme config={{'wbPrZp41':themeHandle('wbPrZp41',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":102,\\"width\\":821}}},)}}><ConnectTable10  viewClass=\\"wbPrZp41\\" indentSize={ 15 } rowKey={  \`key\` } showHeader={ true } /></Theme></div><div style={{position: 'absolute',width: 136 + 'px',
-        height: 28 + 'px', zIndex: '0', 
-        left: 42 + 'px', 
-        top: 430 + 'px' }}
-        ><Theme config={{'wbCQFJ41':themeHandle('wbCQFJ41',undefined, {})}}><ConnectPagination11  defaultCurrent={ 1 } defaultPageSize={ 10 } hideOnSinglePage=\\"\\" pageSize={ 10 } pageSizeOptions={ [\\"10\\",\\"20\\",\\"30\\",\\"40\\"] } showQuickJumper=\\"\\" showSizeChanger=\\"\\" total=\\"\\" /></Theme></div>
+            <div style={{position: 'absolute',width: 1001,
+        height: 102, zIndex: '0', 
+         left: 42 + 'px', top: 71 + 'px' }}
+        ><Theme config={{'wbPrZp41':themeHandle('wbPrZp41',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":102,\\"width\\":821}}}, false)}}><ConnectTable10  viewClass=\\"wbPrZp41\\" indentSize={ 15 } rowKey={  \`key\` } showHeader={ true } /></Theme></div><div style={{position: 'absolute',width: 136,
+        height: 28, zIndex: '0', 
+         left: 42 + 'px', top: 430 + 'px' }}
+        ><Theme config={{'wbCQFJ41':themeHandle('wbCQFJ41',undefined, {}, false)}}><ConnectPagination11  defaultCurrent={ 1 } defaultPageSize={ 10 } hideOnSinglePage=\\"\\" pageSize={ 10 } pageSizeOptions={ [\\"10\\",\\"20\\",\\"30\\",\\"40\\"] } showQuickJumper=\\"\\" showSizeChanger=\\"\\" total=\\"\\" /></Theme></div>
           </React.Fragment>
         );
       }
@@ -47,19 +45,16 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 60 + 'px',
-        height: 60 + 'px', zIndex: '2', 
-        left: 21 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wbcAP!c1':themeHandle('wbcAP!c1',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}},)}}><Avatar  viewClass=\\"wbcAP!c1\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40 + 'px',
-        height: 23 + 'px', zIndex: '3', 
-        left: 101 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wbcl8$02':themeHandle('wbcl8$02',undefined, {})}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67 + 'px',
-        height: 20 + 'px', zIndex: '4', 
-        left: 101 + 'px', 
-        top: 57 + 'px' }}
-        ><Theme config={{'wbc[C@23':themeHandle('wbc[C@23',undefined, {})}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
+            <div style={{position: 'absolute',width: 60,
+        height: 60, zIndex: '2', 
+         left: 21 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wbcAP!c1':themeHandle('wbcAP!c1',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}}, false)}}><Avatar  viewClass=\\"wbcAP!c1\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40,
+        height: 23, zIndex: '3', 
+         left: 101 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wbcl8$02':themeHandle('wbcl8$02',undefined, {}, false)}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67,
+        height: 20, zIndex: '4', 
+         left: 101 + 'px', top: 57 + 'px' }}
+        ><Theme config={{'wbc[C@23':themeHandle('wbc[C@23',undefined, {}, false)}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
           </React.Fragment>
         );
       }
@@ -67,19 +62,16 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 60 + 'px',
-        height: 60 + 'px', zIndex: '2', 
-        left: 21 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wbclT@51':themeHandle('wbclT@51',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}},)}}><Avatar  viewClass=\\"wbclT@51\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40 + 'px',
-        height: 23 + 'px', zIndex: '3', 
-        left: 101 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wbcgj2c2':themeHandle('wbcgj2c2',undefined, {})}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67 + 'px',
-        height: 20 + 'px', zIndex: '4', 
-        left: 101 + 'px', 
-        top: 57 + 'px' }}
-        ><Theme config={{'wbcC)333':themeHandle('wbcC)333',undefined, {})}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
+            <div style={{position: 'absolute',width: 60,
+        height: 60, zIndex: '2', 
+         left: 21 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wbclT@51':themeHandle('wbclT@51',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}}, false)}}><Avatar  viewClass=\\"wbclT@51\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40,
+        height: 23, zIndex: '3', 
+         left: 101 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wbcgj2c2':themeHandle('wbcgj2c2',undefined, {}, false)}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67,
+        height: 20, zIndex: '4', 
+         left: 101 + 'px', top: 57 + 'px' }}
+        ><Theme config={{'wbcC)333':themeHandle('wbcC)333',undefined, {}, false)}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
           </React.Fragment>
         );
       }
@@ -87,19 +79,16 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 60 + 'px',
-        height: 60 + 'px', zIndex: '0', 
-        left: 21 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wb9GG#71':themeHandle('wb9GG#71',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}},)}}><Avatar  viewClass=\\"wb9GG#71\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40 + 'px',
-        height: 23 + 'px', zIndex: '0', 
-        left: 101 + 'px', 
-        top: 24 + 'px' }}
-        ><Theme config={{'wbc8UGd0':themeHandle('wbc8UGd0',undefined, {})}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 101 + 'px', 
-        top: 57 + 'px' }}
-        ><Theme config={{'wbcIVp$0':themeHandle('wbcIVp$0',undefined, {})}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
+            <div style={{position: 'absolute',width: 60,
+        height: 60, zIndex: '0', 
+         left: 21 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wb9GG#71':themeHandle('wb9GG#71',undefined, {\\"Container\\":{\\"normal\\":{\\"height\\":\\"60\\",\\"width\\":\\"60\\"}}}, false)}}><Avatar  viewClass=\\"wb9GG#71\\" shape={  \`circle\` } size={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 40,
+        height: 23, zIndex: '0', 
+         left: 101 + 'px', top: 24 + 'px' }}
+        ><Theme config={{'wbc8UGd0':themeHandle('wbc8UGd0',undefined, {}, false)}}><Label  children={  \`杨帆\` } fontSize={ 20 } /></Theme></div><div style={{position: 'absolute',width: 67,
+        height: 20, zIndex: '0', 
+         left: 101 + 'px', top: 57 + 'px' }}
+        ><Theme config={{'wbcIVp$0':themeHandle('wbcIVp$0',undefined, {}, false)}}><Label  children={  \`Lugia UI\` } color={  \`#4c4c4e\` } fontSize={ 18 } /></Theme></div>
           </React.Fragment>
         );
       }
@@ -107,23 +96,19 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 72 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 36 + 'px', 
-        top: 15 + 'px' }}
-        ><Theme config={{'wbvzoj41':themeHandle('wbvzoj41',undefined, {})}}><Label  children={  \`参与员工\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 300 + 'px',
-        height: 110 + 'px', zIndex: '0', 
-        left: 36 + 'px', 
-        top: 64 + 'px' }}
-        ><Theme config={{'wbpOXW0':themeHandle('wbpOXW0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}},)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbpOXW0\\"><ChildPadComponent4  height={ 130 } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 300 + 'px',
-        height: 110 + 'px', zIndex: '0', 
-        left: 388 + 'px', 
-        top: 64 + 'px' }}
-        ><Theme config={{'wbcYdsl0':themeHandle('wbcYdsl0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}},)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbcYdsl0\\"><ChildPadComponent3  height={ 130 } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 300 + 'px',
-        height: 110 + 'px', zIndex: '0', 
-        left: 740 + 'px', 
-        top: 64 + 'px' }}
-        ><Theme config={{'wbc&%Bz0':themeHandle('wbc&%Bz0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}},)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbc&%Bz0\\"><ChildPadComponent2  height={ 130 } width={ 350 } /></Card></Theme></div>
+            <div style={{position: 'absolute',width: 72,
+        height: 20, zIndex: '0', 
+         left: 36 + 'px', top: 15 + 'px' }}
+        ><Theme config={{'wbvzoj41':themeHandle('wbvzoj41',undefined, {}, false)}}><Label  children={  \`参与员工\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 300,
+        height: 110, zIndex: '0', 
+         left: 36 + 'px', top: 64 + 'px' }}
+        ><Theme config={{'wbpOXW0':themeHandle('wbpOXW0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}}, false)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbpOXW0\\"><ChildPadComponent4  height={ 130 } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 300,
+        height: 110, zIndex: '0', 
+         left: 388 + 'px', top: 64 + 'px' }}
+        ><Theme config={{'wbcYdsl0':themeHandle('wbcYdsl0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}}, false)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbcYdsl0\\"><ChildPadComponent3  height={ 130 } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 300,
+        height: 110, zIndex: '0', 
+         left: 740 + 'px', top: 64 + 'px' }}
+        ><Theme config={{'wbc&%Bz0':themeHandle('wbc&%Bz0',undefined, {\\"Container\\":{\\"normal\\":{\\"boxShadow\\":{\\"blur\\":\\"0\\",\\"color\\":\\"\\",\\"spread\\":\\"0\\",\\"type\\":\\"outset\\",\\"x\\":\\"0\\",\\"y\\":\\"0\\"},\\"height\\":\\"110\\",\\"width\\":\\"300\\"}}}, false)}}><Card height={ 130 } width={ 350 } viewClass=\\"wbc&%Bz0\\"><ChildPadComponent2  height={ 130 } width={ 350 } /></Card></Theme></div>
           </React.Fragment>
         );
       }
@@ -177,59 +162,46 @@ exports[`conversion index -> Card Container 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 420 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 138 + 'px', 
-        top: 160 + 'px' }}
-        ><Theme config={{'wbXJj$71':themeHandle('wbXJj$71',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"420\\"}},\\"Input\\":{\\"normal\\":{\\"color\\":\\"#b8b4b4\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}}},)}}><ConnectInput60  viewClass=\\"wbXJj$71\\" autoFocus=\\"\\" defaultValue={  \`请输入员工姓名\` } disabled=\\"\\" readOnly=\\"\\" size={  \`default\` } type={  \`text\` } validateStatus={  \`success\` } validateType={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 120 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 47 + 'px', 
-        top: 314 + 'px' }}
-        ><Theme config={{'wbV*UQ71':themeHandle('wbV*UQ71',undefined, {\\"Container\\":{\\"normal\\":{\\"borderRadius\\":{\\"bottomLeft\\":3,\\"bottomRight\\":3,\\"topLeft\\":3,\\"topRight\\":3},\\"width\\":\\"120\\"}}},)}}><ConnectButton61  viewClass=\\"wbV*UQ71\\" block=\\"\\" disabled=\\"\\" shape={  \`default\` } size={  \`default\` } text={  \`查询\` } type={  \`primary\` } /></Theme></div><div style={{position: 'absolute',width: 120 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 193 + 'px', 
-        top: 314 + 'px' }}
-        ><Theme config={{'wbc8S640':themeHandle('wbc8S640',undefined, {\\"ButtonText\\":{\\"normal\\":{\\"color\\":\\"#3b3939\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"bottom\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"left\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"right\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"top\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"}},\\"width\\":\\"120\\"}}},)}}><ConnectButton62  viewClass=\\"wbc8S640\\" block=\\"\\" disabled=\\"\\" shape={  \`default\` } size={  \`default\` } text={  \`取消\` } type={  \`primary\` } /></Theme></div><div style={{position: 'absolute',width: 200 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 137 + 'px', 
-        top: 223 + 'px' }}
-        ><Theme config={{'wbVcdc71':themeHandle('wbVcdc71',undefined, {})}}><ConnectDatePicker63  buttonOptions={  \`无\` } disabled=\\"\\" extraFooter={  \`无\` } format={  \`YYYY-MM-DD\` } readOnly=\\"\\" selectToday=\\"\\" showTime=\\"\\" showToday=\\"\\" step=\\"\\" /></Theme></div><div style={{position: 'absolute',width: 11 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 343 + 'px', 
-        top: 229 + 'px' }}
-        ><Theme config={{'wbcwSK10':themeHandle('wbcwSK10',undefined, {})}}><Label  children={  \`~\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 200 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 361 + 'px', 
-        top: 223 + 'px' }}
-        ><Theme config={{'wbc!5nN0':themeHandle('wbc!5nN0',undefined, {})}}><ConnectDatePicker65  buttonOptions={  \`无\` } disabled=\\"\\" extraFooter={  \`无\` } format={  \`YYYY-MM-DD\` } readOnly=\\"\\" selectToday=\\"\\" showTime=\\"\\" showToday=\\"\\" step=\\"\\" /></Theme></div><div style={{position: 'absolute',width: 245 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 683 + 'px', 
-        top: 223 + 'px' }}
-        ><Theme config={{'wbckmg#0':themeHandle('wbckmg#0',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"245\\"}},\\"Input\\":{\\"normal\\":{\\"color\\":\\"#b8b4b4\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}}},)}}><ConnectInput66  viewClass=\\"wbckmg#0\\" autoFocus=\\"\\" defaultValue={  \`请输入员工编号\` } disabled=\\"\\" readOnly=\\"\\" size={  \`default\` } type={  \`text\` } validateStatus={  \`success\` } validateType={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 90 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 590 + 'px', 
-        top: 166 + 'px' }}
-        ><Theme config={{'wbcI8^00':themeHandle('wbcI8^00',undefined, {})}}><Label  children={  \`职位名称：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 90 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 49 + 'px', 
-        top: 166 + 'px' }}
-        ><Theme config={{'wbc!))(0':themeHandle('wbc!))(0',undefined, {})}}><Label  children={  \`员工名称：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 250 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 683 + 'px', 
-        top: 160 + 'px' }}
-        ><Theme config={{'wb^it@41':themeHandle('wb^it@41',undefined, {})}}><ConnectSelect69  canInput=\\"\\" canSearch=\\"\\" disabled=\\"\\" displayField={  \`text\` } mutliple=\\"\\" searchType={  \`include\` } throttle={ 100 } validateStatus={  \`success\` } valueField={  \`value\` } /></Theme></div><div style={{position: 'absolute',width: 90 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 591 + 'px', 
-        top: 229 + 'px' }}
-        ><Theme config={{'wbcEhRn0':themeHandle('wbcEhRn0',undefined, {})}}><Label  children={  \`员工编号：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 90 + 'px',
-        height: 20 + 'px', zIndex: '0', 
-        left: 50 + 'px', 
-        top: 229 + 'px' }}
-        ><Theme config={{'wbc%q8n0':themeHandle('wbc%q8n0',undefined, {})}}><Label  children={  \`工作时间：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 456 + 'px',
-        height: 32 + 'px', zIndex: '0', 
-        left: 286 + 'px', 
-        top: 75 + 'px' }}
-        ><Theme config={{'wbSn6I0':themeHandle('wbSn6I0',undefined, {})}}><ConnectSteps612  currentStepNumber=\\"\\" desAlign={  \`left\` } orientation={  \`horizontal\` } size={  \`normal\` } stepType={  \`simple\` } /></Theme></div>
+            <div style={{position: 'absolute',width: 420,
+        height: 32, zIndex: '0', 
+         left: 138 + 'px', top: 160 + 'px' }}
+        ><Theme config={{'wbXJj$71':themeHandle('wbXJj$71',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"420\\"}},\\"Input\\":{\\"normal\\":{\\"color\\":\\"#b8b4b4\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}}}, false)}}><ConnectInput60  viewClass=\\"wbXJj$71\\" autoFocus=\\"\\" defaultValue={  \`请输入员工姓名\` } disabled=\\"\\" readOnly=\\"\\" size={  \`default\` } type={  \`text\` } validateStatus={  \`success\` } validateType={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 120,
+        height: 32, zIndex: '0', 
+         left: 47 + 'px', top: 314 + 'px' }}
+        ><Theme config={{'wbV*UQ71':themeHandle('wbV*UQ71',undefined, {\\"Container\\":{\\"normal\\":{\\"borderRadius\\":{\\"bottomLeft\\":3,\\"bottomRight\\":3,\\"topLeft\\":3,\\"topRight\\":3},\\"width\\":\\"120\\"}}}, false)}}><ConnectButton61  viewClass=\\"wbV*UQ71\\" block=\\"\\" disabled=\\"\\" shape={  \`default\` } size={  \`default\` } text={  \`查询\` } type={  \`primary\` } /></Theme></div><div style={{position: 'absolute',width: 120,
+        height: 32, zIndex: '0', 
+         left: 193 + 'px', top: 314 + 'px' }}
+        ><Theme config={{'wbc8S640':themeHandle('wbc8S640',undefined, {\\"ButtonText\\":{\\"normal\\":{\\"color\\":\\"#3b3939\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"bottom\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"left\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"right\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"},\\"top\\":{\\"color\\":\\"#7f7a7a\\",\\"style\\":\\"solid\\",\\"width\\":\\"1\\"}},\\"width\\":\\"120\\"}}}, false)}}><ConnectButton62  viewClass=\\"wbc8S640\\" block=\\"\\" disabled=\\"\\" shape={  \`default\` } size={  \`default\` } text={  \`取消\` } type={  \`primary\` } /></Theme></div><div style={{position: 'absolute',width: 200,
+        height: 32, zIndex: '0', 
+         left: 137 + 'px', top: 223 + 'px' }}
+        ><Theme config={{'wbVcdc71':themeHandle('wbVcdc71',undefined, {}, false)}}><ConnectDatePicker63  buttonOptions={  \`无\` } disabled=\\"\\" extraFooter={  \`无\` } format={  \`YYYY-MM-DD\` } readOnly=\\"\\" selectToday=\\"\\" showTime=\\"\\" showToday=\\"\\" step=\\"\\" /></Theme></div><div style={{position: 'absolute',width: 11,
+        height: 20, zIndex: '0', 
+         left: 343 + 'px', top: 229 + 'px' }}
+        ><Theme config={{'wbcwSK10':themeHandle('wbcwSK10',undefined, {}, false)}}><Label  children={  \`~\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 200,
+        height: 32, zIndex: '0', 
+         left: 361 + 'px', top: 223 + 'px' }}
+        ><Theme config={{'wbc!5nN0':themeHandle('wbc!5nN0',undefined, {}, false)}}><ConnectDatePicker65  buttonOptions={  \`无\` } disabled=\\"\\" extraFooter={  \`无\` } format={  \`YYYY-MM-DD\` } readOnly=\\"\\" selectToday=\\"\\" showTime=\\"\\" showToday=\\"\\" step=\\"\\" /></Theme></div><div style={{position: 'absolute',width: 245,
+        height: 32, zIndex: '0', 
+         left: 683 + 'px', top: 223 + 'px' }}
+        ><Theme config={{'wbckmg#0':themeHandle('wbckmg#0',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"245\\"}},\\"Input\\":{\\"normal\\":{\\"color\\":\\"#b8b4b4\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}}}, false)}}><ConnectInput66  viewClass=\\"wbckmg#0\\" autoFocus=\\"\\" defaultValue={  \`请输入员工编号\` } disabled=\\"\\" readOnly=\\"\\" size={  \`default\` } type={  \`text\` } validateStatus={  \`success\` } validateType={  \`default\` } /></Theme></div><div style={{position: 'absolute',width: 90,
+        height: 20, zIndex: '0', 
+         left: 590 + 'px', top: 166 + 'px' }}
+        ><Theme config={{'wbcI8^00':themeHandle('wbcI8^00',undefined, {}, false)}}><Label  children={  \`职位名称：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 90,
+        height: 20, zIndex: '0', 
+         left: 49 + 'px', top: 166 + 'px' }}
+        ><Theme config={{'wbc!))(0':themeHandle('wbc!))(0',undefined, {}, false)}}><Label  children={  \`员工名称：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 250,
+        height: 32, zIndex: '0', 
+         left: 683 + 'px', top: 160 + 'px' }}
+        ><Theme config={{'wb^it@41':themeHandle('wb^it@41',undefined, {}, false)}}><ConnectSelect69  canInput=\\"\\" canSearch=\\"\\" disabled=\\"\\" displayField={  \`text\` } mutliple=\\"\\" searchType={  \`include\` } throttle={ 100 } validateStatus={  \`success\` } valueField={  \`value\` } /></Theme></div><div style={{position: 'absolute',width: 90,
+        height: 20, zIndex: '0', 
+         left: 591 + 'px', top: 229 + 'px' }}
+        ><Theme config={{'wbcEhRn0':themeHandle('wbcEhRn0',undefined, {}, false)}}><Label  children={  \`员工编号：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 90,
+        height: 20, zIndex: '0', 
+         left: 50 + 'px', top: 229 + 'px' }}
+        ><Theme config={{'wbc%q8n0':themeHandle('wbc%q8n0',undefined, {}, false)}}><Label  children={  \`工作时间：\` } fontSize={ 18 } /></Theme></div><div style={{position: 'absolute',width: 456,
+        height: 32, zIndex: '0', 
+         left: 286 + 'px', top: 75 + 'px' }}
+        ><Theme config={{'wbSn6I0':themeHandle('wbSn6I0',undefined, {}, false)}}><ConnectSteps612  currentStepNumber=\\"\\" desAlign={  \`left\` } orientation={  \`horizontal\` } size={  \`normal\` } stepType={  \`simple\` } /></Theme></div>
           </React.Fragment>
         );
       }
@@ -243,35 +215,45 @@ exports[`conversion index -> Card Container 1`] = `
   
       render(){
         return (
-            <div style={{width: '1200px',height: '2000px',zIndex: '4000', position: 'relative'}}><div style={{position: 'absolute',width: 132 + 'px',
-        height: 25 + 'px', zIndex: '0', 
-        left: 64 + 'px', 
-        top: 80 + 'px' }}
-        ><Theme config={{'wb4GD#41':themeHandle('wb4GD#41',undefined, {})}}><Label  children={  \`表单查询页面\` } color={  \`#000000\` } fontSize={ 22 } /></Theme></div><div style={{position: 'absolute',width: 748 + 'px',
-        height: 25 + 'px', zIndex: '0', 
-        left: 64 + 'px', 
-        top: 119 + 'px' }}
-        ><Theme config={{'wbc]D&#0':themeHandle('wbc]D&#0',undefined, {})}}><Label  children={  \`高级详情页完全展示一个信息的全部面貌，在高级详情页面尽量较少可操作项\` } color={  \`#5b5a5a\` } fontSize={ 22 } /></Theme></div><div style={{position: 'absolute',width: 1080 + 'px',
-        height: 220 + 'px', zIndex: '0', 
-        left: 64 + 'px', 
-        top: 180 + 'px' }}
-        ><Theme config={{'wbv13p71':themeHandle('wbv13p71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"#000000\\",\\"font\\":{\\"family\\":\\"PingFangSC-Regular\\",\\"size\\":\\"18\\",\\"style\\":\\"normal\\",\\"weight\\":\\"bold\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"bottom\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"left\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"right\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"top\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"}},\\"height\\":\\"220\\",\\"width\\":\\"1080\\"}}},)}}><Card description=\\"\\" height={ 130 } title={  \` \` } type={  \`tip\` } width={ 350 } viewClass=\\"wbv13p71\\"><ChildPadComponent5  description=\\"\\" height={ 130 } title={  \` \` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080 + 'px',
-        height: 400 + 'px', zIndex: '0', 
-        left: 64 + 'px', 
-        top: 443 + 'px' }}
-        ><Theme config={{'wbneLZ71':themeHandle('wbneLZ71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"20\\",\\"style\\":\\"normal\\",\\"weight\\":\\"bold\\"},\\"height\\":\\"\\"}},\\"CardTitleTipLine\\":{\\"normal\\":{\\"height\\":\\"\\"}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"bottom\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"left\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"right\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"top\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"}},\\"height\\":400,\\"width\\":1080}}},)}}><Card description=\\"\\" height={ 130 } title={  \` 查询明细\` } type={  \`tip\` } width={ 350 } viewClass=\\"wbneLZ71\\"><ChildPadComponent6  description=\\"\\" height={ 130 } title={  \` 查询明细\` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080 + 'px',
-        height: 33 + 'px', zIndex: '0', 
-        left: 48 + 'px', 
-        top: 33 + 'px' }}
-        ><Theme config={{'wbGFUP71':themeHandle('wbGFUP71',undefined, {\\"BreadcrumbWrap\\":{\\"normal\\":{\\"width\\":\\"1080\\"}}},)}}><ConnectBreadcrumbMainPad4  viewClass=\\"wbGFUP71\\" lastSeparator=\\"\\" separator={  \`/\` } /></Theme></div><div style={{position: 'absolute',width: 1080 + 'px',
-        height: 600 + 'px', zIndex: '0', 
-        left: 64 + 'px', 
-        top: 893 + 'px' }}
-        ><Theme config={{'wbGgzU71':themeHandle('wbGgzU71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"20\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"height\\":\\"600\\",\\"width\\":1080}}},)}}><Card description=\\"\\" height={ 130 } title={  \`查询结果\` } type={  \`tip\` } width={ 350 } viewClass=\\"wbGgzU71\\"><ChildPadComponent1  description=\\"\\" height={ 130 } title={  \`查询结果\` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080 + 'px',
-        height: 200 + 'px', zIndex: '0', 
-        left: 67 + 'px', 
-        top: 1555 + 'px' }}
-        ><Theme config={{'wb68qq71':themeHandle('wb68qq71',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"1080\\",\\"height\\":\\"200\\",\\"background\\":{\\"color\\":\\"#ffffff\\"}}}},)}}><Card width={ 350 } height={ 130 } viewClass=\\"wb68qq71\\"><ChildPadComponent0  width={ 350 } height={ 130 } /></Card></Theme></div></div>
+            <div style={{height: '2000px',zIndex: '4000', position: 'relative'}}><div style={{position: 'absolute',width: 132,
+        height: 25, zIndex: '0', 
+         left: 64 + 'px', top: 80 + 'px' }}
+        ><Theme config={{'wb4GD#41':themeHandle('wb4GD#41',undefined, {}, false)}}><Label  children={  \`表单查询页面\` } color={  \`#000000\` } fontSize={ 22 } /></Theme></div><div style={{position: 'absolute',width: 748,
+        height: 25, zIndex: '0', 
+         left: 64 + 'px', top: 119 + 'px' }}
+        ><Theme config={{'wbc]D&#0':themeHandle('wbc]D&#0',undefined, {}, false)}}><Label  children={  \`高级详情页完全展示一个信息的全部面貌，在高级详情页面尽量较少可操作项\` } color={  \`#5b5a5a\` } fontSize={ 22 } /></Theme></div><div style={{position: 'absolute',width: 1080,
+        height: 220, zIndex: '0', 
+         left: 64 + 'px', top: 180 + 'px' }}
+        ><Theme config={{'wbv13p71':themeHandle('wbv13p71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"#000000\\",\\"font\\":{\\"family\\":\\"PingFangSC-Regular\\",\\"size\\":\\"18\\",\\"style\\":\\"normal\\",\\"weight\\":\\"bold\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"bottom\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"left\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"right\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"},\\"top\\":{\\"color\\":\\"#ffffff\\",\\"style\\":\\"solid\\",\\"width\\":\\"\\"}},\\"height\\":\\"220\\",\\"width\\":\\"1080\\"}}}, false)}}><Card description=\\"\\" height={ 130 } title={  \` \` } type={  \`tip\` } width={ 350 } viewClass=\\"wbv13p71\\"><ChildPadComponent5  description=\\"\\" height={ 130 } title={  \` \` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080,
+        height: 400, zIndex: '0', 
+         left: 64 + 'px', top: 443 + 'px' }}
+        ><Theme config={{'wbneLZ71':themeHandle('wbneLZ71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"20\\",\\"style\\":\\"normal\\",\\"weight\\":\\"bold\\"},\\"height\\":\\"\\"}},\\"CardTitleTipLine\\":{\\"normal\\":{\\"height\\":\\"\\"}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"border\\":{\\"all\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"bottom\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"left\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"right\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"},\\"top\\":{\\"color\\":\\"\\",\\"style\\":\\"solid\\",\\"width\\":\\"0\\"}},\\"height\\":400,\\"width\\":1080}}}, false)}}><Card description=\\"\\" height={ 130 } title={  \` 查询明细\` } type={  \`tip\` } width={ 350 } viewClass=\\"wbneLZ71\\"><ChildPadComponent6  description=\\"\\" height={ 130 } title={  \` 查询明细\` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080,
+        height: 33, zIndex: '0', 
+         left: 48 + 'px', top: 33 + 'px' }}
+        ><Theme config={{'wbGFUP71':themeHandle('wbGFUP71',undefined, {\\"BreadcrumbWrap\\":{\\"normal\\":{\\"width\\":\\"1080\\"}}}, false)}}><ConnectBreadcrumbMainPad4  viewClass=\\"wbGFUP71\\" lastSeparator=\\"\\" separator={  \`/\` } /></Theme></div><div style={{position: 'absolute',width: 1080,
+        height: 600, zIndex: '0', 
+         left: 64 + 'px', top: 893 + 'px' }}
+        ><Theme config={{'wbGgzU71':themeHandle('wbGgzU71',undefined, {\\"CardTitle\\":{\\"normal\\":{\\"color\\":\\"\\",\\"font\\":{\\"family\\":\\"\\",\\"size\\":\\"20\\",\\"style\\":\\"normal\\",\\"weight\\":\\"normal\\"}}},\\"Container\\":{\\"normal\\":{\\"background\\":{\\"color\\":\\"#ffffff\\"},\\"height\\":\\"600\\",\\"width\\":1080}}}, false)}}><Card description=\\"\\" height={ 130 } title={  \`查询结果\` } type={  \`tip\` } width={ 350 } viewClass=\\"wbGgzU71\\"><ChildPadComponent1  description=\\"\\" height={ 130 } title={  \`查询结果\` } type={  \`tip\` } width={ 350 } /></Card></Theme></div><div style={{position: 'absolute',width: 1080,
+        height: 200, zIndex: '0', 
+         left: 67 + 'px', top: 1555 + 'px' }}
+        ><Theme config={{'wb68qq71':themeHandle('wb68qq71',undefined, {\\"Container\\":{\\"normal\\":{\\"width\\":\\"1080\\",\\"height\\":\\"200\\",\\"background\\":{\\"color\\":\\"#ffffff\\"}}}}, false)}}><Card width={ 350 } height={ 130 } viewClass=\\"wb68qq71\\"><ChildPadComponent0  width={ 350 } height={ 130 } /></Card></Theme></div></div>
+        );
+      }  
+  }"
+`;
+
+exports[`conversion index -> old version 1`] = `
+"import React from \\"react\\";import styled from \\"styled-components\\";import { Theme } from \\"@lugia/lugia-web\\";import { Button } from '@lugia/lugia-web'; import LugiadCore from '@lugia/lugiad-core';     const {themeHandle} = LugiadCore;    export default class Page extends React.Component{
+  
+      render(){
+        return (
+            <div style={{height: '1080px',zIndex: '4000', position: 'relative'}}><div style={{position: 'absolute',width: 104,
+        height: 32, zIndex: '0', 
+         left: 436.66666666666674 + 'px', top: 380.83333333333303 + 'px' }}
+        ><Theme config={{'wblfLa71':themeHandle('wblfLa71',undefined, {}, false)}}><Button  disabled=\\"\\" shape={  \`default\` } type={  \`primary\` } plain={ true } size={  \`default\` } icon={  \`lugia-icon-logo_lugia\` } text={  \`Button\` } block=\\"\\" /></Theme></div><div style={{position: 'absolute',width: 80,
+        height: 32, zIndex: '1', 
+         left: 653.3333333333335 + 'px', top: 410.8333333333335 + 'px' }}
+        ><Theme config={{'wbT&Yh72':themeHandle('wbT&Yh72',undefined, {}, false)}}><Button  disabled=\\"\\" shape={  \`default\` } type={  \`primary\` } plain={ true } size={  \`default\` } text={  \`Button\` } block=\\"\\" /></Theme></div></div>
         );
       }  
   }"

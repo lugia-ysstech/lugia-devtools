@@ -148,12 +148,12 @@ export function createLayerComponent(
       styleHeight = isResponsive ? `${commonStr}height` : height;
     }
     const responsiveGetLayoutStr = `context.getLayout("${layerId}").`;
-    const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])` : pointType2GetCSS[pointType](percentPoint);
-    let positionCSSStr = `...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)}`;
-    if (!percentWidth) {
-      const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
-      const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
-      positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
+    const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
+    const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    let positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
+    if (percentWidth) {
+      const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])` : pointType2GetCSS[pointType](percentPoint);
+      positionCSSStr = `...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)}`;
     }
     const useSmart = !!percentWidth;
     const theContext = isResponsive ? 'context' : 'undefined';

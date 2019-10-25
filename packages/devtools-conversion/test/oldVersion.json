@@ -1,0 +1,167 @@
+{
+  "type": "PolarBear",
+  "designPoint": [
+    -1438,
+    -1925.5
+  ],
+  "scale": 0.6,
+  "areaId2ChildPadIndexString": {},
+  "widgetId2ChildPad": {},
+  "forkDependencies": [],
+  "mainDependencies": [
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Button"
+    }
+  ],
+  "forkPad": {
+    "point": [
+      -1438,
+      -1925.5
+    ],
+    "width": 5000,
+    "index": 0,
+    "height": 5000,
+    "zIndex": 4000,
+    "type": "ForkPad",
+    "layers": [],
+    "idSeq": 67,
+    "id2WidgetInfo": {},
+    "id": "forkPad",
+    "lastIndex": 41,
+    "group": false
+  },
+  "mainPad": {
+    "point": [
+      102,
+      34.5
+    ],
+    "width": 1920,
+    "index": 0,
+    "height": 1080,
+    "zIndex": 4000,
+    "type": "MainPad",
+    "layers": [
+      {
+        "i": "wblfLa71",
+        "z": 0,
+        "w": 104,
+        "h": 32,
+        "p": [
+          436.66666666666674,
+          380.83333333333303
+        ]
+      },
+      {
+        "i": "wbT&Yh72",
+        "z": 1,
+        "w": 80,
+        "h": 32,
+        "p": [
+          653.3333333333335,
+          410.8333333333335
+        ]
+      }
+    ],
+    "idSeq": 91291,
+    "id2WidgetInfo": {
+      "wblfLa71": {
+        "w": "Button",
+        "a": "IconButton",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": {
+          "disabled": false,
+          "shape": "default",
+          "type": "primary",
+          "plain": true,
+          "size": "default",
+          "icon": "lugia-icon-logo_lugia",
+          "text": "Button",
+          "block": false
+        },
+        "i": "wblfLa71"
+      },
+      "wbT&Yh72": {
+        "w": "Button",
+        "a": "PlainButton",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": {
+          "disabled": false,
+          "shape": "default",
+          "type": "primary",
+          "plain": true,
+          "size": "default",
+          "text": "Button",
+          "block": false
+        },
+        "i": "wbT&Yh72"
+      }
+    },
+    "id": "mainPad",
+    "lastIndex": 71,
+    "group": false,
+    "backgroudColor": "#f8f8f8"
+  },
+  "themes": {
+    "widgetId2ThemeInfo": {}
+  },
+  "lugiax": {
+    "page2mutation": {},
+    "widgetId2PropsName2BindInfo": {},
+    "widgetId2EventName2MutationInfo": {}
+  },
+  "assets": {
+    "widgetIdHasAssetPropsName": {},
+    "widgetIdHasAssetThemeName": {}
+  },
+  "widgetId2Locked": {},
+  "layoutInfos": {
+    "mode2Config": {
+      "1920x1080": {
+        "mainPadSize": {
+          "width": 1920,
+          "height": 1080
+        },
+        "widthRange": [
+          0,
+          50000
+        ],
+        "scale": 0.6,
+        "forkPadPoint": [
+          -1438,
+          -1925.5
+        ]
+      }
+    },
+    "mode2LayoutData": {
+      "1920x1080": {
+        "wblfLa71": {
+          "theme": {},
+          "a": "mainPad",
+          "w": 104,
+          "h": 32,
+          "p": [
+            436.66666666666674,
+            380.83333333333303
+          ],
+          "wi": "wblfLa71"
+        },
+        "wbT&Yh72": {
+          "theme": {},
+          "a": "mainPad",
+          "w": 80,
+          "h": 32,
+          "p": [
+            653.3333333333335,
+            410.8333333333335
+          ],
+          "wi": "wbT&Yh72"
+        }
+      }
+    }
+  },
+  "zip": true
+}
