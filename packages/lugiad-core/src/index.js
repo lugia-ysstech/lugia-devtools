@@ -4,9 +4,9 @@
  *
  * @flow
  */
-import type { PointType, Point } from "@lugia/lugiad-core";
+import type { PointType, Point } from '@lugia/lugiad-core';
 
-function bindHandleEvent(e) {
+function bindHandleEvent(e: Object): string {
   if (!e) {
     return;
   }
@@ -24,7 +24,12 @@ function bindHandleEvent(e) {
   }
 }
 
-function themeHandle(id, context, dTh, useSmart) {
+function themeHandle(
+  id: string,
+  context: Object,
+  dTh: Object,
+  useSmart: boolean
+): Object {
   let cmpTheme = {};
   if (context) {
     const contextTheme = { ...context.getLayout(id).theme };
@@ -34,55 +39,60 @@ function themeHandle(id, context, dTh, useSmart) {
   }
 
   if (useSmart && cmpTheme.Container && cmpTheme.Container.normal) {
-    cmpTheme.Container.normal.width = "100%";
+    cmpTheme.Container.normal.width = '100%';
   }
   return cmpTheme || {};
 }
 
-function getData(state, propsName, modelName, fieldName) {
+function getData(
+  state: Object,
+  propsName: string,
+  modelName: string,
+  fieldName: string
+): Object {
   if (!modelName) {
     return {};
   }
-  const paths = fieldName.split(".");
+  const paths = fieldName.split('.');
   const data = modelName.getState().getIn(paths);
   return {
     [propsName]:
-      typeof data !== "object"
+      typeof data !== 'object'
         ? data
         : data
-        ? data.toJS
-          ? data.toJS()
-          : data
-        : null
+          ? data.toJS
+            ? data.toJS()
+            : data
+          : null,
   };
 }
 
 const pointType2GetCSS: {
   [key: PointType]: (point: Point) => Object
 } = {
-  leftTop: (point: Point) => {
-    const [x, y] = point;
-    return { left: `${x}%`, top: `${y}%`, right: "", bottom: "" };
+  leftTop: (point: Point): Object => {
+    const [ x, y ] = point;
+    return { left: `${x}%`, top: `${y}%`, right: '', bottom: '' };
   },
-  leftBottom: (point: Point) => {
-    const [x, y] = point;
-    return { left: `${x}%`, bottom: `${y}%`, right: "", top: "" };
+  leftBottom: (point: Point): Object => {
+    const [ x, y ] = point;
+    return { left: `${x}%`, bottom: `${y}%`, right: '', top: '' };
   },
-  rightTop: (point: Point) => {
-    const [x, y] = point;
-    return { right: `${x}%`, top: `${y}%`, left: "", bottom: "" };
+  rightTop: (point: Point): Object => {
+    const [ x, y ] = point;
+    return { right: `${x}%`, top: `${y}%`, left: '', bottom: '' };
   },
-  rightBottom: (point: Point) => {
-    const [x, y] = point;
-    return { right: `${x}%`, bottom: `${y}%`, left: "", top: "" };
-  }
+  rightBottom: (point: Point): Object => {
+    const [ x, y ] = point;
+    return { right: `${x}%`, bottom: `${y}%`, left: '', top: '' };
+  },
 };
 
 const lugiaDCore = {
   bindHandleEvent,
   themeHandle,
   getData,
-  pointType2GetCSS
+  pointType2GetCSS,
 };
 
 export default lugiaDCore;
