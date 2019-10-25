@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { Theme } from "@lugia/lugia-web";
-import { Card } from "@lugia/lugia-web";
-import { Label } from "@lugia/lugia-web";
-import { Input } from "@lugia/lugia-web";
-import { NumberInput } from "@lugia/lugia-web";
-import { Button } from "@lugia/lugia-web";
-import { Table } from "@lugia/lugia-web";
-import lugiax, { bindTo, connect, bind } from "@lugia/lugiax";
-import { LugiadCore } from "@lugia/lugia-web";
-import user from "../models/hello";
+import React from 'react';
+import styled from 'styled-components';
+import { Theme } from '@lugia/lugia-web';
+import { Card } from '@lugia/lugia-web';
+import { Label } from '@lugia/lugia-web';
+import { Input } from '@lugia/lugia-web';
+import { NumberInput } from '@lugia/lugia-web';
+import { Button } from '@lugia/lugia-web';
+import { Table } from '@lugia/lugia-web';
+import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';
+import LugiadCore from '@lugia/lugiad-core';
+import user from '../models/hello';
 const { themeHandle, bindHandleEvent, getData } = LugiadCore;
 const ConnectTable00 = connect(
-  [user],
+  [ user ],
   state => {
     return {
-      ...getData(state, "value", user, "table")
+      ...getData(state, 'value', user, 'table'),
     };
   },
   mutations => {
@@ -28,35 +28,43 @@ class ChildPadComponent0 extends React.Component {
       <React.Fragment>
         <div
           style={{
-            position: "absolute",
-            width: 94.60916442048517 + "%",
-            height: 63.1858407079646 + "%",
-            zIndex: "0",
-            ...{ left: "50px", top: "50px", right: "", bottom: "" }
+            position: 'absolute',
+            width: 94.60916442048517 + '%',
+            height: 78.11816192560175 + '%',
+            zIndex: '0',
+            ...{
+              left: '2.6954177897574128%',
+              top: '10.940919037199125%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wb!Y@E0": themeHandle("wb!Y@E0", undefined, {
-                Container: { normal: { width: 1755, height: 357 } }
-              })
+              'wb&Bnm0': themeHandle(
+                'wb&Bnm0',
+                undefined,
+                { Container: { normal: { width: 1755, height: 357 } } },
+                true
+              ),
             }}
           >
             <ConnectTable00
-              viewClass="wb!Y@E0"
+              viewClass="wb&Bnm0"
               columns={[
-                { title: "Name", dataIndex: "name", key: "name" },
-                { title: "Age", dataIndex: "age", key: "age" },
-                { title: "Address", dataIndex: "address", key: "address" },
-                { title: "Operations", dataIndex: "", key: "operations" }
+                { title: 'Name', dataIndex: 'name', key: 'name' },
+                { title: 'Age', dataIndex: 'age', key: 'age' },
+                { title: 'Address', dataIndex: 'address', key: 'address' },
+                { title: 'Operations', dataIndex: '', key: 'operations' },
               ]}
               data={[
-                { name: "Jack", age: 28, address: "some where", key: "1" },
-                { name: "Rose", age: 36, address: "some where", key: "2" },
-                { name: "Uzi", age: 36, address: "some where", key: "3" },
-                { name: "ClearLove", age: 36, address: "some where", key: "4" },
-                { name: "Rookie", age: 36, address: "some where", key: "5" },
-                { name: "TheShy", age: 36, address: "some where", key: "6" }
+                { name: 'Jack', age: 28, address: 'some where', key: '1' },
+                { name: 'Rose', age: 36, address: 'some where', key: '2' },
+                { name: 'Uzi', age: 36, address: 'some where', key: '3' },
+                { name: 'ClearLove', age: 36, address: 'some where', key: '4' },
+                { name: 'Rookie', age: 36, address: 'some where', key: '5' },
+                { name: 'TheShy', age: 36, address: 'some where', key: '6' },
               ]}
             />
           </Theme>
@@ -71,40 +79,46 @@ class ChildPadComponent1 extends React.Component {
       <React.Fragment>
         <div
           style={{
-            position: "absolute",
-            width: 44.285714285714285 + "%",
-            height: 82.05128205128204 + "%",
-            zIndex: "0",
-            ...{ left: "0px", top: "0px", right: "", bottom: "" }
+            position: 'absolute',
+            width: 44.285714285714285 + '%',
+            height: 96.96969696969697 + '%',
+            zIndex: '0',
+            ...{ left: '0%', top: '0%', right: '', bottom: '' },
           }}
         >
           <Theme
             config={{
-              wbkDGX0: themeHandle("wbkDGX0", undefined, {
-                Container: { normal: { width: 155, height: 32 } }
-              })
+              wbjY7B0: themeHandle(
+                'wbjY7B0',
+                undefined,
+                { Container: { normal: { width: 155, height: 32 } } },
+                true
+              ),
             }}
           >
-            <Button viewClass="wbkDGX0" text={`查询`} />
+            <Button viewClass="wbjY7B0" text={'查询'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 44.285714285714285 + "%",
-            height: 82.05128205128204 + "%",
-            zIndex: "1",
-            ...{ left: "175px", top: "0px", right: "", bottom: "" }
+            position: 'absolute',
+            width: 44.285714285714285 + '%',
+            height: 96.96969696969697 + '%',
+            zIndex: '1',
+            ...{ left: '50%', top: '0%', right: '', bottom: '' },
           }}
         >
           <Theme
             config={{
-              wb$D061: themeHandle("wb$D061", undefined, {
-                Container: { normal: { width: 155, height: 32 } }
-              })
+              wbe2CC1: themeHandle(
+                'wbe2CC1',
+                undefined,
+                { Container: { normal: { width: 155, height: 32 } } },
+                true
+              ),
             }}
           >
-            <Button viewClass="wb$D061" text={`重置`} />
+            <Button viewClass="wbe2CC1" text={'重置'} />
           </Theme>
         </div>
       </React.Fragment>
@@ -114,92 +128,92 @@ class ChildPadComponent1 extends React.Component {
 const User22 = bindTo(
   user,
   {
-    sfzh: "value"
+    sfzh: 'value',
   },
   {
     onChange: {
-      ["sfzh"](e) {
+      sfzh(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(Input);
 const User24 = bindTo(
   user,
   {
-    xm: "value"
+    xm: 'value',
   },
   {
     onChange: {
-      ["xm"](e) {
+      xm(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(Input);
 const User26 = bindTo(
   user,
   {
-    age: "value"
+    age: 'value',
   },
   {
     onChange: {
-      ["age"](e) {
+      age(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(NumberInput);
 const User28 = bindTo(
   user,
   {
-    sex: "value"
+    sex: 'value',
   },
   {
     onChange: {
-      ["sex"](e) {
+      sex(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(NumberInput);
 const User210 = bindTo(
   user,
   {
-    sex: "value"
+    sex: 'value',
   },
   {
     onChange: {
-      ["sex"](e) {
+      sex(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(NumberInput);
 const User212 = bindTo(
   user,
   {
-    sex: "value"
+    sex: 'value',
   },
   {
     onChange: {
-      ["sex"](e) {
+      sex(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(NumberInput);
 const User214 = bindTo(
   user,
   {
-    sex: "value"
+    sex: 'value',
   },
   {
     onChange: {
-      ["sex"](e) {
+      sex(e) {
         return bindHandleEvent(e);
-      }
-    }
+      },
+    },
   }
 )(NumberInput);
 class ChildPadComponent2 extends React.Component {
@@ -208,395 +222,502 @@ class ChildPadComponent2 extends React.Component {
       <React.Fragment>
         <div
           style={{
-            position: "absolute",
-            width: 18.867924528301888 + "%",
-            height: 12.177121771217712 + "%",
-            zIndex: "0",
-            ...{ right: "49.5px", bottom: "27.5px", left: "", top: "" }
+            position: 'absolute',
+            width: 18.867924528301888 + '%',
+            height: 12.177121771217712 + '%',
+            zIndex: '0',
+            ...{
+              right: '5.566037735849057%',
+              bottom: '17.066420664206642%',
+              left: '',
+              top: '',
+            },
           }}
         >
           <Theme
             config={{
-              wbIKqG71: themeHandle("wbIKqG71", undefined, {
-                Container: { normal: { width: 350, height: 33 } }
-              })
+              wbIKqG71: themeHandle(
+                'wbIKqG71',
+                undefined,
+                { Container: { normal: { width: 350, height: 33 } } },
+                true
+              ),
             }}
           >
             <Card
               width={350}
               height={130}
-              type={`transparent`}
+              type={'transparent'}
               viewClass="wbIKqG71"
             >
               <ChildPadComponent1
                 width={350}
                 height={130}
-                type={`transparent`}
+                type={'transparent'}
               />
             </Card>
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "1",
-            ...{ left: "70px", top: "50px", right: "", bottom: "" }
-          }}
-        >
-          <Theme
-            config={{
-              "wbX)Q)0": themeHandle("wbX)Q)0", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
-            }}
-          >
-            <Label viewClass="wbX)Q)0" text={`身份证号`} />
-          </Theme>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "2",
+            position: 'absolute',
+            width: 8.679245283018867 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '1',
             ...{
-              left: "250.49999999999997px",
-              top: "50px",
-              right: "",
-              bottom: ""
-            }
+              left: '3.7735849056603774%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              wbP8U41: themeHandle("wbP8U41", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              'wbU@jV0': themeHandle(
+                'wbU@jV0',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User22 viewClass="wbP8U41" disabled={true} />
+            <Label viewClass="wbU@jV0" text={'身份证号'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "3",
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '2',
             ...{
-              left: "671.6666666666666px",
-              top: "50px",
-              right: "",
-              bottom: ""
-            }
+              left: '13.504043126684634%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wb@r1j2": themeHandle("wb@r1j2", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
+              'wb(S5Q1': themeHandle(
+                'wb(S5Q1',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <Label viewClass="wb@r1j2" text={`姓名`} />
+            <User22 viewClass="wb(S5Q1" disabled={true} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "4",
+            position: 'absolute',
+            width: 8.62533692722372 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '3',
             ...{
-              left: "852.1666666666666px",
-              top: "50px",
-              right: "",
-              bottom: ""
-            }
+              left: '36.2084456424079%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              wbbxNP3: themeHandle("wbbxNP3", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              wbRhjl2: themeHandle(
+                'wbRhjl2',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User24 viewClass="wbbxNP3" disabled={true} />
+            <Label viewClass="wbRhjl2" text={'姓名'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "5",
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '4',
             ...{
-              left: "1273.3333333333333px",
-              top: "50px",
-              right: "",
-              bottom: ""
-            }
+              left: '45.93890386343216%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wb1!AK4": themeHandle("wb1!AK4", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
+              'wb5a@x3': themeHandle(
+                'wb5a@x3',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <Label viewClass="wb1!AK4" text={`年龄`} />
+            <User24 viewClass="wb5a@x3" disabled={true} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "6",
+            position: 'absolute',
+            width: 8.679245283018867 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '5',
             ...{
-              left: "1453.8333333333333px",
-              top: "50px",
-              right: "",
-              bottom: ""
-            }
+              left: '68.64330637915543%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wb@zYi5": themeHandle("wb@zYi5", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              'wbLl(34': themeHandle(
+                'wbLl(34',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User26 viewClass="wb@zYi5" disabled={true} />
+            <Label viewClass="wbLl(34" text={'年龄'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "7",
-            ...{ left: "70px", top: "107px", right: "", bottom: "" }
-          }}
-        >
-          <Theme
-            config={{
-              wbrn8z6: themeHandle("wbrn8z6", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
-            }}
-          >
-            <Label viewClass="wbrn8z6" text={`性别`} />
-          </Theme>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "8",
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '6',
             ...{
-              left: "250.49999999999997px",
-              top: "107px",
-              right: "",
-              bottom: ""
-            }
+              left: '78.37376460017968%',
+              top: '18.45018450184502%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wbu!)h7": themeHandle("wbu!)h7", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              wbwQye5: themeHandle(
+                'wbwQye5',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User28 viewClass="wbu!)h7" disabled={true} />
+            <User26 viewClass="wbwQye5" disabled={true} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "9",
+            position: 'absolute',
+            width: 8.679245283018867 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '7',
             ...{
-              left: "671.6666666666666px",
-              top: "107px",
-              right: "",
-              bottom: ""
-            }
+              left: '3.7735849056603774%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              wbCuDc8: themeHandle("wbCuDc8", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
+              wbt9sb6: themeHandle(
+                'wbt9sb6',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <Label viewClass="wbCuDc8" text={`性别`} />
+            <Label viewClass="wbt9sb6" text={'性别'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "10",
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '8',
             ...{
-              left: "852.1666666666666px",
-              top: "107px",
-              right: "",
-              bottom: ""
-            }
+              left: '13.504043126684634%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wbphK&9": themeHandle("wbphK&9", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              'wbzOM&7': themeHandle(
+                'wbzOM&7',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User210 viewClass="wbphK&9" disabled={true} />
+            <User28 viewClass="wbzOM&7" disabled={true} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "11",
+            position: 'absolute',
+            width: 8.62533692722372 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '9',
             ...{
-              left: "1273.3333333333333px",
-              top: "107px",
-              right: "",
-              bottom: ""
-            }
+              left: '36.2084456424079%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wbyU&G10": themeHandle("wbyU&G10", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
+              wbSux$8: themeHandle(
+                'wbSux$8',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <Label viewClass="wbyU&G10" text={`性别`} />
+            <Label viewClass="wbSux$8" text={'性别'} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "12",
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '10',
             ...{
-              left: "1453.8333333333333px",
-              top: "107px",
-              right: "",
-              bottom: ""
-            }
+              left: '45.93890386343216%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wbMJ#u11": themeHandle("wbMJ#u11", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              'wb)k9F9': themeHandle(
+                'wb)k9F9',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User212 viewClass="wbMJ#u11" disabled={true} />
+            <User210 viewClass="wb)k9F9" disabled={true} />
           </Theme>
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 8.652291105121291 + "%",
-            height: 8 + "%",
-            zIndex: "13",
-            ...{ left: "70px", top: "164px", right: "", bottom: "" }
-          }}
-        >
-          <Theme
-            config={{
-              wbofVF12: themeHandle("wbofVF12", undefined, {
-                Container: {
-                  normal: {
-                    textAlign: "right",
-                    width: 160.49999999999997,
-                    height: 22
-                  }
-                }
-              })
-            }}
-          >
-            <Label viewClass="wbofVF12" text={`性别`} />
-          </Theme>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            width: 20.54806828391734 + "%",
-            height: 11.636363636363637 + "%",
-            zIndex: "14",
+            position: 'absolute',
+            width: 8.679245283018867 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '11',
             ...{
-              left: "250.49999999999997px",
-              top: "164px",
-              right: "",
-              bottom: ""
-            }
+              left: '68.64330637915543%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              "wb(82M13": themeHandle("wb(82M13", undefined, {
-                Container: { normal: { width: 381.16666666666663, height: 32 } }
-              })
+              'wbau*E10': themeHandle(
+                'wbau*E10',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
             }}
           >
-            <User214 viewClass="wb(82M13" disabled={true} />
+            <Label viewClass="wbau*E10" text={'性别'} />
+          </Theme>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '12',
+            ...{
+              left: '78.37376460017968%',
+              top: '39.48339483394834%',
+              right: '',
+              bottom: '',
+            },
+          }}
+        >
+          <Theme
+            config={{
+              wbD78T11: themeHandle(
+                'wbD78T11',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
+            }}
+          >
+            <User212 viewClass="wbD78T11" disabled={true} />
+          </Theme>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            width: 8.679245283018867 + '%',
+            height: 8.118081180811808 + '%',
+            zIndex: '13',
+            ...{
+              left: '3.7735849056603774%',
+              top: '60.51660516605166%',
+              right: '',
+              bottom: '',
+            },
+          }}
+        >
+          <Theme
+            config={{
+              'wbR5%&12': themeHandle(
+                'wbR5%&12',
+                undefined,
+                {
+                  Container: {
+                    normal: {
+                      textAlign: 'right',
+                      width: 160.49999999999997,
+                      height: 22,
+                    },
+                  },
+                },
+                true
+              ),
+            }}
+          >
+            <Label viewClass="wbR5%&12" text={'性别'} />
+          </Theme>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            width: 20.539083557951482 + '%',
+            height: 11.808118081180812 + '%',
+            zIndex: '14',
+            ...{
+              left: '13.504043126684634%',
+              top: '60.51660516605166%',
+              right: '',
+              bottom: '',
+            },
+          }}
+        >
+          <Theme
+            config={{
+              'wb6#Bv13': themeHandle(
+                'wb6#Bv13',
+                undefined,
+                {
+                  Container: {
+                    normal: { width: 381.16666666666663, height: 32 },
+                  },
+                },
+                true
+              ),
+            }}
+          >
+            <User214 viewClass="wb6#Bv13" disabled={true} />
           </Theme>
         </div>
       </React.Fragment>
@@ -606,28 +727,29 @@ class ChildPadComponent2 extends React.Component {
 export default class Page extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          width: "1920px",
-          height: "1080px",
-          zIndex: "4000",
-          position: "relative"
-        }}
-      >
+      <div style={{ height: '1080px', zIndex: '4000', position: 'relative' }}>
         <div
           style={{
-            position: "absolute",
-            width: 96.61458333333334 + "%",
-            height: 4.62962962962963 + "%",
-            zIndex: "0",
-            ...{ left: "28.25px", top: "468.125px", right: "", bottom: "" }
+            position: 'absolute',
+            width: 96.61458333333334 + '%',
+            height: 42.31481481481482 + '%',
+            zIndex: '0',
+            ...{
+              left: '1.4713541666666667%',
+              top: '43.344907407407405%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              wbcgWjF0: themeHandle("wbcgWjF0", undefined, {
-                Container: { normal: { width: 1855, height: 457 } }
-              })
+              wbcgWjF0: themeHandle(
+                'wbcgWjF0',
+                undefined,
+                { Container: { normal: { width: 1855, height: 457 } } },
+                true
+              ),
             }}
           >
             <Card width={350} height={130} viewClass="wbcgWjF0">
@@ -637,18 +759,26 @@ export default class Page extends React.Component {
         </div>
         <div
           style={{
-            position: "absolute",
-            width: 96.61458333333334 + "%",
-            height: 25.462962962962965 + "%",
-            zIndex: "1",
-            ...{ left: "32px", top: "21.875px", right: "", bottom: "" }
+            position: 'absolute',
+            width: 96.61458333333334 + '%',
+            height: 25.092592592592595 + '%',
+            zIndex: '1',
+            ...{
+              left: '1.6666666666666667%',
+              top: '2.025462962962963%',
+              right: '',
+              bottom: '',
+            },
           }}
         >
           <Theme
             config={{
-              wb1Mkl71: themeHandle("wb1Mkl71", undefined, {
-                Container: { normal: { width: 1855, height: 271 } }
-              })
+              wb1Mkl71: themeHandle(
+                'wb1Mkl71',
+                undefined,
+                { Container: { normal: { width: 1855, height: 271 } } },
+                true
+              ),
             }}
           >
             <Card width={350} height={130} viewClass="wb1Mkl71">
