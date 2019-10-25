@@ -1,0 +1,26 @@
+{
+  "name": "@lugia/lugiad-core",
+  "version": "1.0.5",
+  "dependencies": {
+    "chai": "^4.1.2"
+  },
+  "author": "ysstech-yjy",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lugia-ysstech/lugia-devtools"
+  },
+  "homepage": "http://lugia.tech",
+  "license": "Apache License 2.0",
+  "devDependencies": {},
+  "files": [
+    "lib",
+    "interface",
+    "package.json"
+  ],
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.2.0"
+  }
+}
