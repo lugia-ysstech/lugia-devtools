@@ -89,7 +89,7 @@ export function createLayerComponent(
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
-    const { id: layerId, percentWidth, percentHeight, percentPoint, width, height, zIndex, point, pointType = 'leftTop' } = key;
+    const { id: layerId, percentWidth, percentHeight, percentPoint = [], width, height, zIndex, point, pointType = 'leftTop' } = key;
     const layerInfo = id2WidgetInfo[layerId];
     const { module, widgetName, props } = layerInfo;
     const componentName = camelNamed(widgetName);
