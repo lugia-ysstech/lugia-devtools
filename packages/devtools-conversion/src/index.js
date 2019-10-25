@@ -53,7 +53,7 @@ export default function conversion(page: Object, options: Object): string {
     themes = {},
     assets = {},
   } = page;
-  const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax);
+  const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax, isResponsive);
   const { widgetIdHasAssetPropsName = {} } = assets;
   const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);

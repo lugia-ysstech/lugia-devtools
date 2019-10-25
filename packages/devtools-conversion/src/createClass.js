@@ -4,7 +4,7 @@
  *
  * @flow
  */
-import { camelNamed, recursiveChildren } from './utils';
+import { camelNamed, recursiveChildren, pointType2GetCSS } from './utils';
 import { widgetIdInLugiax } from './widgetIdInLugiax';
 import { createThemeCode } from './theme';
 
@@ -88,7 +88,7 @@ export function createLayerComponent(
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
-    const { id: layerId, width, height, zIndex, point } = key;
+    const { id: layerId, percentWidth, percentHeight, zIndex, point, pointType = 'leftTop' } = key;
     const layerInfo = id2WidgetInfo[layerId];
     const { module, widgetName, props } = layerInfo;
     const componentName = camelNamed(widgetName);
@@ -138,18 +138,20 @@ export function createLayerComponent(
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
     const commonStr = `context.getLayout("${layerId}").`;
-    const styleWidth = isResponsive ? `${commonStr}width` : width;
-    const styleHeight = isResponsive ? `${commonStr}height` : height;
-    const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
-    const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    const styleWidth = isResponsive ? `${commonStr}percentWidth || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
+    const styleHeight = isResponsive ? `${commonStr}percentHeight || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
+    // const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
+    // const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    const responsiveGetLayoutStr = `context.getLayout("${layerId}").`;
+    const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}point || [${point}])` : pointType2GetCSS[pointType](point);
+
     const theContext = isResponsive ? 'context' : 'undefined';
     const themeStr = configString ? `${configString},` : '{}';
     layerCode =
       layerCode +
-      `<div style={{position: 'absolute',width: ${styleWidth} + 'px',
-        height: ${styleHeight} + 'px', zIndex: '${zIndex}', 
-        left: ${styleLeft} + 'px', 
-        top: ${styleRight} + 'px' }}
+      `<div style={{position: 'absolute',width: ${styleWidth},
+        height: ${styleHeight}, zIndex: '${zIndex}', 
+         ...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)} }}
         ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
@@ -162,6 +164,12 @@ export function createLayerComponent(
   }
 
   return { layerCode, layerBindCode };
+}
+
+function getLayerCSS(layerId: string, isResponsive: boolean, target: string, defaultValue: number): string | number {
+  const commonStr = `context.getLayout("${layerId}").`;
+
+  return `${commonStr}${target}` || defaultValue;
 }
 
 export function getComponentProps(props: ?Object, opt: ?Object): string {
