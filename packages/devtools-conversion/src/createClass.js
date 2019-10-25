@@ -4,7 +4,8 @@
  *
  * @flow
  */
-import { camelNamed, recursiveChildren, pointType2GetCSS } from './utils';
+import { pointType2GetCSS } from '@lugia/lugiad-core';
+import { camelNamed, recursiveChildren } from './utils';
 import { widgetIdInLugiax } from './widgetIdInLugiax';
 import { createThemeCode } from './theme';
 
