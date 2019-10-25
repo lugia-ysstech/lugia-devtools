@@ -55,7 +55,7 @@ export default function conversion(page: Object, options: Object): string {
   } = page;
   const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax, isResponsive);
   const { widgetIdHasAssetPropsName = {} } = assets;
-  const { children, layers, id2WidgetInfo, width, zIndex, height } = mainPad;
+  const { children, layers, id2WidgetInfo, zIndex, height } = mainPad;
   const modelCode = getModelCode(lugiax);
   const { rspPackagesCode, rspDeconstructionCode: responsiveCode } = getResponsiveCode(layoutInfos);
   const classCode = createComponent(
@@ -81,7 +81,7 @@ export default function conversion(page: Object, options: Object): string {
   imageCode = imageCode ? imageCode + ';' : '';
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
-  const nomalCode = `<div style={{width: '${width}px',height: '${height}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
+  const nomalCode = `<div style={{height: '${height}px',zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
                     context => {

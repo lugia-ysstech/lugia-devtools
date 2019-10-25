@@ -88,7 +88,7 @@ export function createLayerComponent(
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
-    const { id: layerId, percentWidth, percentHeight, zIndex, point, pointType = 'leftTop' } = key;
+    const { id: layerId, percentWidth, percentHeight, percentPoint, width, height, zIndex, point, pointType = 'leftTop' } = key;
     const layerInfo = id2WidgetInfo[layerId];
     const { module, widgetName, props } = layerInfo;
     const componentName = camelNamed(widgetName);
@@ -138,21 +138,31 @@ export function createLayerComponent(
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
     const commonStr = `context.getLayout("${layerId}").`;
-    const styleWidth = isResponsive ? `${commonStr}percentWidth || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
-    const styleHeight = isResponsive ? `${commonStr}percentHeight || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
-    // const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
-    // const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    let styleWidth = isResponsive ? `${commonStr}percentWidth || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
+    if (!percentWidth) {
+      styleWidth = isResponsive ? `${commonStr}width` : width;
+    }
+    let styleHeight = isResponsive ? `${commonStr}percentHeight || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
+    if (!percentWidth) {
+      styleHeight = isResponsive ? `${commonStr}height` : height;
+    }
     const responsiveGetLayoutStr = `context.getLayout("${layerId}").`;
-    const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}point || [${point}])` : pointType2GetCSS[pointType](point);
-
+    const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])` : pointType2GetCSS[pointType](percentPoint);
+    let positionCSSStr = `...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)}`;
+    if (!percentWidth) {
+      const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
+      const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+      positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
+    }
+    const useSmart = !!percentWidth;
     const theContext = isResponsive ? 'context' : 'undefined';
-    const themeStr = configString ? `${configString},` : '{}';
+    const themeStr = configString ? `${configString}` : '{}';
     layerCode =
       layerCode +
       `<div style={{position: 'absolute',width: ${styleWidth},
         height: ${styleHeight}, zIndex: '${zIndex}', 
-         ...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)} }}
-        ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
+         ${positionCSSStr} }}
+        ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr}, ${useSmart})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
   if (layerCode && isResponsive) {
@@ -166,11 +176,11 @@ export function createLayerComponent(
   return { layerCode, layerBindCode };
 }
 
-function getLayerCSS(layerId: string, isResponsive: boolean, target: string, defaultValue: number): string | number {
-  const commonStr = `context.getLayout("${layerId}").`;
-
-  return `${commonStr}${target}` || defaultValue;
-}
+// function getLayerCSS(layerId: string, isResponsive: boolean, target: string, defaultValue: number): string | number {
+//   const commonStr = `context.getLayout("${layerId}").`;
+//
+//   return `${commonStr}${target}` || defaultValue;
+// }
 
 export function getComponentProps(props: ?Object, opt: ?Object): string {
   if (!props) {

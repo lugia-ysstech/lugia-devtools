@@ -25,18 +25,18 @@ export const pointType2GetCSS: {
 } = {
   leftTop: (point: Point) => {
     const [x, y] = point;
-    return { left: `${x}px`, top: `${y}px`, right: "", bottom: "" };
+    return { left: `${x}%`, top: `${y}%`, right: "", bottom: "" };
   },
   leftBottom: (point: Point) => {
     const [x, y] = point;
-    return { left: `${x}px`, bottom: `${y}px`, right: "", top: "" };
+    return { left: `${x}%`, bottom: `${y}%`, right: "", top: "" };
   },
   rightTop: (point: Point) => {
     const [x, y] = point;
-    return { right: `${x}px`, top: `${y}px`, left: "", bottom: "" };
+    return { right: `${x}%`, top: `${y}%`, left: "", bottom: "" };
   },
   rightBottom: (point: Point) => {
     const [x, y] = point;
-    return { right: `${x}px`, bottom: `${y}px`, left: "", top: "" };
+    return { right: `${x}%`, bottom: `${y}%`, left: "", top: "" };
   }
 };
