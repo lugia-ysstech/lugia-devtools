@@ -19,6 +19,20 @@ const layerZip = {
   pointType: 'pt',
 };
 
+const pointTypeZip = {
+  leftTop: 'lt',
+  leftBottom: 'lb',
+  rightTop: 'rt',
+  rightBottom: 'rb',
+};
+
+const pointTypeUnZip = {
+  lt: 'leftTop',
+  lb: 'leftBottom',
+  rt: 'rightTop',
+  rb: 'rightBottom',
+};
+
 const layerUnZip = {
   a: 'areaId',
   i: 'id',
@@ -173,10 +187,12 @@ export function unZipLayers(layers: Layer[]) {
 
 export function zipLayer(outLayer: Object) {
   changeDataAttribute(outLayer, layerZip);
+  changeDataAttributeValue(outLayer, pointTypeZip, 'pt');
 }
 
 export function unZipLayer(outLayer: Object) {
   changeDataAttribute(outLayer, layerUnZip);
+  changeDataAttributeValue(outLayer, pointTypeUnZip, 'pointType');
 }
 
 export function zipWidgetInfo(outInfo: Object) {
@@ -233,6 +249,20 @@ export function changeDataAttribute(outData: Object, map: Object) {
     outData[zipName] = outData[targetName];
     delete outData[targetName];
   });
+}
+
+export function changeDataAttributeValue(
+  outData: Object,
+  map: Object,
+  targetField: string
+) {
+  if (!outData || !map) {
+    return;
+  }
+  const value = outData[targetField];
+  if (value !== null || value !== undefined) {
+    outData[targetField] = map[value] || value;
+  }
 }
 
 const copyDataZip = {
