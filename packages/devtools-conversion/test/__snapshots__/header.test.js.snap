@@ -16,27 +16,27 @@ Object {
 exports[`conversion header -> createLugiadCoreCode toMatchSnapshot 1`] = `
 Object {
   "functionsCode": "const {ThemeHandle,bindHandleEvent} = LugiadCore;",
-  "packageCode": "import { LugiadCore } from '@lugia/lugia-web';",
+  "packageCode": "import LugiadCore from '@lugia/lugiad-core';",
 }
 `;
 
 exports[`conversion header -> getLugiadCoreCode toMatchSnapshot 1`] = `
 Object {
-  "lugiadCoreCode": "import { LugiadCore } from '@lugia/lugia-web';",
+  "lugiadCoreCode": "import LugiadCore from '@lugia/lugiad-core';",
   "lugiadFuncCode": "const {themeHandle} = LugiadCore;",
 }
 `;
 
 exports[`conversion header -> getLugiadCoreCode toMatchSnapshot 2`] = `
 Object {
-  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import { LugiadCore } from '@lugia/lugia-web';",
+  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
   "lugiadFuncCode": "const {themeHandle,bindHandleEvent,getData} = LugiadCore;",
 }
 `;
 
 exports[`conversion header -> getLugiadCoreCode toMatchSnapshot 3`] = `
 Object {
-  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import { LugiadCore } from '@lugia/lugia-web';",
+  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
   "lugiadFuncCode": "const {themeHandle,bindHandleEvent,getData} = LugiadCore;",
 }
 `;
