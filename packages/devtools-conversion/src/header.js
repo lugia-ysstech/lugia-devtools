@@ -93,7 +93,8 @@ export function getTargetModal(target: ?Object): any[] {
 }
 
 export function getLugiadCoreCode(
-  lugiax: Object
+  lugiax: Object,
+  isResponsive: boolean
 ): string[] {
   if (!lugiax) {
     return '';
@@ -107,6 +108,9 @@ export function getLugiadCoreCode(
     functionNames.push('bindHandleEvent');
     functionNames.push('getData');
     lugiaxCode = 'import lugiax, { bindTo, connect, bind } from \'@lugia/lugiax\';';
+  }
+  if (isResponsive) {
+    functionNames.push('pointType2GetCSS');
   }
   const { packageCode, functionsCode } = createLugiadCoreCode(functionNames);
   return { lugiadCoreCode: lugiaxCode + packageCode, lugiadFuncCode: functionsCode };

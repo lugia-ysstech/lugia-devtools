@@ -20,137 +20,137 @@
           "percentWidth": 18.867924528301888,
           "percentHeight": 12.177121771217712,
           "pointType": "rightBottom",
-          "i": "wbIKqG71",
-          "z": 0,
-          "w": 350,
-          "h": 33,
-          "p": [49.5, 27.5]
+          "id": "wbIKqG71",
+          "zIndex": 0,
+          "width": 350,
+          "height": 33,
+          "point": [49.5, 27.5]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wbX)Q)0",
-          "z": 1,
-          "w": 161,
-          "h": 22,
-          "p": [70, 50]
+          "id": "wbX)Q)0",
+          "zIndex": 1,
+          "width": 161,
+          "height": 22,
+          "point": [70, 50]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wbP8U41",
-          "z": 2,
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 50]
+          "id": "wbP8U41",
+          "zIndex": 2,
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 50]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wb@r1j2",
-          "z": 3,
-          "w": 160,
-          "h": 22,
-          "p": [671.6666666666666, 50]
+          "id": "wb@r1j2",
+          "zIndex": 3,
+          "width": 160,
+          "height": 22,
+          "point": [671.6666666666666, 50]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wbbxNP3",
-          "z": 4,
-          "w": 381,
-          "h": 32,
-          "p": [852.1666666666666, 50]
+          "id": "wbbxNP3",
+          "zIndex": 4,
+          "width": 381,
+          "height": 32,
+          "point": [852.1666666666666, 50]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wb1!AK4",
-          "z": 5,
-          "w": 161,
-          "h": 22,
-          "p": [1273.3333333333333, 50]
+          "id": "wb1!AK4",
+          "zIndex": 5,
+          "width": 161,
+          "height": 22,
+          "point": [1273.3333333333333, 50]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wb@zYi5",
-          "z": 6,
-          "w": 381,
-          "h": 32,
-          "p": [1453.8333333333333, 50]
+          "id": "wb@zYi5",
+          "zIndex": 6,
+          "width": 381,
+          "height": 32,
+          "point": [1453.8333333333333, 50]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wbrn8z6",
-          "z": 7,
-          "w": 161,
-          "h": 22,
-          "p": [70, 107]
+          "id": "wbrn8z6",
+          "zIndex": 7,
+          "width": 161,
+          "height": 22,
+          "point": [70, 107]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wbu!)h7",
-          "z": 8,
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 107]
+          "id": "wbu!)h7",
+          "zIndex": 8,
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 107]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wbCuDc8",
-          "z": 9,
-          "w": 160,
-          "h": 22,
-          "p": [671.6666666666666, 107]
+          "id": "wbCuDc8",
+          "zIndex": 9,
+          "width": 160,
+          "height": 22,
+          "point": [671.6666666666666, 107]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wbphK&9",
-          "z": 10,
-          "w": 381,
-          "h": 32,
-          "p": [852.1666666666666, 107]
+          "id": "wbphK&9",
+          "zIndex": 10,
+          "width": 381,
+          "height": 32,
+          "point": [852.1666666666666, 107]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wbyU&G10",
-          "z": 11,
-          "w": 161,
-          "h": 22,
-          "p": [1273.3333333333333, 107]
+          "id": "wbyU&G10",
+          "zIndex": 11,
+          "width": 161,
+          "height": 22,
+          "point": [1273.3333333333333, 107]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wbMJ#u11",
-          "z": 12,
-          "w": 381,
-          "h": 32,
-          "p": [1453.8333333333333, 107]
+          "id": "wbMJ#u11",
+          "zIndex": 12,
+          "width": 381,
+          "height": 32,
+          "point": [1453.8333333333333, 107]
         },
         {
           "percentWidth": 8.652291105121291,
           "percentHeight": 8,
-          "i": "wbofVF12",
-          "z": 13,
-          "w": 161,
-          "h": 22,
-          "p": [70, 164]
+          "id": "wbofVF12",
+          "zIndex": 13,
+          "width": 161,
+          "height": 22,
+          "point": [70, 164]
         },
         {
           "percentWidth": 20.54806828391734,
           "percentHeight": 11.636363636363637,
-          "i": "wb(82M13",
-          "z": 14,
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 164]
+          "id": "wb(82M13",
+          "zIndex": 14,
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 164]
         }
       ],
       "idSeq": 0,
@@ -162,11 +162,11 @@
             "preIds": ["wbX)Q)0", "wbP8U41"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "身份证号" },
-          "i": "wbX)Q)0"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "身份证号" },
+          "id": "wbX)Q)0"
         },
         "wbP8U41": {
           "offsetInfo": {
@@ -175,11 +175,11 @@
             "preIds": ["wbX)Q)0", "wbP8U41"],
             "widthScale": 0.7
           },
-          "w": "Input",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wbP8U41"
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wbP8U41"
         },
         "wb@r1j2": {
           "offsetInfo": {
@@ -188,11 +188,11 @@
             "preIds": ["wb@r1j2", "wbbxNP3"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "姓名" },
-          "i": "wb@r1j2"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "姓名" },
+          "id": "wb@r1j2"
         },
         "wbbxNP3": {
           "offsetInfo": {
@@ -201,11 +201,11 @@
             "preIds": ["wb@r1j2", "wbbxNP3"],
             "widthScale": 0.7
           },
-          "w": "Input",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wbbxNP3"
+          "widgetName": "Input",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wbbxNP3"
         },
         "wb1!AK4": {
           "offsetInfo": {
@@ -214,11 +214,11 @@
             "preIds": ["wb1!AK4", "wb@zYi5"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "年龄" },
-          "i": "wb1!AK4"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "年龄" },
+          "id": "wb1!AK4"
         },
         "wb@zYi5": {
           "offsetInfo": {
@@ -227,11 +227,11 @@
             "preIds": ["wb1!AK4", "wb@zYi5"],
             "widthScale": 0.7
           },
-          "w": "NumberInput",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wb@zYi5"
+          "widgetName": "NumberInput",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wb@zYi5"
         },
         "wbrn8z6": {
           "offsetInfo": {
@@ -240,11 +240,11 @@
             "preIds": ["wbrn8z6", "wbu!)h7"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "性别" },
-          "i": "wbrn8z6"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "性别" },
+          "id": "wbrn8z6"
         },
         "wbu!)h7": {
           "offsetInfo": {
@@ -253,11 +253,11 @@
             "preIds": ["wbrn8z6", "wbu!)h7"],
             "widthScale": 0.7
           },
-          "w": "NumberInput",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wbu!)h7"
+          "widgetName": "NumberInput",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wbu!)h7"
         },
         "wbCuDc8": {
           "offsetInfo": {
@@ -266,11 +266,11 @@
             "preIds": ["wbCuDc8", "wbphK&9"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "性别" },
-          "i": "wbCuDc8"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "性别" },
+          "id": "wbCuDc8"
         },
         "wbphK&9": {
           "offsetInfo": {
@@ -279,11 +279,11 @@
             "preIds": ["wbCuDc8", "wbphK&9"],
             "widthScale": 0.7
           },
-          "w": "NumberInput",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wbphK&9"
+          "widgetName": "NumberInput",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wbphK&9"
         },
         "wbyU&G10": {
           "offsetInfo": {
@@ -292,11 +292,11 @@
             "preIds": ["wbyU&G10", "wbMJ#u11"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "性别" },
-          "i": "wbyU&G10"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "性别" },
+          "id": "wbyU&G10"
         },
         "wbMJ#u11": {
           "offsetInfo": {
@@ -305,11 +305,11 @@
             "preIds": ["wbyU&G10", "wbMJ#u11"],
             "widthScale": 0.7
           },
-          "w": "NumberInput",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wbMJ#u11"
+          "widgetName": "NumberInput",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wbMJ#u11"
         },
         "wbofVF12": {
           "offsetInfo": {
@@ -318,11 +318,11 @@
             "preIds": ["wbofVF12", "wb(82M13"],
             "widthScale": 0.3
           },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "性别" },
-          "i": "wbofVF12"
+          "widgetName": "Label",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "性别" },
+          "id": "wbofVF12"
         },
         "wb(82M13": {
           "offsetInfo": {
@@ -331,19 +331,19 @@
             "preIds": ["wbofVF12", "wb(82M13"],
             "widthScale": 0.7
           },
-          "w": "NumberInput",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "disabled": true },
-          "i": "wb(82M13"
+          "widgetName": "NumberInput",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "disabled": true },
+          "id": "wb(82M13"
         },
         "wbIKqG71": {
           "childAreaId": "ToolButton",
-          "w": "MonkeyKing",
-          "a": "Hee",
-          "m": "@lugia/lugia-web",
-          "v": "1.0.0",
-          "p": {
+          "widgetName": "MonkeyKing",
+          "aliasName": "Hee",
+          "module": "@lugia/lugia-web",
+          "version": "1.0.0",
+          "props": {
             "width": 350,
             "height": 130,
             "type": "transparent",
@@ -356,7 +356,7 @@
               "monkeyType": "Point"
             }
           },
-          "i": "wbIKqG71"
+          "id": "wbIKqG71"
         }
       },
       "id": "Form",
@@ -381,20 +381,20 @@
         {
           "percentWidth": 44.285714285714285,
           "percentHeight": 82.05128205128204,
-          "i": "wbkDGX0",
-          "z": 0,
-          "w": 155,
-          "h": 32,
-          "p": [0, 0]
+          "id": "wbkDGX0",
+          "zIndex": 0,
+          "width": 155,
+          "height": 32,
+          "point": [0, 0]
         },
         {
           "percentWidth": 44.285714285714285,
           "percentHeight": 82.05128205128204,
-          "i": "wb$D061",
-          "z": 1,
-          "w": 155,
-          "h": 32,
-          "p": [175, 0]
+          "id": "wb$D061",
+          "zIndex": 1,
+          "width": 155,
+          "height": 32,
+          "point": [175, 0]
         }
       ],
       "idSeq": 0,
@@ -407,11 +407,11 @@
             "minHeight": 33,
             "widthScale": 1
           },
-          "w": "Button",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "查询" },
-          "i": "wbkDGX0"
+          "widgetName": "Button",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "查询" },
+          "id": "wbkDGX0"
         },
         "wb$D061": {
           "offsetInfo": {
@@ -421,11 +421,11 @@
             "minHeight": 33,
             "widthScale": 1
           },
-          "w": "Button",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": { "text": "重置" },
-          "i": "wb$D061"
+          "widgetName": "Button",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": { "text": "重置" },
+          "id": "wb$D061"
         }
       },
       "id": "ToolButton",
@@ -450,11 +450,11 @@
         {
           "percentWidth": 94.60916442048517,
           "percentHeight": 63.1858407079646,
-          "i": "wb!Y@E0",
-          "z": 0,
-          "w": 1755,
-          "h": 357,
-          "p": [50, 50]
+          "id": "wb!Y@E0",
+          "zIndex": 0,
+          "width": 1755,
+          "height": 357,
+          "point": [50, 50]
         }
       ],
       "idSeq": 0,
@@ -467,10 +467,10 @@
             "minHeight": 50,
             "widthScale": 1
           },
-          "w": "Table",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
+          "widgetName": "Table",
+          "module": "@lugia/lugia-web",
+          "version": "lasted",
+          "props": {
             "columns": [
               { "title": "Name", "dataIndex": "name", "key": "name" },
               { "title": "Age", "dataIndex": "age", "key": "age" },
@@ -511,7 +511,7 @@
               }
             ]
           },
-          "i": "wb!Y@E0"
+          "id": "wb!Y@E0"
         }
       },
       "id": "Table",
@@ -584,31 +584,31 @@
       {
         "percentWidth": 96.61458333333334,
         "percentHeight": 4.62962962962963,
-        "i": "wbcgWjF0",
-        "z": 0,
-        "w": 1855,
-        "h": 457,
-        "p": [28.25, 468.125]
+        "id": "wbcgWjF0",
+        "zIndex": 0,
+        "width": 1855,
+        "height": 457,
+        "point": [28.25, 468.125]
       },
       {
         "percentWidth": 96.61458333333334,
         "percentHeight": 25.462962962962965,
-        "i": "wb1Mkl71",
-        "z": 1,
-        "w": 1855,
-        "h": 271,
-        "p": [32, 21.875]
+        "id": "wb1Mkl71",
+        "zIndex": 1,
+        "width": 1855,
+        "height": 271,
+        "point": [32, 21.875]
       }
     ],
     "idSeq": 91291,
     "id2WidgetInfo": {
       "wb1Mkl71": {
         "childAreaId": "Form",
-        "w": "MonkeyKing",
-        "a": "Hee",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
+        "widgetName": "MonkeyKing",
+        "aliasName": "Hee",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
           "width": 350,
           "height": 130,
           "TargetContainer": {
@@ -620,15 +620,15 @@
             "monkeyType": "Point"
           }
         },
-        "i": "wb1Mkl71"
+        "id": "wb1Mkl71"
       },
       "wbcgWjF0": {
         "childAreaId": "Table",
-        "w": "MonkeyKing",
-        "a": "Hee",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
+        "widgetName": "MonkeyKing",
+        "aliasName": "Hee",
+        "module": "@lugia/lugia-web",
+        "version": "1.0.0",
+        "props": {
           "width": 350,
           "height": 130,
           "TargetContainer": {
@@ -640,7 +640,7 @@
             "monkeyType": "Point"
           }
         },
-        "i": "wbcgWjF0"
+        "id": "wbcgWjF0"
       }
     },
     "id": "mainPad",
@@ -759,28 +759,68 @@
     "page2mutation": {},
     "widgetId2PropsName2BindInfo": {
       "wbP8U41": {
-        "value": { "m": "user", "f": "sfzh", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "sfzh",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wbbxNP3": {
-        "value": { "m": "user", "f": "xm", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "xm",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wb@zYi5": {
-        "value": { "m": "user", "f": "age", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "age",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wbu!)h7": {
-        "value": { "m": "user", "f": "sex", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "sex",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wbphK&9": {
-        "value": { "m": "user", "f": "sex", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "sex",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wbMJ#u11": {
-        "value": { "m": "user", "f": "sex", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "sex",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wb(82M13": {
-        "value": { "m": "user", "f": "sex", "p": "value", "b": "bind" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "sex",
+          "propsName": "value",
+          "bindType": "bind"
+        }
       },
       "wb!Y@E0": {
-        "value": { "m": "user", "f": "table", "p": "value", "b": "connect" }
+        "value": {
+          "modelName": "user",
+          "fieldName": "table",
+          "propsName": "value",
+          "bindType": "connect"
+        }
       }
     },
     "widgetId2EventName2MutationInfo": {}
@@ -805,32 +845,32 @@
           "theme": {
             "Container": { "normal": { "width": 1855, "height": 457 } }
           },
-          "a": "mainPad",
-          "w": 1855,
-          "h": 457,
-          "p": [28.25, 468.125],
-          "wi": "wbcgWjF0"
+          "areaId": "mainPad",
+          "width": 1855,
+          "height": 457,
+          "point": [28.25, 468.125],
+          "widgetId": "wbcgWjF0"
         },
         "wb1Mkl71": {
           "theme": {
             "Container": { "normal": { "width": 1855, "height": 271 } }
           },
-          "a": "mainPad",
-          "w": 1855,
-          "h": 271,
-          "p": [32, 21.875],
-          "wi": "wb1Mkl71"
+          "areaId": "mainPad",
+          "width": 1855,
+          "height": 271,
+          "point": [32, 21.875],
+          "widgetId": "wb1Mkl71"
         },
         "wbIKqG71": {
           "pointType": "rightBottom",
           "theme": {
             "Container": { "normal": { "width": 350, "height": 33 } }
           },
-          "a": "Form",
-          "w": 350,
-          "h": 33,
-          "p": [49.5, 27.5],
-          "wi": "wbIKqG71"
+          "areaId": "Form",
+          "width": 350,
+          "height": 33,
+          "point": [49.5, 27.5],
+          "widgetId": "wbIKqG71"
         },
         "wbX)Q)0": {
           "theme": {
@@ -842,11 +882,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 161,
-          "h": 22,
-          "p": [70, 50],
-          "wi": "wbX)Q)0"
+          "areaId": "Form",
+          "width": 161,
+          "height": 22,
+          "point": [70, 50],
+          "widgetId": "wbX)Q)0"
         },
         "wbP8U41": {
           "theme": {
@@ -854,11 +894,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 50],
-          "wi": "wbP8U41"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 50],
+          "widgetId": "wbP8U41"
         },
         "wb@r1j2": {
           "theme": {
@@ -870,11 +910,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 160,
-          "h": 22,
-          "p": [671.6666666666666, 50],
-          "wi": "wb@r1j2"
+          "areaId": "Form",
+          "width": 160,
+          "height": 22,
+          "point": [671.6666666666666, 50],
+          "widgetId": "wb@r1j2"
         },
         "wbbxNP3": {
           "theme": {
@@ -882,11 +922,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [852.1666666666666, 50],
-          "wi": "wbbxNP3"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [852.1666666666666, 50],
+          "widgetId": "wbbxNP3"
         },
         "wb1!AK4": {
           "theme": {
@@ -898,11 +938,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 161,
-          "h": 22,
-          "p": [1273.3333333333333, 50],
-          "wi": "wb1!AK4"
+          "areaId": "Form",
+          "width": 161,
+          "height": 22,
+          "point": [1273.3333333333333, 50],
+          "widgetId": "wb1!AK4"
         },
         "wb@zYi5": {
           "theme": {
@@ -910,11 +950,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [1453.8333333333333, 50],
-          "wi": "wb@zYi5"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [1453.8333333333333, 50],
+          "widgetId": "wb@zYi5"
         },
         "wbrn8z6": {
           "theme": {
@@ -926,11 +966,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 161,
-          "h": 22,
-          "p": [70, 107],
-          "wi": "wbrn8z6"
+          "areaId": "Form",
+          "width": 161,
+          "height": 22,
+          "point": [70, 107],
+          "widgetId": "wbrn8z6"
         },
         "wbu!)h7": {
           "theme": {
@@ -938,11 +978,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 107],
-          "wi": "wbu!)h7"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 107],
+          "widgetId": "wbu!)h7"
         },
         "wbCuDc8": {
           "theme": {
@@ -954,11 +994,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 160,
-          "h": 22,
-          "p": [671.6666666666666, 107],
-          "wi": "wbCuDc8"
+          "areaId": "Form",
+          "width": 160,
+          "height": 22,
+          "point": [671.6666666666666, 107],
+          "widgetId": "wbCuDc8"
         },
         "wbphK&9": {
           "theme": {
@@ -966,11 +1006,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [852.1666666666666, 107],
-          "wi": "wbphK&9"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [852.1666666666666, 107],
+          "widgetId": "wbphK&9"
         },
         "wbyU&G10": {
           "theme": {
@@ -982,11 +1022,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 161,
-          "h": 22,
-          "p": [1273.3333333333333, 107],
-          "wi": "wbyU&G10"
+          "areaId": "Form",
+          "width": 161,
+          "height": 22,
+          "point": [1273.3333333333333, 107],
+          "widgetId": "wbyU&G10"
         },
         "wbMJ#u11": {
           "theme": {
@@ -994,11 +1034,11 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [1453.8333333333333, 107],
-          "wi": "wbMJ#u11"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [1453.8333333333333, 107],
+          "widgetId": "wbMJ#u11"
         },
         "wbofVF12": {
           "theme": {
@@ -1010,11 +1050,11 @@
               }
             }
           },
-          "a": "Form",
-          "w": 161,
-          "h": 22,
-          "p": [70, 164],
-          "wi": "wbofVF12"
+          "areaId": "Form",
+          "width": 161,
+          "height": 22,
+          "point": [70, 164],
+          "widgetId": "wbofVF12"
         },
         "wb(82M13": {
           "theme": {
@@ -1022,41 +1062,41 @@
               "normal": { "width": 381.16666666666663, "height": 32 }
             }
           },
-          "a": "Form",
-          "w": 381,
-          "h": 32,
-          "p": [250.49999999999997, 164],
-          "wi": "wb(82M13"
+          "areaId": "Form",
+          "width": 381,
+          "height": 32,
+          "point": [250.49999999999997, 164],
+          "widgetId": "wb(82M13"
         },
         "wbkDGX0": {
           "theme": {
             "Container": { "normal": { "width": 155, "height": 32 } }
           },
-          "a": "ToolButton",
-          "w": 155,
-          "h": 32,
-          "p": [0, 0],
-          "wi": "wbkDGX0"
+          "areaId": "ToolButton",
+          "width": 155,
+          "height": 32,
+          "point": [0, 0],
+          "widgetId": "wbkDGX0"
         },
         "wb$D061": {
           "theme": {
             "Container": { "normal": { "width": 155, "height": 32 } }
           },
-          "a": "ToolButton",
-          "w": 155,
-          "h": 32,
-          "p": [175, 0],
-          "wi": "wb$D061"
+          "areaId": "ToolButton",
+          "width": 155,
+          "height": 32,
+          "point": [175, 0],
+          "widgetId": "wb$D061"
         },
         "wb!Y@E0": {
           "theme": {
             "Container": { "normal": { "width": 1755, "height": 357 } }
           },
-          "a": "Table",
-          "w": 1755,
-          "h": 357,
-          "p": [50, 50],
-          "wi": "wb!Y@E0"
+          "areaId": "Table",
+          "width": 1755,
+          "height": 357,
+          "point": [50, 50],
+          "widgetId": "wb!Y@E0"
         }
       }
     }

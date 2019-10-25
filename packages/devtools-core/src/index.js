@@ -14,6 +14,9 @@ const layerZip = {
   height: 'h',
   point: 'p',
   widgetId: 'wi',
+  percentWidth: 'pw',
+  percentHeight: 'ph',
+  pointType: 'pt',
 };
 
 const layerUnZip = {
@@ -24,6 +27,9 @@ const layerUnZip = {
   h: 'height',
   p: 'point',
   wi: 'widgetId',
+  pw: 'percentWidth',
+  ph: 'percentHeight',
+  pt: 'pointType',
 };
 const widgetInfoZip = {
   widgetName: 'w',
