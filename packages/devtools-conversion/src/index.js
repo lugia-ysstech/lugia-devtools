@@ -38,7 +38,7 @@ export default function conversion(page: Object, options: Object): string {
   if (zip) {
     page = unZip(JSON.stringify(page));
   }
-  const { resourcesHead = '' } = options || {};
+  const { resourcesHead = '', exportCusCmp = false } = options || {};
   const { mainDependencies = [], layoutInfos = {} } = page;
   const { mode2Config, mode2LayoutData } = layoutInfos;
   const isResponsive = Object.keys(mode2Config || {}).length > 1;
@@ -55,7 +55,7 @@ export default function conversion(page: Object, options: Object): string {
   } = page;
   const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax, isResponsive);
   const { widgetIdHasAssetPropsName = {} } = assets;
-  const { children, layers, id2WidgetInfo, zIndex, height } = mainPad;
+  const { children, layers, id2WidgetInfo, zIndex, height, width } = mainPad;
   const modelCode = getModelCode(lugiax);
   const { rspPackagesCode, rspDeconstructionCode: responsiveCode } = getResponsiveCode(layoutInfos);
   const classCode = createComponent(
@@ -81,7 +81,8 @@ export default function conversion(page: Object, options: Object): string {
   imageCode = imageCode ? imageCode + ';' : '';
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
-  const nomalCode = `<div style={{height: '${height}px', width: '100%', zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
+  const wrapWidth = exportCusCmp ? `${width}px` : '100%';
+  const nomalCode = `<div style={{height: '${height}px', width: ${wrapWidth}, zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
                     context => {
