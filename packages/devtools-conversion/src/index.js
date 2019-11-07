@@ -81,7 +81,7 @@ export default function conversion(page: Object, options: Object): string {
   imageCode = imageCode ? imageCode + ';' : '';
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
-  const wrapWidth = exportCusCmp ? `${width}px` : '100%';
+  const wrapWidth = exportCusCmp ? `'${width}px'` : '100%';
   const nomalCode = `<div style={{height: '${height}px', width: ${wrapWidth}, zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
