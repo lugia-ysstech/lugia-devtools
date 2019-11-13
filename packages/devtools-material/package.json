@@ -17,6 +17,7 @@
   "scripts": {},
   "files": [
     "lib",
+    "bin",
     "interface",
     "package.json"
   ],
