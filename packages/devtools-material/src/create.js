@@ -322,11 +322,13 @@ function createExtendComponent(
   const componentName = Object.keys(designInfo);
   if (componentName.length > 0) {
     let extendMetaInfo = '';
-    const extendMeta = createExtendMeta(meta);
-    const { widgetName } = extendMeta;
+    // const extendMeta = createExtendMeta(meta);
+    // const { widgetName } = extendMeta;
     componentName.forEach((item: string) => {
       total += 1;
       designInfoTotal += 1;
+      const extendMeta = createExtendMeta(meta);
+      const { widgetName } = extendMeta;
       const designInfoElement = designInfo[item];
       const { theme, title, desc, props } = designInfoElement;
       extendMeta.title = title;
