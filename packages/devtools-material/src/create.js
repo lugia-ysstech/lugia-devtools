@@ -235,9 +235,20 @@ function joinChildrenWidgetName(
           const copyChildrenMeta = createExtendMeta(childrenMeta);
           copyChildrenMeta.parentWidget = targetWidgetName;
           copyChildrenMeta.widgetName = childrenWidgetName;
+          const extendComponent = createExtendComponent(
+            copyChildrenMeta,
+            targetPath,
+            folderName,
+            limit
+          );
           commonStr =
             commonStr +
-            createMeta(copyChildrenMeta, childrenWidgetName, childrenImgBase64);
+            createMeta(
+              copyChildrenMeta,
+              childrenWidgetName,
+              childrenImgBase64
+            ) +
+            extendComponent;
         }
       } catch (error) {
         error.push(
