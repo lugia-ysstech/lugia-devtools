@@ -12,6 +12,7 @@ import CopyDataZip from './copydata_zip';
 import CopyData from './copydata';
 import LugiaDFile from './lugiaDFile';
 import LugiaDFileZip from './lugiaDFileZip';
+import CopyChildrenData from './CopyChildrenData';
 
 describe('zip.test', () => {
   it('zip', () => {
@@ -24,8 +25,12 @@ describe('zip.test', () => {
 
   it('zip lugiaDFile', () => {
     const meta = JSON.parse(JSON.stringify(LugiaDFile));
-    expect(JSON.stringify(LugiaDFileZip)).toEqual(JSON.stringify(zip(LugiaDFile)));
-    expect(unZip(JSON.stringify(JSON.parse(JSON.stringify(LugiaDFileZip))))).toEqual(meta);
+    expect(JSON.stringify(LugiaDFileZip)).toEqual(
+      JSON.stringify(zip(LugiaDFile))
+    );
+    expect(
+      unZip(JSON.stringify(JSON.parse(JSON.stringify(LugiaDFileZip))))
+    ).toEqual(meta);
   });
 
   function deepClone(target: Object): Object {
@@ -37,6 +42,12 @@ describe('zip.test', () => {
 
     expect(unZipCopyData(deepClone(zipCopyData(deepClone(CopyData))))).toEqual(
       deepClone(CopyData)
+    );
+  });
+  it('CopyChildrenData', () => {
+
+    expect(zipCopyData(deepClone(unZipCopyData(deepClone(CopyChildrenData))))).toEqual(
+      deepClone(CopyChildrenData)
     );
   });
 });

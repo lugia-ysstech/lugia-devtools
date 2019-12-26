@@ -1,0 +1,1658 @@
+{
+  "type": "CopyData",
+  "copyData": [
+    {
+      "c": {
+        "childPad": {
+          "point": [
+            32,
+            20.625
+          ],
+          "width": 1855,
+          "index": 1,
+          "height": 271,
+          "zIndex": 1000,
+          "type": "ChildPad",
+          "layers": [
+            {
+              "percentWidth": 18.867924528301888,
+              "percentHeight": 12.177121771217712,
+              "id": "wbIKqG71",
+              "zIndex": 0,
+              "width": 350,
+              "height": 33,
+              "point": [
+                103.25,
+                46.25
+              ],
+              "percentPoint": [
+                5.566037735849057,
+                17.066420664206642
+              ]
+            },
+            {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbU@jV0",
+              "zIndex": 1,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                50
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb(S5Q1",
+              "zIndex": 2,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                50
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 8.62533692722372,
+              "percentHeight": 8.118081180811808,
+              "id": "wbRhjl2",
+              "zIndex": 3,
+              "width": 160,
+              "height": 22,
+              "point": [
+                671.6666666666666,
+                50
+              ],
+              "percentPoint": [
+                36.2084456424079,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb5a@x3",
+              "zIndex": 4,
+              "width": 381,
+              "height": 32,
+              "point": [
+                852.1666666666666,
+                50
+              ],
+              "percentPoint": [
+                45.93890386343216,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbLl(34",
+              "zIndex": 5,
+              "width": 161,
+              "height": 22,
+              "point": [
+                1273.3333333333333,
+                50
+              ],
+              "percentPoint": [
+                68.64330637915543,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbwQye5",
+              "zIndex": 6,
+              "width": 381,
+              "height": 32,
+              "point": [
+                1453.8333333333333,
+                50
+              ],
+              "percentPoint": [
+                78.37376460017968,
+                18.45018450184502
+              ]
+            },
+            {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbt9sb6",
+              "zIndex": 7,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                107
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbzOM&7",
+              "zIndex": 8,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                107
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 8.62533692722372,
+              "percentHeight": 8.118081180811808,
+              "id": "wbSux$8",
+              "zIndex": 9,
+              "width": 160,
+              "height": 22,
+              "point": [
+                671.6666666666666,
+                107
+              ],
+              "percentPoint": [
+                36.2084456424079,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb)k9F9",
+              "zIndex": 10,
+              "width": 381,
+              "height": 32,
+              "point": [
+                852.1666666666666,
+                107
+              ],
+              "percentPoint": [
+                45.93890386343216,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbau*E10",
+              "zIndex": 11,
+              "width": 161,
+              "height": 22,
+              "point": [
+                1273.3333333333333,
+                107
+              ],
+              "percentPoint": [
+                68.64330637915543,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbD78T11",
+              "zIndex": 12,
+              "width": 381,
+              "height": 32,
+              "point": [
+                1453.8333333333333,
+                107
+              ],
+              "percentPoint": [
+                78.37376460017968,
+                39.48339483394834
+              ]
+            },
+            {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbR5%&12",
+              "zIndex": 13,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                164
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                60.51660516605166
+              ]
+            },
+            {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb6#Bv13",
+              "zIndex": 14,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                164
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                60.51660516605166
+              ]
+            }
+          ],
+          "idSeq": 0,
+          "id2WidgetInfo": {
+            "wbIKqG71": {
+              "childAreaId": "ToolButton",
+              "widgetName": "MonkeyKing",
+              "aliasName": "Hee",
+              "module": "@lugia/lugia-web",
+              "version": "1.0.0",
+              "props": {
+                "width": 350,
+                "height": 130,
+                "type": "transparent",
+                "TargetContainer": {
+                  "widgetName": "Card",
+                  "aliasName": "Hee",
+                  "module": "@lugia/lugia-web",
+                  "version": "1.0.0",
+                  "props": {
+                    "width": 350,
+                    "height": 130
+                  },
+                  "monkeyType": "Point"
+                }
+              },
+              "id": "wbIKqG71"
+            },
+            "wbU@jV0": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "",
+                "preIds": [
+                  "wbU@jV0",
+                  "wb(S5Q1"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "身份证号"
+              },
+              "id": "wbU@jV0"
+            },
+            "wb(S5Q1": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbU@jV0",
+                "preIds": [
+                  "wbU@jV0",
+                  "wb(S5Q1"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "Input",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb(S5Q1"
+            },
+            "wbRhjl2": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb(S5Q1",
+                "preIds": [
+                  "wbRhjl2",
+                  "wb5a@x3"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "姓名"
+              },
+              "id": "wbRhjl2"
+            },
+            "wb5a@x3": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbRhjl2",
+                "preIds": [
+                  "wbRhjl2",
+                  "wb5a@x3"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "Input",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb5a@x3"
+            },
+            "wbLl(34": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb5a@x3",
+                "preIds": [
+                  "wbLl(34",
+                  "wbwQye5"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "年龄"
+              },
+              "id": "wbLl(34"
+            },
+            "wbwQye5": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbLl(34",
+                "preIds": [
+                  "wbLl(34",
+                  "wbwQye5"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbwQye5"
+            },
+            "wbt9sb6": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbwQye5",
+                "preIds": [
+                  "wbt9sb6",
+                  "wbzOM&7"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbt9sb6"
+            },
+            "wbzOM&7": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbt9sb6",
+                "preIds": [
+                  "wbt9sb6",
+                  "wbzOM&7"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbzOM&7"
+            },
+            "wbSux$8": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbzOM&7",
+                "preIds": [
+                  "wbSux$8",
+                  "wb)k9F9"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbSux$8"
+            },
+            "wb)k9F9": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbSux$8",
+                "preIds": [
+                  "wbSux$8",
+                  "wb)k9F9"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb)k9F9"
+            },
+            "wbau*E10": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb)k9F9",
+                "preIds": [
+                  "wbau*E10",
+                  "wbD78T11"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbau*E10"
+            },
+            "wbD78T11": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbau*E10",
+                "preIds": [
+                  "wbau*E10",
+                  "wbD78T11"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbD78T11"
+            },
+            "wbR5%&12": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbD78T11",
+                "preIds": [
+                  "wbR5%&12",
+                  "wb6#Bv13"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbR5%&12"
+            },
+            "wb6#Bv13": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbR5%&12",
+                "preIds": [
+                  "wbR5%&12",
+                  "wb6#Bv13"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb6#Bv13"
+            }
+          },
+          "id": "Form",
+          "lastIndex": 0,
+          "fatherId": "mainPad",
+          "widgetId": "wb1Mkl71",
+          "group": false,
+          "templateConfig": {
+            "columnCount": 3,
+            "slotType": "GridFlow",
+            "areaMargin": {
+              "left": 50,
+              "top": 50,
+              "bottom": 50
+            }
+          }
+        },
+        "children": [
+          {
+            "layer": {
+              "percentWidth": 18.867924528301888,
+              "percentHeight": 12.177121771217712,
+              "id": "wbIKqG71",
+              "zIndex": 0,
+              "width": 350,
+              "height": 33,
+              "point": [
+                103.25,
+                46.25
+              ],
+              "percentPoint": [
+                5.566037735849057,
+                17.066420664206642
+              ]
+            },
+            "info": {
+              "childAreaId": "ToolButton",
+              "widgetName": "MonkeyKing",
+              "aliasName": "Hee",
+              "module": "@lugia/lugia-web",
+              "version": "1.0.0",
+              "props": {
+                "width": 350,
+                "height": 130,
+                "type": "transparent",
+                "TargetContainer": {
+                  "widgetName": "Card",
+                  "aliasName": "Hee",
+                  "module": "@lugia/lugia-web",
+                  "version": "1.0.0",
+                  "props": {
+                    "width": 350,
+                    "height": 130
+                  },
+                  "monkeyType": "Point"
+                }
+              },
+              "id": "wbIKqG71"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 350,
+                  "height": 33
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": [
+              {
+                "layer": {
+                  "percentWidth": 44.285714285714285,
+                  "percentHeight": 96.96969696969697,
+                  "id": "wbjY7B0",
+                  "zIndex": 0,
+                  "width": 155,
+                  "height": 32,
+                  "point": [
+                    0,
+                    0
+                  ],
+                  "percentPoint": [
+                    0,
+                    0
+                  ]
+                },
+                "info": {
+                  "offsetInfo": {
+                    "margin": {
+                      "right": 20
+                    },
+                    "preId": "",
+                    "preIds": [
+                      "wbjY7B0"
+                    ],
+                    "minHeight": 33,
+                    "widthScale": 1
+                  },
+                  "widgetName": "Button",
+                  "module": "@lugia/lugia-web",
+                  "version": "lasted",
+                  "props": {
+                    "text": "查询"
+                  },
+                  "id": "wbjY7B0"
+                },
+                "themeInfo": {
+                  "Container": {
+                    "normal": {
+                      "width": 155,
+                      "height": 32
+                    }
+                  }
+                },
+                "assetCopyInfo": {},
+                "children": []
+              },
+              {
+                "layer": {
+                  "percentWidth": 44.285714285714285,
+                  "percentHeight": 96.96969696969697,
+                  "id": "wbe2CC1",
+                  "zIndex": 1,
+                  "width": 155,
+                  "height": 32,
+                  "point": [
+                    175,
+                    0
+                  ],
+                  "percentPoint": [
+                    50,
+                    0
+                  ]
+                },
+                "info": {
+                  "offsetInfo": {
+                    "margin": {
+                      "right": 20
+                    },
+                    "preId": "wbjY7B0",
+                    "preIds": [
+                      "wbe2CC1"
+                    ],
+                    "minHeight": 33,
+                    "widthScale": 1
+                  },
+                  "widgetName": "Button",
+                  "module": "@lugia/lugia-web",
+                  "version": "lasted",
+                  "props": {
+                    "text": "重置"
+                  },
+                  "id": "wbe2CC1"
+                },
+                "themeInfo": {
+                  "Container": {
+                    "normal": {
+                      "width": 155,
+                      "height": 32
+                    }
+                  }
+                },
+                "assetCopyInfo": {},
+                "children": []
+              }
+            ],
+            "childPad": {
+              "point": [
+                103.25,
+                46.25
+              ],
+              "width": 350,
+              "index": 2,
+              "height": 33,
+              "zIndex": 1000,
+              "type": "ChildPad",
+              "layers": [
+                {
+                  "percentWidth": 44.285714285714285,
+                  "percentHeight": 96.96969696969697,
+                  "id": "wbjY7B0",
+                  "zIndex": 0,
+                  "width": 155,
+                  "height": 32,
+                  "point": [
+                    0,
+                    0
+                  ],
+                  "percentPoint": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "percentWidth": 44.285714285714285,
+                  "percentHeight": 96.96969696969697,
+                  "id": "wbe2CC1",
+                  "zIndex": 1,
+                  "width": 155,
+                  "height": 32,
+                  "point": [
+                    175,
+                    0
+                  ],
+                  "percentPoint": [
+                    50,
+                    0
+                  ]
+                }
+              ],
+              "idSeq": 0,
+              "id2WidgetInfo": {
+                "wbjY7B0": {
+                  "offsetInfo": {
+                    "margin": {
+                      "right": 20
+                    },
+                    "preId": "",
+                    "preIds": [
+                      "wbjY7B0"
+                    ],
+                    "minHeight": 33,
+                    "widthScale": 1
+                  },
+                  "widgetName": "Button",
+                  "module": "@lugia/lugia-web",
+                  "version": "lasted",
+                  "props": {
+                    "text": "查询"
+                  },
+                  "id": "wbjY7B0"
+                },
+                "wbe2CC1": {
+                  "offsetInfo": {
+                    "margin": {
+                      "right": 20
+                    },
+                    "preId": "wbjY7B0",
+                    "preIds": [
+                      "wbe2CC1"
+                    ],
+                    "minHeight": 33,
+                    "widthScale": 1
+                  },
+                  "widgetName": "Button",
+                  "module": "@lugia/lugia-web",
+                  "version": "lasted",
+                  "props": {
+                    "text": "重置"
+                  },
+                  "id": "wbe2CC1"
+                }
+              },
+              "id": "ToolButton",
+              "lastIndex": 0,
+              "fatherId": "Form",
+              "widgetId": "wbIKqG71",
+              "group": false,
+              "templateConfig": {
+                "columnCount": 2,
+                "slotType": "GridFlow",
+                "areaMargin": {}
+              }
+            }
+          },
+          {
+            "layer": {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbU@jV0",
+              "zIndex": 1,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                50
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "",
+                "preIds": [
+                  "wbU@jV0",
+                  "wb(S5Q1"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "身份证号"
+              },
+              "id": "wbU@jV0"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb(S5Q1",
+              "zIndex": 2,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                50
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbU@jV0",
+                "preIds": [
+                  "wbU@jV0",
+                  "wb(S5Q1"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "Input",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb(S5Q1"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "sfzh",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.62533692722372,
+              "percentHeight": 8.118081180811808,
+              "id": "wbRhjl2",
+              "zIndex": 3,
+              "width": 160,
+              "height": 22,
+              "point": [
+                671.6666666666666,
+                50
+              ],
+              "percentPoint": [
+                36.2084456424079,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb(S5Q1",
+                "preIds": [
+                  "wbRhjl2",
+                  "wb5a@x3"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "姓名"
+              },
+              "id": "wbRhjl2"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb5a@x3",
+              "zIndex": 4,
+              "width": 381,
+              "height": 32,
+              "point": [
+                852.1666666666666,
+                50
+              ],
+              "percentPoint": [
+                45.93890386343216,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbRhjl2",
+                "preIds": [
+                  "wbRhjl2",
+                  "wb5a@x3"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "Input",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb5a@x3"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "xm",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbLl(34",
+              "zIndex": 5,
+              "width": 161,
+              "height": 22,
+              "point": [
+                1273.3333333333333,
+                50
+              ],
+              "percentPoint": [
+                68.64330637915543,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb5a@x3",
+                "preIds": [
+                  "wbLl(34",
+                  "wbwQye5"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "年龄"
+              },
+              "id": "wbLl(34"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbwQye5",
+              "zIndex": 6,
+              "width": 381,
+              "height": 32,
+              "point": [
+                1453.8333333333333,
+                50
+              ],
+              "percentPoint": [
+                78.37376460017968,
+                18.45018450184502
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbLl(34",
+                "preIds": [
+                  "wbLl(34",
+                  "wbwQye5"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbwQye5"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "age",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbt9sb6",
+              "zIndex": 7,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                107
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbwQye5",
+                "preIds": [
+                  "wbt9sb6",
+                  "wbzOM&7"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbt9sb6"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbzOM&7",
+              "zIndex": 8,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                107
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbt9sb6",
+                "preIds": [
+                  "wbt9sb6",
+                  "wbzOM&7"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbzOM&7"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "sex",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.62533692722372,
+              "percentHeight": 8.118081180811808,
+              "id": "wbSux$8",
+              "zIndex": 9,
+              "width": 160,
+              "height": 22,
+              "point": [
+                671.6666666666666,
+                107
+              ],
+              "percentPoint": [
+                36.2084456424079,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbzOM&7",
+                "preIds": [
+                  "wbSux$8",
+                  "wb)k9F9"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbSux$8"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb)k9F9",
+              "zIndex": 10,
+              "width": 381,
+              "height": 32,
+              "point": [
+                852.1666666666666,
+                107
+              ],
+              "percentPoint": [
+                45.93890386343216,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbSux$8",
+                "preIds": [
+                  "wbSux$8",
+                  "wb)k9F9"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb)k9F9"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "sex",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbau*E10",
+              "zIndex": 11,
+              "width": 161,
+              "height": 22,
+              "point": [
+                1273.3333333333333,
+                107
+              ],
+              "percentPoint": [
+                68.64330637915543,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wb)k9F9",
+                "preIds": [
+                  "wbau*E10",
+                  "wbD78T11"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbau*E10"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wbD78T11",
+              "zIndex": 12,
+              "width": 381,
+              "height": 32,
+              "point": [
+                1453.8333333333333,
+                107
+              ],
+              "percentPoint": [
+                78.37376460017968,
+                39.48339483394834
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbau*E10",
+                "preIds": [
+                  "wbau*E10",
+                  "wbD78T11"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wbD78T11"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "sex",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 8.679245283018867,
+              "percentHeight": 8.118081180811808,
+              "id": "wbR5%&12",
+              "zIndex": 13,
+              "width": 161,
+              "height": 22,
+              "point": [
+                70,
+                164
+              ],
+              "percentPoint": [
+                3.7735849056603774,
+                60.51660516605166
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "bottom": 30
+                },
+                "preId": "wbD78T11",
+                "preIds": [
+                  "wbR5%&12",
+                  "wb6#Bv13"
+                ],
+                "widthScale": 0.3
+              },
+              "widgetName": "Label",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "text": "性别"
+              },
+              "id": "wbR5%&12"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "textAlign": "right",
+                  "width": 160.49999999999997,
+                  "height": 22
+                }
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          },
+          {
+            "layer": {
+              "percentWidth": 20.539083557951482,
+              "percentHeight": 11.808118081180812,
+              "id": "wb6#Bv13",
+              "zIndex": 14,
+              "width": 381,
+              "height": 32,
+              "point": [
+                250.49999999999997,
+                164
+              ],
+              "percentPoint": [
+                13.504043126684634,
+                60.51660516605166
+              ]
+            },
+            "info": {
+              "offsetInfo": {
+                "margin": {
+                  "left": 20,
+                  "right": 20,
+                  "bottom": 25
+                },
+                "preId": "wbR5%&12",
+                "preIds": [
+                  "wbR5%&12",
+                  "wb6#Bv13"
+                ],
+                "widthScale": 0.7
+              },
+              "widgetName": "NumberInput",
+              "module": "@lugia/lugia-web",
+              "version": "lasted",
+              "props": {
+                "disabled": true
+              },
+              "id": "wb6#Bv13"
+            },
+            "themeInfo": {
+              "Container": {
+                "normal": {
+                  "width": 381.16666666666663,
+                  "height": 32
+                }
+              }
+            },
+            "bindInfo": {
+              "value": {
+                "modelName": "user",
+                "fieldName": "sex",
+                "propsName": "value",
+                "bindType": "bind"
+              }
+            },
+            "assetCopyInfo": {},
+            "children": []
+          }
+        ]
+      },
+      "a": "",
+      "at": "MainPad",
+      "i": {
+        "childAreaId": "Form",
+        "w": "MonkeyKing",
+        "a": "Hee",
+        "m": "@lugia/lugia-web",
+        "v": "1.0.0",
+        "p": {
+          "width": 350,
+          "height": 130,
+          "TargetContainer": {
+            "widgetName": "Card",
+            "aliasName": "Hee",
+            "module": "@lugia/lugia-web",
+            "version": "1.0.0",
+            "props": {
+              "width": 350,
+              "height": 130
+            },
+            "monkeyType": "Point"
+          }
+        },
+        "i": "wb1Mkl71"
+      },
+      "l": {
+        "i": "wb1Mkl71",
+        "z": 0,
+        "w": 1855,
+        "h": 271,
+        "p": [
+          32,
+          20.625
+        ],
+        "pw": 96.61458333333334,
+        "ph": 25.092592592592595,
+        "pp": [
+          1.6666666666666667,
+          1.9097222222222223
+        ]
+      },
+      "t": {
+        "Container": {
+          "normal": {
+            "width": 1855,
+            "height": 271
+          }
+        }
+      }
+    }
+  ]
+}

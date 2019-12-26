@@ -279,7 +279,7 @@ const copyDataZip = {
 };
 
 const copyDataUnZip = {
-  copyTreeData: 'copyTreeData',
+  c: 'copyTreeData',
   a: 'areaId',
   at: 'areaType',
   i: 'info',
