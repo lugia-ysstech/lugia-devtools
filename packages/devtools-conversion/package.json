@@ -1,8 +1,8 @@
 {
   "name": "@lugia/devtools-conversion",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "dependencies": {
-    "@lugia/devtools-core": "^1.0.9",
+    "@lugia/devtools-core": "^1.0.10",
     "@lugia/lugiad-core": "^1.0.2"
   },
   "peerDependencies": {
