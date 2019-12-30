@@ -1,10 +1,7 @@
 {
   "type": "PolarBear",
-  "designPoint": [
-    -1780,
-    -2069
-  ],
-  "scale": 0.4,
+  "designPoint": [-1660, -2000],
+  "scale": 0.9,
   "areaId2ChildPadIndexString": {},
   "widgetId2ChildPad": {},
   "forkDependencies": [],
@@ -12,14 +9,16 @@
     {
       "version": "1.0.0",
       "module": "@lugia/lugia-web",
+      "widgetName": "Tree"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
       "widgetName": "Button"
     }
   ],
   "forkPad": {
-    "point": [
-      -1780,
-      -2069
-    ],
+    "point": [-1660, -2000],
     "width": 5000,
     "index": 0,
     "height": 5000,
@@ -34,52 +33,37 @@
     "templateConfig": {}
   },
   "mainPad": {
-    "point": [
-      -240,
-      -109
-    ],
-    "width": 1920,
+    "point": [220, 96],
+    "width": 1240,
     "index": 0,
-    "height": 1080,
+    "height": 808,
     "zIndex": 4000,
     "type": "MainPad",
     "layers": [
       {
-        "i": "wb0ohu41",
+        "i": "wb*W&A42",
         "z": 0,
-        "w": 77,
-        "h": 32,
-        "p": [
-          417.5,
-          165
-        ],
-        "pw": 4.010416666666667,
-        "ph": 2.9629629629629632,
-        "pp": [
-          21.744791666666664,
-          15.277777777777779
-        ]
+        "w": 250,
+        "h": 250,
+        "p": [444.4444444444448, 228.44444444444457],
+        "pw": 20.161290322580644,
+        "ph": 30.94059405940594,
+        "pp": [35.84229390681006, 28.27282728272829]
       },
       {
-        "i": "wbNTVS71",
+        "i": "wbhoH841",
         "z": 1,
-        "w": 104,
+        "w": 78,
         "h": 32,
-        "p": [
-          230,
-          330
-        ],
-        "pw": 5.416666666666667,
-        "ph": 2.9629629629629632,
-        "pp": [
-          11.979166666666668,
-          30.555555555555557
-        ]
+        "p": [302.2222222222223, 236.22222222222211],
+        "pw": 6.290322580645161,
+        "ph": 3.9603960396039604,
+        "pp": [24.37275985663083, 29.235423542354223]
       }
     ],
     "idSeq": 91291,
     "id2WidgetInfo": {
-      "wb0ohu41": {
+      "wbhoH841": {
         "w": "Button",
         "m": "@lugia/lugia-web",
         "v": "1.0.0",
@@ -91,34 +75,71 @@
           "text": "Button",
           "block": false
         },
-        "i": "wb0ohu41"
+        "i": "wbhoH841"
       },
-      "wbNTVS71": {
-        "w": "Button",
-        "a": "IconButton",
+      "wb*W&A42": {
+        "w": "Tree",
         "m": "@lugia/lugia-web",
         "v": "1.0.0",
         "p": {
-          "disabled": false,
-          "shape": "default",
-          "type": "primary",
-          "plain": true,
-          "size": "default",
-          "icon": "lugia-icon-logo_lugia",
-          "text": "Button",
-          "block": false
+          "limitCount": 999999,
+          "expandAll": true,
+          "onlySelectLeaf": false,
+          "valueField": "value",
+          "displayField": "text",
+          "parentIsHighlight": false,
+          "data": [
+            {
+              "children": [
+                {
+                  "text": "二级树节点-1",
+                  "value": "二级树节点-1"
+                },
+                {
+                  "text": "一级树节点-2",
+                  "value": "二级树节点-2"
+                },
+                {
+                  "text": "一级树节点-3",
+                  "value": "二级树节点-3"
+                }
+              ],
+              "text": "一级树节点",
+              "value": "一级树节点"
+            }
+          ],
+          "igronSelectField": "disabled",
+          "pathSeparator": "/",
+          "searchType": "include",
+          "shpale": "default",
+          "switchAtEnd": false,
+          "showSwitch": true,
+          "translateTreeData": true
         },
-        "i": "wbNTVS71"
+        "i": "wb*W&A42"
       }
     },
     "id": "mainPad",
     "lastIndex": 71,
     "group": false,
     "templateConfig": {},
-    "backgroudColor": "#f8f8f8"
+    "backgroudColor": "#f5f7fa"
   },
   "themes": {
-    "widgetId2ThemeInfo": {}
+    "widgetId2ThemeInfo": {
+      "wbhoH841": {
+        "Container": {
+          "normal": {
+            "background": "none"
+          }
+        }
+      },
+      "wb*W&A42": {
+        "Container": {
+          "normal": {}
+        }
+      }
+    }
   },
   "lugiax": {
     "page2mutation": {},
@@ -132,61 +153,53 @@
   "widgetId2Locked": {},
   "layoutInfos": {
     "mode2Config": {
-      "1920x1080": {
+      "1240x808": {
+        "forkPadPoint": [-1660, -2000],
         "mainPadSize": {
-          "width": 1920,
-          "height": 1080
+          "height": 808,
+          "width": 1240
         },
-        "widthRange": [
-          0,
-          50000
-        ],
-        "scale": 0.4,
-        "forkPadPoint": [
-          -1780,
-          -2069
-        ]
+        "scale": 0.9,
+        "widthRange": [0, 50000]
       }
     },
     "mode2LayoutData": {
-      "1920x1080": {
-        "wb0ohu41": {
-          "theme": {},
+      "1240x808": {
+        "wb*W&A42": {
+          "theme": {
+            "Container": {
+              "normal": {}
+            }
+          },
           "a": "mainPad",
-          "i": "wb0ohu41",
+          "i": "wb*W&A42",
           "z": 0,
-          "w": 77,
-          "h": 32,
-          "p": [
-            417.5,
-            165
-          ],
-          "wi": "wb0ohu41",
-          "pw": 4.010416666666667,
-          "ph": 2.9629629629629632,
-          "pp": [
-            21.744791666666664,
-            15.277777777777779
-          ]
+          "w": 250,
+          "h": 250,
+          "p": [444.4444444444448, 228.44444444444457],
+          "wi": "wb*W&A42",
+          "pw": 20.161290322580644,
+          "ph": 30.94059405940594,
+          "pp": [35.84229390681006, 28.27282728272829]
         },
-        "wbNTVS71": {
-          "theme": {},
+        "wbhoH841": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "background": "none"
+              }
+            }
+          },
           "a": "mainPad",
-          "i": "wbNTVS71",
+          "i": "wbhoH841",
           "z": 1,
-          "w": 104,
+          "w": 78,
           "h": 32,
-          "p": [
-            230,
-            330
-          ],
-          "wi": "wbNTVS71",
-          "pw": 5.416666666666667,
-          "ph": 2.9629629629629632,
-          "pp": [
-            11.979166666666668,
-            30.555555555555557
-          ]
+          "p": [302.2222222222223, 236.22222222222211],
+          "wi": "wbhoH841",
+          "pw": 6.290322580645161,
+          "ph": 3.9603960396039604,
+          "pp": [24.37275985663083, 29.235423542354223]
         }
       }
     }
