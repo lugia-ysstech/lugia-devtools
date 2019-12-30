@@ -3,7 +3,7 @@
   "version": "1.0.15",
   "dependencies": {
     "@lugia/devtools-conversion": "^1.0.20",
-    "@lugia/lugia-web": "1.1.8-alpha-10",
+    "@lugia/lugia-web": "^1.1.9-alpha-20",
     "@lugia/lugiad-core": "^1.0.2",
     "@lugia/lugiax": "^1.0.9",
     "react": "^16.8.6",
