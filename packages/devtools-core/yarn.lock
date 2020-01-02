@@ -2,31 +2,27 @@
 # yarn lockfile v1
 
 
-"@lugia/jverify@1.0.1":
-  version "1.0.1"
-  resolved "http://192.168.102.79:5001/@lugia/jverify/download/@lugia/jverify-1.0.1.tgz#2b7ac22de06a95a19ea578ea5efcfa8b053f740f"
-  integrity sha1-K3rCLeBqlaGepXjqXvz6iwU/dA8=
+"@lugia/jverify@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@lugia/jverify/-/jverify-1.0.10.tgz#6b933e7f6620437cf50a632dff09c7fdf9c21355"
+  integrity sha512-NmRDyQnaZj5I5A1aJw07tcy3HM/nP189XS+SH1fGGTB3EE+cIaV3fIuxeB26gAQ+jxm4NmUt9PXOvdt4WZEMew==
   dependencies:
-    "@lugia/type-utils" "^1.0.0"
+    "@lugia/type-utils" "^1.0.1"
+    clone "^2.1.1"
     deep-equal "^1.0.1"
 
-"@lugia/react-test-utils@^1.0.0":
-  version "1.0.0"
-  resolved "http://192.168.102.79:5001/@lugia/react-test-utils/download/@lugia/react-test-utils-1.0.0.tgz#019bc028615d3c8ae454ec9b98b4546d027a7497"
-  integrity sha1-AZvAKGFdPIrkVOybmLRUbQJ6dJc=
+"@lugia/react-test-utils@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@lugia/react-test-utils/-/react-test-utils-1.0.1.tgz#325233fb6afd3d5dfdaecf98b76ed72d1d4f6c81"
+  integrity sha512-ER6dKpfLdIHV82plQzdcnXtyjJ7tmoxtHBgefO40bEvE44dD4FdbZnoRmLtUzPOIIOwsWOKwZBaPpB42/WB4Lw==
   dependencies:
     react "^16.4.0"
     react-dom "^16.4.0"
 
-"@lugia/type-utils@1.0.3":
-  version "1.0.3"
-  resolved "http://192.168.102.79:5001/@lugia/type-utils/download/@lugia/type-utils-1.0.3.tgz#274232f202ad72fc1359b1fb3af6e4875fc528d4"
-  integrity sha1-J0Iy8gKtcvwTWbH7Ovbkh1/FKNQ=
-
-"@lugia/type-utils@^1.0.0":
-  version "1.0.4"
-  resolved "http://192.168.102.79:5001/@lugia/type-utils/download/@lugia/type-utils-1.0.4.tgz#d1a4ffc670ae4bdac6326f376f97a18d3476b366"
-  integrity sha1-0aT/xnCuS9rGMm83b5ehjTR2s2Y=
+"@lugia/type-utils@^1.0.1", "@lugia/type-utils@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@lugia/type-utils/-/type-utils-1.0.6.tgz#8ebcab1fadde755291eeeac082ab3d46b186c0eb"
+  integrity sha512-yBymV4SGHmjLMe3lZ7V5p4+J6Sxw5x+bLeGcGG+Vv/B2VPjwnAyHA+MwzL8xgapHj+5zVqiuW1jjEMXy3soY6g==
 
 "@types/node@*":
   version "12.6.8"
@@ -93,6 +89,11 @@ cheerio@^1.0.0-rc.2:
     htmlparser2 "^3.9.1"
     lodash "^4.15.0"
     parse5 "^3.0.1"
+
+clone@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
 
 co@^4.6.0:
   version "4.6.0"

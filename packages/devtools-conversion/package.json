@@ -34,8 +34,8 @@
     "npm": ">=5.2.0"
   },
   "devDependencies": {
-    "@lugia/lugiax": "^1.0.6",
-    "@lugia/react-test-utils": "^1.0.0",
+    "@lugia/lugiax": "^1.0.15",
+    "@lugia/react-test-utils": "^1.0.1",
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.1",
     "flow-bin": "^0.77.0",

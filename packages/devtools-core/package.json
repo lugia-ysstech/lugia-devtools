@@ -17,9 +17,9 @@
   "homepage": "http://lugia.tech",
   "license": "Apache License 2.0",
   "devDependencies": {
-    "@lugia/jverify": "1.0.1",
-    "@lugia/react-test-utils": "^1.0.0",
-    "@lugia/type-utils": "1.0.3",
+    "@lugia/jverify": "^1.0.10",
+    "@lugia/react-test-utils": "^1.0.1",
+    "@lugia/type-utils": "^1.0.6",
     "debug": "2.6.9",
     "dotenv": "4.0.0",
     "enzyme": "3.2.0",

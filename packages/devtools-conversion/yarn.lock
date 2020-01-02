@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@lugia/devtools-core@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@lugia/devtools-core/-/devtools-core-1.0.7.tgz#b1a2f4591339a5d1ff960ac96eaf48ebb46cebd7"
-  integrity sha512-toPbh+QCP3VmK8vlP6vWhRv5RF6CYMaShtVUFpxUS9mM5G+J+lQaM9yQqAjn4U3QIR/7c7fQUf7V3QfxQ6vmTg==
+"@lugia/devtools-core@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-core/-/devtools-core-1.0.10.tgz#b7c93a77aa82eaf5e10f07261bffa866b6fa9f64"
+  integrity sha512-mUAur13UKEJ2fNxEJeifHlFRYbqNJTC+v94gMRiji0FiFYG6YLFajem4jBnSczk9UeMiyWaXjXd9ZiO7/vOLJw==
   dependencies:
     chai "^4.1.2"
     immutable "^3.8.2"
@@ -27,31 +27,37 @@
   dependencies:
     chai "^4.1.2"
 
-"@lugia/lugiax-core@^1.0.8":
-  version "1.0.8"
-  resolved "http://192.168.102.79:5001/@lugia/lugiax-core/download/@lugia/lugiax-core-1.0.8.tgz#400526fb14b6049febf5c808cb913226379ef3b6"
-  integrity sha1-QAUm+xS2BJ/r9cgIy5EyJjee87Y=
+"@lugia/lugiax-core@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@lugia/lugiax-core/-/lugiax-core-1.0.11.tgz#94764f9ef1c52efa288543cc0bc0e6057a3833d9"
+  integrity sha512-tfzwpJk6+ClXNe9WGjg37YgZ8e/rdBGX7cFpGtAmAL5I0Y78JeI6wZwHVidVW/tw0joLVyhI4eGVKf8iVtKiKA==
   dependencies:
+    "@lugia/type-utils" "^1.0.6"
     immutable "^3.8.2"
     redux "^4.0.0"
     redux-immutable "^4.0.0"
     redux-saga "^0.16.0"
 
-"@lugia/lugiax@^1.0.6":
-  version "1.0.9"
-  resolved "http://192.168.102.79:5001/@lugia/lugiax/download/@lugia/lugiax-1.0.9.tgz#97d26f74ca7304628190e98eb0bca439054a597b"
-  integrity sha1-l9JvdMpzBGKBkOmOsLykOQVKWXs=
+"@lugia/lugiax@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@lugia/lugiax/-/lugiax-1.0.15.tgz#ddaafc665614f7cf7f0bbd544f593bd94660a4e6"
+  integrity sha512-kEaY6htO2Iei1zUuVwOjA6arlZ3LgOu6/iQsLf1NHYavoUv8v3wmbrRVx+xr41Z4cn+H1S0JK3dt3Gq9oJAPiw==
   dependencies:
-    "@lugia/lugiax-core" "^1.0.8"
+    "@lugia/lugiax-core" "^1.0.11"
     immutable "^3.8.2"
 
-"@lugia/react-test-utils@^1.0.0":
-  version "1.0.0"
-  resolved "http://192.168.102.79:5001/@lugia/react-test-utils/download/@lugia/react-test-utils-1.0.0.tgz#019bc028615d3c8ae454ec9b98b4546d027a7497"
-  integrity sha1-AZvAKGFdPIrkVOybmLRUbQJ6dJc=
+"@lugia/react-test-utils@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@lugia/react-test-utils/-/react-test-utils-1.0.1.tgz#325233fb6afd3d5dfdaecf98b76ed72d1d4f6c81"
+  integrity sha512-ER6dKpfLdIHV82plQzdcnXtyjJ7tmoxtHBgefO40bEvE44dD4FdbZnoRmLtUzPOIIOwsWOKwZBaPpB42/WB4Lw==
   dependencies:
     react "^16.4.0"
     react-dom "^16.4.0"
+
+"@lugia/type-utils@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@lugia/type-utils/-/type-utils-1.0.6.tgz#8ebcab1fadde755291eeeac082ab3d46b186c0eb"
+  integrity sha512-yBymV4SGHmjLMe3lZ7V5p4+J6Sxw5x+bLeGcGG+Vv/B2VPjwnAyHA+MwzL8xgapHj+5zVqiuW1jjEMXy3soY6g==
 
 "@types/node@*":
   version "12.6.8"
