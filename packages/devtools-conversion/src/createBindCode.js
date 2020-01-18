@@ -86,7 +86,7 @@ export function createConnectCode(
   mutationsCodes = mutationsCodes + '}}';
   theModelName = [ ...new Set(theModelName) ];
   connectCode = `const ${connectComName} = connect(
-    [${theModelName.join('')}],
+    [${theModelName.join(',')}],
     ${stateCodes.join('')}
     ${mutationsCodes}
   )(${componentName});`;
