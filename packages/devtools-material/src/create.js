@@ -339,13 +339,11 @@ function createExtendComponent(
       const extendMeta = createExtendMeta(meta);
       const { widgetName } = extendMeta;
       const designInfoElement = designInfo[item];
+      designInfoElement.aliasName = item;
       const { theme, title, desc, props } = designInfoElement;
-      extendMeta.title = title;
-      extendMeta.desc = desc;
+      replaceMetaFromDesignInfo(designInfoElement, extendMeta);
       checkInfo(theme, desc, title, widgetName, item);
-      extendMeta.aliasName = item;
       const replacedMeta = replaceMeta(props, extendMeta);
-      replacedMeta.theme = theme;
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
       checkImage(extendImgBase64, widgetName, item);
@@ -355,6 +353,20 @@ function createExtendComponent(
     return extendMetaInfo;
   }
   return '';
+}
+
+const replaceValues = [ 'title', 'desc', 'theme', 'defaultTheme', 'aliasName' ];
+function replaceMetaFromDesignInfo(designInfoItemMeta: Object, outMeta: Object) {
+  replaceValues.forEach((item: string) => {
+    const itemValueInDesignInfo = designInfoItemMeta[item];
+    if (!itemValueInDesignInfo) {
+      const msg = `warning: ${outMeta.widgetName}-designInfo中缺少${item}属性`;
+      console.warn(msg);
+      errors.push(msg);
+    } else {
+      outMeta[item] = itemValueInDesignInfo;
+    }
+  });
 }
 
 function createExtendMeta(meta: Object): Object {

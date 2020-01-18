@@ -4,10 +4,17 @@
  *
  * @flow
  */
-import { createHeader, getModelCode, getLugiadCoreCode, getResponsiveCode } from './header';
+import {
+  createHeader,
+  getModelCode,
+  getLugiadCoreCode,
+  getResponsiveCode,
+} from './header';
 import { createImageImport } from './img';
 import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
+
+const defaultBackground = '#f8f8f8';
 
 function getPageMutation(pageMutation: Object): string {
   if (!pageMutation) {
@@ -53,11 +60,25 @@ export default function conversion(page: Object, options: Object): string {
     themes = {},
     assets = {},
   } = page;
-  const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(lugiax, isResponsive);
+  const { lugiadCoreCode, lugiadFuncCode } = getLugiadCoreCode(
+    lugiax,
+    isResponsive
+  );
   const { widgetIdHasAssetPropsName = {} } = assets;
-  const { children, layers, id2WidgetInfo, zIndex, height, width } = mainPad;
+  const {
+    children,
+    layers,
+    id2WidgetInfo,
+    zIndex,
+    height,
+    width,
+    backgroudColor = defaultBackground,
+  } = mainPad;
   const modelCode = getModelCode(lugiax);
-  const { rspPackagesCode, rspDeconstructionCode: responsiveCode } = getResponsiveCode(layoutInfos);
+  const {
+    rspPackagesCode,
+    rspDeconstructionCode: responsiveCode,
+  } = getResponsiveCode(layoutInfos);
   const classCode = createComponent(
     children,
     widgetId2ChildPad,
@@ -82,7 +103,8 @@ export default function conversion(page: Object, options: Object): string {
   const mode2ConfigData = JSON.stringify(mode2Config);
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
   const wrapWidth = exportCusCmp ? `${width}px` : '100%';
-  const nomalCode = `<div style={{height: '${height}px', width: '${wrapWidth}', zIndex: '${zIndex}', position: 'relative'}}>${layerCode}</div>`;
+  const background = exportCusCmp ? '' : `backgroundColor: '${backgroudColor}'`;
+  const nomalCode = `<div style={{height: '${height}px', width: '${wrapWidth}', zIndex: '${zIndex}', position: 'relative', ${background}}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
                     context => {
