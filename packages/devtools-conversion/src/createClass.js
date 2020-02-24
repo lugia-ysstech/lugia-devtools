@@ -139,11 +139,11 @@ export function createLayerComponent(
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
     const commonStr = `context.getLayout("${layerId}").`;
-    let styleWidth = isResponsive ? `${commonStr}percentWidth || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
+    let styleWidth = isResponsive ? `${commonStr}percentWidth + '%' || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
     if (!percentWidth) {
       styleWidth = isResponsive ? `${commonStr}width` : width;
     }
-    let styleHeight = isResponsive ? `${commonStr}percentHeight || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
+    let styleHeight = isResponsive ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
     if (!percentWidth) {
       styleHeight = isResponsive ? `${commonStr}height` : height;
     }
