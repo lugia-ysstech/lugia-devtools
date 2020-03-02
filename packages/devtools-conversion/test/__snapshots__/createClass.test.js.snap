@@ -11,7 +11,7 @@ exports[`conversion createClass -> createClassCode 1`] = `
       render(){
         return (
           <React.Fragment>
-            <div style={{position: 'absolute',width: 72,
+            <div style={{position: 'absolute',display: 'flex', width: 72,
         height: 21, zIndex: '4000', 
          left: 92 + 'px', top: 67 + 'px' }}
         ><Theme config={{'aaa':themeHandle('aaa',undefined, {\\"width\\":100,\\"height\\":100}, false)}}><ConnectLabel10  viewClass=\\"aaa\\" children={  \`高级表单\` } value={  \`高级表单\` } fontSize={ 18 } color={  \`#50575d\` } /></Theme></div>
@@ -22,7 +22,7 @@ exports[`conversion createClass -> createClassCode 1`] = `
 `;
 
 exports[`conversion createClass -> createLayerComponent 1`] = `
-"<div style={{position: 'absolute',width: 72,
+"<div style={{position: 'absolute',display: 'flex', width: 72,
         height: 21, zIndex: '4000', 
          left: 92 + 'px', top: 67 + 'px' }}
         ><Theme config={{'aaa':themeHandle('aaa',undefined, {\\"width\\":100,\\"height\\":100}, false)}}><ConnectLabel10  viewClass=\\"aaa\\" children={  \`高级表单\` } value={  \`高级表单\` } fontSize={ 18 } color={  \`#50575d\` } /></Theme></div>"
@@ -39,7 +39,7 @@ exports[`conversion createClass -> createLayerComponent 2`] = `
 `;
 
 exports[`conversion createClass -> createLayerComponent 3`] = `
-"<div style={{position: 'absolute',width: 72,
+"<div style={{position: 'absolute',display: 'flex', width: 72,
         height: 21, zIndex: '4000', 
          left: 92 + 'px', top: 67 + 'px' }}
         ><Theme config={{'aaa':themeHandle('aaa',undefined, {\\"width\\":100,\\"height\\":100}, false)}}><Label  viewClass=\\"aaa\\" children={  \`高级表单\` } value={  \`高级表单\` } fontSize={ 18 } color={  \`#50575d\` } /></Theme></div>"

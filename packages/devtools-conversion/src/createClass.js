@@ -8,7 +8,7 @@ import { pointType2GetCSS } from '@lugia/lugiad-core';
 import { camelNamed, recursiveChildren } from './utils';
 import { widgetIdInLugiax } from './widgetIdInLugiax';
 import { createThemeCode } from './theme';
-
+import { LugiaxDataPrefix } from './createLugiaxData';
 export function createExpantWidgetid(target: ?(Object[])): string[] {
   const result = [];
   if (!target || target.length < 1) {
@@ -85,51 +85,66 @@ export function createLayerComponent(
   isResponsive: boolean,
   options: Object
 ): Object {
-  const { widgetIdHasAssetPropsName = {}, resourcesHead = '', images = [] } = options || {};
+  const { widgetIdHasAssetPropsName = {}, resourcesHead = '', images = [] } =
+    options || {};
   let layerCode = '',
     layerBindCode = '';
   layers.forEach((key: Object, i: number) => {
-    const { id: layerId, percentWidth, percentHeight, percentPoint = [], width, height, zIndex, point, pointType = 'leftTop' } = key;
-    const layerInfo = id2WidgetInfo[layerId];
-    const { module, widgetName, props } = layerInfo;
+    const {
+      id: widgetId,
+      percentWidth,
+      percentHeight,
+      percentPoint = [],
+      width,
+      height,
+      zIndex,
+      point,
+      pointType = 'leftTop',
+    } = key;
+    const layerInfo = id2WidgetInfo[widgetId];
+    const { props } = layerInfo;
+    const { module, widgetName } = layerInfo;
+
     const componentName = camelNamed(widgetName);
-    // if (module === '@lugia/lugia-web-html') {
-    //   const customLabelName = camelNamed(`${widgetName}${index}${i}`);
-    //   widgetId2Component[layerId] = customLabelName;
-    //   customLabelCode = customLabelCode + createCustomLabel(widgetName, customLabelName);
-    // }
-    // const name = widgetId2Component[layerId]
-    //   ? widgetId2Component[layerId]
-    //   : widgetName;
-    let name = widgetId2Component[layerId] || widgetName;
+    let name = widgetId2Component[widgetId] || widgetName;
     if (module === '@lugia/lugia-web-html') {
       name = widgetId2Component[widgetName];
     }
     const newIndex = index.toString() + i;
-    const lugiaxInfo = widgetIdInLugiax(layerId, lugiax, name, newIndex);
+    const lugiaxInfo = widgetIdInLugiax(widgetId, lugiax, name, newIndex);
     if (lugiaxInfo) {
       const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
-      widgetId2Component[layerId] = inLugiax ? bindName : componentName;
+      widgetId2Component[widgetId] = inLugiax ? bindName : componentName;
       if (inLugiax) {
         layerBindCode = layerBindCode + lugiaxCode;
       }
     }
     const hasContainer = 'TargetContainer' in props;
-    const assetProps = widgetIdHasAssetPropsName[layerId];
+    const assetProps = widgetIdHasAssetPropsName[widgetId];
+
+    const { pageData } = lugiax;
     const { containerStart, containerEnd } = createTargetContainer(
       props.TargetContainer,
       props,
-      { assetProps, resourcesHead, images }
+      { assetProps, resourcesHead, images, widgetId, pageData }
     );
     const containerStartLabel = hasContainer ? containerStart : '';
     const containerEndLabel = hasContainer ? containerEnd : '';
-    const propsConfig = getComponentProps(props, { assetProps, resourcesHead, images });
+    const propsConfig = getComponentProps(props, {
+      assetProps,
+      resourcesHead,
+      images,
+      pageData,
+      widgetId,
+    });
 
     const layerThemeInfo =
-      themes && themes.widgetId2ThemeInfo && themes.widgetId2ThemeInfo[layerId];
+      themes &&
+      themes.widgetId2ThemeInfo &&
+      themes.widgetId2ThemeInfo[widgetId];
     const { viewClass, configString } = createThemeCode(
       themes.widgetId2ThemeInfo,
-      layerId
+      widgetId
     );
     const viewClassCode = layerThemeInfo
       ? ' viewClass="' + viewClass + '"'
@@ -138,22 +153,30 @@ export function createLayerComponent(
       ? containerStartLabel + viewClassCode + '>'
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
-    const commonStr = `context.getLayout("${layerId}").`;
-    let styleWidth = isResponsive ? `${commonStr}percentWidth + '%' || ${percentWidth} + '%'` : `${percentWidth} +  '%'`;
+    const commonStr = `context.getLayout("${widgetId}").`;
+    let styleWidth = isResponsive
+      ? `${commonStr}percentWidth + '%' || ${percentWidth} + '%'`
+      : `${percentWidth} +  '%'`;
     if (!percentWidth) {
       styleWidth = isResponsive ? `${commonStr}width` : width;
     }
-    let styleHeight = isResponsive ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'` : `${percentHeight} +  '%'`;
+    let styleHeight = isResponsive
+      ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'`
+      : `${percentHeight} +  '%'`;
     if (!percentWidth) {
       styleHeight = isResponsive ? `${commonStr}height` : height;
     }
-    const responsiveGetLayoutStr = `context.getLayout("${layerId}").`;
+    const responsiveGetLayoutStr = `context.getLayout("${widgetId}").`;
     const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
     const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
     let positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
     if (percentWidth) {
-      const getPositionCSS = isResponsive ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])` : pointType2GetCSS[pointType](percentPoint);
-      positionCSSStr = `...${isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)}`;
+      const getPositionCSS = isResponsive
+        ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])`
+        : pointType2GetCSS[pointType](percentPoint);
+      positionCSSStr = `...${
+        isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)
+      }`;
     }
     const useSmart = !!percentWidth;
     const theContext = isResponsive ? 'context' : 'undefined';
@@ -163,7 +186,7 @@ export function createLayerComponent(
       `<div style={{position: 'absolute',display: 'flex', width: ${styleWidth},
         height: ${styleHeight}, zIndex: '${zIndex}', 
          ${positionCSSStr} }}
-        ><Theme config={{'${layerId}':themeHandle('${layerId}',${theContext}, ${themeStr}, ${useSmart})}}>${containerThemeCode}<${widgetId2Component[layerId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
+        ><Theme config={{'${widgetId}':themeHandle('${widgetId}',${theContext}, ${themeStr}, ${useSmart})}}>${containerThemeCode}<${widgetId2Component[widgetId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
 
   if (layerCode && isResponsive) {
@@ -206,13 +229,47 @@ export function getComponentProps(props: ?Object, opt: ?Object): string {
         } else {
           comProps.push(`${item}=${handlePropsType(propsItem)}`);
         }
-
       }
     });
   }
-
-  return comProps.join(' ');
+  const { widgetId, pageData } = opt;
+  return comProps.join(' ') + ' ' + getBindDataEvent(widgetId, pageData);
 }
+
+// TODO: will test
+export function getBindDataEvent(widgetId: string, pageData: Object): string {
+  const empty = '';
+  if (!pageData) {
+    return empty;
+  }
+  const { scripts } = pageData;
+  const { bindEvent } = pageData;
+  if (!scripts || !bindEvent) {
+    return empty;
+  }
+  const bindInfo = bindEvent[widgetId];
+  if (!bindInfo) {
+    return empty;
+  }
+  const { dependenciesModels = [] } = pageData;
+  const { model: pageModel } = pageData;
+
+  const result = [];
+
+  Object.keys(bindInfo).forEach((eventName: string) => {
+    const codeName = bindInfo[eventName];
+    if (!scripts[codeName]) {
+      return;
+    }
+    result.push(`${eventName} = {(...events)=>{
+        return ${LugiaxDataPrefix}${codeName}({events, pageData: ${
+  pageModel ? `${LugiaxDataPrefix}.data` : '{}'
+}, models: [${dependenciesModels.join(',')}]});
+      }}`);
+  });
+  return result.join(' ');
+}
+
 export function createTargetContainer(
   TargetContainer: ?Object,
   props: Object,

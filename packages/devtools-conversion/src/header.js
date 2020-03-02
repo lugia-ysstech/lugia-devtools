@@ -4,9 +4,12 @@
  *
  * @flow
  */
-import { camelNamed } from './utils';
-import type { HeaderType } from '@lugia/devtools-conversion';
-
+import type { HeaderType } from "@lugia/devtools-conversion";
+import { camelNamed } from "./utils";
+import createLugiaxData, {
+  getImportScripts,
+  LugiaxDataPrefix
+} from "./createLugiaxData";
 export function createHeader(
   mainDependencies: ?(Object[]),
   widgetId2Component: Object
@@ -15,7 +18,7 @@ export function createHeader(
     'import React from "react";' +
     'import styled from "styled-components";' +
     'import { Theme } from "@lugia/lugia-web";';
-  let styledComponentCode = '';
+  let styledComponentCode = "";
   const moudleMap = {};
 
   if (!mainDependencies || mainDependencies.length < 1) {
@@ -24,17 +27,17 @@ export function createHeader(
   mainDependencies.forEach((item: Object) => {
     const { widgetName, module } = item;
     const componentName = camelNamed(widgetName);
-    if (module === '@lugia/lugia-web-html') {
+    if (module === "@lugia/lugia-web-html") {
       styledComponentCode =
-        'const ' +
+        "const " +
         componentName +
-        ' = styled.div' +
-        '`' +
-        'font-size: 12px;' +
-        '`;';
+        " = styled.div" +
+        "`" +
+        "font-size: 12px;" +
+        "`;";
       widgetId2Component[widgetName] = componentName;
     } else {
-      const components = widgetName.split('.');
+      const components = widgetName.split(".");
       if (!moudleMap[components[0]]) {
         packages += `import { ${components[0]} } from '${module}';`;
       }
@@ -43,15 +46,15 @@ export function createHeader(
   });
   return { packages, styledComponentCode };
 }
+
 export function getModelCode(lugiax: ?Object): string {
-  let code = '';
   if (!lugiax) {
-    return code;
+    return "";
   }
   const {
     widgetId2PropsName2BindInfo = {},
     widgetId2EventName2MutationInfo = {},
-    page2mutation = {},
+    page2mutation = {}
   } = lugiax;
 
   const propsModel = getTargetModal(widgetId2PropsName2BindInfo);
@@ -64,15 +67,31 @@ export function getModelCode(lugiax: ?Object): string {
       pageModal.push(modelName);
     }
   }
-  let modelName = [ ...propsModel, ...eventModal, ...pageModal ];
+
+  const { pageData = {} } = lugiax;
+  const { dependenciesModels = [], scripts } = pageData;
+  let modelName = [
+    ...propsModel,
+    ...eventModal,
+    ...pageModal,
+    ...dependenciesModels
+  ];
   if (modelName.length > 0) {
-    modelName = [ ...new Set(modelName) ];
-    modelName.forEach((model: string) => {
-      code = code + `import ${model} from '../models/${model}';`;
-    });
+    modelName = [...new Set(modelName)];
+    return (
+      modelName
+        .map((model: string): string => {
+          if (model.startsWith(LugiaxDataPrefix)) {
+            return "";
+          }
+          return `import ${model} from '../models/${model}';`;
+        })
+        .join("") + getImportScripts(scripts)
+    );
   }
-  return code;
+  return "";
 }
+
 export function getTargetModal(target: ?Object): any[] {
   const keys = [];
   if (!target) {
@@ -97,36 +116,44 @@ export function getLugiadCoreCode(
   isResponsive: boolean
 ): string[] {
   if (!lugiax) {
-    return '';
+    return "";
   }
-  const functionNames = [ 'themeHandle' ];
-  let lugiaxCode = '';
-  const { widgetId2PropsName2BindInfo = {}, widgetId2EventName2MutationInfo = {} } = lugiax || {};
+  const functionNames = ["themeHandle"];
+  let lugiaxCode = "";
+  const {
+    widgetId2PropsName2BindInfo = {},
+    widgetId2EventName2MutationInfo = {},
+    pageData = {}
+  } = lugiax || {};
   const bindKeys = Object.keys(widgetId2PropsName2BindInfo);
   const mutationKeys = Object.keys(widgetId2EventName2MutationInfo);
-  if (bindKeys.length || mutationKeys.length) {
-    functionNames.push('bindHandleEvent');
-    functionNames.push('getData');
-    lugiaxCode = 'import lugiax, { bindTo, connect, bind } from \'@lugia/lugiax\';';
+  if (bindKeys.length || mutationKeys.length || pageData.model) {
+    functionNames.push("bindHandleEvent");
+    functionNames.push("getData");
+    lugiaxCode =
+      "import lugiax, { bindTo, connect, bind, LugiaxData}  from '@lugia/lugiax';";
   }
   if (isResponsive) {
-    functionNames.push('pointType2GetCSS');
+    functionNames.push("pointType2GetCSS");
   }
   const { packageCode, functionsCode } = createLugiadCoreCode(functionNames);
-  return { lugiadCoreCode: lugiaxCode + packageCode, lugiadFuncCode: functionsCode };
+  return {
+    lugiadCoreCode: lugiaxCode + packageCode,
+    lugiadFuncCode: `${functionsCode};${createLugiaxData(lugiax)}`
+  };
 }
 
 export function createLugiadCoreCode(names: string[]): string {
   if (!names || !names.length) {
-    return '';
+    return "";
   }
-  const packageCode = 'import LugiadCore from \'@lugia/lugiad-core\';';
-  const functionNames = names.join(',');
+  const packageCode = "import LugiadCore from '@lugia/lugiad-core';";
+  const functionNames = names.join(",");
   const functionsCode = `const {${functionNames}} = LugiadCore;`;
 
   return {
     packageCode,
-    functionsCode,
+    functionsCode
   };
 }
 
@@ -138,21 +165,22 @@ export function hasResponsive(layoutInfos: Object): boolean {
 }
 
 export function getResponsiveCode(layoutInfos: Object): Object {
-  let rspPackagesCode = '',
-    rspDeconstructionCode = '';
+  let rspPackagesCode = "",
+    rspDeconstructionCode = "";
   if (!layoutInfos) {
     return {
       rspPackagesCode,
-      rspDeconstructionCode,
+      rspDeconstructionCode
     };
   }
   if (hasResponsive(layoutInfos)) {
-    rspPackagesCode = 'import { DesignResponsive } from \'@lugia/lugia-web\';';
-    rspDeconstructionCode = 'const ResponsiveContext = DesignResponsive.ResponsiveContext;';
+    rspPackagesCode = "import { DesignResponsive } from '@lugia/lugia-web';";
+    rspDeconstructionCode =
+      "const ResponsiveContext = DesignResponsive.ResponsiveContext;";
   }
 
   return {
     rspPackagesCode,
-    rspDeconstructionCode,
+    rspDeconstructionCode
   };
 }

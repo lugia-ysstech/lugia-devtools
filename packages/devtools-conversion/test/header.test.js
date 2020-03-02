@@ -58,6 +58,47 @@ describe('conversion header ->', () => {
     );
   });
 
+
+  it('getModelCode widgetId2EventName2MutationInfo ', () => {
+    const lugiax = {
+      pageData: {
+        dependenciesModels: [
+          'hello',
+          'login',
+          'modelAbc',
+          'modelAbcd',
+          'modelAbcdf',
+        ],
+      },
+      widgetId2PropsName2BindInfo: {
+        ...target,
+      },
+      page2mutation: {
+        mount: { modelName: 'login', mutationName: 'click' },
+        did: { modelName: 'modelAbc', mutationName: 'click' },
+
+      },
+      widgetId2EventName2MutationInfo: {
+        'wb67fbbc00-17d3-11e9-bb21-754a2cde60630': {
+          onClick: {
+            modelName: 'hello',
+            eventName: 'onClick',
+            mutationName: 'login',
+          },
+          onChange: {
+            modelName: 'login',
+            eventName: 'onClick',
+            mutationName: 'login',
+          },
+        },
+      },
+    };
+    const result = getModelCode(lugiax);
+    expect(result.split(';')).toEqual(
+      "import user from '../models/user';import login from '../models/login';import hello from '../models/hello';import modelAbc from '../models/modelAbc';import modelAbcd from '../models/modelAbcd';import modelAbcdf from '../models/modelAbcdf';".split(';')
+    );
+  });
+
   it('createHeader', () => {
     const mainDependencies = [
       { module: '@lugia/lugia-web', widgetName: 'Table' },

@@ -29,14 +29,14 @@ Object {
 
 exports[`conversion header -> getLugiadCoreCode toMatchSnapshot 2`] = `
 Object {
-  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
+  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind, LugiaxData}  from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
   "lugiadFuncCode": "const {themeHandle,bindHandleEvent,getData} = LugiadCore;",
 }
 `;
 
 exports[`conversion header -> getLugiadCoreCode toMatchSnapshot 3`] = `
 Object {
-  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind } from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
+  "lugiadCoreCode": "import lugiax, { bindTo, connect, bind, LugiaxData}  from '@lugia/lugiax';import LugiadCore from '@lugia/lugiad-core';",
   "lugiadFuncCode": "const {themeHandle,bindHandleEvent,getData} = LugiadCore;",
 }
 `;

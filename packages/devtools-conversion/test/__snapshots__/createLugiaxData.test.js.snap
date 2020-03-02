@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`conversion createLugiaxData. -> createLugiaxData pageData model hello state {num, str, bool, date} 1`] = `""`;
+
+exports[`conversion createLugiaxData. -> createLugiaxData pageData model hello state {num, str, bool, date} scriptes 1`] = `
+"const __data__ = LugiaxData.createModel({
+    model: 'hello',
+    state: {\\"num\\":1,\\"str\\":\\"abc\\",\\"bool\\":true},
+  });
+  const __data__Code2 = new Function('param', 'console.info(param);');
+ "
+`;
+
+exports[`conversion createLugiaxData. -> createLugiaxData pageData model hello state 1`] = `
+"const __data__ = LugiaxData.createModel({
+    model: 'hello',
+    state: {},
+  });
+  
+ "
+`;
+
+exports[`conversion createLugiaxData. -> getImportScripts 1`] = `"import Code3 from ../lugiax"`;
