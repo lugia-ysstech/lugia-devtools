@@ -19,7 +19,9 @@ export function getImportScripts(scripts: Object): string {
     }
     switch (type) {
       case 'Project':
-        return importCodes.push(`import __data__${codeName} from ${code}`);
+        return importCodes.push(
+          `import ${LugiaxDataPrefix}${codeName} from '${code}';`
+        );
       default:
     }
   });
@@ -38,7 +40,7 @@ function getScripts(scripts: Object): string {
     switch (type) {
       case 'Code':
         codes.push(
-          `const ${LugiaxDataPrefix}${codeName} = new Function('param', \`${code}\`);`
+          `const ${LugiaxDataPrefix}${codeName} = (param)=>  { ${code}};`
         );
         return;
       default:
