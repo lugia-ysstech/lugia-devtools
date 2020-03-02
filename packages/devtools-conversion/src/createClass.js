@@ -111,25 +111,52 @@ export function createLayerComponent(
       name = widgetId2Component[widgetName];
     }
     const newIndex = index.toString() + i;
-    const lugiaxInfo = widgetIdInLugiax(widgetId, lugiax, name, newIndex);
-    if (lugiaxInfo) {
-      const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
-      widgetId2Component[widgetId] = inLugiax ? bindName : componentName;
-      if (inLugiax) {
-        layerBindCode = layerBindCode + lugiaxCode;
+    const hasContainer = 'TargetContainer' in props;
+
+    if (hasContainer) {
+      widgetId2Component[widgetId] = name;
+    } else {
+      const lugiaxInfo = widgetIdInLugiax(widgetId, lugiax, name, newIndex);
+      if (lugiaxInfo) {
+        const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
+        widgetId2Component[widgetId] = inLugiax ? bindName : componentName;
+        if (inLugiax) {
+          layerBindCode = layerBindCode + lugiaxCode;
+        }
       }
     }
-    const hasContainer = 'TargetContainer' in props;
     const assetProps = widgetIdHasAssetPropsName[widgetId];
 
     const { pageData } = lugiax;
-    const { containerStart, containerEnd } = createTargetContainer(
-      props.TargetContainer,
-      props,
-      { assetProps, resourcesHead, images, widgetId, pageData }
-    );
-    const containerStartLabel = hasContainer ? containerStart : '';
-    const containerEndLabel = hasContainer ? containerEnd : '';
+    let containerStartLabel = '';
+    let containerEndLabel = '';
+    if (hasContainer) {
+      let { widgetName } = props.TargetContainer;
+
+      const lugiaxInfo = widgetIdInLugiax(
+        widgetId,
+        lugiax,
+        widgetName,
+        newIndex
+      );
+      if (lugiaxInfo) {
+        const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
+        // widgetId2Component[widgetId] = inLugiax ? bindName : widgetName;
+        if (inLugiax) {
+          // bindName
+          widgetName = bindName;
+          layerBindCode = layerBindCode + lugiaxCode;
+        }
+      }
+
+      const { containerStart, containerEnd } = createTargetContainer(
+        { ...props.TargetContainer, widgetName },
+        props,
+        { assetProps, resourcesHead, images, widgetId, pageData }
+      );
+      containerStartLabel = containerStart;
+      containerEndLabel = containerEnd;
+    }
     const propsConfig = getComponentProps(props, {
       assetProps,
       resourcesHead,
@@ -334,13 +361,6 @@ export function createComponent(
         options
       );
     widgetId2Component[id] = componentName;
-    const lugiaxInfo = widgetIdInLugiax(id, lugiax, componentName, index);
-    if (lugiaxInfo) {
-      const { inLugiax, lugiaxCode, componentName: bindName } = lugiaxInfo;
-      widgetId2Component[id] = inLugiax ? bindName : componentName;
-      const bindCode = inLugiax ? lugiaxCode : '';
-      classCode = classCode + bindCode;
-    }
   });
 
   return classCode;
