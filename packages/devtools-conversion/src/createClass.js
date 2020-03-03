@@ -100,7 +100,7 @@ export function createLayerComponent(
       zIndex,
       point,
       pointType = 'leftTop',
-      pointFix = false
+      pointFix = false,
     } = key;
     const layerInfo = id2WidgetInfo[widgetId];
     const { props } = layerInfo;
@@ -188,12 +188,12 @@ export function createLayerComponent(
     if (!percentWidth) {
       styleWidth = isResponsive ? `${commonStr}width` : width;
     }
-    let styleHeight = isResponsive
-      ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'`
-      : `${percentHeight} +  '%'`;
-    if (!percentWidth) {
-      styleHeight = isResponsive ? `${commonStr}height` : height;
-    }
+    // let styleHeight = isResponsive
+    //   ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'`
+    //   : `${percentHeight} +  '%'`;
+    // if (!percentWidth) {
+    //   styleHeight = isResponsive ? `${commonStr}height` : height;
+    // }
     const responsiveGetLayoutStr = `context.getLayout("${widgetId}").`;
     const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
     const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
@@ -215,7 +215,7 @@ export function createLayerComponent(
     layerCode =
       layerCode +
       `<div style={{position: 'absolute',display: 'flex', width: ${styleWidth},
-        height: ${styleHeight}, zIndex: '${zIndex}', 
+         zIndex: '${zIndex}', 
          ${positionCSSStr} }}
         ><Theme config={{'${widgetId}':themeHandle('${widgetId}',${theContext}, ${themeStr}, ${useSmart})}}>${containerThemeCode}<${widgetId2Component[widgetId]} ${componentThemeCode} ${propsConfig} />${containerEndLabel}</Theme></div>`;
   });
