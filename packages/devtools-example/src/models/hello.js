@@ -16,5 +16,15 @@ export default lugiax.register({
         return state;
       },
     },
+    async: {
+      async go(state: Object, param: Object) {
+        await new Promise(res => {
+          setTimeout(() => {
+            res(true);
+          }, param.time);
+        });
+        return state;
+      },
+    },
   },
 });
