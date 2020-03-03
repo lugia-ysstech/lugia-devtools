@@ -991,25 +991,6 @@
   dependencies:
     "@lugia/devtools-core" "^1.0.5"
 
-"@lugia/devtools-conversion@^1.0.23":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@lugia/devtools-conversion/-/devtools-conversion-1.0.23.tgz#151bf2764b7991dcbafab78a954d1bd17ac4671c"
-  integrity sha512-pI82LVgm+8nYT9gKnJR8xCjXOI04Ur+ZlWcVoS4cM+3spKrlKCxpkXiufzDu8nrKFJKvZ/HHV8HdJ/r8k3KNmA==
-  dependencies:
-    "@lugia/devtools-core" "^1.0.11"
-    "@lugia/lugiad-core" "^1.0.2"
-
-"@lugia/devtools-core@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@lugia/devtools-core/-/devtools-core-1.0.11.tgz#cf9e498421a37cf9822a5b8818a98c70b8468c5c"
-  integrity sha512-max2LV4g2CGQ9ef7WqXtVhS+Stl0JS6Hs3QnYvPsQtySct11XyIrbTrczipR+Ky7t6gTz04pru2DEX2bk1deWw==
-  dependencies:
-    chai "^4.1.2"
-    immutable "^3.8.2"
-    redux "^4.0.0"
-    redux-immutable "^4.0.0"
-    redux-saga "^0.16.0"
-
 "@lugia/devtools-core@^1.0.5":
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/@lugia/devtools-core/download/@lugia/devtools-core-1.0.5.tgz#53e9147497b3f581a7ba886a240f69c0e425273a"
@@ -1075,13 +1056,6 @@
     rc-util "4.0.4"
     react-error-overlay "1.0.9"
     warning "3.0.0"
-
-"@lugia/lugiad-core@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@lugia/lugiad-core/-/lugiad-core-1.0.2.tgz#186c5de344cdf62a3cadbfb51787c29c5aa530e9"
-  integrity sha512-dS9G6o6ggGtGGWCJW3aQAUOT92Ud2lcGcJhSibMEnSDsAG63+yKNcXMpyULAG/DdbM5y/GC+aBSevbQkQ3I46A==
-  dependencies:
-    chai "^4.1.2"
 
 "@lugia/lugiad-loader@^1.2.1":
   version "1.2.1"
