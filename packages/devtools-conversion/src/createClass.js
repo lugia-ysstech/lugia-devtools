@@ -100,6 +100,7 @@ export function createLayerComponent(
       zIndex,
       point,
       pointType = 'leftTop',
+      pointFix = false
     } = key;
     const layerInfo = id2WidgetInfo[widgetId];
     const { props } = layerInfo;
@@ -198,9 +199,12 @@ export function createLayerComponent(
     const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
     let positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
     if (percentWidth) {
+      const validPoint = pointFix ? point : percentPoint;
+      const validPointStr = pointFix ? 'point' : 'percentPoint';
+      const symbolStr = pointFix ? 'px' : '%';
       const getPositionCSS = isResponsive
-        ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}percentPoint || [${percentPoint}])`
-        : pointType2GetCSS[pointType](percentPoint);
+        ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}${validPointStr} || [${validPoint}], ${symbolStr})`
+        : pointType2GetCSS[pointType](validPoint, symbolStr);
       positionCSSStr = `...${
         isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)
       }`;

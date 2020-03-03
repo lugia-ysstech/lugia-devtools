@@ -68,23 +68,23 @@ function getData(
 }
 
 const pointType2GetCSS: {
-  [key: PointType]: (point: Point) => Object
+  [key: PointType]: (point: Point, symbol: ?string) => Object
 } = {
-  leftTop: (point: Point): Object => {
+  leftTop: (point: Point, symbol: ?string = '%'): Object => {
     const [ x, y ] = point;
-    return { left: `${x}%`, top: `${y}%`, right: '', bottom: '' };
+    return { left: `${x}${symbol}`, top: `${y}${symbol}`, right: '', bottom: '' };
   },
-  leftBottom: (point: Point): Object => {
+  leftBottom: (point: Point, symbol: ?string = '%'): Object => {
     const [ x, y ] = point;
-    return { left: `${x}%`, bottom: `${y}%`, right: '', top: '' };
+    return { left: `${x}${symbol}`, bottom: `${y}${symbol}`, right: '', top: '' };
   },
-  rightTop: (point: Point): Object => {
+  rightTop: (point: Point, symbol: ?string = '%'): Object => {
     const [ x, y ] = point;
-    return { right: `${x}%`, top: `${y}%`, left: '', bottom: '' };
+    return { right: `${x}${symbol}`, top: `${y}${symbol}`, left: '', bottom: '' };
   },
-  rightBottom: (point: Point): Object => {
+  rightBottom: (point: Point, symbol: ?string = '%'): Object => {
     const [ x, y ] = point;
-    return { right: `${x}%`, bottom: `${y}%`, left: '', top: '' };
+    return { right: `${x}${symbol}`, bottom: `${y}${symbol}`, left: '', top: '' };
   },
 };
 
