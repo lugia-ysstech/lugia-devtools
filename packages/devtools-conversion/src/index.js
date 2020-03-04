@@ -13,24 +13,59 @@ import {
 import { createImageImport } from './img';
 import { createComponent, createLayerComponent } from './createClass';
 import { unZip } from '@lugia/devtools-core';
+import { LugiaxDataPrefix } from './createLugiaxData';
 
 const defaultBackground = '#f8f8f8';
+const supportEvents = [ 'componentDidMount', 'componentWillUnmount' ];
 
-function getPageMutation(pageMutation: Object): string {
-  if (!pageMutation) {
+function getPageMutation(lugiax: Object): string {
+  const { pageMutation, pageData } = lugiax;
+  if (!pageMutation && !pageData) {
     return '';
   }
-  const eventNames = Object.keys(pageMutation).filter(
-    (name: string): boolean =>
-      name === 'componentDidMount' || name === 'componentWillUnmount'
-  );
+  const { lifeScripts = {} } = pageData;
+
+  const eventNames = supportEvents.filter((name: string) => {
+    return lifeScripts[name] || (pageMutation && pageMutation[name]);
+  });
+  console.info('eventNames', eventNames);
+
+  function getPageMutationCode(name: string): string {
+    const mutation = pageMutation && pageMutation[name];
+    if (!mutation) {
+      return '';
+    }
+    const { modelName, mutationName } = mutation;
+    return `${modelName}.mutations.${mutationName}({eventName: '${name}'});`;
+  }
+  function getPageDataScripts(name: string): string {
+    const { scripts, model: pageModel, dependenciesModels = [] } = pageData;
+    const scriptId = lifeScripts[name];
+    if (!scriptId || !scripts[scriptId]) {
+      return '';
+    }
+    return `${LugiaxDataPrefix}${scriptId}({events: [], pageData: ${
+      pageModel ? `${LugiaxDataPrefix}.data` : '{}'
+    }, models: [${dependenciesModels.join(',')}]});`;
+  }
   const res = [];
   eventNames.forEach((name: string) => {
-    const { modelName, mutationName } = pageMutation[name];
     res.push(`${name}(){
-          ${modelName}.mutations.${mutationName}({eventName: '${name}'});
+          ${getPageMutationCode(name)}
+          ${getPageDataScripts(name)}
       }`);
   });
+
+  const constructor = 'constructor';
+  if (lifeScripts[constructor]) {
+    const consturctorCode = getPageDataScripts(constructor);
+    if (consturctorCode) {
+      res.push(`constructor(props){
+          super(props);
+          ${consturctorCode}
+      }`);
+    }
+  }
   return res.join('');
 }
 
@@ -114,7 +149,7 @@ export default function conversion(page: Object, options: Object): string {
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
   exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
-  ${getPageMutation(lugiax.page2mutation)}
+  ${getPageMutation(lugiax)}
       render(){
         return (
             ${Code}
