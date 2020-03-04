@@ -1,9 +1,9 @@
 {
   "name": "@lugia/devtools-conversion",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "dependencies": {
     "@lugia/devtools-core": "^1.0.12",
-    "@lugia/lugiad-core": "^1.0.3"
+    "@lugia/lugiad-core": "^1.0.4"
   },
   "peerDependencies": {
     "react": ">16.0.0",
