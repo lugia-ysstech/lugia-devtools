@@ -18,16 +18,14 @@ import { LugiaxDataPrefix } from './createLugiaxData';
 const defaultBackground = '#f8f8f8';
 const supportEvents = [ 'componentDidMount', 'componentWillUnmount' ];
 
-function getPageMutation(lugiax: Object): string {
+function getPageMutation(lugiax: Object, backgroudColor: string): string {
   const { pageMutation, pageData } = lugiax;
   if (!pageMutation && !pageData) {
     return '';
   }
   const { lifeScripts = {} } = pageData;
 
-  const eventNames = supportEvents.filter((name: string) => {
-    return lifeScripts[name] || (pageMutation && pageMutation[name]);
-  });
+  const eventNames = supportEvents;
   console.info('eventNames', eventNames);
 
   function getPageMutationCode(name: string): string {
@@ -48,11 +46,21 @@ function getPageMutation(lugiax: Object): string {
       pageModel ? `${LugiaxDataPrefix}.data` : '{}'
     }, models: [${dependenciesModels.join(',')}]});`;
   }
+  function getBackgroundColor(name: string): string {
+    if (name === 'componentDidMount') {
+      return `document.body.style.background = '${backgroudColor}'`;
+    }
+    if (name === 'componentWillUnmount') {
+      return "document.body.style.background = ''";
+    }
+    return '';
+  }
   const res = [];
   eventNames.forEach((name: string) => {
     res.push(`${name}(){
           ${getPageMutationCode(name)}
           ${getPageDataScripts(name)}
+          ${getBackgroundColor(name)}
       }`);
   });
 
@@ -139,7 +147,7 @@ export default function conversion(page: Object, options: Object): string {
   const mode2LayoutDatas = JSON.stringify(mode2LayoutData);
   const wrapWidth = exportCusCmp ? `${width}px` : '100%';
   const background = exportCusCmp ? '' : `backgroundColor: '${backgroudColor}'`;
-  const nomalCode = `<div style={{height: '${height}px', width: '${wrapWidth}', zIndex: '${zIndex}', position: 'relative', ${background}}}>${layerCode}</div>`;
+  const nomalCode = `<div style={{width: '${wrapWidth}', zIndex: '${zIndex}', position: 'relative', ${background}}}>${layerCode}</div>`;
   const contextCode = `<DesignResponsive mode2Config={${mode2ConfigData}} mode2LayoutData={${mode2LayoutDatas}} sideMenuWidth={this.props.sideMenuWidth}>
                 <ResponsiveContext.Consumer>{
                     context => {
@@ -149,7 +157,7 @@ export default function conversion(page: Object, options: Object): string {
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
   exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
-  ${getPageMutation(lugiax)}
+  ${getPageMutation(lugiax, backgroudColor)}
       render(){
         return (
             ${Code}
