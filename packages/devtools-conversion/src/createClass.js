@@ -204,7 +204,7 @@ export function createLayerComponent(
       const symbolStr = pointFix ? 'px' : '%';
       const getPositionCSS = isResponsive
         ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}${validPointStr} || [${validPoint}], ${symbolStr})`
-        : pointType2GetCSS[pointType](validPoint, symbolStr);
+        : pointType2GetCSS[pointType](point, percentPoint, pointFix);
       positionCSSStr = `...${
         isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)
       }`;
