@@ -185,7 +185,7 @@ export function createLayerComponent(
     let styleWidth = isResponsive
       ? `${commonStr}percentWidth + '%' || ${percentWidth} + '%'`
       : `${percentWidth} +  '%'`;
-    if (!percentWidth) {
+    if (!percentWidth || pointFix) {
       styleWidth = isResponsive ? `${commonStr}width` : width;
     }
     // let styleHeight = isResponsive
@@ -202,6 +202,7 @@ export function createLayerComponent(
       const validPoint = pointFix ? point : percentPoint;
       const validPointStr = pointFix ? 'point' : 'percentPoint';
       const symbolStr = pointFix ? 'px' : '%';
+      // todo: top 和 bottom pointFix 为true 时，响应式情况没有处理；
       const getPositionCSS = isResponsive
         ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}${validPointStr} || [${validPoint}], ${symbolStr})`
         : pointType2GetCSS[pointType](point, percentPoint, pointFix);
