@@ -26,7 +26,6 @@ function getPageMutation(lugiax: Object, backgroudColor: string): string {
   const { lifeScripts = {} } = pageData;
 
   const eventNames = supportEvents;
-  console.info('eventNames', eventNames);
 
   function getPageMutationCode(name: string): string {
     const mutation = pageMutation && pageMutation[name];
