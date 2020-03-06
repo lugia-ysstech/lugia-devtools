@@ -991,18 +991,18 @@
   dependencies:
     "@lugia/devtools-core" "^1.0.5"
 
-"@lugia/devtools-conversion@^1.0.24":
-  version "1.0.23"
-  resolved "https://registry.npm.taobao.org/@lugia/devtools-conversion/download/@lugia/devtools-conversion-1.0.23.tgz#151bf2764b7991dcbafab78a954d1bd17ac4671c"
-  integrity sha1-FRvydkt5kdy6+reKlU0b0XrEZxw=
+"@lugia/devtools-conversion@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-conversion/-/devtools-conversion-1.0.26.tgz#c8cc4e2824e6ae40c25c84a15c44ec7ab3043303"
+  integrity sha512-IOP5RGwodzsIFJfIHMjB/QcTwzop7g9FzGYUCXghNQXCFeLo+o7DmzOhHyWLl2/A89vxjBF/BQu5MNJCE3GhPg==
   dependencies:
-    "@lugia/devtools-core" "^1.0.11"
-    "@lugia/lugiad-core" "^1.0.2"
+    "@lugia/devtools-core" "^1.0.14"
+    "@lugia/lugiad-core" "^1.0.4"
 
-"@lugia/devtools-core@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.npm.taobao.org/@lugia/devtools-core/download/@lugia/devtools-core-1.0.11.tgz#cf9e498421a37cf9822a5b8818a98c70b8468c5c"
-  integrity sha1-z55JhCGjfPmCKluIGKmMcLhGjFw=
+"@lugia/devtools-core@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-core/-/devtools-core-1.0.14.tgz#0889ee7f29e066275ef0de71a7acc45b3c1333b1"
+  integrity sha512-+gjz6ctNolom7KN+/uyHvV6XIusWAV8yQqHKHslJvClDpUDebJq0EnDAQTOHOl/ggmJlMqE+MGVABYHa5ocm+A==
   dependencies:
     chai "^4.1.2"
     immutable "^3.8.2"
@@ -1039,10 +1039,10 @@
     events "^3.0.0"
     rxjs "^6.3.3"
 
-"@lugia/lugia-web@1.2.1-alpha-6":
-  version "1.2.1-alpha-6"
-  resolved "https://registry.npm.taobao.org/@lugia/lugia-web/download/@lugia/lugia-web-1.2.1-alpha-6.tgz#f04092b530c08250c64f4ca93ae9424f905d8172"
-  integrity sha1-8ECStTDAglDGT0ypOulCT5BdgXI=
+"@lugia/lugia-web@1.2.1-alpha-8":
+  version "1.2.1-alpha-8"
+  resolved "https://registry.yarnpkg.com/@lugia/lugia-web/-/lugia-web-1.2.1-alpha-8.tgz#99a49773d49f7d3444c6bad781f47632f3b53dc3"
+  integrity sha512-tzGfi5To+KjUH1qC8SYwmO9zevfT4ngSdsjcqovQ4f3DEb3MHJ6oAMUttDarqVf2ifwFKM4EagsAk5BlxPaTcg==
   dependencies:
     "@lugia/css" "^1.0.19"
     "@lugia/listener" "^1.0.4"
@@ -1052,7 +1052,7 @@
     "@lugia/theme-config" "^1.0.36"
     "@lugia/theme-core" "^1.0.36"
     "@lugia/theme-css-hoc" "^1.0.64"
-    "@lugia/theme-hoc" "^1.0.48"
+    "@lugia/theme-hoc" "^1.0.49"
     "@lugia/theme-hoc-devtools" "^1.0.8"
     "@lugia/theme-utils" "^1.0.8"
     "@lugia/type-utils" "^1.0.6"
@@ -1076,10 +1076,10 @@
     react-error-overlay "1.0.9"
     warning "3.0.0"
 
-"@lugia/lugiad-core@^1.0.2", "@lugia/lugiad-core@^1.0.3":
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/@lugia/lugiad-core/download/@lugia/lugiad-core-1.0.2.tgz#186c5de344cdf62a3cadbfb51787c29c5aa530e9"
-  integrity sha1-GGxd40TN9io8rb+1F4fCnFqlMOk=
+"@lugia/lugiad-core@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@lugia/lugiad-core/-/lugiad-core-1.0.4.tgz#54f95f6541fd9434f5a90c6f759fde6c561d7fff"
+  integrity sha512-4rXrBt3BGuJ+muCBxggHo7aUKlGImoxyInUtMvjj8iQPiELl+Dx6r2cxY6RkI/jUoV1Tca8mhNQFffBRkvwkSQ==
   dependencies:
     chai "^4.1.2"
 
@@ -1343,10 +1343,10 @@
   dependencies:
     "@lugia/react-devtools-core" "^1.0.3"
 
-"@lugia/theme-hoc@^1.0.48":
-  version "1.0.48"
-  resolved "https://registry.npm.taobao.org/@lugia/theme-hoc/download/@lugia/theme-hoc-1.0.48.tgz#a1557271dfb91986a43954824a33cda4d39f53c6"
-  integrity sha1-oVVycd+5GYakOVSCSjPNpNOfU8Y=
+"@lugia/theme-hoc@^1.0.49":
+  version "1.0.49"
+  resolved "https://registry.yarnpkg.com/@lugia/theme-hoc/-/theme-hoc-1.0.49.tgz#21db4d55f0fa56eef4092d4287b47771baccbcd3"
+  integrity sha512-9VgAqbFCEmUZu2Y33tTFJqEscTC/R0d/IM8FAuZNFjMclKFA6mBk0eXVik5szcM0vtFBFcCX7OB+WeXQndW9Ow==
   dependencies:
     "@babel/runtime" "^7.4.5"
     "@lugia/object-utils" "^1.0.15"

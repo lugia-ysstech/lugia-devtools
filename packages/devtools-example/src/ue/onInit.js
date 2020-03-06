@@ -7,8 +7,17 @@
 export default async (param: Object) => {
   const { pageData } = param;
   if (!pageData.half) {
-    pageData.half = pageData.theme.QueryForm.Container.normal.height - 120;
+    const height = pageData.theme.QueryForm.Container.normal.height;
+
+    const space = 120;
+    if (height < space) {
+      pageData.btnHidden = true;
+      pageData.half = 0;
+    } else {
+      pageData.half = height - space;
+    }
   }
+
   pageData.direction = -pageData.direction;
   const { ExpandButton } = pageData;
   ExpandButton.text = '展开';
