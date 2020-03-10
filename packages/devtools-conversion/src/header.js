@@ -76,17 +76,18 @@ export function getModelCode(lugiax: ?Object): string {
     ...pageModal,
     ...dependenciesModels
   ];
-  if (modelName.length > 0) {
+
+  if (modelName.length > 0 || Object.keys(scripts).length > 0) {
     modelName = [...new Set(modelName)];
     return (
       modelName
-        .map((model: string): string => {
-          if (model.startsWith(LugiaxDataPrefix)) {
-            return "";
-          }
-          return `import ${model} from '../models/${model}';`;
-        })
-        .join("") + getImportScripts(scripts)
+      .map((model: string): string => {
+        if (model.startsWith(LugiaxDataPrefix)) {
+          return "";
+        }
+        return `import ${model} from '../models/${model}';`;
+      })
+      .join("") + getImportScripts(scripts)
     );
   }
   return "";
