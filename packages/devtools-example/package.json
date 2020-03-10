@@ -1,8 +1,8 @@
 {
   "name": "@lugia/devtools-example",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "dependencies": {
-    "@lugia/devtools-conversion": "^1.0.30",
+    "@lugia/devtools-conversion": "^1.0.31",
     "@lugia/lugia-web": "1.2.1-alpha-8",
     "@lugia/lugiad-core": "^1.0.5",
     "@lugia/lugiax": "^1.1.3",
