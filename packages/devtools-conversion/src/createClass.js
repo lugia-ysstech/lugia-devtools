@@ -294,7 +294,7 @@ export function getBindDataEvent(widgetId: string, pageData: Object): string {
     result.push(`${eventName} = {(...events)=>{
         return ${LugiaxDataPrefix}${codeName}({events, pageData: ${
   pageModel ? `${LugiaxDataPrefix}.data` : '{}'
-}, models: [${dependenciesModels.join(',')}]});
+}, props: this.props, models: [${dependenciesModels.join(',')}]});
       }}`);
   });
   return result.join(' ');

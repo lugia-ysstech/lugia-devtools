@@ -41,7 +41,7 @@ function getPageMutation(lugiax: Object, backgroudColor: string): string {
     if (!scriptId || !scripts || !scripts[scriptId]) {
       return '';
     }
-    return `${LugiaxDataPrefix}${scriptId}({events: [], pageData: ${
+    return `${LugiaxDataPrefix}${scriptId}({events: [], props: this.props , pageData: ${
       pageModel ? `${LugiaxDataPrefix}.data` : '{}'
     }, models: [${dependenciesModels.join(',')}]});`;
   }
