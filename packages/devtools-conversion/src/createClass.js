@@ -263,11 +263,15 @@ export function getComponentProps(props: ?Object, opt: ?Object): string {
     });
   }
   const { widgetId, pageData } = opt;
-  return comProps.join(' ') + ' ' + getBindDataEvent(widgetId, pageData);
+  return comProps.join(' ') + ' ' + getBindDataEvent(widgetId, pageData, props);
 }
 
 // TODO: will test
-export function getBindDataEvent(widgetId: string, pageData: Object): string {
+export function getBindDataEvent(
+  widgetId: string,
+  pageData: Object,
+  props: Object
+): string {
   const empty = '';
   if (!pageData) {
     return empty;
@@ -294,7 +298,9 @@ export function getBindDataEvent(widgetId: string, pageData: Object): string {
     result.push(`${eventName} = {(...events)=>{
         return ${LugiaxDataPrefix}${codeName}({events, pageData: ${
   pageModel ? `${LugiaxDataPrefix}.data` : '{}'
-}, props: this.props, models: [${dependenciesModels.join(',')}]});
+}, models: [${dependenciesModels.join(',')}], props: {...${JSON.stringify(
+  props
+)}}});
       }}`);
   });
   return result.join(' ');
