@@ -18,7 +18,7 @@ const layerZip = {
   percentHeight: 'ph',
   pointType: 'pt',
   percentPoint: 'pp',
-  pointFix: 'pf',
+  fixType: 'ft',
 };
 
 const pointTypeZip = {
@@ -47,7 +47,7 @@ const layerUnZip = {
   ph: 'percentHeight',
   pt: 'pointType',
   pp: 'percentPoint',
-  pf: 'pointFix',
+  ft: 'fixType',
 };
 const widgetInfoZip = {
   widgetName: 'w',
