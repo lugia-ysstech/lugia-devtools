@@ -93,14 +93,13 @@ export function createLayerComponent(
     const {
       id: widgetId,
       percentWidth,
-      percentHeight,
       percentPoint = [],
       width,
-      height,
       zIndex,
       point,
       pointType = 'leftTop',
       pointFix = false,
+      fixType,
     } = key;
     const layerInfo = id2WidgetInfo[widgetId];
     const { props } = layerInfo;
@@ -181,31 +180,31 @@ export function createLayerComponent(
       ? containerStartLabel + viewClassCode + '>'
       : containerStartLabel;
     const componentThemeCode = hasContainer ? '' : viewClassCode;
-    const commonStr = `context.getLayout("${widgetId}").`;
+    const responsiveGetLayoutStr = `context.getLayout("${widgetId}").`;
     let styleWidth = isResponsive
-      ? `${commonStr}percentWidth + '%' || ${percentWidth} + '%'`
+      ? `${responsiveGetLayoutStr}percentWidth + '%' || ${percentWidth} + '%'`
       : `${percentWidth} +  '%'`;
     if (!percentWidth || pointFix) {
-      styleWidth = isResponsive ? `${commonStr}width` : width;
+      styleWidth = isResponsive ? `${responsiveGetLayoutStr}width` : width;
     }
     // let styleHeight = isResponsive
-    //   ? `${commonStr}percentHeight + '%' || ${percentHeight} + '%'`
+    //   ? `${responsiveGetLayoutStr}percentHeight + '%' || ${percentHeight} + '%'`
     //   : `${percentHeight} +  '%'`;
     // if (!percentWidth) {
-    //   styleHeight = isResponsive ? `${commonStr}height` : height;
+    //   styleHeight = isResponsive ? `${responsiveGetLayoutStr}height` : height;
     // }
-    const responsiveGetLayoutStr = `context.getLayout("${widgetId}").`;
-    const styleLeft = isResponsive ? `${commonStr}point[0]` : point[0];
-    const styleRight = isResponsive ? `${commonStr}point[1]` : point[1];
+    const styleLeft = isResponsive
+      ? `${responsiveGetLayoutStr}point[0]`
+      : point[0];
+    const styleRight = isResponsive
+      ? `${responsiveGetLayoutStr}point[1]`
+      : point[1];
     let positionCSSStr = `left: ${styleLeft} + 'px', top: ${styleRight} + 'px'`;
-    if (percentWidth) {
-      const validPoint = pointFix ? point : percentPoint;
-      const validPointStr = pointFix ? 'point' : 'percentPoint';
-      const symbolStr = pointFix ? 'px' : '%';
-      // todo: top 和 bottom pointFix 为true 时，响应式情况没有处理；
+    if (percentWidth && pointType !== 'w' && pointType !== 'xw') {
+      const responsiveArg = `${responsiveGetLayoutStr}percentPoint || [${percentPoint}], ${point}, ${fixType}`;
       const getPositionCSS = isResponsive
-        ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveGetLayoutStr}${validPointStr} || [${validPoint}], ${symbolStr})`
-        : pointType2GetCSS[pointType](point, percentPoint, pointFix);
+        ? `pointType2GetCSS[${responsiveGetLayoutStr}pointType || 'leftTop'](${responsiveArg})`
+        : pointType2GetCSS[pointType](point, percentPoint, fixType);
       positionCSSStr = `...${
         isResponsive ? getPositionCSS : JSON.stringify(getPositionCSS)
       }`;

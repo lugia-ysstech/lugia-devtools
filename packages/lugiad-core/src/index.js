@@ -67,21 +67,26 @@ function getData(
   };
 }
 
-const getSymbol = (pointFix: boolean) => (pointFix ? "px" : "%");
-const getPoint = (point, percentPoint, pointFix) =>
-  pointFix ? point : percentPoint;
+const getSymbol = (fixType?: "x" | "xw" | "w") =>
+  fixType === "x" || fixType === "xw" ? "px" : "%";
+const getPoint = (point, percentPoint, fixType?: "x" | "xw" | "w") =>
+  fixType === "x" || fixType === "xw" ? point : [percentPoint[0], point[1]];
 
 const pointType2GetCSS: {
   [key: PointType]: (
     pxPoint: Point,
     percentPoint: Point,
-    pointFix: boolean
+    fixType?: "x" | "xw" | "w"
   ) => Object
 } = {
-  leftTop: (pxPoint: Point, percentPoint: Point, pointFix: boolean): Object => {
-    const point = getPoint(pxPoint, percentPoint, pointFix);
+  leftTop: (
+    pxPoint: Point,
+    percentPoint: Point,
+    fixType?: "x" | "xw" | "w"
+  ): Object => {
+    const point = getPoint(pxPoint, percentPoint, fixType);
     const [x, y] = point;
-    const symbol = getSymbol(pointFix);
+    const symbol = getSymbol(fixType);
     return {
       left: `${x}${symbol}`,
       top: `${pxPoint[1]}px`,
