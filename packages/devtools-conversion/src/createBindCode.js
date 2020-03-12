@@ -19,6 +19,10 @@ export function createBindCode(
   }
   bindItem.forEach((item: Object) => {
     const { modelName, fieldName, propsName } = item;
+    if (!modelName) {
+      console.warn('modelName is empty!');
+      return;
+    }
     const BindName = camelNamed(modelName) + fieldName.replace(/./g, '');
     const eventCode = `onChange: { ['${fieldName}'](e){ return bindHandleEvent(e); } }`;
     let theBindName = BindName + index;
@@ -67,6 +71,9 @@ export function createConnectCode(
   if (connectItem && connectItem.length > 0) {
     connectItem.forEach((bindItem: Object) => {
       const { modelName, fieldName, propsName } = bindItem;
+      if (!modelName) {
+        return;
+      }
       theModelName.push(modelName);
       stateCodes.push(`
       ... getData(state, '${propsName}', ${modelName}, '${fieldName}'),
@@ -77,6 +84,9 @@ export function createConnectCode(
   if (mutationInfo && mutationInfo.length > 0) {
     mutationInfo.forEach((item: Object) => {
       const { eventName, modelName, mutationName } = item;
+      if (!modelName) {
+        return;
+      }
       theModelName.push(modelName);
       mutationsCodes =
         mutationsCodes +

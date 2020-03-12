@@ -112,7 +112,6 @@ export default function conversion(page: Object, options: Object): string {
     layers,
     id2WidgetInfo,
     zIndex,
-    height,
     width,
     backgroudColor = defaultBackground,
   } = mainPad;
@@ -155,13 +154,24 @@ export default function conversion(page: Object, options: Object): string {
                 }</ResponsiveContext.Consumer>        
             </DesignResponsive>`;
   const Code = isResponsive ? contextCode : nomalCode;
-  exportCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode} ${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} export default class Page extends React.Component{
+  const headerCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode}`;
+  exportCode = `${headerCode}
+function create(){
+${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} return class Page extends React.Component{
   ${getPageMutation(lugiax, backgroudColor)}
       render(){
         return (
             ${Code}
         );
       }  
-  }`;
+  }}
+export default props => {
+  const TargetRef = useRef(null);
+  let Target = TargetRef.current;
+  if (!Target) {
+    Target = TargetRef.current = create();
+  }
+  return <Target {...props} />;
+};`;
   return exportCode;
 }

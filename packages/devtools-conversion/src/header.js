@@ -15,7 +15,7 @@ export function createHeader(
   widgetId2Component: Object
 ): HeaderType {
   let packages =
-    'import React from "react";' +
+    'import React, {useRef} from "react";' +
     'import styled from "styled-components";' +
     'import { Theme } from "@lugia/lugia-web";';
   let styledComponentCode = "";
@@ -69,7 +69,7 @@ export function getModelCode(lugiax: ?Object): string {
   }
 
   const { pageData = {} } = lugiax;
-  const { dependenciesModels = [], scripts } = pageData;
+  const { dependenciesModels = [], scripts = {} } = pageData;
   let modelName = [
     ...propsModel,
     ...eventModal,
