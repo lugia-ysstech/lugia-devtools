@@ -157,21 +157,33 @@ export default function conversion(page: Object, options: Object): string {
   const headerCode = `${packages} ${lugiadCoreCode} ${imageCode} ${modelCode} ${rspPackagesCode}`;
   exportCode = `${headerCode}
 function create(){
-${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} return class Page extends React.Component{
+${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} return { 
+destroy(){
+    if(typeof $__data__ !== 'undefined'){
+           $__data__ && $__data__.model && $__data__.destroy && $__data__.model.destroy();
+    }
+},
+Component: class Page extends React.Component{
   ${getPageMutation(lugiax, backgroudColor)}
       render(){
         return (
             ${Code}
         );
       }  
-  }}
+  }}}
 export default props => {
   const TargetRef = useRef(null);
+  useEffect(()=>{
+    return ()=>{
+    if(TargetRef.current){
+        TargetRef.current.destroy();
+    }
+  }},[]);
   let Target = TargetRef.current;
   if (!Target) {
     Target = TargetRef.current = create();
   }
-  return <Target {...props} />;
+  return <Target.Component {...props} />;
 };`;
   return exportCode;
 }

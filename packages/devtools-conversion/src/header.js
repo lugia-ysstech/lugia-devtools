@@ -15,7 +15,7 @@ export function createHeader(
   widgetId2Component: Object
 ): HeaderType {
   let packages =
-    'import React, {useRef} from "react";' +
+    'import React, {useRef, useEffect} from "react";' +
     'import styled from "styled-components";' +
     'import { Theme } from "@lugia/lugia-web";';
   let styledComponentCode = "";
