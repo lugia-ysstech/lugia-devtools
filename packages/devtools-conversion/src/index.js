@@ -160,7 +160,7 @@ function create(){
 ${responsiveCode} ${lugiadFuncCode} ${styledComponentCode} ${classCode} ${layerBindCode} return { 
 destroy(){
     if(typeof $__data__ !== 'undefined'){
-           $__data__ && $__data__.model && $__data__.destroy && $__data__.model.destroy();
+           $__data__ && $__data__.model && $__data__.model.destroy && $__data__.model.destroy();
     }
 },
 Component: class Page extends React.Component{
