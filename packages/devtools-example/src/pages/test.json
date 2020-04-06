@@ -1,534 +1,297 @@
 {
   "type": "PolarBear",
-  "designPoint": [-24328, -24640.2],
-  "scale": 0.7,
+  "designPoint": [
+    -24160,
+    -24798.5
+  ],
+  "scale": 0.4,
   "areaId2ChildPadIndexString": {
-    "OneBlockForm": "polarbear6$V!3.OneBlockForm",
-    "QueryButton": "polarbearCt%Y2.QueryButton",
-    "TwoBlockForm": "polarbear6$V!3.TwoBlockForm",
-    "polarbear6$V!3": "polarbearCt%Y2.wb1NTT0",
-    "polarbearCt%Y2": "mainPad.wb7mlJ71"
+    "MainCard": "MainBoxCard.MainCard",
+    "QueryForm": "MainCard.QueryForm",
+    "MainBoxCard": "mainPad.MainBoxCard"
   },
   "widgetId2ChildPad": {
-    "wb7mlJ71": {
-      "point": [73.91824776785711, 97.64760044642861],
-      "width": 1206,
+    "MainBoxCard": {
+      "point": [
+        30.000000000019554,
+        41.99999999998127
+      ],
+      "width": 1180,
       "index": 1,
-      "height": 287,
+      "height": 732,
       "zIndex": 1000,
       "type": "ChildPad",
       "layers": [
         {
-          "i": "QueryButton",
+          "i": "wbc&ywn2",
           "z": 0,
-          "w": 1134,
-          "h": 80,
-          "p": [38.5, 46.5],
-          "pw": 94.02985074626866,
-          "ph": 27.874564459930312,
-          "pt": "lb",
-          "pp": [3.1923714759535655, 16.202090592334496]
+          "w": 241,
+          "h": 30,
+          "p": [
+            16.873015873015902,
+            7.707431457439952
+          ],
+          "pw": 20.423728813559322,
+          "ph": 4.098360655737705,
+          "pt": "rb",
+          "pp": [
+            1.4299165994081273,
+            1.052927794732234
+          ]
         },
         {
-          "i": "wb1NTT0",
+          "i": "MainCard",
           "z": 1,
-          "w": 1134,
-          "h": 132,
-          "p": [34, 20],
-          "pw": 94.02985074626866,
-          "ph": 45.99303135888502,
-          "pp": [2.8192371475953566, 6.968641114982578]
+          "w": 1180,
+          "h": 732,
+          "p": [
+            0.07792207790166117,
+            1.818181818199463
+          ],
+          "pw": 100,
+          "ph": 100,
+          "pp": [
+            0.00660356592386959,
+            0.24838549428954412
+          ]
         }
       ],
       "idSeq": 0,
       "id2WidgetInfo": {
-        "QueryButton": {
-          "childAreaId": "QueryButton",
-          "w": "MonkeyKing",
-          "a": "Hee",
+        "wbc&ywn2": {
+          "childAreaId": "MainBoxCard",
+          "w": "Label",
           "m": "@lugia/lugia-web",
           "v": "1.0.0",
           "p": {
-            "TargetContainer": {
-              "aliasName": "Hee",
-              "defaultTheme": {
-                "CardTitleHeadContainer": {
-                  "normal": {
-                    "height": 50,
-                    "padding": {
-                      "top": 0
-                    }
-                  }
-                },
-                "Container": {
-                  "normal": {
-                    "height": 400,
-                    "width": 750
-                  }
-                }
-              },
-              "module": "@lugia/lugia-web",
-              "monkeyType": "Point",
-              "props": {
-                "height": 130,
-                "showTipBottomLine": false,
-                "title": "",
-                "type": "combo",
-                "width": 350
-              },
-              "version": "1.0.0",
-              "widgetName": "Card"
-            },
-            "height": 130,
-            "showTipBottomLine": false,
-            "title": "",
-            "type": "transparent",
-            "width": 350
+            "prefix": "*",
+            "showPrefix": false
           },
-          "i": "QueryButton"
+          "i": "wbc&ywn2"
         },
-        "wb1NTT0": {
-          "childAreaId": "polarbear6$V!3",
+        "MainCard": {
+          "childAreaId": "MainCard",
           "w": "MonkeyKing",
-          "a": "Hee",
           "m": "@lugia/lugia-web",
           "v": "1.0.0",
           "p": {
             "TargetContainer": {
-              "aliasName": "Hee",
-              "defaultTheme": {
-                "CardTitleHeadContainer": {
-                  "normal": {
-                    "height": 50,
-                    "padding": {
-                      "top": 0
-                    }
-                  }
-                },
-                "Container": {
-                  "normal": {
-                    "height": 400,
-                    "width": 750
-                  }
-                }
-              },
+              "type": "transparent",
               "module": "@lugia/lugia-web",
               "monkeyType": "Point",
               "props": {
                 "height": 130,
-                "showTipBottomLine": false,
-                "title": "",
-                "type": "combo",
                 "width": 350
               },
               "version": "1.0.0",
               "widgetName": "Card"
             },
             "height": 130,
-            "showTipBottomLine": false,
-            "title": "",
-            "type": "transparent",
-            "width": 350
+            "width": 350,
+            "type": "transparent"
           },
-          "i": "wb1NTT0"
+          "i": "MainCard"
         }
       },
-      "id": "polarbearCt%Y2",
+      "id": "MainBoxCard",
       "lastIndex": 0,
       "fatherId": "mainPad",
-      "widgetId": "wb7mlJ71",
+      "widgetId": "MainBoxCard",
       "group": false,
       "templateConfig": {}
     },
-    "wb1NTT0": {
-      "point": [34, 20],
-      "width": 1134,
+    "MainCard": {
+      "point": [
+        0.07792207790166117,
+        1.818181818199463
+      ],
+      "width": 1180,
       "index": 2,
-      "height": 132,
+      "height": 732,
       "zIndex": 1000,
       "type": "ChildPad",
       "layers": [
         {
-          "i": "OneBlockForm",
+          "i": "Table",
           "z": 0,
-          "w": 1096,
-          "h": 44,
-          "p": [13.5, 20.166666666666686],
-          "pw": 96.64902998236332,
-          "ph": 33.33333333333333,
+          "w": 1132,
+          "h": 440,
+          "p": [
+            23.775636128576537,
+            76.53987189281008
+          ],
+          "pw": 95.9322033898305,
+          "ph": 60.10928961748634,
           "pt": "lb",
-          "pp": [1.1904761904761905, 15.277777777777793]
+          "pp": [
+            2.0148844176759777,
+            10.456266652023235
+          ]
         },
         {
-          "i": "TwoBlockForm",
+          "i": "ExpandButton",
           "z": 1,
-          "w": 1096,
-          "h": 50,
-          "p": [10, 9.111111111111086],
-          "pw": 96.64902998236332,
-          "ph": 37.878787878787875,
-          "pp": [0.8818342151675485, 6.902356902356884]
-        }
-      ],
-      "idSeq": 0,
-      "id2WidgetInfo": {
-        "OneBlockForm": {
-          "childAreaId": "OneBlockForm",
-          "w": "MonkeyKing",
-          "a": "Hee",
-          "m": "@lugia/lugia-web",
-          "v": "1.0.0",
-          "p": {
-            "TargetContainer": {
-              "aliasName": "Hee",
-              "defaultTheme": {
-                "CardTitleHeadContainer": {
-                  "normal": {
-                    "height": 50,
-                    "padding": {
-                      "top": 0
-                    }
-                  }
-                },
-                "Container": {
-                  "normal": {
-                    "height": 400,
-                    "width": 750
-                  }
-                }
-              },
-              "module": "@lugia/lugia-web",
-              "monkeyType": "Point",
-              "props": {
-                "height": 130,
-                "showTipBottomLine": false,
-                "title": "",
-                "type": "combo",
-                "width": 350
-              },
-              "version": "1.0.0",
-              "widgetName": "Card"
-            },
-            "height": 130,
-            "showTipBottomLine": false,
-            "title": "",
-            "type": "transparent",
-            "width": 350
-          },
-          "i": "OneBlockForm"
-        },
-        "TwoBlockForm": {
-          "childAreaId": "TwoBlockForm",
-          "w": "MonkeyKing",
-          "a": "Hee",
-          "m": "@lugia/lugia-web",
-          "v": "1.0.0",
-          "p": {
-            "TargetContainer": {
-              "aliasName": "Hee",
-              "defaultTheme": {
-                "CardTitleHeadContainer": {
-                  "normal": {
-                    "height": 50,
-                    "padding": {
-                      "top": 0
-                    }
-                  }
-                },
-                "Container": {
-                  "normal": {
-                    "height": 400,
-                    "width": 750
-                  }
-                }
-              },
-              "module": "@lugia/lugia-web",
-              "monkeyType": "Point",
-              "props": {
-                "height": 130,
-                "showTipBottomLine": false,
-                "title": "",
-                "type": "combo",
-                "width": 350
-              },
-              "version": "1.0.0",
-              "widgetName": "Card"
-            },
-            "height": 130,
-            "showTipBottomLine": false,
-            "title": "",
-            "type": "transparent",
-            "width": 350
-          },
-          "i": "TwoBlockForm"
-        }
-      },
-      "id": "polarbear6$V!3",
-      "lastIndex": 0,
-      "fatherId": "polarbearCt%Y2",
-      "widgetId": "wb1NTT0",
-      "group": false,
-      "templateConfig": {}
-    },
-    "TwoBlockForm": {
-      "point": [10, 9.111111111111086],
-      "width": 1096,
-      "index": 3,
-      "height": 50,
-      "zIndex": 1000,
-      "type": "ChildPad",
-      "layers": [
-        {
-          "i": "wbzcRn0",
-          "z": 0,
-          "w": 110,
-          "h": 30,
-          "p": [0, 0],
-          "pw": 10.036496350364963,
-          "ph": 60,
-          "pp": [0, 0]
+          "w": 54,
+          "h": 18,
+          "p": [
+            701.649350649351,
+            588.3947033358795
+          ],
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "lb",
+          "pp": [
+            59.461809377063645,
+            80.38179007320758
+          ]
         },
         {
-          "i": "wbFk^d1",
-          "z": 1,
-          "w": 408,
-          "h": 32,
-          "p": [119.60000000000001, 0],
-          "pw": 37.22627737226277,
-          "ph": 64,
-          "pp": [10.912408759124089, 0]
-        },
-        {
-          "i": "wb3GKe2",
+          "i": "Page",
           "z": 2,
-          "w": 110,
-          "h": 30,
-          "p": [548, 0],
-          "pw": 10.036496350364963,
-          "ph": 60,
-          "pp": [50, 0]
+          "w": 1132,
+          "h": 28,
+          "p": [
+            24.352941176470267,
+            32.52236652237514
+          ],
+          "pw": 95.9322033898305,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            2.0638085742771413,
+            4.442946246226112
+          ]
         },
         {
-          "i": "wbpU#)3",
+          "i": "QueryForm",
           "z": 3,
-          "w": 408,
-          "h": 32,
-          "p": [667.6, 0],
-          "pw": 37.22627737226277,
-          "ph": 64,
-          "pp": [60.91240875912409, 0]
-        }
-      ],
-      "idSeq": 0,
-      "id2WidgetInfo": {
-        "wbzcRn0": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 20
-            },
-            "preId": "",
-            "preIds": ["wbzcRn0", "wbFk^d1"],
-            "widthScale": 0.2
-          },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "showPrefix": "",
-            "text": "姓名 : "
-          },
-          "i": "wbzcRn0"
-        },
-        "wbFk^d1": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 14,
-              "left": 10,
-              "right": 20
-            },
-            "preId": "wbzcRn0",
-            "preIds": ["wbzcRn0", "wbFk^d1"],
-            "widthScale": 0.8
-          },
-          "w": "Input",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "placeholder": "请输入姓名"
-          },
-          "i": "wbFk^d1"
-        },
-        "wb3GKe2": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 20
-            },
-            "preId": "wbFk^d1",
-            "preIds": ["wb3GKe2", "wbpU#)3"],
-            "widthScale": 0.2
-          },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "showPrefix": "",
-            "text": "性别 : "
-          },
-          "i": "wb3GKe2"
-        },
-        "wbpU#)3": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 14,
-              "left": 10,
-              "right": 20
-            },
-            "preId": "wb3GKe2",
-            "preIds": ["wb3GKe2", "wbpU#)3"],
-            "widthScale": 0.8
-          },
-          "w": "Input",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "placeholder": "请输入性别"
-          },
-          "i": "wbpU#)3"
-        }
-      },
-      "id": "TwoBlockForm",
-      "lastIndex": 0,
-      "fatherId": "polarbear6$V!3",
-      "widgetId": "TwoBlockForm",
-      "group": false,
-      "templateConfig": {
-        "columnCount": 2,
-        "slotType": "GridFlow",
-        "areaMargin": {
-          "bottom": 0,
-          "left": 0,
-          "top": 0
-        }
-      }
-    },
-    "OneBlockForm": {
-      "point": [13.5, 20.166666666666686],
-      "width": 1096,
-      "index": 4,
-      "height": 44,
-      "zIndex": 1000,
-      "type": "ChildPad",
-      "layers": [
-        {
-          "i": "wb*H^o0",
-          "z": 0,
-          "w": 110,
-          "h": 30,
-          "p": [0, 0],
-          "pw": 10.036496350364963,
-          "ph": 68.18181818181817,
-          "pp": [0, 0]
+          "w": 1149,
+          "h": 102,
+          "p": [
+            15.025974025973454,
+            1.675324675324532
+          ],
+          "pw": 97.37288135593221,
+          "ph": 13.934426229508196,
+          "pp": [
+            1.2733876293197843,
+            0.22886949116455355
+          ]
         },
         {
-          "i": "wbcAJO1",
-          "z": 1,
-          "w": 956,
-          "h": 30,
-          "p": [119.60000000000001, 0],
-          "pw": 87.22627737226277,
-          "ph": 68.18181818181817,
-          "pp": [10.912408759124089, 0]
-        }
-      ],
-      "idSeq": 0,
-      "id2WidgetInfo": {
-        "wb*H^o0": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 20
-            },
-            "preId": "",
-            "preIds": ["wb*H^o0", "wbcAJO1"],
-            "widthScale": 0.1
-          },
-          "w": "Label",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "showPrefix": "",
-            "text": "备注 : "
-          },
-          "i": "wb*H^o0"
+          "i": "AddButton",
+          "z": 4,
+          "w": 54,
+          "h": 18,
+          "p": [
+            91.1371961372015,
+            530.397635044694
+          ],
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "rb",
+          "pp": [
+            7.723491198067924,
+            72.45869331211667
+          ],
+          "ft": "xw"
         },
-        "wbcAJO1": {
-          "offsetInfo": {
-            "margin": {
-              "bottom": 14,
-              "left": 10,
-              "right": 20
-            },
-            "preId": "wb*H^o0",
-            "preIds": ["wb*H^o0", "wbcAJO1"],
-            "widthScale": 0.9
-          },
-          "w": "Input",
-          "m": "@lugia/lugia-web",
-          "v": "lasted",
-          "p": {
-            "placeholder": "请输入备注"
-          },
-          "i": "wbcAJO1"
-        }
-      },
-      "id": "OneBlockForm",
-      "lastIndex": 0,
-      "fatherId": "polarbear6$V!3",
-      "widgetId": "OneBlockForm",
-      "group": false,
-      "templateConfig": {
-        "columnCount": 1,
-        "slotType": "GridFlow",
-        "areaMargin": {
-          "bottom": 0,
-          "left": 0,
-          "top": 0
-        }
-      }
-    },
-    "QueryButton": {
-      "point": [38.5, 46.5],
-      "width": 1134,
-      "index": 5,
-      "height": 80,
-      "zIndex": 1000,
-      "type": "ChildPad",
-      "layers": [
         {
-          "i": "NextButton",
-          "z": 0,
-          "w": 78,
-          "h": 32,
-          "p": [95.22509765625, 30.423828125],
-          "pw": 6.878306878306878,
-          "ph": 40,
-          "pp": [8.397274925595239, 38.02978515625]
+          "i": "DeleteButton",
+          "z": 5,
+          "w": 54,
+          "h": 18,
+          "p": [
+            23.584415584414728,
+            530.397635044694
+          ],
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "rb",
+          "pp": [
+            1.9986792868148073,
+            72.45869331211667
+          ],
+          "ft": "xw"
+        },
+        {
+          "i": "SaveButton",
+          "z": 6,
+          "w": 88,
+          "h": 28,
+          "p": [
+            493.5454545454518,
+            583.8492487904256
+          ],
+          "pw": 7.457627118644068,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            41.82588597842812,
+            79.76082633748983
+          ]
+        },
+        {
+          "i": "SplitLine",
+          "z": 7,
+          "w": 1132,
+          "h": 1,
+          "p": [
+            23.58441558441453,
+            562.6363636363635
+          ],
+          "pw": 95.9322033898305,
+          "ph": 0.1366120218579235,
+          "pt": "rb",
+          "pp": [
+            1.9986792868147907,
+            76.86289120715348
+          ]
         },
         {
           "i": "ResetButton",
-          "z": 1,
+          "z": 8,
           "w": 88,
-          "h": 32,
-          "p": [205.22509765625, 30.923828125],
-          "pw": 7.760141093474426,
-          "ph": 40,
-          "pp": [18.097451292438272, 38.65478515625]
+          "h": 28,
+          "p": [
+            597.181818181817,
+            584.0310669722437
+          ],
+          "pw": 7.457627118644068,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            50.60862865947602,
+            79.78566488691854
+          ]
         }
       ],
       "idSeq": 0,
       "id2WidgetInfo": {
-        "NextButton": {
+        "QueryForm": {
+          "childAreaId": "QueryForm",
+          "w": "MonkeyKing",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "TargetContainer": {
+              "module": "@lugia/lugia-web",
+              "monkeyType": "Point",
+              "props": {
+                "height": 130,
+                "width": 350
+              },
+              "version": "1.0.0",
+              "widgetName": "Card"
+            },
+            "height": 130,
+            "width": 350,
+            "type": "transparent"
+          },
+          "i": "QueryForm"
+        },
+        "SaveButton": {
           "w": "Button",
-          "a": "Hee",
           "m": "@lugia/lugia-web",
           "v": "1.0.0",
           "p": {
@@ -536,63 +299,528 @@
             "disabled": false,
             "shape": "default",
             "size": "default",
-            "type": "primary",
-            "text": "下一步"
+            "text": "查询",
+            "type": "primary"
           },
-          "i": "NextButton"
+          "i": "SaveButton"
         },
         "ResetButton": {
           "w": "Button",
-          "a": "Hee",
           "m": "@lugia/lugia-web",
           "v": "1.0.0",
           "p": {
             "block": false,
             "disabled": false,
-            "icon": "lugia-icon-reminder_refresh",
             "shape": "default",
             "size": "default",
+            "text": "重置",
             "type": "primary",
-            "text": "重置"
+            "plain": true
           },
           "i": "ResetButton"
+        },
+        "ExpandButton": {
+          "w": "Button",
+          "a": "PlainButton",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "block": false,
+            "disabled": false,
+            "plain": true,
+            "shape": "default",
+            "size": "default",
+            "type": "primary"
+          },
+          "i": "ExpandButton"
+        },
+        "SplitLine": {
+          "w": "BasicElements",
+          "a": "Hee",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "shape": "square"
+          },
+          "i": "SplitLine"
+        },
+        "AddButton": {
+          "w": "Button",
+          "a": "PlainButton",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "icon": "lugia-icon-reminder_plus_circle_o",
+            "block": false,
+            "disabled": false,
+            "plain": true,
+            "shape": "default",
+            "size": "default",
+            "text": "新增",
+            "type": "primary"
+          },
+          "i": "AddButton"
+        },
+        "DeleteButton": {
+          "w": "Button",
+          "a": "PlainButton",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "block": false,
+            "disabled": false,
+            "icon": "lugia-icon-reminder_minus_circle_o",
+            "plain": true,
+            "shape": "default",
+            "size": "default",
+            "text": "删除",
+            "type": "primary"
+          },
+          "i": "DeleteButton"
+        },
+        "Table": {
+          "w": "SmartTable",
+          "m": "@/components",
+          "v": "1.0.0",
+          "p": {
+            "indentSize": 15,
+            "rowKey": "key",
+            "showHeader": true,
+            "tableStyle": "bordered",
+            "columns": [
+              {
+                "columnType": "",
+                "dataIndex": "title",
+                "editType": "string",
+                "key": "title",
+                "mark": 1582790476195,
+                "title": "用户ID"
+              },
+              {
+                "columnType": "",
+                "dataIndex": "key",
+                "key": "key",
+                "mark": 1582790475399,
+                "title": "用户名"
+              },
+              {
+                "columnType": "",
+                "dataIndex": "dataIndex",
+                "key": "dataIndex",
+                "mark": 1582790476023,
+                "title": "邮箱"
+              },
+              {
+                "columnType": "",
+                "dataIndex": "width",
+                "editType": "number",
+                "key": "width",
+                "mark": 1582790475507,
+                "title": "手机号"
+              },
+              {
+                "dataIndex": null,
+                "key": null,
+                "title": "创建时间",
+                "width": null
+              },
+              {
+                "dataIndex": null,
+                "key": null,
+                "title": "状态",
+                "width": null
+              }
+            ]
+          },
+          "i": "Table"
+        },
+        "Page": {
+          "w": "Pagination",
+          "m": "@lugia/lugia-web",
+          "v": "1.0.0",
+          "p": {
+            "blockList": [
+              "Total",
+              "Page",
+              "PageInput"
+            ],
+            "align": "Right",
+            "defaultCurrent": 1,
+            "defaultPageSize": 10,
+            "hideOnSinglePage": false,
+            "pageSizeOptions": [
+              "10",
+              "20",
+              "30",
+              "50"
+            ],
+            "showQuickJumper": true,
+            "isShowTotalData": true
+          },
+          "i": "Page"
         }
       },
-      "id": "QueryButton",
+      "id": "MainCard",
       "lastIndex": 0,
-      "fatherId": "polarbearCt%Y2",
-      "widgetId": "QueryButton",
+      "fatherId": "MainBoxCard",
+      "widgetId": "MainCard",
       "group": false,
       "templateConfig": {}
+    },
+    "QueryForm": {
+      "point": [
+        15.025974025973454,
+        1.675324675324532
+      ],
+      "width": 1149,
+      "index": 3,
+      "height": 102,
+      "zIndex": 1000,
+      "type": "ChildPad",
+      "layers": [
+        {
+          "i": "wb%YAv0",
+          "z": 0,
+          "w": 96,
+          "h": 30,
+          "p": [
+            0,
+            30
+          ],
+          "pw": 8.355091383812011,
+          "ph": 29.411764705882355,
+          "pp": [
+            0,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wb#KnZ1",
+          "z": 1,
+          "w": 275,
+          "h": 32,
+          "p": [
+            101.75,
+            30
+          ],
+          "pw": 23.93385552654482,
+          "ph": 31.372549019607842,
+          "pp": [
+            8.855526544821583,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wbVtH%2",
+          "z": 2,
+          "w": 96,
+          "h": 30,
+          "p": [
+            383,
+            30
+          ],
+          "pw": 8.355091383812011,
+          "ph": 29.411764705882355,
+          "pp": [
+            33.33333333333333,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wbcUhP3",
+          "z": 3,
+          "w": 275,
+          "h": 32,
+          "p": [
+            484.75,
+            30
+          ],
+          "pw": 23.93385552654482,
+          "ph": 31.372549019607842,
+          "pp": [
+            42.188859878154915,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wb3*7R4",
+          "z": 4,
+          "w": 96,
+          "h": 30,
+          "p": [
+            766,
+            30
+          ],
+          "pw": 8.355091383812011,
+          "ph": 29.411764705882355,
+          "pp": [
+            66.66666666666666,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wb7V7S5",
+          "z": 5,
+          "w": 275,
+          "h": 32,
+          "p": [
+            867.75,
+            30
+          ],
+          "pw": 23.93385552654482,
+          "ph": 31.372549019607842,
+          "pp": [
+            75.52219321148826,
+            29.411764705882355
+          ]
+        },
+        {
+          "i": "wbuSt^6",
+          "z": 6,
+          "w": 96,
+          "h": 30,
+          "p": [
+            0,
+            70
+          ],
+          "pw": 8.355091383812011,
+          "ph": 29.411764705882355,
+          "pp": [
+            0,
+            68.62745098039215
+          ]
+        },
+        {
+          "i": "wbmi)j7",
+          "z": 7,
+          "w": 275,
+          "h": 32,
+          "p": [
+            101.75,
+            70
+          ],
+          "pw": 23.93385552654482,
+          "ph": 31.372549019607842,
+          "pp": [
+            8.855526544821583,
+            68.62745098039215
+          ]
+        }
+      ],
+      "idSeq": 0,
+      "id2WidgetInfo": {
+        "wb%YAv0": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8
+            },
+            "preId": "",
+            "preIds": [
+              "wb%YAv0",
+              "wb#KnZ1"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.25
+          },
+          "w": "Label",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "text": "性别 : ",
+            "prefix": "*"
+          },
+          "i": "wb%YAv0"
+        },
+        "wb#KnZ1": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8,
+              "left": 6,
+              "right": 6
+            },
+            "preId": "wb%YAv0",
+            "preIds": [
+              "wb%YAv0",
+              "wb#KnZ1"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.75
+          },
+          "w": "Input",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "field": "sex",
+            "placeholder": "请输入性别",
+            "validateType": "top"
+          },
+          "i": "wb#KnZ1"
+        },
+        "wbVtH%2": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8
+            },
+            "preId": "wb#KnZ1",
+            "preIds": [
+              "wbVtH%2",
+              "wbcUhP3"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.25
+          },
+          "w": "Label",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "text": "姓名 : ",
+            "prefix": "*"
+          },
+          "i": "wbVtH%2"
+        },
+        "wbcUhP3": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8,
+              "left": 6,
+              "right": 6
+            },
+            "preId": "wbVtH%2",
+            "preIds": [
+              "wbVtH%2",
+              "wbcUhP3"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.75
+          },
+          "w": "Input",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "field": "name",
+            "placeholder": "请输入姓名",
+            "validateType": "top"
+          },
+          "i": "wbcUhP3"
+        },
+        "wb3*7R4": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8
+            },
+            "preId": "wbcUhP3",
+            "preIds": [
+              "wb3*7R4",
+              "wb7V7S5"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.25
+          },
+          "w": "Label",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "text": "年龄 : ",
+            "prefix": "*"
+          },
+          "i": "wb3*7R4"
+        },
+        "wb7V7S5": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8,
+              "left": 6,
+              "right": 6
+            },
+            "preId": "wb3*7R4",
+            "preIds": [
+              "wb3*7R4",
+              "wb7V7S5"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.75
+          },
+          "w": "Input",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "field": "age",
+            "placeholder": "请输入年龄",
+            "validateType": "top"
+          },
+          "i": "wb7V7S5"
+        },
+        "wbuSt^6": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8
+            },
+            "preId": "wb7V7S5",
+            "preIds": [
+              "wbuSt^6",
+              "wbmi)j7"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.25
+          },
+          "w": "Label",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "text": "性别 : ",
+            "prefix": "*"
+          },
+          "i": "wbuSt^6"
+        },
+        "wbmi)j7": {
+          "offsetInfo": {
+            "margin": {
+              "top": 8,
+              "left": 6,
+              "right": 6
+            },
+            "preId": "wbuSt^6",
+            "preIds": [
+              "wbuSt^6",
+              "wbmi)j7"
+            ],
+            "minHeight": 80,
+            "widthScale": 0.75
+          },
+          "w": "Input",
+          "m": "@lugia/lugia-web",
+          "v": "lasted",
+          "p": {
+            "field": "sex",
+            "placeholder": "请输入性别",
+            "validateType": "top"
+          },
+          "i": "wbmi)j7"
+        }
+      },
+      "id": "QueryForm",
+      "lastIndex": 0,
+      "fatherId": "MainCard",
+      "widgetId": "QueryForm",
+      "group": false,
+      "templateConfig": {
+        "columnCount": 3,
+        "slotType": "GridFlow",
+        "areaMargin": {
+          "left": 0,
+          "top": 22,
+          "bottom": 0
+        }
+      }
     }
   },
   "forkDependencies": [],
   "mainDependencies": [
     {
-      "aliasName": "Hee",
-      "defaultTheme": {
-        "CardTitleHeadContainer": {
-          "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
-            }
-          }
-        },
-        "Container": {
-          "normal": {
-            "height": 400,
-            "width": 750
-          }
-        }
-      },
       "module": "@lugia/lugia-web",
       "monkeyType": "Point",
       "props": {
         "height": 130,
-        "showTipBottomLine": false,
-        "title": "",
-        "type": "combo",
         "width": 350
       },
       "version": "1.0.0",
@@ -601,12 +829,32 @@
     {
       "version": "1.0.0",
       "module": "@lugia/lugia-web",
-      "widgetName": "Label"
+      "widgetName": "Breadcrumb"
     },
     {
       "version": "1.0.0",
       "module": "@lugia/lugia-web",
-      "widgetName": "Breadcrumb"
+      "widgetName": "Label"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@/components",
+      "widgetName": "SmartTable"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Button"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "Pagination"
+    },
+    {
+      "version": "1.0.0",
+      "module": "@lugia/lugia-web",
+      "widgetName": "BasicElements"
     },
     {
       "version": "lasted",
@@ -617,15 +865,13 @@
       "version": "lasted",
       "module": "@lugia/lugia-web",
       "widgetName": "Input"
-    },
-    {
-      "version": "1.0.0",
-      "module": "@lugia/lugia-web",
-      "widgetName": "Button"
     }
   ],
   "forkPad": {
-    "point": [-24328, -24640.2],
+    "point": [
+      -24160,
+      -24798.5
+    ],
     "width": 50000,
     "index": 0,
     "height": 50000,
@@ -640,150 +886,90 @@
     "templateConfig": {}
   },
   "mainPad": {
-    "point": [52, -116.20000000000073],
+    "point": [
+      220,
+      -232
+    ],
     "width": 1240,
     "index": 0,
-    "height": 956,
+    "height": 867,
     "zIndex": 4000,
     "type": "MainPad",
     "layers": [
       {
-        "i": "wb7mlJ71",
+        "i": "MainBoxCard",
         "z": 0,
-        "w": 1206,
-        "h": 287,
-        "p": [73.91824776785711, 97.64760044642861],
-        "pw": 97.25806451612902,
-        "ph": 30.020920502092054,
-        "pp": [5.961149013536864, 10.214184147115963]
-      },
-      {
-        "i": "wbbsw40",
-        "z": 1,
-        "w": 42,
-        "h": 20,
-        "p": [24.57310267857315, 16.714285714285182],
-        "pw": 3.387096774193549,
-        "ph": 2.092050209205021,
-        "pp": [1.9817018289171897, 1.7483562462641404]
+        "w": 1180,
+        "h": 732,
+        "p": [
+          30.000000000019554,
+          41.99999999998127
+        ],
+        "pw": 95.16129032258065,
+        "ph": 84.42906574394463,
+        "pp": [
+          2.419354838711254,
+          4.844290657437286
+        ]
       },
       {
         "i": "Router",
-        "z": 2,
-        "w": 312,
-        "h": 30,
-        "p": [66.00167410714494, 15.761904761903708],
-        "pw": 25.161290322580644,
-        "ph": 3.1380753138075312,
-        "pp": [5.322715653802011, 1.6487348077305133]
-      },
-      {
-        "i": "Title",
-        "z": 3,
-        "w": 28,
-        "h": 20,
-        "p": [27.430245535717404, 51.0000000000052],
-        "pw": 2.258064516129032,
-        "ph": 2.092050209205021,
-        "pp": [2.212116575461081, 5.334728033473348]
+        "z": 1,
+        "w": 1180,
+        "h": 18,
+        "p": [
+          30,
+          14
+        ],
+        "pw": 95.16129032258065,
+        "ph": 2.0761245674740483,
+        "pp": [
+          2.4193548387096775,
+          1.6147635524798154
+        ]
       }
     ],
     "idSeq": 91291,
     "id2WidgetInfo": {
       "Router": {
         "w": "Breadcrumb",
-        "a": "Hee",
         "m": "@lugia/lugia-web",
         "v": "1.0.0",
         "p": {
+          "lastSeparator": "",
+          "separator": "/",
           "routes": [
             {
-              "path": "a",
-              "title": "测试",
-              "widgetName": "Input"
+              "title": "首页"
             },
             {
-              "path": "b",
-              "title": "路由",
-              "widgetName": "Input"
-            },
-            {
-              "path": "test3",
-              "title": "test3"
+              "path": "/",
+              "title": "用户管理"
             }
-          ],
-          "separator": "/"
+          ]
         },
         "i": "Router"
       },
-      "Title": {
-        "w": "Label",
-        "a": "Hee",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
-          "prefix": "*",
-          "showPrefix": false,
-          "text": "测试"
-        },
-        "i": "Title"
-      },
-      "wb7mlJ71": {
-        "childAreaId": "polarbearCt%Y2",
+      "MainBoxCard": {
+        "childAreaId": "MainBoxCard",
         "w": "MonkeyKing",
-        "a": "Hee",
         "m": "@lugia/lugia-web",
         "v": "1.0.0",
         "p": {
           "TargetContainer": {
-            "aliasName": "Hee",
-            "defaultTheme": {
-              "CardTitleHeadContainer": {
-                "normal": {
-                  "height": 50,
-                  "padding": {
-                    "top": 0
-                  }
-                }
-              },
-              "Container": {
-                "normal": {
-                  "height": 400,
-                  "width": 750
-                }
-              }
-            },
             "module": "@lugia/lugia-web",
             "monkeyType": "Point",
             "props": {
               "height": 130,
-              "showTipBottomLine": false,
-              "title": "",
-              "type": "combo",
               "width": 350
             },
             "version": "1.0.0",
             "widgetName": "Card"
           },
           "height": 130,
-          "showTipBottomLine": false,
-          "title": "",
-          "type": "transparent",
           "width": 350
         },
-        "i": "wb7mlJ71"
-      },
-      "wbbsw40": {
-        "w": "Label",
-        "a": "Hee",
-        "m": "@lugia/lugia-web",
-        "v": "1.0.0",
-        "p": {
-          "prefix": "*",
-          "showPrefix": false,
-          "text": "位置："
-        },
-        "i": "wbbsw40"
+        "i": "MainBoxCard"
       }
     },
     "id": "mainPad",
@@ -792,126 +978,349 @@
     "templateConfig": {},
     "children": [
       {
-        "widgetId": "wb7mlJ71",
-        "path": ["@root"],
+        "widgetId": "MainBoxCard",
+        "path": [
+          "@root"
+        ],
         "children": [
           {
-            "widgetId": "wb1NTT0",
-            "path": ["@root", "wb7mlJ71"],
+            "widgetId": "MainCard",
+            "path": [
+              "@root",
+              "MainBoxCard"
+            ],
             "children": [
               {
-                "widgetId": "TwoBlockForm",
-                "path": ["@root", "wb7mlJ71", "wb1NTT0"]
-              },
-              {
-                "widgetId": "OneBlockForm",
-                "path": ["@root", "wb7mlJ71", "wb1NTT0"]
+                "widgetId": "QueryForm",
+                "path": [
+                  "@root",
+                  "MainBoxCard",
+                  "MainCard"
+                ]
               }
             ]
-          },
-          {
-            "widgetId": "QueryButton",
-            "path": ["@root", "wb7mlJ71"]
           }
         ]
       }
     ],
-    "backgroudColor": "#ffffff"
+    "backgroudColor": "#f8f8f8"
   },
   "themes": {
     "widgetId2ThemeInfo": {
-      "NextButton": {},
-      "OneBlockForm": {
-        "CardTitleHeadContainer": {
-          "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
-            }
-          }
-        },
+      "SaveButton": {
         "Container": {
           "normal": {
-            "height": 44,
-            "width": 1096
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "height": 28,
+            "width": 88
           }
         }
       },
-      "QueryButton": {
-        "CardTitleHeadContainer": {
-          "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
-            }
-          }
-        },
+      "Table": {
         "Container": {
           "normal": {
-            "height": 80,
-            "width": 1134
+            "height": 440,
+            "width": 1132
+          }
+        },
+        "getValue": {
+          "Container": {
+            "normal": {
+              "width": 1149,
+              "height": 360
+            }
           }
         }
       },
-      "ResetButton": {},
       "Router": {
-        "Container": {
-          "normal": {
-            "width": 312
-          }
-        }
-      },
-      "Title": {},
-      "TwoBlockForm": {
-        "CardTitleHeadContainer": {
-          "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
+        "BreadcrumbItem": {
+          "Text": {
+            "normal": {
+              "last": {
+                "color": "#666666",
+                "font": {
+                  "family": "",
+                  "size": "",
+                  "style": "normal",
+                  "weight": "normal"
+                }
+              },
+              "fontSize": 14
             }
           }
         },
         "Container": {
           "normal": {
-            "height": 50,
-            "width": 1096
+            "width": 1180,
+            "height": 18
           }
         }
       },
-      "wb1NTT0": {
-        "CardTitleHeadContainer": {
+      "DeleteButton": {
+        "Container": {
           "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
+            "background": "none",
+            "border": "none",
+            "height": 18,
+            "width": 54
+          },
+          "hover": {
+            "background": "none",
+            "border": "none"
+          },
+          "active": {
+            "background": "none",
+            "border": "none"
+          },
+          "focus": {
+            "background": "none",
+            "border": "none"
+          }
+        },
+        "ButtonText": {
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        },
+        "ButtonIcon": {
+          "normal": {
+            "margin": {
+              "right": 8
+            }
+          },
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        }
+      },
+      "AddButton": {
+        "Container": {
+          "normal": {
+            "background": "none",
+            "border": "none",
+            "height": 18,
+            "width": 54
+          },
+          "hover": {
+            "background": "none",
+            "border": "none"
+          },
+          "active": {
+            "background": "none",
+            "border": "none"
+          },
+          "focus": {
+            "background": "none",
+            "border": "none"
+          }
+        },
+        "ButtonText": {
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        },
+        "ButtonIcon": {
+          "normal": {
+            "margin": {
+              "right": 8
+            }
+          },
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        }
+      },
+      "ExpandButton": {
+        "Container": {
+          "normal": {
+            "background": "none",
+            "border": "none",
+            "height": 18,
+            "width": 54
+          },
+          "hover": {
+            "background": "none",
+            "border": "none"
+          },
+          "active": {
+            "background": "none",
+            "border": "none"
+          },
+          "focus": {
+            "background": "none",
+            "border": "none"
+          }
+        },
+        "ButtonText": {
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        },
+        "ButtonIcon": {
+          "normal": {
+            "margin": {
+              "right": 8
+            }
+          },
+          "active": {
+            "color": "#8C9DFF"
+          },
+          "hover": {
+            "color": "#8C9DFF"
+          },
+          "focus": {
+            "color": "#4d63f"
+          }
+        }
+      },
+      "MainCard": {
+        "Container": {
+          "normal": {
+            "height": 732,
+            "width": 1180
+          }
+        }
+      },
+      "Page": {
+        "Container": {
+          "normal": {
+            "width": 1132,
+            "height": 28
+          }
+        },
+        "PaginationListItem": {
+          "normal": {
+            "height": 28,
+            "width": 28,
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
             }
           }
         },
-        "Container": {
+        "PaginationArrowIconContainer": {
           "normal": {
-            "height": 132,
-            "width": 1134
-          }
-        }
-      },
-      "wb7mlJ71": {
-        "CardTitleHeadContainer": {
-          "normal": {
-            "height": 50,
-            "padding": {
-              "top": 0
+            "height": 28,
+            "width": 28,
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
             }
           }
         },
-        "Container": {
-          "normal": {
-            "height": 287,
-            "width": 1206
+        "QuickJumpInput": {
+          "Container": {
+            "normal": {
+              "height": 28,
+              "borderRadius": {
+                "bottomLeft": 4,
+                "bottomRight": 4,
+                "topLeft": 4,
+                "topRight": 4
+              }
+            }
           }
         }
       },
-      "wbbsw40": {},
-      "wbzcRn0": {
+      "QueryForm": {
+        "Container": {
+          "normal": {
+            "height": 102,
+            "width": 1149
+          }
+        }
+      },
+      "SplitLine": {
+        "Container": {
+          "normal": {
+            "width": 1132,
+            "height": 1,
+            "background": {
+              "color": "#e8e8e8"
+            }
+          }
+        }
+      },
+      "MainBoxCard": {
+        "Container": {
+          "normal": {
+            "height": 732,
+            "width": 1180,
+            "border": "none",
+            "boxShadow": "none"
+          }
+        }
+      },
+      "wbc&ywn2": {
+        "Container": {
+          "normal": {
+            "color": "#666666",
+            "font": {
+              "family": "",
+              "size": 14,
+              "style": "normal",
+              "weight": "normal"
+            },
+            "width": 241,
+            "height": 30,
+            "textAlign": "right"
+          }
+        }
+      },
+      "ResetButton": {
+        "Container": {
+          "normal": {
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "height": 28,
+            "width": 88
+          }
+        }
+      },
+      "wb%YAv0": {
         "Container": {
           "normal": {
             "textAlign": "right",
@@ -921,27 +1330,61 @@
             "color": "#333",
             "height": 30,
             "lineHeight": 30,
-            "width": 109.60000000000001
+            "width": 95.75
+          }
+        },
+        "LabelPrefix": {
+          "normal": {
+            "color": "red",
+            "font": {
+              "size": 14
+            }
           }
         }
       },
-      "wbFk^d1": {
+      "wb#KnZ1": {
         "Placeholder": {
           "normal": {
-            "font": {
-              "size": 14
-            },
+            "fontSize": 14,
             "color": "#ccc"
           }
         },
         "Container": {
           "normal": {
-            "width": 408.40000000000003,
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "border": {
+              "top": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "left": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "right": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "bottom": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              }
+            },
+            "width": 275.25,
             "height": 32
           }
         }
       },
-      "wb3GKe2": {
+      "wbVtH%2": {
         "Container": {
           "normal": {
             "textAlign": "right",
@@ -951,27 +1394,61 @@
             "color": "#333",
             "height": 30,
             "lineHeight": 30,
-            "width": 109.60000000000001
+            "width": 95.75
+          }
+        },
+        "LabelPrefix": {
+          "normal": {
+            "color": "red",
+            "font": {
+              "size": 14
+            }
           }
         }
       },
-      "wbpU#)3": {
+      "wbcUhP3": {
         "Placeholder": {
           "normal": {
-            "font": {
-              "size": 14
-            },
+            "fontSize": 14,
             "color": "#ccc"
           }
         },
         "Container": {
           "normal": {
-            "width": 408.40000000000003,
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "border": {
+              "top": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "left": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "right": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "bottom": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              }
+            },
+            "width": 275.25,
             "height": 32
           }
         }
       },
-      "wb*H^o0": {
+      "wb3*7R4": {
         "Container": {
           "normal": {
             "textAlign": "right",
@@ -981,11 +1458,61 @@
             "color": "#333",
             "height": 30,
             "lineHeight": 30,
-            "width": 109.60000000000001
+            "width": 95.75
+          }
+        },
+        "LabelPrefix": {
+          "normal": {
+            "color": "red",
+            "font": {
+              "size": 14
+            }
           }
         }
       },
-      "wbcAJO1": {
+      "wb7V7S5": {
+        "Placeholder": {
+          "normal": {
+            "fontSize": 14,
+            "color": "#ccc"
+          }
+        },
+        "Container": {
+          "normal": {
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "border": {
+              "top": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "left": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "right": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "bottom": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              }
+            },
+            "width": 275.25,
+            "height": 32
+          }
+        }
+      },
+      "wbuSt^6": {
         "Container": {
           "normal": {
             "textAlign": "right",
@@ -995,58 +1522,384 @@
             "color": "#333",
             "height": 30,
             "lineHeight": 30,
-            "width": 956.4
+            "width": 95.75
+          }
+        },
+        "LabelPrefix": {
+          "normal": {
+            "color": "red",
+            "font": {
+              "size": 14
+            }
+          }
+        }
+      },
+      "wbmi)j7": {
+        "Placeholder": {
+          "normal": {
+            "fontSize": 14,
+            "color": "#ccc"
+          }
+        },
+        "Container": {
+          "normal": {
+            "borderRadius": {
+              "bottomLeft": 4,
+              "bottomRight": 4,
+              "topLeft": 4,
+              "topRight": 4
+            },
+            "border": {
+              "top": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "left": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "right": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              },
+              "bottom": {
+                "color": "#d8d8d8",
+                "width": 1,
+                "style": "solid"
+              }
+            },
+            "width": 275.25,
+            "height": 32
           }
         }
       }
     }
   },
   "lugiax": {
-    "page2mutation": {},
+    "page2mutation": {
+      "constructor": {
+        "modelName": "hello",
+        "mutationName": "init"
+      },
+      "componentWillUnmount": {
+        "modelName": "hello",
+        "mutationName": "unMount"
+      },
+      "componentDidMount": {
+        "modelName": "hello",
+        "mutationName": "didMount"
+      }
+    },
     "widgetId2PropsName2BindInfo": {
-      "wbFk^d1": {
-        "value": {
-          "m": "",
-          "f": "name",
-          "p": "value",
-          "b": "bind"
+      "QueryForm": {
+        "theme": {
+          "m": "$__data__.model",
+          "f": "theme",
+          "p": "theme",
+          "b": "connect"
         }
       },
-      "wbpU#)3": {
+      "MainCard": {
+        "theme": {
+          "m": "$__data__.model",
+          "f": "theme",
+          "p": "theme",
+          "b": "connect"
+        }
+      },
+      "MainBoxCard": {
+        "theme": {
+          "m": "$__data__.model",
+          "f": "theme",
+          "p": "theme",
+          "b": "connect"
+        }
+      },
+      "ExpandButton": {
+        "icon": {
+          "m": "$__data__.model",
+          "f": "ExpandButton.icon",
+          "p": "icon",
+          "b": "connect"
+        },
+        "text": {
+          "m": "$__data__.model",
+          "f": "ExpandButton.text",
+          "p": "text",
+          "b": "connect"
+        },
+        "lugiaHidden": {
+          "m": "$__data__.model",
+          "f": "btnHidden",
+          "p": "lugiaHidden",
+          "b": "connect"
+        }
+      },
+      "Page": {
+        "current": {
+          "m": "hello",
+          "f": "current",
+          "p": "current",
+          "b": "connect"
+        },
+        "total": {
+          "m": "hello",
+          "f": "total",
+          "p": "total",
+          "b": "connect"
+        },
+        "pageSize": {
+          "m": "hello",
+          "f": "pageSize",
+          "p": "pageSize",
+          "b": "connect"
+        }
+      },
+      "TotalCount": {
+        "text": {
+          "m": "hello",
+          "f": "totalText",
+          "p": "text",
+          "b": "connect"
+        }
+      },
+      "wb#KnZ1": {
         "value": {
-          "m": "",
+          "m": "hello",
           "f": "sex",
           "p": "value",
           "b": "bind"
+        },
+        "validateStatus": {
+          "m": "$__data__.model",
+          "f": "sexError",
+          "p": "validateStatus",
+          "b": "connect"
+        },
+        "help": {
+          "m": "$__data__.model",
+          "f": "sexHelp",
+          "p": "help",
+          "b": "connect"
         }
       },
-      "wbcAJO1": {
+      "wbcUhP3": {
         "value": {
-          "m": "",
-          "f": "bz",
+          "m": "hello",
+          "f": "name",
           "p": "value",
           "b": "bind"
+        },
+        "validateStatus": {
+          "m": "$__data__.model",
+          "f": "nameError",
+          "p": "validateStatus",
+          "b": "connect"
+        },
+        "help": {
+          "m": "$__data__.model",
+          "f": "nameHelp",
+          "p": "help",
+          "b": "connect"
+        }
+      },
+      "wb7V7S5": {
+        "value": {
+          "m": "hello",
+          "f": "age",
+          "p": "value",
+          "b": "bind"
+        },
+        "validateStatus": {
+          "m": "$__data__.model",
+          "f": "ageError",
+          "p": "validateStatus",
+          "b": "connect"
+        },
+        "help": {
+          "m": "$__data__.model",
+          "f": "ageHelp",
+          "p": "help",
+          "b": "connect"
+        }
+      },
+      "wbmi)j7": {
+        "value": {
+          "m": "hello",
+          "f": "sex",
+          "p": "value",
+          "b": "bind"
+        },
+        "validateStatus": {
+          "m": "$__data__.model",
+          "f": "sexError",
+          "p": "validateStatus",
+          "b": "connect"
+        },
+        "help": {
+          "m": "$__data__.model",
+          "f": "sexHelp",
+          "p": "help",
+          "b": "connect"
+        }
+      },
+      "Table": {
+        "data": {
+          "m": "hello",
+          "f": "table",
+          "p": "data",
+          "b": "connect"
+        },
+        "selectRowKeys": {
+          "m": "hello",
+          "f": "selected",
+          "p": "selectRowKeys",
+          "b": "connect"
         }
       }
     },
     "widgetId2EventName2MutationInfo": {
-      "NextButton": {
-        "onClick": {
-          "e": "onClick",
-          "m": "",
-          "mu": "asyncDoNext"
-        }
-      },
       "ResetButton": {
         "onClick": {
           "e": "onClick",
-          "m": "",
-          "mu": "doReset"
+          "m": "hello",
+          "mu": "resetQuery"
+        }
+      },
+      "AddButton": {
+        "onClick": {
+          "e": "onClick",
+          "m": "hello",
+          "mu": "add"
+        }
+      },
+      "Page": {
+        "onChange": {
+          "e": "onChange",
+          "m": "hello",
+          "mu": "asyncOnChangePage"
+        }
+      },
+      "Table": {
+        "onChange": {
+          "e": "onChange",
+          "m": "hello",
+          "mu": "onSelected"
+        },
+        "onEdit": {
+          "e": "onEdit",
+          "m": "hello",
+          "mu": "asyncOnEdit"
         }
       }
     },
     "pageData": {
-      "model": "a77e8dd0-57f4-4ccb-a3ed-dc3db2e43a69"
+      "dependenciesModels": [
+        "hello"
+      ],
+      "state": {
+        "text": "保存",
+        "sexError": "",
+        "sexHelp": "",
+        "nameError": "",
+        "nameHelp": "",
+        "ageError": "",
+        "ageHelp": "",
+        "btnHidden": false,
+        "direction": -1,
+        "ExpandButton": {
+          "icon": "lugia-icon-direction_up",
+          "text": "收起"
+        },
+        "theme": {
+          "QueryForm": {
+            "Container": {
+              "normal": {
+                "height": 102,
+                "overflow": "hidden"
+              }
+            }
+          },
+          "MainCard": {
+            "Container": {
+              "normal": {
+                "height": 732
+              }
+            }
+          },
+          "MainBoxCard": {
+            "Container": {
+              "normal": {
+                "height": 732,
+                "border": "none",
+                "boxShadow": "none"
+              }
+            }
+          }
+        }
+      },
+      "scripts": {
+        "onQuery": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/hello/onQuery.js"
+        },
+        "onValidate": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/hello/validate"
+        },
+        "onExpand": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/onExpand"
+        },
+        "onInit": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/onInit"
+        },
+        "onDelete": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/onDelete"
+        },
+        "onView": {
+          "type": "Project",
+          "code": "../ue/lugia/smart/query/onViewRecord"
+        }
+      },
+      "bindEvent": {
+        "SaveButton": {
+          "onClick": "onQuery"
+        },
+        "DeleteButton": {
+          "onClick": "onDelete"
+        },
+        "ExpandButton": {
+          "onClick": "onExpand"
+        },
+        "wb#KnZ1": {
+          "onChange": "onValidate"
+        },
+        "wbcUhP3": {
+          "onChange": "onValidate"
+        },
+        "wb7V7S5": {
+          "onChange": "onValidate"
+        },
+        "wbmi)j7": {
+          "onChange": "onValidate"
+        },
+        "Table": {
+          "onView": "onView",
+          "onDelete": "onDelete"
+        }
+      },
+      "lifeScripts": {
+        "constructor": "onInit",
+        "componentDidMount": "onInit",
+        "componentWillUnmount": "onInit"
+      },
+      "model": "0e58d3c7-396c-4587-b47b-15c03257e2ff"
     }
   },
   "assets": {
@@ -1056,391 +1909,1696 @@
   "widgetId2Locked": {},
   "layoutInfos": {
     "mode2Config": {
-      "1240x956": {
+      "1240x867": {
         "mainPadSize": {
           "width": 1240,
-          "height": 956
+          "height": 867
         },
-        "widthRange": [0, 50000]
+        "widthRange": [
+          0,
+          50000
+        ],
+        "scale": 0.4,
+        "forkPadPoint": [
+          -24160,
+          -24798.5
+        ]
       }
     },
     "mode2LayoutData": {
-      "1240x956": {
-        "wb7mlJ71": {
+      "1240x867": {
+        "MainBoxCard": {
           "theme": {
-            "CardTitleHeadContainer": {
+            "Container": {
               "normal": {
-                "height": 50,
-                "padding": {
-                  "top": 0
+                "height": 732,
+                "width": 1180,
+                "border": "none",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "a": "mainPad",
+          "i": "MainBoxCard",
+          "z": 0,
+          "w": 1180,
+          "h": 732,
+          "p": [
+            30.000000000019554,
+            41.99999999998127
+          ],
+          "wi": "MainBoxCard",
+          "pw": 95.16129032258065,
+          "ph": 84.42906574394463,
+          "pp": [
+            2.419354838711254,
+            4.844290657437286
+          ]
+        },
+        "Router": {
+          "theme": {
+            "BreadcrumbItem": {
+              "Text": {
+                "normal": {
+                  "last": {
+                    "color": "#666666",
+                    "font": {
+                      "family": "",
+                      "size": "",
+                      "style": "normal",
+                      "weight": "normal"
+                    }
+                  },
+                  "fontSize": 14
                 }
               }
             },
             "Container": {
               "normal": {
-                "height": 287,
-                "width": 1206
-              }
-            }
-          },
-          "a": "mainPad",
-          "i": "wb7mlJ71",
-          "z": 0,
-          "w": 1206,
-          "h": 287,
-          "p": [73.91824776785711, 97.64760044642861],
-          "wi": "wb7mlJ71",
-          "pw": 97.25806451612902,
-          "ph": 30.020920502092054,
-          "pp": [5.961149013536864, 10.214184147115963]
-        },
-        "wbbsw40": {
-          "theme": {},
-          "a": "mainPad",
-          "i": "wbbsw40",
-          "z": 1,
-          "w": 42,
-          "h": 20,
-          "p": [24.57310267857315, 16.714285714285182],
-          "wi": "wbbsw40",
-          "pw": 3.387096774193549,
-          "ph": 2.092050209205021,
-          "pp": [1.9817018289171897, 1.7483562462641404]
-        },
-        "Router": {
-          "theme": {
-            "Container": {
-              "normal": {
-                "width": 312
+                "width": 1180,
+                "height": 18
               }
             }
           },
           "a": "mainPad",
           "i": "Router",
-          "z": 2,
-          "w": 312,
-          "h": 30,
-          "p": [66.00167410714494, 15.761904761903708],
+          "z": 1,
+          "w": 1180,
+          "h": 18,
+          "p": [
+            30,
+            14
+          ],
           "wi": "Router",
-          "pw": 25.161290322580644,
-          "ph": 3.1380753138075312,
-          "pp": [5.322715653802011, 1.6487348077305133]
+          "pw": 95.16129032258065,
+          "ph": 2.0761245674740483,
+          "pp": [
+            2.4193548387096775,
+            1.6147635524798154
+          ]
         },
-        "Title": {
-          "theme": {},
-          "a": "mainPad",
-          "i": "Title",
-          "z": 3,
-          "w": 28,
-          "h": 20,
-          "p": [27.430245535717404, 51.0000000000052],
-          "wi": "Title",
-          "pw": 2.258064516129032,
-          "ph": 2.092050209205021,
-          "pp": [2.212116575461081, 5.334728033473348]
-        },
-        "QueryButton": {
-          "theme": {
-            "CardTitleHeadContainer": {
-              "normal": {
-                "height": 50,
-                "padding": {
-                  "top": 0
-                }
-              }
-            },
-            "Container": {
-              "normal": {
-                "height": 80,
-                "width": 1134
-              }
-            }
-          },
-          "a": "polarbearCt%Y2",
-          "i": "QueryButton",
-          "z": 0,
-          "w": 1134,
-          "h": 80,
-          "p": [38.5, 46.5],
-          "wi": "QueryButton",
-          "pw": 94.02985074626866,
-          "ph": 27.874564459930312,
-          "pt": "lb",
-          "pp": [3.1923714759535655, 16.202090592334496]
-        },
-        "wb1NTT0": {
-          "theme": {
-            "CardTitleHeadContainer": {
-              "normal": {
-                "height": 50,
-                "padding": {
-                  "top": 0
-                }
-              }
-            },
-            "Container": {
-              "normal": {
-                "height": 132,
-                "width": 1134
-              }
-            }
-          },
-          "a": "polarbearCt%Y2",
-          "i": "wb1NTT0",
-          "z": 1,
-          "w": 1134,
-          "h": 132,
-          "p": [34, 20],
-          "wi": "wb1NTT0",
-          "pw": 94.02985074626866,
-          "ph": 45.99303135888502,
-          "pp": [2.8192371475953566, 6.968641114982578]
-        },
-        "OneBlockForm": {
-          "theme": {
-            "CardTitleHeadContainer": {
-              "normal": {
-                "height": 50,
-                "padding": {
-                  "top": 0
-                }
-              }
-            },
-            "Container": {
-              "normal": {
-                "height": 44,
-                "width": 1096
-              }
-            }
-          },
-          "a": "polarbear6$V!3",
-          "i": "OneBlockForm",
-          "z": 0,
-          "w": 1096,
-          "h": 44,
-          "p": [13.5, 20.166666666666686],
-          "wi": "OneBlockForm",
-          "pw": 96.64902998236332,
-          "ph": 33.33333333333333,
-          "pt": "lb",
-          "pp": [1.1904761904761905, 15.277777777777793]
-        },
-        "TwoBlockForm": {
-          "theme": {
-            "CardTitleHeadContainer": {
-              "normal": {
-                "height": 50,
-                "padding": {
-                  "top": 0
-                }
-              }
-            },
-            "Container": {
-              "normal": {
-                "height": 50,
-                "width": 1096
-              }
-            }
-          },
-          "a": "polarbear6$V!3",
-          "i": "TwoBlockForm",
-          "z": 1,
-          "w": 1096,
-          "h": 50,
-          "p": [10, 9.111111111111086],
-          "wi": "TwoBlockForm",
-          "pw": 96.64902998236332,
-          "ph": 37.878787878787875,
-          "pp": [0.8818342151675485, 6.902356902356884]
-        },
-        "wbzcRn0": {
+        "wbc&ywn2": {
           "theme": {
             "Container": {
               "normal": {
-                "textAlign": "right",
+                "color": "#666666",
                 "font": {
-                  "size": 14
+                  "family": "",
+                  "size": 14,
+                  "style": "normal",
+                  "weight": "normal"
                 },
-                "color": "#333",
+                "width": 241,
                 "height": 30,
-                "lineHeight": 30,
-                "width": 109.60000000000001
+                "textAlign": "right"
               }
             }
           },
-          "a": "TwoBlockForm",
-          "i": "wbzcRn0",
+          "a": "MainBoxCard",
+          "i": "wbc&ywn2",
           "z": 0,
-          "w": 110,
+          "w": 241,
           "h": 30,
-          "p": [0, 0],
-          "wi": "wbzcRn0",
-          "pw": 10,
-          "ph": 60,
-          "pp": [0, 0]
+          "p": [
+            16.873015873015902,
+            7.707431457439952
+          ],
+          "wi": "wbc&ywn2",
+          "pw": 20.423728813559322,
+          "ph": 4.098360655737705,
+          "pt": "rb",
+          "pp": [
+            1.4299165994081273,
+            1.052927794732234
+          ]
         },
-        "wbFk^d1": {
+        "MainCard": {
           "theme": {
-            "Placeholder": {
+            "Container": {
               "normal": {
-                "font": {
-                  "size": 14
-                },
-                "color": "#ccc"
+                "height": 732,
+                "width": 1180
+              }
+            }
+          },
+          "a": "MainBoxCard",
+          "i": "MainCard",
+          "z": 1,
+          "w": 1180,
+          "h": 732,
+          "p": [
+            0.07792207790166117,
+            1.818181818199463
+          ],
+          "wi": "MainCard",
+          "pw": 100,
+          "ph": 100,
+          "pp": [
+            0.00660356592386959,
+            0.24838549428954412
+          ]
+        },
+        "Table": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "height": 440,
+                "width": 1132
               }
             },
-            "Container": {
-              "normal": {
-                "width": 408.40000000000003,
-                "height": 32
+            "getValue": {
+              "Container": {
+                "normal": {
+                  "width": 1149,
+                  "height": 360
+                }
               }
             }
           },
-          "a": "TwoBlockForm",
-          "i": "wbFk^d1",
-          "z": 1,
-          "w": 408,
-          "h": 32,
-          "p": [119.60000000000001, 0],
-          "wi": "wbFk^d1",
-          "pw": 37.26277372262774,
-          "ph": 64,
-          "pp": [10.912408759124089, 0]
+          "a": "MainCard",
+          "i": "Table",
+          "z": 0,
+          "w": 1132,
+          "h": 440,
+          "p": [
+            23.775636128576537,
+            76.53987189281008
+          ],
+          "wi": "Table",
+          "pw": 95.9322033898305,
+          "ph": 60.10928961748634,
+          "pt": "lb",
+          "pp": [
+            2.0148844176759777,
+            10.456266652023235
+          ]
         },
-        "wb3GKe2": {
+        "ExpandButton": {
           "theme": {
             "Container": {
               "normal": {
-                "textAlign": "right",
-                "font": {
-                  "size": 14
-                },
-                "color": "#333",
-                "height": 30,
-                "lineHeight": 30,
-                "width": 109.60000000000001
+                "background": "none",
+                "border": "none",
+                "height": 18,
+                "width": 54
+              },
+              "hover": {
+                "background": "none",
+                "border": "none"
+              },
+              "active": {
+                "background": "none",
+                "border": "none"
+              },
+              "focus": {
+                "background": "none",
+                "border": "none"
+              }
+            },
+            "ButtonText": {
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
+              }
+            },
+            "ButtonIcon": {
+              "normal": {
+                "margin": {
+                  "right": 8
+                }
+              },
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
               }
             }
           },
-          "a": "TwoBlockForm",
-          "i": "wb3GKe2",
+          "a": "MainCard",
+          "i": "ExpandButton",
+          "z": 1,
+          "w": 54,
+          "h": 18,
+          "p": [
+            701.649350649351,
+            588.3947033358795
+          ],
+          "wi": "ExpandButton",
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "lb",
+          "pp": [
+            59.461809377063645,
+            80.38179007320758
+          ]
+        },
+        "Page": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "width": 1132,
+                "height": 28
+              }
+            },
+            "PaginationListItem": {
+              "normal": {
+                "height": 28,
+                "width": 28,
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                }
+              }
+            },
+            "PaginationArrowIconContainer": {
+              "normal": {
+                "height": 28,
+                "width": 28,
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                }
+              }
+            },
+            "QuickJumpInput": {
+              "Container": {
+                "normal": {
+                  "height": 28,
+                  "borderRadius": {
+                    "bottomLeft": 4,
+                    "bottomRight": 4,
+                    "topLeft": 4,
+                    "topRight": 4
+                  }
+                }
+              }
+            }
+          },
+          "a": "MainCard",
+          "i": "Page",
           "z": 2,
-          "w": 110,
-          "h": 30,
-          "p": [548, 0],
-          "wi": "wb3GKe2",
-          "pw": 10,
-          "ph": 60,
-          "pp": [50, 0]
+          "w": 1132,
+          "h": 28,
+          "p": [
+            24.352941176470267,
+            32.52236652237514
+          ],
+          "wi": "Page",
+          "pw": 95.9322033898305,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            2.0638085742771413,
+            4.442946246226112
+          ]
         },
-        "wbpU#)3": {
+        "QueryForm": {
           "theme": {
-            "Placeholder": {
+            "Container": {
               "normal": {
-                "font": {
-                  "size": 14
-                },
-                "color": "#ccc"
+                "height": 102,
+                "width": 1149
+              }
+            }
+          },
+          "a": "MainCard",
+          "i": "QueryForm",
+          "z": 3,
+          "w": 1149,
+          "h": 102,
+          "p": [
+            15.025974025973454,
+            1.675324675324532
+          ],
+          "wi": "QueryForm",
+          "pw": 97.37288135593221,
+          "ph": 13.934426229508196,
+          "pp": [
+            1.2733876293197843,
+            0.22886949116455355
+          ]
+        },
+        "AddButton": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "background": "none",
+                "border": "none",
+                "height": 18,
+                "width": 54
+              },
+              "hover": {
+                "background": "none",
+                "border": "none"
+              },
+              "active": {
+                "background": "none",
+                "border": "none"
+              },
+              "focus": {
+                "background": "none",
+                "border": "none"
               }
             },
-            "Container": {
+            "ButtonText": {
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
+              }
+            },
+            "ButtonIcon": {
               "normal": {
-                "width": 408.40000000000003,
-                "height": 32
+                "margin": {
+                  "right": 8
+                }
+              },
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
               }
             }
           },
-          "a": "TwoBlockForm",
-          "i": "wbpU#)3",
-          "z": 3,
-          "w": 408,
-          "h": 32,
-          "p": [667.6, 0],
-          "wi": "wbpU#)3",
-          "pw": 37.26277372262774,
-          "ph": 64,
-          "pp": [60.91240875912409, 0]
+          "a": "MainCard",
+          "i": "AddButton",
+          "z": 4,
+          "w": 54,
+          "h": 18,
+          "p": [
+            91.1371961372015,
+            530.397635044694
+          ],
+          "wi": "AddButton",
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "rb",
+          "pp": [
+            7.723491198067924,
+            72.45869331211667
+          ],
+          "ft": "xw"
         },
-        "wb*H^o0": {
+        "DeleteButton": {
           "theme": {
             "Container": {
               "normal": {
-                "textAlign": "right",
-                "font": {
-                  "size": 14
-                },
-                "color": "#333",
-                "height": 30,
-                "lineHeight": 30,
-                "width": 109.60000000000001
+                "background": "none",
+                "border": "none",
+                "height": 18,
+                "width": 54
+              },
+              "hover": {
+                "background": "none",
+                "border": "none"
+              },
+              "active": {
+                "background": "none",
+                "border": "none"
+              },
+              "focus": {
+                "background": "none",
+                "border": "none"
+              }
+            },
+            "ButtonText": {
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
+              }
+            },
+            "ButtonIcon": {
+              "normal": {
+                "margin": {
+                  "right": 8
+                }
+              },
+              "active": {
+                "color": "#8C9DFF"
+              },
+              "hover": {
+                "color": "#8C9DFF"
+              },
+              "focus": {
+                "color": "#4d63f"
               }
             }
           },
-          "a": "OneBlockForm",
-          "i": "wb*H^o0",
-          "z": 0,
-          "w": 110,
-          "h": 30,
-          "p": [0, 0],
-          "wi": "wb*H^o0",
-          "pw": 10,
-          "ph": 68.18181818181817,
-          "pp": [0, 0]
+          "a": "MainCard",
+          "i": "DeleteButton",
+          "z": 5,
+          "w": 54,
+          "h": 18,
+          "p": [
+            23.584415584414728,
+            530.397635044694
+          ],
+          "wi": "DeleteButton",
+          "pw": 4.576271186440678,
+          "ph": 2.459016393442623,
+          "pt": "rb",
+          "pp": [
+            1.9986792868148073,
+            72.45869331211667
+          ],
+          "ft": "xw"
         },
-        "wbcAJO1": {
+        "SaveButton": {
           "theme": {
             "Container": {
               "normal": {
-                "textAlign": "right",
-                "font": {
-                  "size": 14
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
                 },
-                "color": "#333",
-                "height": 30,
-                "lineHeight": 30,
-                "width": 956.4
+                "height": 28,
+                "width": 88
               }
             }
           },
-          "a": "OneBlockForm",
-          "i": "wbcAJO1",
-          "z": 1,
-          "w": 956,
-          "h": 30,
-          "p": [119.60000000000001, 0],
-          "wi": "wbcAJO1",
-          "pw": 87.26277372262774,
-          "ph": 68.18181818181817,
-          "pp": [10.912408759124089, 0]
+          "a": "MainCard",
+          "i": "SaveButton",
+          "z": 6,
+          "w": 88,
+          "h": 28,
+          "p": [
+            493.5454545454518,
+            583.8492487904256
+          ],
+          "wi": "SaveButton",
+          "pw": 7.457627118644068,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            41.82588597842812,
+            79.76082633748983
+          ]
         },
-        "NextButton": {
-          "theme": {},
-          "a": "QueryButton",
-          "i": "NextButton",
-          "z": 0,
-          "w": 78,
-          "h": 32,
-          "p": [95.22509765625, 30.423828125],
-          "wi": "NextButton",
-          "pw": 6.878306878306878,
-          "ph": 40,
-          "pp": [8.397274925595239, 38.02978515625]
+        "SplitLine": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "width": 1132,
+                "height": 1,
+                "background": {
+                  "color": "#e8e8e8"
+                }
+              }
+            }
+          },
+          "a": "MainCard",
+          "i": "SplitLine",
+          "z": 7,
+          "w": 1132,
+          "h": 1,
+          "p": [
+            23.58441558441453,
+            562.6363636363635
+          ],
+          "wi": "SplitLine",
+          "pw": 95.9322033898305,
+          "ph": 0.1366120218579235,
+          "pt": "rb",
+          "pp": [
+            1.9986792868147907,
+            76.86289120715348
+          ]
         },
         "ResetButton": {
-          "theme": {},
-          "a": "QueryButton",
+          "theme": {
+            "Container": {
+              "normal": {
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                },
+                "height": 28,
+                "width": 88
+              }
+            }
+          },
+          "a": "MainCard",
           "i": "ResetButton",
-          "z": 1,
+          "z": 8,
           "w": 88,
-          "h": 32,
-          "p": [205.22509765625, 30.923828125],
+          "h": 28,
+          "p": [
+            597.181818181817,
+            584.0310669722437
+          ],
           "wi": "ResetButton",
-          "pw": 7.760141093474426,
-          "ph": 40,
-          "pp": [18.097451292438272, 38.65478515625]
+          "pw": 7.457627118644068,
+          "ph": 3.825136612021858,
+          "pt": "lb",
+          "pp": [
+            50.60862865947602,
+            79.78566488691854
+          ]
+        },
+        "wb%YAv0": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "textAlign": "right",
+                "font": {
+                  "size": 14
+                },
+                "color": "#333",
+                "height": 30,
+                "lineHeight": 30,
+                "width": 95.75
+              }
+            },
+            "LabelPrefix": {
+              "normal": {
+                "color": "red",
+                "font": {
+                  "size": 14
+                }
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wb%YAv0",
+          "z": 0,
+          "w": 96,
+          "h": 30,
+          "p": [
+            0,
+            30
+          ],
+          "wi": "wb%YAv0",
+          "pw": 8.333333333333332,
+          "ph": 29.411764705882355,
+          "pp": [
+            0,
+            29.411764705882355
+          ]
+        },
+        "wb#KnZ1": {
+          "theme": {
+            "Placeholder": {
+              "normal": {
+                "fontSize": 14,
+                "color": "#ccc"
+              }
+            },
+            "Container": {
+              "normal": {
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                },
+                "border": {
+                  "top": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "left": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "right": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "bottom": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  }
+                },
+                "width": 275.25,
+                "height": 32
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wb#KnZ1",
+          "z": 1,
+          "w": 275,
+          "h": 32,
+          "p": [
+            101.75,
+            30
+          ],
+          "wi": "wb#KnZ1",
+          "pw": 23.9556135770235,
+          "ph": 31.372549019607842,
+          "pp": [
+            8.855526544821583,
+            29.411764705882355
+          ]
+        },
+        "wbVtH%2": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "textAlign": "right",
+                "font": {
+                  "size": 14
+                },
+                "color": "#333",
+                "height": 30,
+                "lineHeight": 30,
+                "width": 95.75
+              }
+            },
+            "LabelPrefix": {
+              "normal": {
+                "color": "red",
+                "font": {
+                  "size": 14
+                }
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wbVtH%2",
+          "z": 2,
+          "w": 96,
+          "h": 30,
+          "p": [
+            383,
+            30
+          ],
+          "wi": "wbVtH%2",
+          "pw": 8.333333333333332,
+          "ph": 29.411764705882355,
+          "pp": [
+            33.33333333333333,
+            29.411764705882355
+          ]
+        },
+        "wbcUhP3": {
+          "theme": {
+            "Placeholder": {
+              "normal": {
+                "fontSize": 14,
+                "color": "#ccc"
+              }
+            },
+            "Container": {
+              "normal": {
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                },
+                "border": {
+                  "top": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "left": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "right": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "bottom": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  }
+                },
+                "width": 275.25,
+                "height": 32
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wbcUhP3",
+          "z": 3,
+          "w": 275,
+          "h": 32,
+          "p": [
+            484.75,
+            30
+          ],
+          "wi": "wbcUhP3",
+          "pw": 23.9556135770235,
+          "ph": 31.372549019607842,
+          "pp": [
+            42.188859878154915,
+            29.411764705882355
+          ]
+        },
+        "wb3*7R4": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "textAlign": "right",
+                "font": {
+                  "size": 14
+                },
+                "color": "#333",
+                "height": 30,
+                "lineHeight": 30,
+                "width": 95.75
+              }
+            },
+            "LabelPrefix": {
+              "normal": {
+                "color": "red",
+                "font": {
+                  "size": 14
+                }
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wb3*7R4",
+          "z": 4,
+          "w": 96,
+          "h": 30,
+          "p": [
+            766,
+            30
+          ],
+          "wi": "wb3*7R4",
+          "pw": 8.333333333333332,
+          "ph": 29.411764705882355,
+          "pp": [
+            66.66666666666666,
+            29.411764705882355
+          ]
+        },
+        "wb7V7S5": {
+          "theme": {
+            "Placeholder": {
+              "normal": {
+                "fontSize": 14,
+                "color": "#ccc"
+              }
+            },
+            "Container": {
+              "normal": {
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                },
+                "border": {
+                  "top": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "left": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "right": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "bottom": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  }
+                },
+                "width": 275.25,
+                "height": 32
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wb7V7S5",
+          "z": 5,
+          "w": 275,
+          "h": 32,
+          "p": [
+            867.75,
+            30
+          ],
+          "wi": "wb7V7S5",
+          "pw": 23.9556135770235,
+          "ph": 31.372549019607842,
+          "pp": [
+            75.52219321148826,
+            29.411764705882355
+          ]
+        },
+        "wbuSt^6": {
+          "theme": {
+            "Container": {
+              "normal": {
+                "textAlign": "right",
+                "font": {
+                  "size": 14
+                },
+                "color": "#333",
+                "height": 30,
+                "lineHeight": 30,
+                "width": 95.75
+              }
+            },
+            "LabelPrefix": {
+              "normal": {
+                "color": "red",
+                "font": {
+                  "size": 14
+                }
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wbuSt^6",
+          "z": 6,
+          "w": 96,
+          "h": 30,
+          "p": [
+            0,
+            70
+          ],
+          "wi": "wbuSt^6",
+          "pw": 8.333333333333332,
+          "ph": 29.411764705882355,
+          "pp": [
+            0,
+            68.62745098039215
+          ]
+        },
+        "wbmi)j7": {
+          "theme": {
+            "Placeholder": {
+              "normal": {
+                "fontSize": 14,
+                "color": "#ccc"
+              }
+            },
+            "Container": {
+              "normal": {
+                "borderRadius": {
+                  "bottomLeft": 4,
+                  "bottomRight": 4,
+                  "topLeft": 4,
+                  "topRight": 4
+                },
+                "border": {
+                  "top": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "left": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "right": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  },
+                  "bottom": {
+                    "color": "#d8d8d8",
+                    "width": 1,
+                    "style": "solid"
+                  }
+                },
+                "width": 275.25,
+                "height": 32
+              }
+            }
+          },
+          "a": "QueryForm",
+          "i": "wbmi)j7",
+          "z": 7,
+          "w": 275,
+          "h": 32,
+          "p": [
+            101.75,
+            70
+          ],
+          "wi": "wbmi)j7",
+          "pw": 23.9556135770235,
+          "ph": 31.372549019607842,
+          "pp": [
+            8.855526544821583,
+            68.62745098039215
+          ]
         }
       }
     }
   },
-  "zip": true
+  "zip": true,
+  "areaTemplate": [
+    {
+      "areaId": "mainPad",
+      "title": "路由信息",
+      "widgetId": "Router",
+      "slot": {
+        "checked": true,
+        "title": "路由信息",
+        "dataKey": "router",
+        "widgetInfo": {
+          "props": {
+            "routes": {
+              "getValue": "const itemRouter =  item.router || [] ;const router = [...itemRouter.map(({title})=>({title})), { path: vars.path, title: vars.title } ]; return router; "
+            }
+          }
+        },
+        "metaFields": [
+          {
+            "name": "Router",
+            "title": "路由信息",
+            "columns": [
+              {
+                "title": "显示文本",
+                "dataIndex": "title",
+                "key": "title",
+                "type": "Input"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "areaId": "mainPad",
+      "title": "一级标题",
+      "widgetId": "Title",
+      "slot": {
+        "checked": true,
+        "title": "一级标题",
+        "dataType": "object",
+        "widgetInfo": {
+          "props": {
+            "text": {
+              "getValue": "return item.title;"
+            }
+          }
+        },
+        "metaFields": [
+          {
+            "name": "Title",
+            "title": "一级标题",
+            "columns": [
+              {
+                "title": "一级标题",
+                "dataIndex": "title",
+                "key": "title",
+                "type": "Input"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "areaId": "mainPad",
+      "title": "二级标题",
+      "widgetId": "Desc",
+      "slot": {
+        "checked": true,
+        "title": "二级标题",
+        "dataType": "object",
+        "widgetInfo": {
+          "props": {
+            "text": {
+              "getValue": "return item.title;"
+            }
+          }
+        },
+        "metaFields": [
+          {
+            "name": "Desc",
+            "title": "二级标题",
+            "columns": [
+              {
+                "title": "二级标题",
+                "dataIndex": "title",
+                "key": "title",
+                "type": "Input"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "查询按钮",
+      "widgetId": "SaveButton",
+      "slot": {
+        "title": "查询按钮",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "pageData": {
+          "state": {
+            "text": "保存"
+          },
+          "scripts": {
+            "getValue": "return { onQuery: {type: 'Project', code: `../ue/lugia/smart/query/${vars.modelName}/onQuery.js`}}"
+          },
+          "bindEvent": {
+            "SaveButton": {
+              "onClick": "onQuery"
+            }
+          }
+        },
+        "widgetInfo": {}
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "",
+      "widgetId": "ResetButton",
+      "slot": {
+        "title": "重置按按",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "mutation": {
+            "onClick": {
+              "eventName": "onClick",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "mutationName": "resetQuery"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "mainPad",
+      "title": "查询表单",
+      "widgetId": "QueryForm",
+      "slot": {
+        "title": "查询表单",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "bind": {
+            "theme": {
+              "modelName": "$__data__.model",
+              "fieldName": "theme",
+              "propsName": "theme",
+              "bindType": "connect"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "MainBoxCard",
+      "title": "主卡片容器",
+      "widgetId": "MainCard",
+      "slot": {
+        "title": "主卡片容器",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "bind": {
+            "theme": {
+              "modelName": "$__data__.model",
+              "fieldName": "theme",
+              "propsName": "theme",
+              "bindType": "connect"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "mainPad",
+      "title": "外部卡片容器",
+      "widgetId": "MainBoxCard",
+      "slot": {
+        "title": "主卡片容器",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "bind": {
+            "theme": {
+              "modelName": "$__data__.model",
+              "fieldName": "theme",
+              "propsName": "theme",
+              "bindType": "connect"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "删除按钮",
+      "widgetId": "DeleteButton",
+      "slot": {
+        "title": "删除按钮",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "pageData": {
+          "bindEvent": {
+            "DeleteButton": {
+              "onClick": "onDelete"
+            }
+          }
+        },
+        "widgetInfo": {}
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "展开按钮",
+      "widgetId": "ExpandButton",
+      "slot": {
+        "title": "展开按钮",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "pageData": {
+          "bindEvent": {
+            "ExpandButton": {
+              "onClick": "onExpand"
+            }
+          }
+        },
+        "widgetInfo": {
+          "bind": {
+            "icon": {
+              "modelName": "$__data__.model",
+              "fieldName": "ExpandButton.icon",
+              "propsName": "icon",
+              "bindType": "connect"
+            },
+            "text": {
+              "modelName": "$__data__.model",
+              "fieldName": "ExpandButton.text",
+              "propsName": "text",
+              "bindType": "connect"
+            },
+            "lugiaHidden": {
+              "modelName": "$__data__.model",
+              "fieldName": "btnHidden",
+              "propsName": "lugiaHidden",
+              "bindType": "connect"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "新增按钮",
+      "widgetId": "AddButton",
+      "slot": {
+        "title": "新增按钮",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "mutation": {
+            "onClick": {
+              "eventName": "onClick",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "mutationName": "add"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "分页",
+      "widgetId": "Page",
+      "slot": {
+        "title": "分页信息",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "metaFields": [],
+        "widgetInfo": {
+          "bind": {
+            "current": {
+              "propsName": "current",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "current",
+              "bindType": "connect"
+            },
+            "total": {
+              "propsName": "total",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "total",
+              "bindType": "connect"
+            },
+            "pageSize": {
+              "propsName": "pageSize",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "pageSize",
+              "bindType": "connect"
+            }
+          },
+          "mutation": {
+            "onChange": {
+              "eventName": "onChange",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "mutationName": "asyncOnChangePage"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "title": "总数",
+      "widgetId": "TotalCount",
+      "slot": {
+        "title": "总数",
+        "checked": false,
+        "hidden": true,
+        "dataType": "object",
+        "dataKey": "router",
+        "metaFields": [],
+        "widgetInfo": {
+          "bind": {
+            "text": {
+              "propsName": "text",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "totalText",
+              "bindType": "connect"
+            }
+          }
+        }
+      }
+    },
+    {
+      "areaId": "QueryForm",
+      "slot": {
+        "checked": true,
+        "minHeight": 80,
+        "slotType": "GridFlow",
+        "columnCount": 3,
+        "title": "表单",
+        "margin": {
+          "left": 0,
+          "top": 22,
+          "bottom": 0
+        },
+        "metaFields": [
+          {
+            "title": "表单",
+            "name": "QueryForm",
+            "columns": [
+              {
+                "title": "列名",
+                "dataIndex": "key",
+                "key": "key",
+                "type": "Input",
+                "defaultValue": "search",
+                "mark": 1
+              },
+              {
+                "title": "文本",
+                "dataIndex": "title",
+                "key": "title",
+                "type": "Input",
+                "defaultValue": "查询",
+                "mark": 2
+              },
+              {
+                "title": "错误提示",
+                "dataIndex": "help",
+                "key": "help",
+                "type": "Input",
+                "defaultValue": "",
+                "mark": 3
+              },
+              {
+                "title": "类型",
+                "dataIndex": "type",
+                "key": "type",
+                "type": "Select",
+                "defaultValue": "string",
+                "selectData": "lugiaWebForm",
+                "mark": 4
+              },
+              {
+                "title": "是否必填",
+                "dataIndex": "required",
+                "key": "required",
+                "type": "Select",
+                "selectData": [
+                  {
+                    "value": false,
+                    "text": "否"
+                  },
+                  {
+                    "value": true,
+                    "text": "是"
+                  }
+                ],
+                "mark": 5
+              }
+            ]
+          }
+        ],
+        "blocks": [
+          {
+            "margin": {
+              "top": 8
+            },
+            "title": "标题",
+            "widthScale": 0.25,
+            "widgetName": "Label",
+            "module": "@lugia/lugia-web",
+            "content": {
+              "props": {
+                "text": {
+                  "getValue": "return item.title + ' : '"
+                },
+                "showPrefix": {
+                  "getValue": "return item.required;"
+                },
+                "prefix": "*"
+              },
+              "theme": {
+                "getValue": "return {Container: {normal: {textAlign: 'right', font: {size: 14}, color: '#333', height: 30, lineHeight: 30}}, LabelPrefix : {normal: {color: 'red', font: {size: 14}}}}"
+              }
+            }
+          },
+          {
+            "title": "组件",
+            "widgetName": {
+              "getValue": "return item.widgetName"
+            },
+            "widthScale": 0.75,
+            "margin": {
+              "top": 8,
+              "left": 6,
+              "right": 6
+            },
+            "theme": {
+              "getValue": "return {Container: {normal: {height: 30}}}"
+            },
+            "content": {
+              "props": {
+                "field": {
+                  "getValue": "return item.field"
+                },
+                "placeholder": {
+                  "getValue": "return `请输入${item.title}`"
+                },
+                "validateType": "top",
+                "help": {
+                  "getValue": "return item.help || ''"
+                }
+              },
+              "bind": {
+                "value": {
+                  "propsName": "value",
+                  "modelName": {
+                    "getValue": "return vars.modelName"
+                  },
+                  "fieldName": {
+                    "getValue": "return item.field"
+                  },
+                  "bindType": "bind"
+                },
+                "validateStatus": {
+                  "propsName": "validateStatus",
+                  "modelName": "$__data__.model",
+                  "fieldName": {
+                    "getValue": "return item.field + 'Error'"
+                  },
+                  "bindType": "connect"
+                },
+                "help": {
+                  "propsName": "help",
+                  "modelName": "$__data__.model",
+                  "fieldName": {
+                    "getValue": "return item.field + 'Help'"
+                  },
+                  "bindType": "connect"
+                }
+              },
+              "theme": {
+                "getValue": "return {Placeholder: {normal: {fontSize: 14, color: '#ccc'} }, Container: {  normal: {      borderRadius: { bottomLeft: 4, bottomRight: 4, topLeft: 4, topRight: 4 },    border: {      top: { color: '#d8d8d8', width:1, style: 'solid' },      left: { color: '#d8d8d8', width:1 , style: 'solid'},      right: { color: '#d8d8d8', width:1 , style: 'solid'},      bottom: { color: '#d8d8d8', width:1 , style: 'solid'},    },  },},}"
+              },
+              "pageData": {
+                "state": {
+                  "getValue": "return {[item.field + 'Error']: '', [item.field + 'Help']: item.help || ''}"
+                },
+                "bindEvent": {
+                  "getValue": "return {[vars.widgetId]: {onChange: 'onValidate'}}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "areaId": "MainCard",
+      "widgetId": "Table",
+      "slot": {
+        "checked": true,
+        "slotType": "GridFlow",
+        "columnCount": 1,
+        "title": "表格",
+        "minHeight": 50,
+        "margin": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "isTable": true,
+        "metaFields": [
+          {
+            "title": "表格",
+            "name": "Table",
+            "columns": [
+              {
+                "title": "表格标题",
+                "dataIndex": "title",
+                "key": "title",
+                "width": 200,
+                "align": "center",
+                "mark": 1
+              },
+              {
+                "title": "编辑表头数据",
+                "dataIndex": "columns",
+                "key": "columns",
+                "width": 200,
+                "align": "center",
+                "mark": 2,
+                "columns": [
+                  {
+                    "title": "列名(英文)",
+                    "dataIndex": "key",
+                    "key": "key",
+                    "width": 200,
+                    "mark": 1
+                  },
+                  {
+                    "title": "列名显示文本",
+                    "dataIndex": "title",
+                    "key": "title",
+                    "width": 200,
+                    "mark": 2
+                  }
+                ]
+              },
+              {
+                "title": "编辑表体数据",
+                "dataIndex": "data",
+                "key": "data",
+                "width": 200,
+                "align": "center",
+                "mark": 3
+              }
+            ]
+          }
+        ],
+        "pageData": {
+          "bindEvent": {
+            "Table": {
+              "onView": "onView",
+              "onDelete": "onDelete"
+            }
+          }
+        },
+        "widgetInfo": {
+          "bind": {
+            "data": {
+              "propsName": "data",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "table",
+              "bindType": "connect"
+            },
+            "selectRowKeys": {
+              "propsName": "selectRowKeys",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "fieldName": "selected",
+              "bindType": "connect"
+            }
+          },
+          "props": {
+            "columns": {
+              "getValue": "return item.columns"
+            },
+            "data": {
+              "getValue": "return item.data"
+            }
+          },
+          "theme": {
+            "getValue": {
+              "Container": {
+                "normal": {
+                  "width": 1149,
+                  "height": 360
+                }
+              }
+            }
+          },
+          "mutation": {
+            "onChange": {
+              "eventName": "onChange",
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "mutationName": "onSelected"
+            },
+            "onEdit": {
+              "eventName": {
+                "getValue": "return 'onEdit'"
+              },
+              "modelName": {
+                "getValue": "return vars.modelName"
+              },
+              "mutationName": {
+                "getValue": "return 'asyncOnEdit'"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "pageData",
+      "target": {
+        "state": {
+          "btnHidden": false,
+          "direction": -1,
+          "ExpandButton": {
+            "icon": "lugia-icon-direction_up",
+            "text": "收起"
+          },
+          "theme": {
+            "QueryForm": {
+              "Container": {
+                "normal": {
+                  "height": 251,
+                  "overflow": "hidden"
+                }
+              }
+            },
+            "MainCard": {
+              "Container": {
+                "normal": {
+                  "height": 662
+                }
+              }
+            },
+            "MainBoxCard": {
+              "Container": {
+                "normal": {
+                  "height": 662,
+                  "width": 1180,
+                  "border": "none",
+                  "boxShadow": "none"
+                }
+              }
+            }
+          }
+        },
+        "dependenciesModels": {
+          "getValue": "return [vars.modelName]"
+        },
+        "scripts": {
+          "getValue": " return { onValidate: {type: 'Project', code: `../ue/lugia/smart/query/${vars.modelName}/validate` },  'onExpand': { 'type': 'Project', 'code': '../ue/lugia/smart/query/onExpand' },        'onInit': { 'type': 'Project', 'code': '../ue/lugia/smart/query/onInit' },        'onDelete': { 'type': 'Project', 'code': '../ue/lugia/smart/query/onDelete' },        'onView': { 'type': 'Project', 'code': '../ue/lugia/smart/query/onViewRecord' } }"
+        }
+      }
+    }
+  ]
 }

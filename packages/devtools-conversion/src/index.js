@@ -16,19 +16,28 @@ import { unZip } from '@lugia/devtools-core';
 import { LugiaxDataPrefix } from './createLugiaxData';
 
 const defaultBackground = '#f8f8f8';
-const supportEvents = [ 'componentDidMount', 'componentWillUnmount' ];
+const supportEvents = [
+  'constructor',
+  'componentDidMount',
+  'componentWillUnmount',
+];
+const name2param = {
+  constructor: 'props',
+  componentDidMount: 'props, state',
+  componentWillUnmount: 'props, state',
+};
 
-function getPageMutation(lugiax: Object, backgroudColor: string): string {
-  const { pageMutation, pageData } = lugiax;
-  if (!pageMutation && !pageData) {
+function getPageMutation (lugiax: Object, backgroudColor: string): string {
+  const { page2mutation, pageData } = lugiax;
+  if (!page2mutation && !pageData) {
     return '';
   }
   const { lifeScripts = {} } = pageData;
 
   const eventNames = supportEvents;
 
-  function getPageMutationCode(name: string): string {
-    const mutation = pageMutation && pageMutation[name];
+  function getPageMutationCode (name: string): string {
+    const mutation = page2mutation && page2mutation[ name ];
     if (!mutation) {
       return '';
     }
@@ -56,23 +65,14 @@ function getPageMutation(lugiax: Object, backgroudColor: string): string {
   }
   const res = [];
   eventNames.forEach((name: string) => {
-    res.push(`${name}(){
+    res.push(`${name}(${name2param[ name ]}){
+          ${name === 'constructor' ? "super('props')" : ''}
           ${getPageMutationCode(name)}
           ${getPageDataScripts(name)}
           ${getBackgroundColor(name)}
       }`);
   });
 
-  const constructor = 'constructor';
-  if (lifeScripts[constructor]) {
-    const consturctorCode = getPageDataScripts(constructor);
-    if (consturctorCode) {
-      res.push(`constructor(props){
-          super(props);
-          ${consturctorCode}
-      }`);
-    }
-  }
   return res.join('');
 }
 
