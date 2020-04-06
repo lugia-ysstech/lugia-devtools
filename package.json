@@ -14,7 +14,8 @@
     "stylelint": "stylelint",
     "lint": "eslint --ext .js packages scripts",
     "lint:fix": "eslint --fix --ext .js packages scripts",
-    "publish": "node ./scripts/publish.js"
+    "publish": "node ./scripts/publish.js",
+    "alpha.js": "node ./scripts/alpha.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
