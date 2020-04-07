@@ -42,9 +42,13 @@ function getPageMutation (lugiax: Object, backgroudColor: string): string {
       return '';
     }
     const { modelName, mutationName } = mutation;
+    if (!modelName || !mutationName) {
+      return '';
+    }
     return `${modelName}.mutations.${mutationName}({eventName: '${name}'});`;
   }
-  function getPageDataScripts(name: string): string {
+
+  function getPageDataScripts (name: string): string {
     const { scripts, model: pageModel, dependenciesModels = [] } = pageData;
     const scriptId = lifeScripts[name];
     if (!scriptId || !scripts || !scripts[scriptId]) {
