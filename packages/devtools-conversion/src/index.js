@@ -70,7 +70,7 @@ function getPageMutation (lugiax: Object, backgroudColor: string): string {
   const res = [];
   eventNames.forEach((name: string) => {
     res.push(`${name}(${name2param[ name ]}){
-          ${name === 'constructor' ? "super('props')" : ''}
+          ${name === 'constructor' ? 'super(props)' : ''}
           ${getPageMutationCode(name)}
           ${getPageDataScripts(name)}
           ${getBackgroundColor(name)}
