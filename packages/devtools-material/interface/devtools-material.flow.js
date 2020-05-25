@@ -3,25 +3,27 @@
  * @flow
  */
 declare module '@lugia/devtools-material' {
-  declare type ExtendParam = {
-    outExtend: string,
-    max: number,
+  declare type OutFileType = {
     outFile: string
   };
+  declare type ExtendParam = OutFileType & {
+    outExtend: string,
+    max: number
+  };
+
   declare type InvalidType = string[];
+  declare type ThemeMetaParams = {
+    targetPath: string,
+    invalid: InvalidType,
+    option: OutFileType
+  };
   declare type DesignInfo = {
     createDesignInfo(
       targetPath: string,
       invalid: InvalidType,
       opt: ExtendParam
     ): string,
-    createThemeMeta(targetPath: string, invalid: InvalidType): void
-  };
-
-  declare type ThemeMetaParams = {
-    targetPath: string,
-    invalid: InvalidType,
-    opt: Object
+    createThemeMeta(params: ThemeMetaParams): void
   };
 
   declare module.exports: DesignInfo;
