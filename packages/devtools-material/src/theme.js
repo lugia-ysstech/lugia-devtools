@@ -34,8 +34,8 @@ function loadTheme(
   return JSON.parse(fileContent);
 }
 
-export async function createThemeMeta(params: ThemeMetaParams) {
-  const { targetPath, invalid = [] } = params;
+export async function createThemeMeta(params: ThemeMetaParams): ?string {
+  const { targetPath, invalid = [], option = {} } = params;
   let total = 0;
   try {
     const allFileNames = await getFolderNames(targetPath, invalid);
@@ -56,9 +56,16 @@ export async function createThemeMeta(params: ThemeMetaParams) {
       }
     });
 
+    const { outFile } = option;
+
+    const data = JSON.stringify(themeMeta);
+    if (outFile === 'string') {
+      return data;
+    }
+
     try {
       const designPath = getPath(targetPath, 'themeMeta.json');
-      fs.writeFileSync(designPath, JSON.stringify(themeMeta));
+      fs.writeFileSync(designPath, data);
     } catch (e) {
       console.log(e);
     }
