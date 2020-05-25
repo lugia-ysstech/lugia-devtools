@@ -8,12 +8,20 @@ declare module '@lugia/devtools-material' {
     max: number,
     outFile: string
   };
+  declare type InvalidType = string[];
   declare type DesignInfo = {
     createDesignInfo(
       targetPath: string,
-      Invalid: string[],
+      invalid: InvalidType,
       opt: ExtendParam
-    ): string
+    ): string,
+    createThemeMeta(targetPath: string, invalid: InvalidType): void
+  };
+
+  declare type ThemeMetaParams = {
+    targetPath: string,
+    invalid: InvalidType,
+    opt: Object
   };
 
   declare module.exports: DesignInfo;
