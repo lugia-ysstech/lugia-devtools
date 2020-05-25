@@ -24,14 +24,17 @@ const checkImage = function(
     errors.push(`${widgetName}[${item}] 缺少图片`);
   }
 };
-function getPath(url: string, folderName: string): string {
+export function getPath(url: string, folderName: string): string {
   return path.join(url, folderName);
 }
 function getTargetPath(targetPath: string): string {
   const url = targetPath || fileRelativePath;
   return path.join(url);
 }
-async function getFolderNames(targetPath: string, Invalid: string[]): string[] {
+export async function getFolderNames(
+  targetPath: string,
+  Invalid: string[]
+): string[] {
   return fs
     .readdirSync(getTargetPath(targetPath))
     .filter(
@@ -45,7 +48,7 @@ function loadMeta(path: string, folderName: string, metaName: string): Object {
   );
   return JSON.parse(file);
 }
-async function getDemoFolderNames(
+export async function getDemoFolderNames(
   allPathFile: string[],
   targetPath: string
 ): string[] {
@@ -64,14 +67,15 @@ async function getDemoFolderNames(
   }
   return res;
 }
-async function getFolderName2Meta(
+export async function getFolderName2Meta(
   targetPath: string,
-  folderNames: string[]
+  folderNames: string[],
+  cb: () => any
 ): Object {
   const metas = {};
   folderNames.forEach((folderName: string, pos: number) => {
     try {
-      metas[folderName] = loadMeta(targetPath, folderName, folderName);
+      metas[folderName] = cb(targetPath, folderName, folderName);
     } catch (error) {
       const msg = `** (第${pos}个) ${folderName} 读取元信息失败 **`;
       console.log(msg, pos, folderName);
@@ -118,7 +122,11 @@ export async function createDesignInfo(
   try {
     const allPathFile = await getFolderNames(targetPath, Invalid || []);
     const folderNames = await getDemoFolderNames(allPathFile, targetPath);
-    const folderName2Meta = await getFolderName2Meta(targetPath, folderNames);
+    const folderName2Meta = await getFolderName2Meta(
+      targetPath,
+      folderNames,
+      loadMeta
+    );
     console.log('共获取组件[%d]个', allPathFile.length);
     const widgetName2FolderName = {};
     folderNames.forEach((folderName: string) => {
@@ -356,7 +364,10 @@ function createExtendComponent(
 }
 
 const replaceValues = [ 'title', 'desc', 'theme', 'defaultTheme', 'aliasName' ];
-function replaceMetaFromDesignInfo(designInfoItemMeta: Object, outMeta: Object) {
+function replaceMetaFromDesignInfo(
+  designInfoItemMeta: Object,
+  outMeta: Object
+) {
   replaceValues.forEach((item: string) => {
     const itemValueInDesignInfo = designInfoItemMeta[item];
     if (!itemValueInDesignInfo) {

@@ -5,4 +5,6 @@
  * @flow
  */
 import { createDesignInfo } from './create';
-export { createDesignInfo };
+import { createThemeMeta } from './theme';
+
+export { createDesignInfo, createThemeMeta };
