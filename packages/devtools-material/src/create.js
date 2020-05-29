@@ -317,17 +317,14 @@ function createMeta(
   imgBase64: string,
   hideInTollPanel: boolean = false
 ): string {
-  const strArr = [
-    `meta: ${JSON.stringify(meta)}`,
-    `target: ${targetName}`,
-    `screenshot: '${imgBase64}'`,
-  ];
-
   if (hideInTollPanel) {
-    strArr.push('hideInTollPanel: true');
+    meta.hideInTollPanel = hideInTollPanel;
   }
+  const str = `{meta: ${JSON.stringify(
+    meta
+  )},target: ${targetName},screenshot: '${imgBase64}'},`;
 
-  return `{ ${strArr.join(',')} },`;
+  return str;
 }
 
 function replaceMeta(props: Object, outMeta: Object): Object {
