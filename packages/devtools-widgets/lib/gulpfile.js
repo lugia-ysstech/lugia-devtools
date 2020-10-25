@@ -3,8 +3,8 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const ts = require('gulp-typescript');
 const merge = require('merge2');
+const { join } = require('path');
 
-const tsProject = ts.createProject('tsconfig.json');
 process.env.BABEL_ENV = 'production';
 
 module.exports = (importModules = []) => {
@@ -21,6 +21,8 @@ module.exports = (importModules = []) => {
   gulp.task('default', ['js', 'ts', 'css', 'font', 'interface', 'meta']);
 
   gulp.task('ts', () => {
+    const cwd = process.cwd();
+    const tsProject = ts.createProject(join(cwd, 'tsconfig.json'));
     const tsResult = gulp.src(['src/widgets/**/*.ts', 'src/widgets/**/*.tsx']).pipe(tsProject());
 
     return merge([
