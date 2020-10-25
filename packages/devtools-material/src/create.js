@@ -116,7 +116,12 @@ export async function createDesignInfo(
   total = 0;
   designInfoTotal = 0;
   childWidgetTotal = 0;
-  const { outExtend, limit = 10240, outFile } = opt;
+  const {
+    outExtend,
+    limit = 10240,
+    outFile,
+    hideInTollPanelComponents = {},
+  } = opt;
   const widgetNames = [];
   let designInfo = '';
   try {
@@ -142,6 +147,7 @@ export async function createDesignInfo(
         getImgBase64(targetPath, folderName, folderName, limit) ||
         defaultBase64;
       checkImage(imgBase64, widgetName);
+      const hideInTollPanel = !!hideInTollPanelComponents[folderName];
       const childrenWidgetName = [];
       const childrenMeta =
         folderName === 'table'
@@ -152,18 +158,25 @@ export async function createDesignInfo(
             childrenWidget,
             targetPath,
             limit,
-            childrenWidgetName
+            childrenWidgetName,
+            hideInTollPanel
           );
       widgetNames.push(widgetName);
 
       const copyMeta = createExtendMeta(meta);
       copyMeta.childrenWidget = childrenWidgetName;
-      const owner = createMeta(copyMeta, widgetName, imgBase64);
+      const owner = createMeta(
+        copyMeta,
+        widgetName,
+        imgBase64,
+        hideInTollPanel
+      );
       const extendComponent = createExtendComponent(
         copyMeta,
         targetPath,
         folderName,
-        limit
+        limit,
+        hideInTollPanel
       );
       const commonStr = owner + extendComponent;
       designInfo =
@@ -171,7 +184,12 @@ export async function createDesignInfo(
     });
 
     const designData =
-      getComponent(widgetNames, widgetName2FolderName, outExtend) +
+      getComponent(
+        widgetNames,
+        widgetName2FolderName,
+        outExtend,
+        hideInTollPanelComponents
+      ) +
       'export default [ ' +
       designInfo +
       ' ];';
@@ -214,7 +232,8 @@ function joinChildrenWidgetName(
   childrenWidget: string[],
   targetPath: string,
   limit: number,
-  outChildrenWidgetName: string[]
+  outChildrenWidgetName: string[],
+  hideInTollPanel: boolean
 ): string {
   let commonStr = '';
   if (childrenWidget && childrenWidget.length > 0) {
@@ -247,14 +266,16 @@ function joinChildrenWidgetName(
             copyChildrenMeta,
             targetPath,
             folderName,
-            limit
+            limit,
+            hideInTollPanel
           );
           commonStr =
             commonStr +
             createMeta(
               copyChildrenMeta,
               childrenWidgetName,
-              childrenImgBase64
+              childrenImgBase64,
+              hideInTollPanel
             ) +
             extendComponent;
         }
@@ -270,14 +291,18 @@ function joinChildrenWidgetName(
 function getComponent(
   widgetNames: string[],
   widgetName2FolderName: Object,
-  outExtend: string
+  outExtend: string,
+  hideInTollPanelComponents: { [key: string]: string }
 ): string {
   if (widgetNames && widgetNames.length > 0) {
     const importInfo = [];
     const extend = outExtend ? `${outExtend}/` : './';
     widgetNames.forEach((item: string) => {
+      const folderName = widgetName2FolderName[item];
+      const componentFileName = hideInTollPanelComponents[folderName];
+      const filePath = componentFileName ? `/${componentFileName}` : '';
       importInfo.push(
-        `import ${item} from '${extend}${widgetName2FolderName[item]}';`
+        `import ${item} from '${extend}${folderName}${filePath}';`
       );
     });
 
@@ -289,8 +314,12 @@ function getComponent(
 function createMeta(
   meta: Object,
   targetName: string,
-  imgBase64: string
+  imgBase64: string,
+  hideInTollPanel: boolean = false
 ): string {
+  if (hideInTollPanel) {
+    meta.hideInTollPanel = hideInTollPanel;
+  }
   const str = `{meta: ${JSON.stringify(
     meta
   )},target: ${targetName},screenshot: '${imgBase64}'},`;
@@ -331,7 +360,8 @@ function createExtendComponent(
   meta: Object,
   targetPath: string,
   folderName: string,
-  limit: number
+  limit: number,
+  hideInTollPanel: boolean
 ): string {
   const { designInfo } = meta;
   if (!designInfo) {
@@ -355,7 +385,12 @@ function createExtendComponent(
       const extendImgBase64 =
         getImgBase64(targetPath, folderName, item, limit) || defaultBase64;
       checkImage(extendImgBase64, widgetName, item);
-      extendMetaInfo += createMeta(replacedMeta, widgetName, extendImgBase64);
+      extendMetaInfo += createMeta(
+        replacedMeta,
+        widgetName,
+        extendImgBase64,
+        hideInTollPanel
+      );
     });
 
     return extendMetaInfo;
