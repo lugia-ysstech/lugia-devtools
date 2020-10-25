@@ -85,7 +85,6 @@ module.exports = async function compileComponent (param) {
     disableCssExtract: true
   };
 
-
   singleCompile(config, (error, result) => {
     if (!result) {
       return;
