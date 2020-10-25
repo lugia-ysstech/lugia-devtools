@@ -29,14 +29,14 @@ const build = require("./compile");
 
 async function compilePlugin (info) {
   const cwd = process.cwd();
-  const { pluginName, outputDir: outputDirName, externals } = info;
+  const { pluginName, outputDir: outputDirName, externals, enter = 'index.tsx' } = info;
   const outputDir = join(cwd, outputDirName);
   const version = getPkgVersion();
   const targetName = `__${moduleName}__${pluginName}`;
 
   const buildAction = async () => {
     console.info("cwd", cwd);
-    const entry = `${outputDirName}/index.tsx`;
+    const entry = `${outputDirName}/${enter}`;
 
     const config = {
       SINGLE_COMPILED: true,
@@ -104,7 +104,7 @@ function parsePluginName (param) {
   return path.join("");
 }
 
-async function compile (buildData, externals) {
+async function compile (buildData, externals, enter) {
   const cwd = process.cwd();
   console.info("需打包数量", buildData.length);
   const errPluginNames = [];
@@ -125,7 +125,8 @@ async function compile (buildData, externals) {
         ...buildDatum,
         entryPath,
         outputDir: entryPath,
-        externals
+        externals,
+        enter
       });
       const { targetName, asset } = target;
       result[ pluginName ] = {
