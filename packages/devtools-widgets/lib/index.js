@@ -29,12 +29,13 @@ const buildTask = require("./gulpfile");
 const DesignFile = "designInfo.js";
 const ThemeMetaFile = "themeMeta.json";
 
-async function createDesignInfoFile (config) {
+async function createDesignInfoFile(config) {
   const {
     targetPath,
     componentInvalid,
     hideInTollPanelComponents,
-    themeInvalid
+    themeInvalid,
+    extendCode
   } = config;
   const designInfoStr = await createDesignInfo(targetPath, componentInvalid, {
     outFile: "string",
@@ -42,12 +43,17 @@ async function createDesignInfoFile (config) {
   });
   const designInfoPath = join(targetPath, DesignFile);
   ensureFileSync(designInfoPath);
-  writeFileSync(designInfoPath, designInfoStr);
+  writeFileSync(designInfoPath, designInfoStr + extendCode);
   await createThemeMeta({ targetPath, invalid: themeInvalid });
 }
 
-module.exports = async function compileComponent (param) {
-  const { componentInvalid, hideInTollPanelComponents, themeInvalid } = param;
+module.exports = async function compileComponent(param) {
+  const {
+    componentInvalid,
+    hideInTollPanelComponents,
+    themeInvalid,
+    extendCode = ""
+  } = param;
 
   const cwd = process.cwd();
   const outputDir = join(cwd, "./src/widgets");
@@ -59,7 +65,8 @@ module.exports = async function compileComponent (param) {
     targetPath: outputDir,
     componentInvalid,
     hideInTollPanelComponents,
-    themeInvalid
+    themeInvalid,
+    extendCode
   });
 
   const { externals = {}, importModules } = param;
