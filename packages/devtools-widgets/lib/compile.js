@@ -10,33 +10,32 @@
  * Javascript will save your soul!
  */
 
-
 const tsImportPluginFactory = require('ts-import-plugin');
 const build = require('@lugia/mega-scripts/lib/utils/buildApp');
 const { join } = require('path');
 
-function compile (
-  params,
-  cb
-) {
+function compile (params, cb) {
   const {
-    cwd, entry, name = '__SINGLE_COMPILED__', watch, publicPath, disableCssExtract, externals, importModules = [],
+    cwd,
+    entry,
+    name = '__SINGLE_COMPILED__',
+    watch,
+    publicPath,
+    disableCssExtract,
+    externals,
+    importModules = [],
   } = params;
 
-
-  const babelPlugins = importModules.length > 0 ? importModules.map(module => {
-    return [
-      'import',
-      module,
-      module.libraryName
-    ]
-  }) : [];
+  const babelPlugins =
+    importModules.length > 0
+      ? importModules.map(module => {
+        return ['import', module, module.libraryName];
+      })
+      : [];
   const tsPlugins = {
     transpileOnly: true,
     getCustomTransformers: () => ({
-      before: importModules.length > 0 ? [
-        tsImportPluginFactory(importModules),
-      ] : [],
+      before: importModules.length > 0 ? [tsImportPluginFactory(importModules)] : [],
     }),
     compilerOptions: {
       module: 'es2015',
@@ -51,8 +50,8 @@ function compile (
       useMemoryFS: true,
       applyConfig: config => {
         config.entry = {
-          'component.entry': [entry]
-        }
+          'component.entry': [entry],
+        };
         return {
           ...config,
           babel: {
@@ -73,12 +72,9 @@ function compile (
           hash: null,
           manifest: null,
           browserslist: ['chrome 70'],
-          extraBabelIncludes: [
-            /react-app-polyfill/,
-            /decamelize/,
-          ],
+          extraBabelIncludes: [/react-app-polyfill/, /decamelize/],
           publicPath,
-          disableCssExtract
+          disableCssExtract,
         };
       },
       applyWebpack: (webpackConfig, { merge }) => {
@@ -97,6 +93,103 @@ function compile (
           options: tsPlugins,
           exclude: /node_modules/,
         });
+        config.module.rules = config.module.rules.filter(item => {
+          return item.loader !== require.resolve('url-loader');
+        })
+        config.module.rules.push(
+          ...[
+            {
+              include: [
+                /\.(html|ejs)$/,
+                /\.json$/,
+                /\.(js|jsx|ts|tsx)$/,
+                /\.lugiad$/,
+                /\.lugiadac$/,
+                /\.(css|less|scss|sass)$/ || [],
+              ],
+              loader: 'url-loader',
+            },
+            {
+              test: /^((?!\.lugia-icon).)*\.(scss|sass)$/,
+              exclude: /node_modules/,
+              use: [
+                {
+                  loader: 'css-loader',
+                  options: {
+                    modules: true,
+                    importLoaders: 1,
+                    localIdentName: '[name]__[local]__[hash:base64:5]',
+                    sourceMap: true,
+                  },
+                },
+                {
+                  loader: 'sass-loader',
+                  options: {
+                    sourceMap: false,
+                  },
+                },
+              ],
+            },
+            // WOFF Font
+            {
+              test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+              use: {
+                loader: 'url-loader',
+                options: {
+                  limit: 2000000,
+                  mimetype: 'application/font-woff',
+                },
+              },
+            },
+            // WOFF2 Font
+            {
+              test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+              use: {
+                loader: 'url-loader',
+                options: {
+                  limit: 2000000,
+                  mimetype: 'application/font-woff',
+                },
+              },
+            },
+            // TTF Font
+            {
+              test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+              use: {
+                loader: 'url-loader',
+                options: {
+                  limit: 2000000,
+                  mimetype: 'application/octet-stream',
+                },
+              },
+            },
+            // EOT Font
+            {
+              test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+              use: 'file-loader',
+            },
+            // SVG Font
+            {
+              test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+              use: {
+                loader: 'url-loader',
+                options: {
+                  limit: 2000000,
+                  mimetype: 'image/svg+xml',
+                },
+              },
+            },
+            {
+              test: /\.(?:ico|gif|png|jpg|jpeg|webp|mp4)$/,
+              use: {
+                loader: 'url-loader',
+                options: {
+                  limit: 2000000,
+                },
+              },
+            },
+          ]
+        );
         return config;
       },
     },
