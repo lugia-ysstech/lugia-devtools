@@ -16,7 +16,7 @@ async function changeVersion(param: paramType) {
   try {
     const packageObj = await readJson(filePath);
     const currentVersion = packageObj.version;
-    const { forceAlpha } = param;
+    const { forceAlpha = true } = param;
     const newVersion = getNewVersion(currentVersion, forceAlpha);
     packageObj.version = newVersion;
     console.info('--- 写入新版本 ---：', newVersion, '当前版本', currentVersion);
