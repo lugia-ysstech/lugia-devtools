@@ -5,12 +5,12 @@
 
 const { writeJSON, readJson } = require('fs-extra');
 
-declare type paramType = {
+declare type ParamType = {
   forceAlpha: boolean,
   filePath: string
 }
 
-async function changeVersion(param: paramType) {
+async function changeVersion(param: ParamType) {
   console.info('--- 检测版本 ---');
   const { filePath } = param;
   try {
