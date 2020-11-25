@@ -40,7 +40,7 @@ function getNewVersion(version, forceAlpha) {
       const newVersionNumber = currentVersion + 1;
       const matchAlpha = version.match(/alpha/g);
       const isAlpha = forceAlpha ? matchAlpha && matchAlpha.length > 0 : true;
-      newVersion = isAlpha ? version.replace(/\.\d+$/g, `.${newVersionNumber}`) : `${version}-alpha.0`;
+      newVersion = isAlpha ? version.replace(/\.\d+$/g, `.${newVersionNumber}`) : `${getNewVersion(version)}-alpha.0`;
     }
   }
 
