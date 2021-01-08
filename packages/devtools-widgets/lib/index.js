@@ -13,6 +13,7 @@ const {
   ensureFileSync,
   outputJsonSync,
   writeFileSync,
+  pathExistsSync,
   readJsonSync,
   unlinkSync
 } = require("fs-extra");
@@ -102,7 +103,12 @@ module.exports = async function compileComponent(param) {
     const { outputDir } = config;
     const getFullOutPath = target => join(outputDir, target);
     const dllFilePath = getFullOutPath("./designInfo.dll.json");
-
+    const lugiadConfigFile = join(outputDir, "lugiad.config.json");
+    let lugiadConfig = {};
+    if (pathExistsSync(lugiadConfigFile)) {
+      lugiadConfig = readJsonSync(lugiadConfigFile);
+      console.info(`读取组件扩展信息`, lugiadConfig);
+    }
     assets.forEach(async asset => {
       const {
         content,
@@ -118,7 +124,8 @@ module.exports = async function compileComponent(param) {
             asset: {
               ...asset,
               content: content.toString()
-            }
+            },
+            lugiadConfig
           });
           unlinkSync(entryFile);
           buildTask(importModules);
