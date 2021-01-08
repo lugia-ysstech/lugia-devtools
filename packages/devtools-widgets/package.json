@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-widgets",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "dependencies": {
     "@lugia/devtools-material": "^1.0.44",
     "ts-import-plugin": "^1.6.6",
