@@ -8,29 +8,25 @@ function getComponentPropsArr(props, componentTypes) {
   componentPropsKeys.forEach(i => {
     if (props) {
       const item = props[i];
-      if (TypesKeys && TypesKeys[item.type]) {
+      if (item && TypesKeys && TypesKeys[item.type]) {
         item.type = TypesKeys[item.type];
       }
-      if (item.meta) {
-        const itemMeta = item.meta;
-        if (Array.isArray(itemMeta) && itemMeta.length > 0) {
-          let metaItemType = '';
-          let metaItemIndex = '';
-          itemMeta.forEach((metaItem, index) => {
-            const { type } = metaItem;
-            if (TypesKeys && TypesKeys[type]) {
-              metaItemType = TypesKeys[type];
-              metaItemIndex = index;
-            }
-          });
-          if (metaItemIndex !== '') {
-            item.meta[metaItemIndex].type = metaItemType;
+      const itemMeta = item && item.meta;
+      const hasMeta = itemMeta && Array.isArray(itemMeta);
+      const newItemMeta =
+        hasMeta &&
+        itemMeta.map(metaItem => {
+          const { type } = metaItem;
+          if (TypesKeys && TypesKeys[type]) {
+            return { ...metaItem, type: TypesKeys[type] };
           }
-        }
-      }
+          return metaItem;
+        });
+      const meta = hasMeta ? { meta: newItemMeta } : {};
       const list = {
         name: i,
         ...item,
+        ...meta,
       };
       arr.push(list);
     }
