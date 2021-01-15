@@ -12,7 +12,7 @@ function getComponentPropsArr(props, componentTypes) {
         item.type = TypesKeys[item.type];
       }
       const itemMeta = item && item.meta;
-      const hasMeta = itemMeta && Array.isArray(itemMeta);
+      const hasMeta = itemMeta && Array.isArray(itemMeta) && itemMeta.length>0;
       const newItemMeta =
         hasMeta &&
         itemMeta.map(metaItem => {
