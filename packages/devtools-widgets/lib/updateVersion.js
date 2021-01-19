@@ -16,7 +16,7 @@ async function changeVersion(param) {
     packageObj.version = newVersion;
     console.info('--- 写入新版本 ---：', newVersion, '当前版本', currentVersion);
     try {
-      await writeJSON(filePath, packageObj);
+      await writeJSON(filePath, packageObj, { spaces: '\t' });
       console.log('--- 版本修改成功! ---');
     } catch (err) {
       console.error(err);
