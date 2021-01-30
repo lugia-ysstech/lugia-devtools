@@ -8,17 +8,12 @@ const { join } = require('path');
 process.env.BABEL_ENV = 'production';
 
 module.exports = (importModules = []) => {
+  const babelPlugins = importModules.length > 0 ? [['import', importModules]] : [];
 
-  const babelPlugins = importModules.length > 0 ? [[
-    'import', importModules]] : [];
-
-  const plugins = [
-    'transform-es2015-modules-commonjs',
-  ];
+  const plugins = ['transform-es2015-modules-commonjs'];
   if (babelPlugins.length > 0) {
     plugins.push(...babelPlugins);
   }
-  gulp.task('default', ['js', 'ts', 'css', 'font', 'interface', 'meta']);
 
   gulp.task('ts', () => {
     const cwd = process.cwd();
@@ -72,4 +67,5 @@ module.exports = (importModules = []) => {
   gulp.task('interface', () => {
     return gulp.src(['src/interface/*.js', 'src/interface/*.json']).pipe(gulp.dest('interface'));
   });
+  return gulp.series('js', 'ts', 'css', 'font', 'interface', 'meta');
 };

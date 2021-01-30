@@ -128,8 +128,8 @@ module.exports = async function compileComponent(param) {
             lugiadConfig
           });
           unlinkSync(entryFile);
-          buildTask(importModules);
-          gulp.run("default", () => {
+          const build = buildTask(importModules);
+          build(() => {
             unlinkSync(dllFilePath);
             unlinkSync(getFullOutPath(ThemeMetaFile));
           });
