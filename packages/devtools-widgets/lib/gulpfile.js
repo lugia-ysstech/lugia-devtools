@@ -18,7 +18,9 @@ module.exports = (importModules = []) => {
   gulp.task('ts', () => {
     const cwd = process.cwd();
     const tsProject = ts.createProject(join(cwd, 'tsconfig.json'));
-    const tsResult = gulp.src(['src/widgets/**/*.ts', 'src/widgets/**/*.tsx']).pipe(tsProject());
+    const tsResult = gulp.src(['src/widgets/**/*.ts', 'src/widgets/**/*.tsx']).pipe(tsProject()).on('error', (error) => {
+      console.error('TS编译存在错误');
+    });
 
     return merge([
       tsResult.dts.pipe(gulp.dest('dist')),
