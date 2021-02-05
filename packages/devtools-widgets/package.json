@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-widgets",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "dependencies": {
     "@lugia/devtools-material": "^1.0.44",
     "fs-extra": "^9.1.0",
@@ -49,6 +49,5 @@
     "url": "https://github.com/lugia-ysstech/lugia-devtools"
   },
   "homepage": "http://lugia.tech",
-  "license": "Apache License 2.0",
-  "devDependencies": {}
+  "license": "Apache License 2.0"
 }
