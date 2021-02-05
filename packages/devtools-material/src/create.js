@@ -244,7 +244,7 @@ function joinChildrenWidgetName(
       try {
         childrenMeta = loadMeta(targetPath, folderName, item);
       } catch (error) {
-        error.push(
+        errors.push(
           `** ${folderName}--${targetWidgetName}-${item} 子组件加载错误**`
         );
         return;
@@ -280,7 +280,7 @@ function joinChildrenWidgetName(
             extendComponent;
         }
       } catch (error) {
-        error.push(
+        errors.push(
           `** ${folderName}--${targetWidgetName}-${item}子组件${widgetName}获取元信息错误 **`
         );
       }
