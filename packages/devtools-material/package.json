@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-material",
-  "version": "1.0.45-alpha.0",
+  "version": "1.0.45",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "immutable": "^3.8.2",
