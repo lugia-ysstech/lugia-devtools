@@ -1,6 +1,6 @@
 {
   "name": "@lugia/devtools-widgets",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "dependencies": {
     "@lugia/devtools-material": "^1.0.45",
     "fs-extra": "^9.1.0",
