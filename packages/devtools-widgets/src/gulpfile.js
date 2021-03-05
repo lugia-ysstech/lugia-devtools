@@ -12,7 +12,7 @@ module.exports = (importModules = []) => {
 
   const plugins = ['transform-es2015-modules-commonjs'];
   if (babelPlugins.length > 0) {
-    plugins.push(...babelPlugins);
+    plugins.unshift(...babelPlugins);
   }
 
   gulp.task('ts', () => {
