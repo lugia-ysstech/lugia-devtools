@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@lugia/devtools-material@^1.0.44":
-  version "1.0.44"
-  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.44.tgz#d59d0480b5e29c63af0bd11e6d48f5c298cde33f"
-  integrity sha512-GypQhxBNSK61MAs9BRV7Bj9yUQHQ07mzHcdgTS42LRK1HG4vNxvsjtXXJAS5hPWkD6B8dyUyNRaQG0R0rr9FOg==
+"@lugia/devtools-material@^1.0.45":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.45.tgz#03057c3685c56b2bf02d71e6b6e84a8143c8d4ed"
+  integrity sha512-RWvGorOEs0HWUyuTxWRV2Hsjz3LBBZtvonwVWmJQaIUIUx+I7uFWunBr/dYHWwlV6c+J6beUua/o+Xc6wqHfwg==
   dependencies:
     babel-runtime "^6.26.0"
     immutable "^3.8.2"
@@ -2188,9 +2188,9 @@ lodash.templatesettings@^3.0.0:
     lodash.escape "^3.0.0"
 
 lodash@^4.17.4:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.0.0:
   version "1.4.0"
