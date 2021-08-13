@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@lugia/devtools-material@^1.0.44":
-  version "1.0.44"
-  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.44.tgz#d59d0480b5e29c63af0bd11e6d48f5c298cde33f"
-  integrity sha512-GypQhxBNSK61MAs9BRV7Bj9yUQHQ07mzHcdgTS42LRK1HG4vNxvsjtXXJAS5hPWkD6B8dyUyNRaQG0R0rr9FOg==
+"@lugia/devtools-material@^1.0.45":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.45.tgz#03057c3685c56b2bf02d71e6b6e84a8143c8d4ed"
+  integrity sha512-RWvGorOEs0HWUyuTxWRV2Hsjz3LBBZtvonwVWmJQaIUIUx+I7uFWunBr/dYHWwlV6c+J6beUua/o+Xc6wqHfwg==
   dependencies:
     babel-runtime "^6.26.0"
     immutable "^3.8.2"
@@ -2638,9 +2638,9 @@ path-is-absolute@^1.0.0, path-is-absolute@^1.0.1:
   integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-root-regex@^0.1.0:
   version "0.1.2"
