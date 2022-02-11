@@ -1031,6 +1031,15 @@
     immutable "^3.8.2"
     yargs "^13.2.2"
 
+"@lugia/devtools-material@^1.0.44":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.45.tgz#03057c3685c56b2bf02d71e6b6e84a8143c8d4ed"
+  integrity sha512-RWvGorOEs0HWUyuTxWRV2Hsjz3LBBZtvonwVWmJQaIUIUx+I7uFWunBr/dYHWwlV6c+J6beUua/o+Xc6wqHfwg==
+  dependencies:
+    babel-runtime "^6.26.0"
+    immutable "^3.8.2"
+    yargs "^13.2.2"
+
 "@lugia/dict@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@lugia/dict/-/dict-1.0.4.tgz#b030f62020c0c847e1ee439731cbaf4de16df7f4"
@@ -8098,9 +8107,9 @@ path-type@^3.0.0:
     pify "^3.0.0"
 
 pathval@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/pathval/download/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
-  integrity sha1-uULm1L3mUwBe9rcTYd74cn0GReA=
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
+  integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
 
 pbkdf2@^3.0.3:
   version "3.0.17"
