@@ -1031,6 +1031,15 @@
     immutable "^3.8.2"
     yargs "^13.2.2"
 
+"@lugia/devtools-material@^1.0.44":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@lugia/devtools-material/-/devtools-material-1.0.45.tgz#03057c3685c56b2bf02d71e6b6e84a8143c8d4ed"
+  integrity sha512-RWvGorOEs0HWUyuTxWRV2Hsjz3LBBZtvonwVWmJQaIUIUx+I7uFWunBr/dYHWwlV6c+J6beUua/o+Xc6wqHfwg==
+  dependencies:
+    babel-runtime "^6.26.0"
+    immutable "^3.8.2"
+    yargs "^13.2.2"
+
 "@lugia/dict@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@lugia/dict/-/dict-1.0.4.tgz#b030f62020c0c847e1ee439731cbaf4de16df7f4"
@@ -3572,9 +3581,9 @@ decamelize@^3.2.0:
     xregexp "^4.2.4"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^3.3.0:
   version "3.3.0"
